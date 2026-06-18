@@ -1,0 +1,115 @@
+---
+title: "Revenue by Month — Three Theme Treatments"
+format:
+  html:
+    embed-resources: true
+    toc: false
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(tidyverse)
+library(ggthemes)
+library(scales)
+```
+
+## The Data
+
+A synthetic 13-month revenue series with a gentle upward trend and realistic
+month-to-month variation. Median revenue is set at \$20 million.
+
+```{r data}
+set.seed(42)
+
+# Build a trend + noise series, then rescale so the median lands at $20M
+n <- 13
+trend  <- seq(0, 1, length.out = n)          # gentle upward slope
+noise  <- rnorm(n, mean = 0, sd = 0.18)      # realistic variation
+raw    <- trend + noise
+
+# Rescale: shift so median = 0, scale so spread feels natural, then add $20M
+raw_centered <- raw - median(raw)
+revenue_raw  <- raw_centered * 3e6 + 20e6    # ~$3M std dev around $20M
+
+df <- tibble(
+  month   = seq(as.Date("2024-01-01"), by = "month", length.out = n),
+  revenue = revenue_raw
+)
+
+# Quick look
+df |> mutate(revenue_M = scales::dollar(revenue / 1e6, suffix = "M"))
+```
+
+---
+
+## Chart 1 — ggplot2 Defaults
+
+No `theme()` call at all; pure out-of-the-box ggplot2.
+
+```{r chart-default, fig.width=9, fig.height=5}
+p_base <- ggplot(df, aes(x = month, y = revenue)) +
+  geom_line(linewidth = 0.9) +
+  geom_point(size = 2.5) +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
+  scale_y_continuous(
+    labels = label_dollar(scale = 1e-6, suffix = "M"),
+    limits = c(NA, NA)
+  ) +
+  labs(
+    title   = "Monthly Revenue",
+    subtitle = "13-month trend | Jan 2024 – Jan 2025",
+    x       = NULL,
+    y       = "Revenue"
+  )
+
+p_base
+```
+
+---
+
+## Chart 2 — Tufte Theme (`ggthemes`)
+
+Edward Tufte's minimalist aesthetic: no background, muted grid, range-frame axes.
+
+```{r chart-tufte, fig.width=9, fig.height=5}
+p_base +
+  theme_tufte(base_size = 13) +
+  geom_rangeframe(color = "grey30")   # Tufte-style axis end-caps
+```
+
+---
+
+## Chart 3 — Maximum Data-Pixel Ratio
+
+Every non-data element stripped away: no panel background, no grid lines, no
+axis ticks, no axis titles, minimal axis text. The data line is the only thing
+left to look at.
+
+```{r chart-max-dpr, fig.width=9, fig.height=5}
+p_base +
+  labs(title = NULL, subtitle = NULL, x = NULL, y = NULL) +
+  theme(
+    # Remove all panel elements
+    panel.background  = element_blank(),
+    panel.grid.major  = element_blank(),
+    panel.grid.minor  = element_blank(),
+    panel.border      = element_blank(),
+
+    # Remove axis infrastructure
+    axis.ticks        = element_blank(),
+    axis.line         = element_blank(),
+
+    # Minimal axis text — just enough to orient the reader
+    axis.text.x       = element_text(size = 9, color = "grey50", margin = margin(t = 4)),
+    axis.text.y       = element_text(size = 9, color = "grey50", margin = margin(r = 4)),
+
+    # Strip the plot frame entirely
+    plot.background   = element_blank(),
+
+    # Tight margins
+    plot.margin       = margin(8, 8, 8, 8)
+  )
+```
