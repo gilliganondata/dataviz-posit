@@ -1,0 +1,435 @@
+---
+title: "Data Visualization Best Practices"
+subtitle: "Principles for clear, honest, and effective charts"
+author: "Tim Wilson"
+date: today
+format:
+  revealjs:
+    theme: [default, dataviz-best-practices.scss]
+    slide-number: false
+    progress: false
+    history: false
+    transition: fade
+    transition-speed: fast
+    incremental: false
+    logo: images/meadowlark-logo.png
+    width: 1280
+    height: 720
+    margin: 0
+    highlight-style: github
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+
+# Packages
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse,
+               scales,
+               ggthemes)
+
+```
+
+## The Data
+
+A synthetic 13-month revenue series with a gentle upward trend and realistic
+month-to-month variation. Median revenue is set at \$20 million.
+
+```{r data}
+set.seed(42)
+
+# Build a trend + noise series, then rescale so the median lands at $20M
+n <- 13
+trend  <- seq(0, 1, length.out = n)          # gentle upward slope
+noise  <- rnorm(n, mean = 0, sd = 0.24)      # realistic variation
+raw    <- trend + noise
+
+# Rescale: shift so median = 0, scale so spread feels natural, then add $20M
+raw_centered <- raw - median(raw)
+revenue_raw  <- raw_centered * 3e6 + 20e6    # ~$3M std dev around $20M
+
+df <- tibble(
+  month   = seq(as.Date("2024-01-01"), by = "month", length.out = n),
+  revenue = revenue_raw
+)
+
+# Quick look
+df |> mutate(revenue_M = scales::dollar(revenue / 1e6, suffix = "M"))
+```
+
+---
+
+## Chart 1 — ggplot2 Defaults
+
+No `theme()` call at all; pure out-of-the-box ggplot2.
+
+```{r chart-default, fig.width=9, fig.height=5}
+p_base <- ggplot(df, aes(x = month, y = revenue)) +
+  geom_line(linewidth = 0.9) +
+  # geom_point(size = 2.5) +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
+  scale_y_continuous(
+    labels = label_dollar(scale = 1e-6, suffix = "M"),
+    limits = c(0, NA)
+  ) +
+  labs(
+    title   = "Monthly Revenue",
+    subtitle = "13-month trend | Jan 2024 – Jan 2025",
+    x       = NULL,
+    y       = "Revenue"
+  )
+
+p_base
+```
+
+---
+
+## Chart 2 — Tufte Theme (`ggthemes`)
+
+Edward Tufte's minimalist aesthetic: no background, muted grid, range-frame axes.
+
+```{r chart-tufte, fig.width=9, fig.height=5}
+p_base +
+  theme_tufte(base_size = 13) +
+  geom_rangeframe(color = "grey30")   # Tufte-style axis end-caps
+```
+
+---
+
+## Chart 3 — Maximum Data-Pixel Ratio
+
+Every non-data element stripped away: no panel background, no grid lines, no
+axis ticks, no axis titles, minimal axis text. The data line is the only thing
+left to look at.
+
+```{r chart-max-dpr, fig.width=9, fig.height=5}
+p_base +
+  labs(title = NULL, subtitle = NULL, x = NULL, y = NULL) +
+  theme(
+    # Remove all panel elements
+    panel.background  = element_blank(),
+    panel.grid.major  = element_blank(),
+    panel.grid.minor  = element_blank(),
+    panel.border      = element_blank(),
+
+    # Remove axis infrastructure
+    axis.ticks        = element_blank(),
+    axis.line         = element_blank(),
+
+    # Minimal axis text — just enough to orient the reader
+    axis.text.x       = element_text(size = 9, color = "grey50", margin = margin(t = 4)),
+    axis.text.y       = element_text(size = 9, color = "grey50", margin = margin(r = 4)),
+
+    # Strip the plot frame entirely
+    plot.background   = element_blank(),
+
+    # Tight margins
+    plot.margin       = margin(8, 8, 8, 8)
+  )
+```
+
+
+## Agenda {.agenda}
+
+1. Choosing the right chart type
+2. Color and accessibility
+3. Decluttering and data-ink ratio
+4. Labeling and annotation
+5. Common pitfalls to avoid
+
+---
+
+# 1. Choosing the Right Chart Type {background-color="#0f172a" color="white"}
+
+## Match the Chart to the Question
+
+Ask first: *what relationship am I trying to show?*
+
+| Question type | Chart family |
+|---|---|
+| How does X change over time? | Line, area |
+| How do parts compare to the whole? | Bar, stacked bar, waffle |
+| How are two variables related? | Scatter, bubble |
+| What does a distribution look like? | Histogram, boxplot, violin |
+| How do categories rank? | Horizontal bar |
+
+: {tbl-colwidths="[55,45]"}
+
+## The Short List: Use These Most Often
+
+- **Bar chart** — comparisons between discrete categories; always start the y-axis at zero
+- **Line chart** — trends over continuous time; points imply measured values
+- **Scatter plot** — relationship between two quantitative variables
+- **Small multiples** — compare the same structure across subgroups
+
+::: {.callout-tip}
+**Rule of thumb:** if a table communicates it just as well, the data probably doesn't need a chart.
+:::
+
+## When to Avoid Pie Charts
+
+- Hard to compare non-adjacent slices accurately
+- Fail when there are more than ~4–5 categories
+- 3-D versions add distortion with no information gain
+
+**Prefer instead:**
+- Horizontal bar chart (sorted by value)
+- Waffle chart when part-of-whole framing matters
+
+---
+
+# 2. Color and Accessibility {background-color="#0f172a" color="white"}
+
+## Color Has One Job Per Chart
+
+Use color to encode **one dimension of meaning** per chart.
+
+- **Categorical** palettes — qualitatively different groups (e.g., ColorBrewer Set2, Okabe-Ito)
+- **Sequential** palettes — ordered magnitude from low to high (e.g., blues, viridis)
+- **Diverging** palettes — values that pivot around a meaningful midpoint (e.g., red–white–blue)
+
+::: {.muted}
+Never use color just for decoration — it adds noise and misleads.
+:::
+
+## Accessibility First
+
+~8% of men and ~0.5% of women have red-green color vision deficiency.
+
+**Practical rules:**
+
+- Prefer the **Okabe-Ito** palette or **viridis** family — both are perceptually uniform and colorblind-safe
+- Redundantly encode: use **shape** or **line type** in addition to color
+- Check contrast ratios for any text on colored backgrounds (WCAG AA: ≥ 4.5:1)
+- Test your charts with a colorblind simulator (e.g., `colorblindr` in R, Coblis online)
+
+## Color Don'ts
+
+- Rainbow / jet palettes — imply ordering that isn't there; hide true gradients
+- Too many categories (> 6–7 hues) — readers can't distinguish them reliably
+- Low-contrast combinations — light gray on white, yellow on white
+- Using red = bad / green = good without redundant encoding
+
+---
+
+# 3. Decluttering & Data-Ink Ratio {background-color="#0f172a" color="white"}
+
+## Tufte's Data-Ink Principle
+
+> *"Maximize the data-ink ratio, within reason."* — Edward Tufte
+
+**Data ink** = ink that directly represents data values
+**Non-data ink** = everything else (borders, backgrounds, grid lines, decorations)
+
+**Goal:** every pixel should earn its place.
+
+## The Decluttering Checklist
+
+Remove or soften each of these unless it aids comprehension:
+
+- [ ] Chartjunk — decorative images, 3-D effects, heavy drop shadows
+- [ ] Unnecessary borders around the entire plot or legend
+- [ ] Bold or dark gridlines — prefer light gray or remove entirely
+- [ ] Redundant axis labels when the title already states the unit
+- [ ] Duplicate legends when direct labeling is possible
+- [ ] Excessive tick marks on axes
+
+## Before / After Mental Model
+
+:::: {.columns}
+::: {.column width="50%"}
+**Before (common defaults)**
+
+- Dark gray plot border
+- Dense gridlines every unit
+- Legend floating in white box
+- Axis titles in all caps
+- Default font size too small
+:::
+::: {.column width="50%"}
+**After (decluttered)**
+
+- No border
+- Subtle horizontal gridlines only
+- Direct data labels replace legend
+- Sentence-case, descriptive axis titles
+- Base font bumped to ≥ 12 pt
+:::
+::::
+
+---
+
+# 4. Labeling & Annotation {background-color="#0f172a" color="white"}
+
+## Titles Do the Heavy Lifting
+
+A chart title should state the **finding**, not just describe the variables.
+
+| Weak | Strong |
+|---|---|
+| "Revenue by Month" | "Revenue grew 18% YoY, led by Q4" |
+| "Satisfaction Score" | "Customer satisfaction dipped after the March outage" |
+
+: {tbl-colwidths="[50,50]"}
+
+## Label Hierarchy
+
+Apply in order; stop when the chart is clear:
+
+1. **Chart title** — the main takeaway
+2. **Subtitle** — context, units, or data source
+3. **Axis labels** — only when not obvious from title
+4. **Direct data labels** — on bars or at line ends; eliminates need for a legend
+5. **Annotations** — call out the one or two points that need explanation
+6. **Caption / footnote** — data source, caveats, last updated
+
+## Annotation Tips
+
+- Anchor annotations to specific data points, not floating in whitespace
+- Use a contrasting but restrained color (e.g., dark gray text, colored leader line)
+- Less is more — annotate the *interesting* points, not every point
+- In ggplot2: `annotate()`, `geom_label()`, or the `{ggtext}` / `{ggrepel}` packages
+
+---
+
+# 5. Common Pitfalls {background-color="#0f172a" color="white"}
+
+## Misleading Axes
+
+**Truncated y-axis** — starting above zero exaggerates differences in bar charts
+
+- OK for line charts showing change over time
+- Never for bar/column charts (bars encode magnitude from zero)
+
+**Dual y-axes** — two different scales on one chart almost always mislead
+
+- Use small multiples instead, or pick the more important variable
+
+## Overplotting and Clutter
+
+- **Too many series** on one line chart → spaghetti; use small multiples or highlight one
+- **Overlapping points** in scatter plots → use `alpha` transparency, jitter, or 2-D density
+- **Too much data** in one view → filter to the most relevant slice, let users drill down
+
+## Chartjunk Hall of Shame
+
+- 3-D bar/pie charts — perspective distorts perceived area
+- Exploding pie charts — emphasizes a slice arbitrarily
+- Gradient fills — suggest a data dimension that isn't there
+- Stock photo backgrounds — compete with the data
+- Clip art / icons replacing bars — imprecise and distracting
+
+## The Publication Checklist
+
+Before sharing any chart, verify:
+
+- [ ] Title states the finding
+- [ ] Axes start at appropriate baselines; labeled with units
+- [ ] Color is purposeful and colorblind-safe
+- [ ] No unnecessary chartjunk
+- [ ] Source and date noted in caption
+- [ ] Legible at the intended output size
+
+---
+
+# Summary {background-color="#0f172a" color="white"}
+
+## Five Principles to Remember
+
+1. **Right chart** — match the visual form to the question being answered
+2. **Purposeful color** — one encoding per chart, always accessible
+3. **Data-ink ratio** — remove anything that doesn't carry information
+4. **Honest labeling** — titles that state findings; axes that don't mislead
+5. **Intentional annotation** — guide the reader's eye to what matters
+
+::: {.callout-tip}
+The best visualization is the one that lets the data speak without getting in the way.
+:::
+
+---
+
+## Resources
+
+**Books**
+
+- *The Visual Display of Quantitative Information* — Edward Tufte
+- *Storytelling with Data* — Cole Nussbaumer Knaflic
+- *Fundamentals of Data Visualization* — Claus Wilke (free online)
+
+**R packages**
+
+- `ggplot2`, `ggthemes`, `ggrepel`, `ggtext`, `patchwork`, `colorblindr`
+
+**Online tools**
+
+- ColorBrewer 2.0 — colorbrewer2.org
+- Coblis colorblind simulator — color-blindness.com/coblis
+- Datawrapper Academy — academy.datawrapper.de
+
+---
+
+## {background-color="#000000" .full-bleed}
+
+```{=html}
+<div style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;background:#000;font-family:'Nunito',sans-serif;">
+
+  <!-- Eye photo: right 52%, show the right/eye portion of the source image -->
+  <img src="images/closeupeye-bw.jpg"
+       style="position:absolute;right:0;top:0;height:100%;width:52%;
+              object-fit:cover;object-position:right center;">
+
+  <!-- ① Iconic Memory -->
+  <div class="fragment" data-fragment-index="1"
+       style="position:absolute;left:4%;top:7%;
+              color:#fff;font-weight:700;font-size:2em;line-height:1.2;">
+    Iconic<br>Memory
+  </div>
+
+  <!-- ② Pre-Cognition (fades out on click 3) -->
+  <div class="fragment fade-in-then-out" data-fragment-index="2"
+       style="position:absolute;left:32%;top:11%;
+              color:#f59e0b;font-weight:600;font-size:1.2em;">
+    Pre-Cognition
+  </div>
+
+  <!-- ③ Arrow 1 + Short-Term Memory -->
+  <div class="fragment" data-fragment-index="3"
+       style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;">
+    <div style="position:absolute;left:9%;top:30%;
+                color:#fff;font-size:1.8em;line-height:1;">&#9660;</div>
+    <div style="position:absolute;left:4%;top:40%;
+                color:#fff;font-weight:700;font-size:2em;line-height:1.2;">
+      Short-Term<br>Memory
+    </div>
+  </div>
+
+  <!-- ④ 7 ± 2 (fades out on click 5) -->
+  <div class="fragment fade-in-then-out" data-fragment-index="4"
+       style="position:absolute;left:32%;top:44%;
+              color:#f59e0b;font-weight:700;font-size:2.6em;">
+    7 &#177; 2
+  </div>
+
+  <!-- ⑤ Arrow 2 + Long-Term Memory -->
+  <div class="fragment" data-fragment-index="5"
+       style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;">
+    <div style="position:absolute;left:9%;top:63%;
+                color:#fff;font-size:1.8em;line-height:1;">&#9660;</div>
+    <div style="position:absolute;left:4%;top:72%;
+                color:#fff;font-weight:700;font-size:2em;line-height:1.2;">
+      Long-Term<br>Memory
+    </div>
+  </div>
+
+  <!-- ⑥ Tomorrow… -->
+  <div class="fragment" data-fragment-index="6"
+       style="position:absolute;left:32%;top:68%;
+              color:#f59e0b;font-weight:600;font-size:1.2em;line-height:1.55;">
+    Tomorrow,<br>Next Week,<br>Next Month
+  </div>
+
+</div>
+```

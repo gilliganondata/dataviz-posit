@@ -1,0 +1,105 @@
+/*-- scss:defaults --*/
+
+// Typography — Nunito from Google Fonts (loaded via scss:rules @import below)
+$font-family-sans-serif: "Nunito", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: "Fira Code", "Courier New", monospace;
+$presentation-font-size-root: 36px;
+
+// Colors
+$body-bg: #ffffff;
+$body-color: #1a1a2e;
+$link-color: #2563eb;
+
+$primary:   #2563eb;
+$secondary: #64748b;
+$accent:    #f59e0b;
+$muted:     #94a3b8;
+
+// Headings — ~25% smaller than revealjs default (2.5em → ~1.85em)
+$presentation-heading-color: #0f172a;
+$presentation-heading-font: $font-family-sans-serif;
+$presentation-heading-font-weight: 600;
+$presentation-heading-line-height: 1.2;
+$presentation-h1-font-size: 1.85em;
+$presentation-h2-font-size: 1.4em;
+$presentation-h3-font-size: 1.1em;
+
+// Slide spacing
+$presentation-block-margin: 1rem;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+// Section title slides
+.reveal .slide-background-content {
+  background-color: $body-bg;
+}
+
+// Divider / section slides
+.reveal section.has-dark-background h2,
+.reveal section.has-dark-background p {
+  color: #ffffff;
+}
+
+// Highlight box utility class
+.callout-tip {
+  border-left: 4px solid $primary;
+  background: #eff6ff;
+  padding: 0.5rem 1rem;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.85em;
+}
+
+// De-emphasize secondary points
+.muted {
+  color: $muted;
+  font-size: 0.85em;
+}
+
+// Code blocks
+.reveal pre code {
+  font-size: 0.75em;
+  line-height: 1.5;
+}
+
+// Footer text (slide number / text label)
+.reveal .footer {
+  font-size: 0.55em;
+  color: $muted;
+}
+
+// Meadowlark logo — bottom-right on every non-title slide
+.reveal .slide-logo {
+  position: fixed;
+  bottom: 14px;
+  right: 16px;
+  height: 36px;
+  width: auto;
+  opacity: 0.9;
+  // Hide on title slide (slide index 0)
+  .title-slide & {
+    display: none;
+  }
+}
+
+// Incremental list spacing
+.reveal ul li,
+.reveal ol li {
+  margin-bottom: 0.4em;
+}
+
+// Full-bleed slides: strip padding and establish positioning context so
+// absolute-positioned children can fill the entire slide area
+.reveal .slides section.full-bleed {
+  padding: 0 !important;
+  position: relative !important;
+}
+
+// Two-column layout helper
+.columns-equal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
