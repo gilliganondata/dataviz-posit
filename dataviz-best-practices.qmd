@@ -42,14 +42,14 @@ month-to-month variation. Median revenue is set at \$20 million.
 set.seed(42)
 
 # Build a trend + noise series, then rescale so the median lands at $20M
-n <- 13
+n <- 8
 trend  <- seq(0, 1, length.out = n)          # gentle upward slope
-noise  <- rnorm(n, mean = 0, sd = 0.24)      # realistic variation
+noise  <- rnorm(n, mean = 0, sd = 0.4)      # realistic variation
 raw    <- trend + noise
 
 # Rescale: shift so median = 0, scale so spread feels natural, then add $20M
 raw_centered <- raw - median(raw)
-revenue_raw  <- raw_centered * 3e6 + 20e6    # ~$3M std dev around $20M
+revenue_raw  <- raw_centered * 3e1 + 20e3    # ~$3M std dev around $20M
 
 df <- tibble(
   month   = seq(as.Date("2024-01-01"), by = "month", length.out = n),
@@ -68,17 +68,15 @@ No `theme()` call at all; pure out-of-the-box ggplot2.
 
 ```{r chart-default, fig.width=9, fig.height=5}
 p_base <- ggplot(df, aes(x = month, y = revenue)) +
-  geom_line(linewidth = 0.9) +
-  # geom_point(size = 2.5) +
+  geom_line() +
   scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
   scale_y_continuous(
     labels = label_dollar(scale = 1e-6, suffix = "M"),
     limits = c(0, NA)
   ) +
   labs(
-    title   = "Monthly Revenue",
-    subtitle = "13-month trend | Jan 2024 – Jan 2025",
-    x       = NULL,
+    title   = "Revenue by Month",
+    x       = "Month",
     y       = "Revenue"
   )
 

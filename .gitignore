@@ -51,3 +51,4 @@ rsconnect/
 
 # Output files
 *.html
+/dataviz-best-practices_files/
