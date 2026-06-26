@@ -6,6 +6,7 @@ date: today
 format:
   revealjs:
     theme: [default, dataviz-best-practices.scss]
+    menu: false
     slide-number: false
     progress: false
     history: false
@@ -13,9 +14,9 @@ format:
     transition-speed: fast
     incremental: false
     logo: images/meadowlark-logo.png
-    width: 1280
-    height: 720
-    margin: 0
+    width: 1920
+    height: 1080
+    margin: 0.05
     highlight-style: github
 execute:
   echo: false
@@ -33,12 +34,11 @@ pacman::p_load(tidyverse,
 
 ```
 
-## The Data
-
-A synthetic 13-month revenue series with a gentle upward trend and realistic
-month-to-month variation. Median revenue is set at \$20 million.
 
 ```{r data}
+# A synthetic monthly revenue series with a gentle upward trend and realistic
+# month-to-month variation.
+
 set.seed(42)
 
 # Build a trend + noise series, then rescale so the median lands at $20M
@@ -49,10 +49,10 @@ raw    <- trend + noise
 
 # Rescale: shift so median = 0, scale so spread feels natural, then add $20M
 raw_centered <- raw - median(raw)
-revenue_raw  <- raw_centered * 3e1 + 20e3    # ~$3K std dev around $20K
+revenue_raw  <- raw_centered * 5e4 + 1e5
 
 df <- tibble(
-  month   = seq(as.Date("2024-01-01"), by = "month", length.out = n),
+  month   = seq(as.Date("2026-01-01"), by = "month", length.out = n),
   revenue = revenue_raw
 )
 
@@ -64,14 +64,14 @@ df |> mutate(revenue_M = scales::dollar(revenue / 1e3, suffix = "K"))
 
 ## Chart 1 — ggplot2 Defaults
 
-No `theme()` call at all; pure out-of-the-box ggplot2.
+```{r chart-default, fig.width=5, fig.height=5}
+#| fig-align: center
 
-```{r chart-default, fig.width=9, fig.height=5}
 p_base <- ggplot(df, aes(x = month, y = revenue)) +
   geom_line() +
   scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
   scale_y_continuous(
-    labels = label_dollar(scale = 1e-6, suffix = "M"),
+    labels = label_dollar(),
     limits = c(0, NA)
   ) +
   labs(
@@ -85,25 +85,11 @@ p_base
 
 ---
 
-## Chart 2 — Tufte Theme (`ggthemes`)
-
-Edward Tufte's minimalist aesthetic: no background, muted grid, range-frame axes.
-
-```{r chart-tufte, fig.width=9, fig.height=5}
-p_base +
-  theme_tufte(base_size = 13) +
-  geom_rangeframe(color = "grey30")   # Tufte-style axis end-caps
-```
-
----
-
 ## Chart 3 — Maximum Data-Pixel Ratio
 
-Every non-data element stripped away: no panel background, no grid lines, no
-axis ticks, no axis titles, minimal axis text. The data line is the only thing
-left to look at.
+```{r chart-max-dpr, fig.width=5, fig.height=5}
+#| fig-align: center
 
-```{r chart-max-dpr, fig.width=9, fig.height=5}
 p_base +
   labs(title = NULL, subtitle = NULL, x = NULL, y = NULL) +
   theme(
