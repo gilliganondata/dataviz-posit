@@ -44,12 +44,12 @@ set.seed(42)
 # Build a trend + noise series, then rescale so the median lands at $20M
 n <- 8
 trend  <- seq(0, 1, length.out = n)          # gentle upward slope
-noise  <- rnorm(n, mean = 0, sd = 0.4)      # realistic variation
+noise  <- rnorm(n, mean = 0, sd = 0.24)      # realistic variation
 raw    <- trend + noise
 
 # Rescale: shift so median = 0, scale so spread feels natural, then add $20M
 raw_centered <- raw - median(raw)
-revenue_raw  <- raw_centered * 3e1 + 20e3    # ~$3M std dev around $20M
+revenue_raw  <- raw_centered * 3e1 + 20e3    # ~$3K std dev around $20K
 
 df <- tibble(
   month   = seq(as.Date("2024-01-01"), by = "month", length.out = n),
@@ -57,7 +57,7 @@ df <- tibble(
 )
 
 # Quick look
-df |> mutate(revenue_M = scales::dollar(revenue / 1e6, suffix = "M"))
+df |> mutate(revenue_M = scales::dollar(revenue / 1e3, suffix = "K"))
 ```
 
 ---
