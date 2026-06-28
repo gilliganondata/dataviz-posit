@@ -34,7 +34,6 @@ pacman::p_load(tidyverse,
 
 ```
 
-
 ```{r data}
 # A synthetic monthly revenue series with a gentle upward trend and realistic
 # month-to-month variation.
@@ -57,64 +56,80 @@ df <- tibble(
 )
 
 # Quick look
-df |> mutate(revenue_M = scales::dollar(revenue / 1e3, suffix = "K"))
+# df |> mutate(revenue_M = scales::dollar(revenue / 1e3, suffix = "K"))
 ```
 
----
+:::{style="position: relative; width: 75%; margin: 0 auto;"}
 
-## Chart 1 — ggplot2 Defaults
-
-```{r chart-default, fig.width=5, fig.height=5}
+```{r chart-default}
+#| fig.width: 6
+#| fig.height: 4.5
 #| fig-align: center
+#| out.width: 100%
 
-p_base <- ggplot(df, aes(x = month, y = revenue)) +
-  geom_line() +
+gg <- ggplot(df, aes(x = month, y = revenue, color = "Revenue")) +
+  geom_line(linewidth = 0.5) +
+  scale_color_manual(values = c("Revenue" = "#725496")) +
   scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
   scale_y_continuous(
     labels = label_dollar(),
-    limits = c(0, NA)
+    limits = c(0, ceiling(max(df$revenue) / 20000) * 20000),
+    breaks = seq(0, ceiling(max(df$revenue) / 20000) * 20000, by = 20000)
   ) +
   labs(
-    title   = "Revenue by Month",
-    x       = "Month",
-    y       = "Revenue"
+    title  = "Revenue by Month",
+    x      = "Month",
+    y      = "Revenue",
+    color  = NULL
+  ) +
+  # worsen things up a bit by adding a gratuitous legend and plot border
+  theme(
+    legend.position = "top",
+    plot.title.position = "plot",
+    plot.background  = element_rect(linewidth = 0.75, color = "gray40", fill = NA),
+    plot.margin = margin(10,10,10,10,"pt")
   )
 
-p_base
+gg
+
 ```
+[← Ignore]{.callout-label .fragment style="position: absolute; top: 30%; left: 95%;"}
+:::
 
 ---
 
-## Chart 3 — Maximum Data-Pixel Ratio
+:::{style="position: relative; width: 75%; margin: 0 auto;"}
 
-```{r chart-max-dpr, fig.width=5, fig.height=5}
+```{r higher-data-pixel, fig.width=5, fig.height=5}
+#| fig.width: 6
+#| fig.height: 4.5
 #| fig-align: center
+#| out.width: 100%
 
-p_base +
-  labs(title = NULL, subtitle = NULL, x = NULL, y = NULL) +
+gg <- ggplot(df, aes(x = month, y = revenue, color = "Revenue")) +
+  geom_line(linewidth = 0.8) +
+  scale_color_manual(values = c("Revenue" = "#725496")) +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
+  scale_y_continuous(
+    labels = label_dollar(),
+    limits = c(0, ceiling(max(df$revenue) / 20000) * 20000),
+    breaks = seq(0, ceiling(max(df$revenue) / 20000) * 20000, by = 20000)
+  ) +
+  labs(
+    title  = "Revenue by Month",
+    color  = NULL
+  ) +
+  theme_minimal() +
   theme(
-    # Remove all panel elements
-    panel.background  = element_blank(),
-    panel.grid.major  = element_blank(),
-    panel.grid.minor  = element_blank(),
-    panel.border      = element_blank(),
-
-    # Remove axis infrastructure
-    axis.ticks        = element_blank(),
-    axis.line         = element_blank(),
-
-    # Minimal axis text — just enough to orient the reader
-    axis.text.x       = element_text(size = 9, color = "grey50", margin = margin(t = 4)),
-    axis.text.y       = element_text(size = 9, color = "grey50", margin = margin(r = 4)),
-
-    # Strip the plot frame entirely
-    plot.background   = element_blank(),
-
-    # Tight margins
-    plot.margin       = margin(8, 8, 8, 8)
+    legend.position = "none",
+    plot.title.position = "plot",
+    plot.background = element_rect(fill = "#F9EBDC", color = NA),
+    axis.title = element_blank()
   )
-```
 
+gg
+```
+:::
 
 ## Agenda {.agenda}
 
