@@ -113,3 +113,8 @@ $presentation-block-margin: 1rem;
   color: #F1655F;
 }
 
+// Setting up to allow full bleed as needed
+.reveal .slides section.no-padding {
+  padding: 0 !important;
+}
+

@@ -34,6 +34,18 @@ pacman::p_load(tidyverse,
 
 ```
 
+## For someone to act on information, they must... {.no-padding}
+
+* ...be engaged with it.
+* ...understand it.
+* ...care about it.
+* ...remember it.
+
+![](images/pic_polevault.jpeg){style="position: absolute; top: -40px; right: -40px; height: calc(100% + 80px);"}
+
+
+---
+
 ```{r data}
 # A synthetic monthly revenue series with a gentle upward trend and realistic
 # month-to-month variation.
