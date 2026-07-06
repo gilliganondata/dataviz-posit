@@ -70,7 +70,7 @@ $presentation-block-margin: 1rem;
   color: $muted;
 }
 
-// Meadowlark logo — bottom-right on every non-title slide
+// Meadowlark logo — bottom-left on every slide
 .reveal .slide-logo {
   position: fixed;
   bottom: 14px;
@@ -78,11 +78,8 @@ $presentation-block-margin: 1rem;
   height: 36px;
   width: auto;
   opacity: 0.9;
-  // Hide on title slide (slide index 0)
-  .title-slide & {
-    display: none;
-  }
 }
+
 
 // Incremental list spacing
 .reveal ul li,

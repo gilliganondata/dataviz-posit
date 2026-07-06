@@ -18,6 +18,9 @@ format:
     height: 1080
     margin: 0.05
     highlight-style: github
+    center: false
+title-slide-attributes:
+  data-visibility: "hidden"
 execute:
   echo: false
   warning: false
@@ -59,13 +62,30 @@ df <- tibble(
 # df |> mutate(revenue_M = scales::dollar(revenue / 1e3, suffix = "K"))
 ```
 
+## {background-color="#F9EBDC"}
+
+```{=html}
+<div style="position:absolute;top:0;left:0;width:100%;height:100%;">
+  <img src="images/meadowlark_bird.png"
+       style="position:absolute;left:16%;top:40%;transform:translateY(-50%);
+              height:78%;width:auto;">
+  <div style="position:absolute;left:46%;top:50%;transform:translateY(-50%);
+              font-family:'STIX Two Text',serif;font-weight:500;font-size:4em;
+              line-height:1.1;color:#317168;width:48%;">
+    Data Visualization<br>Best Practices
+  </div>
+</div>
+```
+
+##
+
 :::{style="position: relative; width: 75%; margin: 0 auto;"}
 
 ```{r chart-default}
 #| fig.width: 6
 #| fig.height: 4.5
 #| fig-align: center
-#| out.width: 100%
+#| out.width: 80%
 
 gg <- ggplot(df, aes(x = month, y = revenue, color = "Revenue")) +
   geom_line(linewidth = 0.5) +
@@ -94,9 +114,10 @@ gg
 
 ```
 [← Ignore]{.callout-label .fragment style="position: absolute; top: 30%; left: 95%;"}
+
 :::
 
----
+##
 
 :::{style="position: relative; width: 75%; margin: 0 auto;"}
 
@@ -104,7 +125,7 @@ gg
 #| fig.width: 6
 #| fig.height: 4.5
 #| fig-align: center
-#| out.width: 100%
+#| out.width: 80%
 
 gg <- ggplot(df, aes(x = month, y = revenue, color = "Revenue")) +
   geom_line(linewidth = 0.8) +
@@ -129,6 +150,7 @@ gg <- ggplot(df, aes(x = month, y = revenue, color = "Revenue")) +
 
 gg
 ```
+
 :::
 
 ## Agenda {.agenda}
