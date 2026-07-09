@@ -2,12 +2,13 @@
 
 // Typography — Google Fonts loaded via scss:rules @import below)
 $font-family-sans-serif: "Halyard Text", sans-serif;
-$font-family-serif: "Plantagenet Cherokee", Arial, sans-serif;
+$font-family-serif: "Plantagenet Cherokee", sans-serif;
 $font-family-monospace: "Fira Code", "Courier New", monospace;
 $presentation-font-size-root: 36px;
 
 // Colors
 $body-bg: #F9EBDC;
+$divider-text: $body-bg; // divider slides are dark, so inverts the color
 $body-color: #292F20;
 $link-color: #2563eb;
 
@@ -21,7 +22,7 @@ $presentation-heading-color: $primary;
 $presentation-heading-font: $font-family-serif;
 $presentation-heading-font-weight: 500;
 $presentation-heading-line-height: 1.2;
-$presentation-h1-font-size: 1.8em;
+$presentation-h1-font-size: 3.2em;
 $presentation-h2-font-size: 2.5em;
 $presentation-h3-font-size: 1.1em;
 
@@ -30,17 +31,24 @@ $presentation-block-margin: 1rem;
 
 /*-- scss:rules --*/
 
-@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap');
+// Expose $primary as a CSS variable so .qmd files can reference it
+:root {
+  --divider-bg: #{$primary};
+}
 
-// Section title slides
-.reveal .slide-background-content {
-  background-color: $body-bg;
+// Divider / section slides (level-1 headings with no body content)
+.reveal section.level1 {
+  text-align: center;
+}
+
+.reveal section.level1 h1 {
+  color: $divider-text;  // light color (normally the background)
 }
 
 // Divider / section slides
 .reveal section.has-dark-background h2,
 .reveal section.has-dark-background p {
-  color: #ffffff;
+  color: $divider-text;
 }
 
 // Highlight box utility class

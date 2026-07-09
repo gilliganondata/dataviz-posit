@@ -53,3 +53,8 @@ rsconnect/
 *.html
 dataviz-best-practices_files/
 .positai
+_site/
+_quarto_internal_scss_error.scss
+
+/.quarto/
+**/*.quarto_ipynb

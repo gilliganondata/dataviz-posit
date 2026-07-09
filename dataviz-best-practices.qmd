@@ -6,7 +6,6 @@ format:
   revealjs:
     theme: [default, dataviz-best-practices.scss]
     menu: false
-    slide-number: true
     progress: false
     history: false
     transition: fade
@@ -31,6 +30,8 @@ execute:
 # Packages
 if (!require("pacman")) install.packages("pacman")
 pacman::p_load(tidyverse,
+               palmerpenguins,
+               gapminder,
                scales,
                ggthemes)
 
@@ -39,28 +40,11 @@ pacman::p_load(tidyverse,
 ---
 
 ```{r data}
-# A synthetic monthly revenue series with a gentle upward trend and realistic
-# month-to-month variation.
 
-set.seed(42)
+# Time-series data: monthly data from the economics dataset
+df_unemployment <- economics |> 
+  filter(date >= as.Date("2009-01-01"), date <= as.Date("2009-12-01"))
 
-# Build a trend + noise series, then rescale so the median lands at $20M
-n <- 8
-trend  <- seq(0, 1, length.out = n)          # gentle upward slope
-noise  <- rnorm(n, mean = 0, sd = 0.24)      # realistic variation
-raw    <- trend + noise
-
-# Rescale: shift so median = 0, scale so spread feels natural, then add $20M
-raw_centered <- raw - median(raw)
-revenue_raw  <- raw_centered * 5e4 + 1e5
-
-df <- tibble(
-  month   = seq(as.Date("2026-01-01"), by = "month", length.out = n),
-  revenue = revenue_raw
-)
-
-# Quick look
-# df |> mutate(revenue_M = scales::dollar(revenue / 1e3, suffix = "K"))
 ```
 
 ## {background-color="#F9EBDC"}
@@ -78,6 +62,8 @@ df <- tibble(
 </div>
 ```
 
+# Why do we have slides in a talk? {background-color="var(--divider-bg)"}
+
 ## For someone to act on<br>information, they must... {.no-padding}
 
 ...be engaged with it.
@@ -88,7 +74,6 @@ df <- tibble(
 
 ...remember it.
 
-1. What are some words that encapsulate delivery for you?
 
 ![](images/pic_polevault.jpeg){style="position: absolute; top: -50px; right: -50px; height: calc(100% + 200px);"}
 
@@ -102,19 +87,19 @@ df <- tibble(
 #| fig-align: center
 #| out.width: 90%
 
-gg <- ggplot(df, aes(x = month, y = revenue, color = "Revenue")) +
+gg <- ggplot(df_unemployment, aes(x = date, y = unemploy, color = "unemploy")) +
   geom_line(linewidth = 0.5) +
-  scale_color_manual(values = c("Revenue" = "#725496")) +
+  scale_color_manual(values = c("unemploy" = "#725496")) +
   scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
   scale_y_continuous(
     labels = label_dollar(),
-    limits = c(0, ceiling(max(df$revenue) / 20000) * 20000),
-    breaks = seq(0, ceiling(max(df$revenue) / 20000) * 20000, by = 20000)
+    limits = c(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000),
+    breaks = seq(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000, by = 20000)
   ) +
   labs(
-    title  = "Revenue by Month",
+    title  = "Unemployed Persons by Month in 2009",
     x      = "Month",
-    y      = "Revenue",
+    y      = "000s of Unemployed Persons",
     color  = NULL
   ) +
   # worsen things up a bit by adding a gratuitous legend and plot border
@@ -142,17 +127,17 @@ gg
 #| fig-align: center
 #| out.width: 90%
 
-gg <- ggplot(df, aes(x = month, y = revenue, color = "Revenue")) +
+gg <- ggplot(df_unemployment, aes(x = date, y = unemploy, color = "unemploy")) +
   geom_line(linewidth = 0.8) +
-  scale_color_manual(values = c("Revenue" = "#725496")) +
+  scale_color_manual(values = c("unemploy" = "#725496")) +
   scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
   scale_y_continuous(
     labels = label_dollar(),
-    limits = c(0, ceiling(max(df$revenue) / 20000) * 20000),
-    breaks = seq(0, ceiling(max(df$revenue) / 20000) * 20000, by = 20000)
+    limits = c(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000),
+    breaks = seq(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000, by = 20000)
   ) +
   labs(
-    title  = "Revenue by Month",
+    title  = "Unemployed Persons by Month in 2009",
     color  = NULL
   ) +
   theme_minimal() +
