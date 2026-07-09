@@ -32,52 +32,236 @@ if (!require("pacman")) install.packages("pacman")
 pacman::p_load(tidyverse,
                palmerpenguins,
                gapminder,
+               gt,
                scales,
                ggthemes)
 
-```
+# Brand palette — mirrors the variables defined in dataviz-best-practices.scss.
+# (R can't read SCSS, so this is the one place hex values are repeated.)
+brand <- list(
+  bg        = "#F9EBDC",
+  primary   = "#317168",
+  secondary = "#9D792F",
+  accent    = "#F1655F",
+  dark      = "#292F20",
+  muted     = "#94a3b8",
+  gratuitous = "#725496"  # deliberately off-brand, for the "before" examples
+)
 
----
+```
 
 ```{r data}
 
 # Time-series data: monthly data from the economics dataset
-df_unemployment <- economics |> 
+df_unemployment <- economics |>
   filter(date >= as.Date("2009-01-01"), date <= as.Date("2009-12-01"))
 
+# Summary table data: gapminder, 2007 snapshot by continent
+df_continents <- gapminder |>
+  filter(year == 2007) |>
+  group_by(continent) |>
+  summarise(
+    countries    = n(),
+    mean_lifeExp = mean(lifeExp),
+    total_pop    = sum(as.numeric(pop))
+  ) |>
+  arrange(desc(total_pop))
+
 ```
 
-## {background-color="#F9EBDC"}
+## {.title-custom}
 
-```{=html}
-<div style="position:absolute;top:0;left:0;width:100%;height:100%;">
-  <img src="images/meadowlark_bird.png"
-       style="position:absolute;left:10%;top:40%;transform:translateY(-50%);
-              height:78%;width:auto;">
-  <div style="position:absolute;left:40%;top:50%;transform:translateY(-50%);
-              font-family:'Plantagenet Cherokee',serif;font-weight:500;font-size:3em;
-              line-height:1.1;color:#317168;width:48%;">
-    Amplifying Talk Impact<br>through Visual<br>Reinforcement
-  </div>
-</div>
-```
+:::: {.columns}
+
+::: {.column width="38%" .column-right}
+![](images/meadowlark_bird.png){.title-bird}
+:::
+
+::: {.column width="62%"}
+[Amplifying Talk Impact through Visual Reinforcement]{.title-text}
+:::
+
+::::
+
+::: {.notes}
+Not sure if I love this title, but trying to come up with something that frames
+the overarching point—that "the slides" are secondary to "the point" and "the
+narrative"... but they do still matter.
+:::
+
 
 # Why do we have slides in a talk? {background-color="var(--divider-bg)"}
 
-## For someone to act on<br>information, they must... {.no-padding}
+::: {.notes}
+"Highest Level Situation"
 
-...be engaged with it.
-
-...understand it.
-
-...care about it.
-
-...remember it.
+Verbally: a good place to start is being clear on why we have slides in a talk
+in the first place…
+:::
 
 
-![](images/pic_polevault.jpeg){style="position: absolute; top: -50px; right: -50px; height: calc(100% + 200px);"}
+## What is the goal of a talk? {background-image="images/pic_basketball_goal.jpg" background-size="auto 100%" background-position="right center"}
 
-##
+Get your audience to:
+
+- think differently
+- try something new
+- take action
+
+::: {.notes}
+Possible image: up close of a basketball goal (full bleed to the right).
+:::
+
+
+## Default presumption: slides are not needed at all. {.statement}
+
+Slides are not where a talk starts.
+
+::: {.notes}
+Verbally: Don't worry! We WILL talk about slides. We just want to be clear that
+slides are not where a talk starts.
+:::
+
+
+## Ask: What can the slides do better than my words?
+
+- **Keep the audience's attention** — the talk is bound by time and attention
+- **Understand and care about the information** — by directly reinforcing what the speaker is saying
+- **Remember it** — dual-encoding with multiple senses (hearing *and* seeing); brain science backs up that using multiple senses aids retention
+
+
+## What slides should not (primarily) do
+
+- Remind the speaker what they're supposed to be saying
+
+. . .
+
+*Caveat: break in case of emergency… they **can** be a visual aid to keep the speaker on track; that's just a natural artifact if they do their primary job well!*
+
+
+# Most slide decks fail to deliver {background-color="var(--divider-bg)"}
+
+::: {.notes}
+"The Challenge"
+
+Verbal: this is partly because we don't stop and think about what the role of
+the slides is, but it's also because we operate as though the brain easily does
+some things that it just doesn't. We're going to briefly dip into some light
+neuroscience here…
+:::
+
+
+## {background-color="black" background-image="images/closeupeye-bw.jpg" background-size="auto 100%" background-position="right center"}
+
+::: {.absolute .memory-label .fragment left="4%" top="7%" width="24%" fragment-index=1}
+Iconic Memory
+:::
+
+::: {.absolute .memory-detail .fragment .fade-in-then-out left="32%" top="9%" fragment-index=2}
+Pre-Cognition
+:::
+
+::: {.absolute .memory-arrow .fragment left="4%" top="28%" width="24%" fragment-index=3}
+&#9660;
+:::
+
+::: {.absolute .memory-label .fragment left="4%" top="38%" width="24%" fragment-index=3}
+Short-Term Memory
+:::
+
+::: {.absolute .memory-detail .fragment .fade-in-then-out left="32%" top="42%" fragment-index=4}
+7 &plusmn; 2
+:::
+
+::: {.absolute .memory-arrow .fragment left="4%" top="60%" width="24%" fragment-index=5}
+&#9660;
+:::
+
+::: {.absolute .memory-label .fragment left="4%" top="70%" width="24%" fragment-index=5}
+Long-Term Memory
+:::
+
+::: {.absolute .memory-detail .fragment left="32%" top="68%" fragment-index=6}
+Tomorrow,<br>Next Week,<br>Next Month
+:::
+
+::: {.notes}
+The human brain has limitations:
+
+- Iconic memory — pre-cognition; everything comes in and gets processed
+- Short-term memory / Miller's Law (7 +/- 2)
+- Long-term memory
+:::
+
+
+## Shorthand &rarr; Minimize cognitive load {background-image="images/pic_cognitive_load.jpg" background-size="auto 100%" background-position="right center"}
+
+::: {.notes}
+Physical pic of "cognitive" load / lady w/ pots on her head (sets up callback
+later to risks/realities of being clever).
+:::
+
+
+## How many 5s are in this set of numbers?
+
+<br><br>
+
+::: {.digit-wall}
+4979027[5]{.fragment .custom .five-pop fragment-index=1}647902894728624092406037070[5]{.fragment .custom .five-pop fragment-index=1}70279072\
+08029007302[5]{.fragment .custom .five-pop fragment-index=1}01270237008374082078720272007083\
+0260270379377[5]{.fragment .custom .five-pop fragment-index=1}709707377970667462097094702780\
+79709723097230979[5]{.fragment .custom .five-pop fragment-index=1}927[5]{.fragment .custom .five-pop fragment-index=1}0927279798734972608027
+:::
+
+<br><br>
+
+[Source: *Information Dashboard Design* by Stephen Few]{.muted}
+
+::: {.notes}
+Likely need to cut for time. It IS a good way to get some quick interactivity
+and have them "feel" cognitive load, though.
+:::
+
+
+# Some simple tactics can reduce cognitive load {background-color="var(--divider-bg)"}
+
+::: {.notes}
+"The solutions"
+:::
+
+
+## Maximize the data-pixel ratio!
+
+<br><br>
+
+::: {.ratio-fraction}
+::: {.ratio-annotation}
+Pixels that represent actual data or information
+:::
+::: {.numerator}
+Data-Information Pixels
+:::
+::: {.denominator}
+All Non-Background Pixels
+:::
+::: {.ratio-annotation}
+Every pixel that is not simply the background color
+:::
+:::
+
+<br>
+
+[Tufte posited "the data-ink ratio"; Stephen Few derived "the data-pixel ratio."]{.muted}
+
+::: {.notes}
+Visually define — multiple slides, but they go quick.
+
+Close with, verbally: this is reducing cognitive load by giving the brain fewer
+decisions to make about "what matters."
+:::
+
+
+## (Increase the data-pixel ratio of) A chart {visibility="uncounted"}
 
 :::{style="position: relative; width: 75%; margin: 0 auto;"}
 
@@ -89,10 +273,10 @@ df_unemployment <- economics |>
 
 gg <- ggplot(df_unemployment, aes(x = date, y = unemploy, color = "unemploy")) +
   geom_line(linewidth = 0.5) +
-  scale_color_manual(values = c("unemploy" = "#725496")) +
+  scale_color_manual(values = c("unemploy" = brand$gratuitous)) +
   scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
   scale_y_continuous(
-    labels = label_dollar(),
+    labels = label_comma(),
     limits = c(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000),
     breaks = seq(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000, by = 20000)
   ) +
@@ -113,15 +297,29 @@ gg <- ggplot(df_unemployment, aes(x = date, y = unemploy, color = "unemploy")) +
 gg
 
 ```
-[← Ignore]{.callout-label .fragment style="position: absolute; top: 30%; left: 95%;"}
+
+[&larr; Ignore]{.callout-label .absolute .fragment top="30%" left="95%" fragment-index=1}
+[Ignore &rarr;]{.callout-label .absolute .fragment top="3%" left="18%" fragment-index=2}
+[Tilt my head to read! &rarr;]{.callout-label .absolute .fragment top="45%" left="-18%" fragment-index=3}
+[&uarr; Tilt my head to read!]{.callout-label .absolute .fragment top="95%" left="55%" fragment-index=4}
+[&uarr; I already knew that]{.callout-label .absolute .fragment top="99%" left="38%" fragment-index=5}
 
 :::
 
-##
+::: {.notes}
+Quick hit: before / after. These all can be literally a quick hit
+before/after; can return to that to go deeper as to what's going on.
+
+Each callout is a click, building up the cognitive load the audience is
+carrying while reading a "default" chart.
+:::
+
+
+## (Increase the data-pixel ratio of) A chart {visibility="uncounted"}
 
 :::{style="position: relative; width: 75%; margin: 0 auto;"}
 
-```{r higher-data-pixel, fig.width=5, fig.height=5}
+```{r higher-data-pixel}
 #| fig.width: 6
 #| fig.height: 4.5
 #| fig-align: center
@@ -129,22 +327,22 @@ gg
 
 gg <- ggplot(df_unemployment, aes(x = date, y = unemploy, color = "unemploy")) +
   geom_line(linewidth = 0.8) +
-  scale_color_manual(values = c("unemploy" = "#725496")) +
+  scale_color_manual(values = c("unemploy" = brand$primary)) +
   scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
   scale_y_continuous(
-    labels = label_dollar(),
+    labels = label_comma(),
     limits = c(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000),
     breaks = seq(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000, by = 20000)
   ) +
   labs(
-    title  = "Unemployed Persons by Month in 2009",
+    title  = "Unemployed Persons (000s) by Month in 2009",
     color  = NULL
   ) +
   theme_minimal() +
   theme(
     legend.position = "none",
     plot.title.position = "plot",
-    plot.background = element_rect(fill = "#F9EBDC", color = NA),
+    plot.background = element_rect(fill = brand$bg, color = NA),
     axis.title = element_blank()
   )
 
@@ -153,67 +351,224 @@ gg
 
 :::
 
----
+::: {.notes}
+The "after": same data, higher data-pixel ratio. No border, no legend, no
+redundant axis titles, horizontal month labels.
+:::
 
-## {background-color="#000000" .full-bleed}
 
-```{=html}
-<div style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;background:#000;font-family:'Nunito',sans-serif;">
+## (Increase the data-pixel ratio of) A table
 
-  <!-- Eye photo: right 52%, show the right/eye portion of the source image -->
-  <img src="images/closeupeye-bw.jpg"
-       style="position:absolute;right:0;top:0;height:100%;width:52%;
-              object-fit:cover;object-position:right center;">
+```{r table-before}
 
-  <!-- ① Iconic Memory -->
-  <div class="fragment" data-fragment-index="1"
-       style="position:absolute;left:4%;top:7%;
-              color:#fff;font-weight:700;font-size:2em;line-height:1.2;">
-    Iconic<br>Memory
-  </div>
+# The "before": default-ish gt table with heavy fills, borders, and banding
+df_continents |>
+  gt() |>
+  cols_label(
+    continent    = "Continent",
+    countries    = "Countries",
+    mean_lifeExp = "Mean Life Expectancy",
+    total_pop    = "Total Population"
+  ) |>
+  fmt_number(columns = mean_lifeExp, decimals = 1) |>
+  fmt_number(columns = total_pop, decimals = 0) |>
+  tab_options(
+    table.font.size = px(34),
+    column_labels.background.color = brand$gratuitous,
+    row.striping.include_table_body = TRUE,
+    table_body.hlines.width = px(2),
+    table_body.vlines.width = px(2),
+    table_body.vlines.style = "solid",
+    table.border.top.width = px(3),
+    table.border.bottom.width = px(3)
+  ) |>
+  opt_row_striping()
 
-  <!-- ② Pre-Cognition (fades out on click 3) -->
-  <div class="fragment fade-in-then-out" data-fragment-index="2"
-       style="position:absolute;left:32%;top:11%;
-              color:#f59e0b;font-weight:600;font-size:1.2em;">
-    Pre-Cognition
-  </div>
-
-  <!-- ③ Arrow 1 + Short-Term Memory -->
-  <div class="fragment" data-fragment-index="3"
-       style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;">
-    <div style="position:absolute;left:9%;top:30%;
-                color:#fff;font-size:1.8em;line-height:1;">&#9660;</div>
-    <div style="position:absolute;left:4%;top:40%;
-                color:#fff;font-weight:700;font-size:2em;line-height:1.2;">
-      Short-Term<br>Memory
-    </div>
-  </div>
-
-  <!-- ④ 7 ± 2 (fades out on click 5) -->
-  <div class="fragment fade-in-then-out" data-fragment-index="4"
-       style="position:absolute;left:32%;top:44%;
-              color:#f59e0b;font-weight:700;font-size:2.6em;">
-    7 &#177; 2
-  </div>
-
-  <!-- ⑤ Arrow 2 + Long-Term Memory -->
-  <div class="fragment" data-fragment-index="5"
-       style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;">
-    <div style="position:absolute;left:9%;top:63%;
-                color:#fff;font-size:1.8em;line-height:1;">&#9660;</div>
-    <div style="position:absolute;left:4%;top:72%;
-                color:#fff;font-weight:700;font-size:2em;line-height:1.2;">
-      Long-Term<br>Memory
-    </div>
-  </div>
-
-  <!-- ⑥ Tomorrow… -->
-  <div class="fragment" data-fragment-index="6"
-       style="position:absolute;left:32%;top:68%;
-              color:#f59e0b;font-weight:600;font-size:1.2em;line-height:1.55;">
-    Tomorrow,<br>Next Week,<br>Next Month
-  </div>
-
-</div>
 ```
+
+::: {.notes}
+Quick hit: before / after…
+:::
+
+
+## (Increase the data-pixel ratio of) A table {visibility="uncounted"}
+
+```{r table-after}
+
+# The "after": same data, minimal ink — light rules only where they aid scanning
+df_continents |>
+  gt() |>
+  cols_label(
+    continent    = "Continent",
+    countries    = "Countries",
+    mean_lifeExp = "Mean Life Expectancy",
+    total_pop    = "Total Population"
+  ) |>
+  fmt_number(columns = mean_lifeExp, decimals = 1) |>
+  fmt_number(columns = total_pop, decimals = 0) |>
+  tab_options(
+    table.font.size = px(34),
+    table.background.color = brand$bg,
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = brand$dark,
+    column_labels.border.top.style = "hidden",
+    table_body.hlines.style = "hidden",
+    table.border.bottom.style = "hidden"
+  )
+
+```
+
+
+## [Possible Bonus] A table…that can be processed without reading #s
+
+*[Placeholder: same continent table with horizontal bars embedded in the
+Total Population column — likely built with `gt` + `gtExtras::gt_plt_bar()`.
+To be built.]*
+
+::: {.notes}
+Not strictly data-pixel ratio territory, but is a cognitive load reducer: add
+horizontal bars in using a gt table.
+:::
+
+
+## (Increase the data-pixel ratio of) Text! {.statement}
+
+The application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.
+
+::: {.notes}
+Quick hit: before / after — slightly verbose statement for the first, then
+tightened up overall words AND heavy-ing up a key point.
+:::
+
+
+## (Increase the data-pixel ratio of) Text! {.statement visibility="uncounted"}
+
+The new preprocessing technique reduced model run-time by [30–40%]{.emphasis}.
+
+
+## (Increase the data-pixel ratio of) Code!
+
+```{r code-before}
+#| echo: true
+#| eval: false
+
+penguins_clean <- penguins |>
+  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |>
+  mutate(body_mass_kg = body_mass_g / 1000,
+         species = as.factor(species),
+         island = as.factor(island),
+         sex = as.factor(sex))
+
+model_spec <- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +
+                   bill_depth_mm + species + sex,
+                 data = penguins_clean)
+
+model_summary <- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)
+
+model_summary |>
+  filter(term != "(Intercept)") |>
+  arrange(desc(abs(estimate)))
+```
+
+::: {.notes}
+Quick hit: before / after — limit the initial version to JUST be reducing the
+volume of code shown and making ONE LINE of the code a larger font and
+bold/black; other code is "context" — smaller font BUT NOT SMALL and lighter
+color BUT NOT TOO LIGHT such that there is projector risk.
+
+[Placeholder styling note: the "after" treatment below uses Quarto's
+code-line-numbers highlighting; a fuller size/color treatment may need SCSS
+tuning against the syntax highlighter.]
+:::
+
+
+## (Increase the data-pixel ratio of) Code! {visibility="uncounted"}
+
+```{r code-after}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "4"
+
+penguins_clean <- penguins |>
+  drop_na(body_mass_g, flipper_length_mm)
+
+model_spec <- lm(body_mass_kg ~ flipper_length_mm + species + sex,
+                 data = penguins_clean)
+```
+
+
+## Building information (Make it impossible to ignore)
+
+```{r code-build}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "|1-2|4-5|4"
+
+penguins_clean <- penguins |>
+  drop_na(body_mass_g, flipper_length_mm)
+
+model_spec <- lm(body_mass_kg ~ flipper_length_mm + species + sex,
+                 data = penguins_clean)
+```
+
+Choose a template that represents you (avoid the default)
+
+::: {.notes}
+Pushes the same code example farther with builds and even a highlight: each
+click walks through the code, ending with the key line highlighted alone.
+:::
+
+
+## "Brain breaks" can be useful
+
+Brain breaks (Make it interesting to pay attention):
+
+- **Reveal** — show something that is hard to describe (often a moment of revelation)
+- **Explain** — images can create connections that words cannot
+- **Delight** — aesthetics keep people interested
+
+<br>
+
+Gifs, comics, memes, blank screen
+
+::: {.notes}
+For the audience (TED book).
+:::
+
+
+# The talk is about the idea. The slides support the idea. {background-color="var(--divider-bg)"}
+
+::: {.notes}
+"Closing"
+:::
+
+
+# Why are so many slide decks so bad? {background-color="var(--divider-bg)"}
+
+
+## normative conformity
+
+> "the tendency of individuals to adjust their behavior, attitudes, or beliefs to align with the perceived standards or expectations of a group or society"
+
+
+## normative conformity…for slide decks
+
+> "the tendency of employees to adjust their presentations to align with the perceived standards of their organization"
+
+
+## normative conformity…illustrated {.statement}
+
+"This slide deck is killing me."
+
+. . .
+
+"Let me produce another one."
+
+
+## You have the power to change! {background-image="images/pic_uncle_sam.jpg" background-size="auto 100%" background-position="right center"}
+
+::: {.notes}
+Uncle Sam-like pic, full bleed to the right.
+
+Then choose your own adventure with what you want to learn more about.
+:::
