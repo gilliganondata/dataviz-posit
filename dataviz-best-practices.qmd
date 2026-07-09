@@ -79,14 +79,19 @@ df <- tibble(
 </div>
 ```
 
-## For someone to act on information, they must... {.no-padding}
+## For someone to act on<br>information, they must... {.no-padding}
 
-* ...be engaged with it.
-* ...understand it.
-* ...care about it.
-* ...remember it.
+...be engaged with it.
 
-![](images/pic_polevault.jpeg){style="position: absolute; top: -40px; right: -40px; height: calc(100% + 80px);"}
+...understand it.
+
+...care about it.
+
+...remember it.
+
+1. What are some words that encapsulate delivery for you?
+
+![](images/pic_polevault.jpeg){style="position: absolute; top: -50px; right: -50px; height: calc(100% + 200px);"}
 
 ##
 
@@ -96,7 +101,7 @@ df <- tibble(
 #| fig.width: 6
 #| fig.height: 4.5
 #| fig-align: center
-#| out.width: 80%
+#| out.width: 90%
 
 gg <- ggplot(df, aes(x = month, y = revenue, color = "Revenue")) +
   geom_line(linewidth = 0.5) +
@@ -136,7 +141,7 @@ gg
 #| fig.width: 6
 #| fig.height: 4.5
 #| fig-align: center
-#| out.width: 80%
+#| out.width: 90%
 
 gg <- ggplot(df, aes(x = month, y = revenue, color = "Revenue")) +
   geom_line(linewidth = 0.8) +
