@@ -1,0 +1,11 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Data Viz Presentations"
+  page-navigation: false
+
+format:
+  revealjs:
+    slide-number: true
