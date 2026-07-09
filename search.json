@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "rev-by-month.html",
+    "href": "rev-by-month.html",
+    "title": "Revenue by Month — Three Theme Treatments",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(ggthemes)\nlibrary(scales)"
+  },
+  {
+    "objectID": "rev-by-month.html#the-data",
+    "href": "rev-by-month.html#the-data",
+    "title": "Revenue by Month — Three Theme Treatments",
+    "section": "The Data",
+    "text": "The Data\nA synthetic 13-month revenue series with a gentle upward trend and realistic month-to-month variation. Median revenue is set at $20 million.\n\nset.seed(42)\n\n# Build a trend + noise series, then rescale so the median lands at $20M\nn &lt;- 13\ntrend  &lt;- seq(0, 1, length.out = n)          # gentle upward slope\nnoise  &lt;- rnorm(n, mean = 0, sd = 0.18)      # realistic variation\nraw    &lt;- trend + noise\n\n# Rescale: shift so median = 0, scale so spread feels natural, then add $20M\nraw_centered &lt;- raw - median(raw)\nrevenue_raw  &lt;- raw_centered * 3e6 + 20e6    # ~$3M std dev around $20M\n\ndf &lt;- tibble(\n  month   = seq(as.Date(\"2024-01-01\"), by = \"month\", length.out = n),\n  revenue = revenue_raw\n)\n\n# Quick look\ndf |&gt; mutate(revenue_M = scales::dollar(revenue / 1e6, suffix = \"M\"))\n\n# A tibble: 13 × 3\n   month        revenue revenue_M\n   &lt;date&gt;         &lt;dbl&gt; &lt;chr&gt;    \n 1 2024-01-01 19041433. $19.04M  \n 2 2024-02-01 18246179. $18.25M  \n 3 2024-03-01 18997205. $19.00M  \n 4 2024-04-01 19392862. $19.39M  \n 5 2024-05-01 19519421. $19.52M  \n 6 2024-06-01 19493809. $19.49M  \n 7 2024-07-01 20617338. $20.62M  \n 8 2024-08-01 20000000  $20.00M  \n 9 2024-09-01 21391065. $21.39M  \n10 2024-10-01 20517250. $20.52M  \n11 2024-11-01 21505745. $21.51M  \n12 2024-12-01 22285904. $22.29M  \n13 2025-01-01 20551131. $20.55M"
+  },
+  {
+    "objectID": "rev-by-month.html#chart-1-ggplot2-defaults",
+    "href": "rev-by-month.html#chart-1-ggplot2-defaults",
+    "title": "Revenue by Month — Three Theme Treatments",
+    "section": "Chart 1 — ggplot2 Defaults",
+    "text": "Chart 1 — ggplot2 Defaults\nNo theme() call at all; pure out-of-the-box ggplot2.\n\np_base &lt;- ggplot(df, aes(x = month, y = revenue)) +\n  geom_line(linewidth = 0.9) +\n  geom_point(size = 2.5) +\n  scale_x_date(date_labels = \"%b %Y\", date_breaks = \"1 month\") +\n  scale_y_continuous(\n    labels = label_dollar(scale = 1e-6, suffix = \"M\"),\n    limits = c(0, NA)\n  ) +\n  labs(\n    title   = \"Monthly Revenue\",\n    subtitle = \"13-month trend | Jan 2024 – Jan 2025\",\n    x       = NULL,\n    y       = \"Revenue\"\n  )\n\np_base"
+  },
+  {
+    "objectID": "rev-by-month.html#chart-2-tufte-theme-ggthemes",
+    "href": "rev-by-month.html#chart-2-tufte-theme-ggthemes",
+    "title": "Revenue by Month — Three Theme Treatments",
+    "section": "Chart 2 — Tufte Theme (ggthemes)",
+    "text": "Chart 2 — Tufte Theme (ggthemes)\nEdward Tufte’s minimalist aesthetic: no background, muted grid, range-frame axes.\n\np_base +\n  theme_tufte(base_size = 13) +\n  geom_rangeframe(color = \"grey30\")   # Tufte-style axis end-caps"
+  },
+  {
+    "objectID": "rev-by-month.html#chart-3-maximum-data-pixel-ratio",
+    "href": "rev-by-month.html#chart-3-maximum-data-pixel-ratio",
+    "title": "Revenue by Month — Three Theme Treatments",
+    "section": "Chart 3 — Maximum Data-Pixel Ratio",
+    "text": "Chart 3 — Maximum Data-Pixel Ratio\nEvery non-data element stripped away: no panel background, no grid lines, no axis ticks, no axis titles, minimal axis text. The data line is the only thing left to look at.\n\np_base +\n  labs(title = NULL, subtitle = NULL, x = NULL, y = NULL) +\n  theme(\n    # Remove all panel elements\n    panel.background  = element_blank(),\n    panel.grid.major  = element_blank(),\n    panel.grid.minor  = element_blank(),\n    panel.border      = element_blank(),\n\n    # Remove axis infrastructure\n    axis.ticks        = element_blank(),\n    axis.line         = element_blank(),\n\n    # Minimal axis text — just enough to orient the reader\n    axis.text.x       = element_text(size = 9, color = \"grey50\", margin = margin(t = 4)),\n    axis.text.y       = element_text(size = 9, color = \"grey50\", margin = margin(r = 4)),\n\n    # Strip the plot frame entirely\n    plot.background   = element_blank(),\n\n    # Tight margins\n    plot.margin       = margin(8, 8, 8, 8)\n  )"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#section",
+    "href": "dataviz-best-practices.html#section",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "",
+    "text": "Amplifying Talk Impactthrough VisualReinforcement"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#for-someone-to-act-on-information-they-must",
+    "href": "dataviz-best-practices.html#for-someone-to-act-on-information-they-must",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "For someone to act oninformation, they must…",
+    "text": "For someone to act oninformation, they must…\n…be engaged with it.\n…understand it.\n…care about it.\n…remember it.\n\nWhat are some words that encapsulate delivery for you?"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#section-1",
+    "href": "dataviz-best-practices.html#section-1",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "",
+    "text": "← Ignore"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#section-3",
+    "href": "dataviz-best-practices.html#section-3",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "",
+    "text": "IconicMemory\n  \n\n  \n  \n    Pre-Cognition\n  \n\n  \n  \n    ▼\n    \n      Short-TermMemory\n    \n  \n\n  \n  \n    7 ± 2\n  \n\n  \n  \n    ▼\n    \n      Long-TermMemory\n    \n  \n\n  \n  \n    Tomorrow,Next Week,Next Month"
+  }
+]
