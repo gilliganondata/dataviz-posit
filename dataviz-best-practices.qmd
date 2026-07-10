@@ -100,24 +100,57 @@ in the first place…
 :::
 
 
-## What is the goal of a talk? {background-image="images/pic_basketball_goal.jpg" background-size="auto 100%" background-position="right center"}
+## {.center background-image="images/pic_basketball_goal.jpg" background-size="auto 100%" background-position="right center"}
 
-Get your audience to:
+:::: {.columns}
 
-- think differently
-- try something new
-- take action
+::: {.column width="60%"}
 
-::: {.notes}
-Possible image: up close of a basketball goal (full bleed to the right).
+::: {.slide-body-heading}
+The goal of any talk is **audience impact**.
 :::
 
+::: {.fragment}
+Get them to [think differently]{.emphasis}
+:::
 
-## Default presumption: slides are not needed at all. {.statement}
+::: {.fragment}
+Get them to [try something new]{.emphasis}
+:::
 
-Slides are not where a talk starts.
+::: {.fragment}
+Get them to [take action]{.emphasis}
+:::
+
+:::
+
+::: {.column width="40%"}
+:::
+
+::::
+
+
+##
+
+:::: {.slide-stack}
+
+::: {.slide-body-heading}
+[Slides]{.emphasis} don't drive the talk.
+:::
+
+::: {.fragment .slide-body-heading}
+[The talk]{.emphasis} drives the talk.
+:::
+
+::: {.fragment .slide-body-heading}
+Slides simply [reinforce]{.emphasis} the talk.
+:::
+
+::::
 
 ::: {.notes}
+Slides are not where a talk starts.
+
 Verbally: Don't worry! We WILL talk about slides. We just want to be clear that
 slides are not where a talk starts.
 :::
@@ -565,7 +598,7 @@ For the audience (TED book).
 "Let me produce another one."
 
 
-## You have the power to change! {background-image="images/pic_uncle_sam.jpg" background-size="auto 100%" background-position="right center"}
+## You have the power to change! {background-image="images/pic_uncle_sam.png" background-size="auto 100%" background-position="right center"}
 
 ::: {.notes}
 Uncle Sam-like pic, full bleed to the right.
