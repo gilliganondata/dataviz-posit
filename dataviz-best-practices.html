@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Tim Wilson">
-  <meta name="dcterms.date" content="2026-07-09">
+  <meta name="dcterms.date" content="2026-07-10">
   <title>Data Viz Presentations – Amplifying Talk Impact through Visual Reinforcement</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -32,8 +32,74 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-998fb7d39ae9ab5c23a7c06720155175.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-dfff9d24a543edae7df71d2dc58df13d.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -141,33 +207,270 @@ Tim Wilson
 </div>
 </div>
 
-  <p class="date">2026-07-09</p>
+  <p class="date">2026-07-10</p>
 </section>
-<section id="section" class="slide level2" data-background-color="#F9EBDC">
+<section id="section" class="slide level2 title-custom">
 <h2></h2>
-<div style="position:absolute;top:0;left:0;width:100%;height:100%;">
-  <img src="images/meadowlark_bird.png" style="position:absolute;left:10%;top:40%;transform:translateY(-50%);
-              height:78%;width:auto;">
-  <div style="position:absolute;left:40%;top:50%;transform:translateY(-50%);
-              font-family:'Plantagenet Cherokee',serif;font-weight:500;font-size:3em;
-              line-height:1.1;color:#317168;width:48%;">
-    Amplifying Talk Impact<br>through Visual<br>Reinforcement
-  </div>
+<div class="columns">
+<div class="column column-right" style="width:38%;">
+<p><img data-src="images/meadowlark_bird.png" class="title-bird"></p>
+</div><div class="column" style="width:62%;">
+<p><span class="title-text">Amplifying Talk Impact through Visual Reinforcement</span></p>
+</div></div>
+<aside class="notes">
+<p>Not sure if I love this title, but trying to come up with something that frames the overarching point—that “the slides” are secondary to “the point” and “the narrative”… but they do still matter.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section>
+<section id="why-do-we-have-slides-in-a-talk" class="title-slide slide level1 center" data-background-color="var(--divider-bg)">
+<h1>Why do we have slides in a talk?</h1>
+<aside class="notes">
+<p>“Highest Level Situation”</p>
+<p>Verbally: a good place to start is being clear on why we have slides in a talk in the first place…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-1" class="slide level2 center" data-background-image="images/pic_basketball_goal.jpg" data-background-size="auto 100%" data-background-position="right center">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div class="slide-body-heading">
+<p>The goal of any talk is <strong>audience impact</strong>.</p>
 </div>
+<div class="fragment">
+<p>Get them to <span class="emphasis">think differently</span></p>
+</div>
+<div class="fragment">
+<p>Get them to <span class="emphasis">try something new</span></p>
+</div>
+<div class="fragment">
+<p>Get them to <span class="emphasis">take action</span></p>
+</div>
+</div><div class="column" style="width:40%;">
+
+</div></div>
 </section>
-<section id="for-someone-to-act-on-information-they-must" class="slide level2 no-padding">
-<h2>For someone to act on<br>information, they must…</h2>
-<p>…be engaged with it.</p>
-<p>…understand it.</p>
-<p>…care about it.</p>
-<p>…remember it.</p>
-<ol type="1">
-<li>What are some words that encapsulate delivery for you?</li>
-</ol>
-<p><img data-src="images/pic_polevault.jpeg" style="position: absolute; top: -50px; right: -50px; height: calc(100% + 200px);"></p>
-</section>
-<section id="section-1" class="slide level2">
+<section id="section-2" class="slide level2">
 <h2></h2>
+<div class="slide-stack">
+<div class="slide-body-heading">
+<p><span class="emphasis">Slides</span> don’t drive the talk.</p>
+</div>
+<div class="fragment slide-body-heading">
+<p><span class="emphasis">The talk</span> drives the talk.</p>
+</div>
+<div class="fragment slide-body-heading">
+<p>Slides simply <span class="emphasis">reinforce</span> the talk.</p>
+</div>
+</div>
+<aside class="notes">
+<p>Slides are not where a talk starts.</p>
+<p>Verbally: Don’t worry! We WILL talk about slides. We just want to be clear that slides are not where a talk starts.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ask-what-can-the-slides-do-better-than-my-words" class="slide level2">
+<h2>Ask: What can the slides do better than my words?</h2>
+<ul>
+<li><strong>Keep the audience’s attention</strong> — the talk is bound by time and attention</li>
+<li><strong>Understand and care about the information</strong> — by directly reinforcing what the speaker is saying</li>
+<li><strong>Remember it</strong> — dual-encoding with multiple senses (hearing <em>and</em> seeing); brain science backs up that using multiple senses aids retention</li>
+</ul>
+</section>
+<section id="what-slides-should-not-primarily-do" class="slide level2">
+<h2>What slides should not (primarily) do</h2>
+<ul>
+<li>Remind the speaker what they’re supposed to be saying</li>
+</ul>
+<div class="fragment">
+<p><em>Caveat: break in case of emergency… they <strong>can</strong> be a visual aid to keep the speaker on track; that’s just a natural artifact if they do their primary job well!</em></p>
+</div>
+</section></section>
+<section>
+<section id="most-slide-decks-fail-to-deliver" class="title-slide slide level1 center" data-background-color="var(--divider-bg)">
+<h1>Most slide decks fail to deliver</h1>
+<aside class="notes">
+<p>“The Challenge”</p>
+<p>Verbal: this is partly because we don’t stop and think about what the role of the slides is, but it’s also because we operate as though the brain easily does some things that it just doesn’t. We’re going to briefly dip into some light neuroscience here…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3" class="slide level2" data-background-color="black" data-background-image="images/closeupeye-bw.jpg" data-background-size="auto 100%" data-background-position="right center">
+<h2></h2>
+<div class="absolute memory-label fragment" data-fragment-index="1" style="top: 7%; left: 4%; width: 24%; ">
+<p>Iconic Memory</p>
+</div>
+<div class="absolute memory-detail fragment fade-in-then-out" data-fragment-index="2" style="top: 9%; left: 32%; ">
+<p>Pre-Cognition</p>
+</div>
+<div class="absolute memory-arrow fragment" data-fragment-index="3" style="top: 28%; left: 4%; width: 24%; ">
+<p>▼</p>
+</div>
+<div class="absolute memory-label fragment" data-fragment-index="3" style="top: 38%; left: 4%; width: 24%; ">
+<p>Short-Term Memory</p>
+</div>
+<div class="absolute memory-detail fragment fade-in-then-out" data-fragment-index="4" style="top: 42%; left: 32%; ">
+<p>7 ± 2</p>
+</div>
+<div class="absolute memory-arrow fragment" data-fragment-index="5" style="top: 60%; left: 4%; width: 24%; ">
+<p>▼</p>
+</div>
+<div class="absolute memory-label fragment" data-fragment-index="5" style="top: 70%; left: 4%; width: 24%; ">
+<p>Long-Term Memory</p>
+</div>
+<div class="absolute memory-detail fragment" data-fragment-index="6" style="top: 68%; left: 32%; ">
+<p>Tomorrow,<br>Next Week,<br>Next Month</p>
+</div>
+<aside class="notes">
+<p>The human brain has limitations:</p>
+<ul>
+<li>Iconic memory — pre-cognition; everything comes in and gets processed</li>
+<li>Short-term memory / Miller’s Law (7 +/- 2)</li>
+<li>Long-term memory</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="shorthand-minimize-cognitive-load" class="slide level2" data-background-image="images/pic_cognitive_load.jpg" data-background-size="auto 100%" data-background-position="right center">
+<h2>Shorthand → Minimize cognitive load</h2>
+<aside class="notes">
+<p>Physical pic of “cognitive” load / lady w/ pots on her head (sets up callback later to risks/realities of being clever).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="how-many-5s-are-in-this-set-of-numbers" class="slide level2">
+<h2>How many 5s are in this set of numbers?</h2>
+<p><br><br></p>
+<div class="digit-wall">
+<p>4979027<span class="fragment custom five-pop" data-fragment-index="1">5</span>647902894728624092406037070<span class="fragment custom five-pop" data-fragment-index="1">5</span>70279072<br>
+08029007302<span class="fragment custom five-pop" data-fragment-index="1">5</span>01270237008374082078720272007083<br>
+0260270379377<span class="fragment custom five-pop" data-fragment-index="1">5</span>709707377970667462097094702780<br>
+79709723097230979<span class="fragment custom five-pop" data-fragment-index="1">5</span>927<span class="fragment custom five-pop" data-fragment-index="1">5</span>0927279798734972608027</p>
+</div>
+<p><br><br></p>
+<p><span class="muted">Source: <em>Information Dashboard Design</em> by Stephen Few</span></p>
+<aside class="notes">
+<p>Likely need to cut for time. It IS a good way to get some quick interactivity and have them “feel” cognitive load, though.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="some-simple-tactics-can-reduce-cognitive-load" class="title-slide slide level1 center" data-background-color="var(--divider-bg)">
+<h1>Some simple tactics can reduce cognitive load</h1>
+<aside class="notes">
+<p>“The solutions”</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="maximize-the-data-pixel-ratio" class="slide level2">
+<h2>Maximize the data-pixel ratio!</h2>
+<p><br><br></p>
+<div class="ratio-fraction">
+<div class="ratio-annotation">
+<p>Pixels that represent actual data or information</p>
+</div>
+<div class="numerator">
+<p>Data-Information Pixels</p>
+</div>
+<div class="denominator">
+<p>All Non-Background Pixels</p>
+</div>
+<div class="ratio-annotation">
+<p>Every pixel that is not simply the background color</p>
+</div>
+</div>
+<p><br></p>
+<p><span class="muted">Tufte posited “the data-ink ratio”; Stephen Few derived “the data-pixel ratio.”</span></p>
+<aside class="notes">
+<p>Visually define — multiple slides, but they go quick.</p>
+<p>Close with, verbally: this is reducing cognitive load by giving the brain fewer decisions to make about “what matters.”</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="increase-the-data-pixel-ratio-of-a-chart" class="slide level2" data-visibility="uncounted">
+<h2>(Increase the data-pixel ratio of) A chart</h2>
 <div style="position: relative; width: 75%; margin: 0 auto;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -178,11 +481,25 @@ Tim Wilson
 </div>
 </div>
 </div>
-<p><span class="callout-label fragment" style="position: absolute; top: 30%; left: 95%;">← Ignore</span></p>
+<p><span class="callout-label absolute fragment" data-fragment-index="1" style="top: 30%; left: 95%; ">← Ignore</span> <span class="callout-label absolute fragment" data-fragment-index="2" style="top: 3%; left: 18%; ">Ignore →</span> <span class="callout-label absolute fragment" data-fragment-index="3" style="top: 45%; left: -18%; ">Tilt my head to read! →</span> <span class="callout-label absolute fragment" data-fragment-index="4" style="top: 95%; left: 55%; ">↑ Tilt my head to read!</span> <span class="callout-label absolute fragment" data-fragment-index="5" style="top: 99%; left: 38%; ">↑ I already knew that</span></p>
 </div>
+<aside class="notes">
+<p>Quick hit: before / after. These all can be literally a quick hit before/after; can return to that to go deeper as to what’s going on.</p>
+<p>Each callout is a click, building up the cognitive load the audience is carrying while reading a “default” chart.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="increase-the-data-pixel-ratio-of-a-chart-1" class="slide level2" data-visibility="uncounted">
+<h2>(Increase the data-pixel ratio of) A chart</h2>
 <div style="position: relative; width: 75%; margin: 0 auto;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -194,63 +511,1226 @@ Tim Wilson
 </div>
 </div>
 </div>
+<aside class="notes">
+<p>The “after”: same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="section-3" class="slide level2 full-bleed" data-background-color="#000000">
-<h2></h2>
-<div style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden;background:#000;font-family:'Nunito',sans-serif;">
+<section id="increase-the-data-pixel-ratio-of-a-table" class="slide level2">
+<h2>(Increase the data-pixel ratio of) A table</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="aefuvdhwtu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#aefuvdhwtu table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  <!-- Eye photo: right 52%, show the right/eye portion of the source image -->
-  <img src="images/closeupeye-bw.jpg" style="position:absolute;right:0;top:0;height:100%;width:52%;
-              object-fit:cover;object-position:right center;">
+#aefuvdhwtu thead, #aefuvdhwtu tbody, #aefuvdhwtu tfoot, #aefuvdhwtu tr, #aefuvdhwtu td, #aefuvdhwtu th {
+  border-style: none;
+}
 
-  <!-- ① Iconic Memory -->
-  <div class="fragment" data-fragment-index="1" style="position:absolute;left:4%;top:7%;
-              color:#fff;font-weight:700;font-size:2em;line-height:1.2;">
-    Iconic<br>Memory
-  </div>
+#aefuvdhwtu p {
+  margin: 0;
+  padding: 0;
+}
 
-  <!-- ② Pre-Cognition (fades out on click 3) -->
-  <div class="fragment fade-in-then-out" data-fragment-index="2" style="position:absolute;left:32%;top:11%;
-              color:#f59e0b;font-weight:600;font-size:1.2em;">
-    Pre-Cognition
-  </div>
+#aefuvdhwtu .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 34px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
 
-  <!-- ③ Arrow 1 + Short-Term Memory -->
-  <div class="fragment" data-fragment-index="3" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;">
-    <div style="position:absolute;left:9%;top:30%;
-                color:#fff;font-size:1.8em;line-height:1;">▼</div>
-    <div style="position:absolute;left:4%;top:40%;
-                color:#fff;font-weight:700;font-size:2em;line-height:1.2;">
-      Short-Term<br>Memory
-    </div>
-  </div>
+#aefuvdhwtu .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
 
-  <!-- ④ 7 ± 2 (fades out on click 5) -->
-  <div class="fragment fade-in-then-out" data-fragment-index="4" style="position:absolute;left:32%;top:44%;
-              color:#f59e0b;font-weight:700;font-size:2.6em;">
-    7 ± 2
-  </div>
+#aefuvdhwtu .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
 
-  <!-- ⑤ Arrow 2 + Long-Term Memory -->
-  <div class="fragment" data-fragment-index="5" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;">
-    <div style="position:absolute;left:9%;top:63%;
-                color:#fff;font-size:1.8em;line-height:1;">▼</div>
-    <div style="position:absolute;left:4%;top:72%;
-                color:#fff;font-weight:700;font-size:2em;line-height:1.2;">
-      Long-Term<br>Memory
-    </div>
-  </div>
+#aefuvdhwtu .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
 
-  <!-- ⑥ Tomorrow… -->
-  <div class="fragment" data-fragment-index="6" style="position:absolute;left:32%;top:68%;
-              color:#f59e0b;font-weight:600;font-size:1.2em;line-height:1.55;">
-    Tomorrow,<br>Next Week,<br>Next Month
-  </div>
+#aefuvdhwtu .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#aefuvdhwtu .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#aefuvdhwtu .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#aefuvdhwtu .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #725496;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#aefuvdhwtu .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #725496;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#aefuvdhwtu .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#aefuvdhwtu .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#aefuvdhwtu .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#aefuvdhwtu .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#aefuvdhwtu .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#aefuvdhwtu .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#aefuvdhwtu .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#aefuvdhwtu .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#aefuvdhwtu .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#aefuvdhwtu .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aefuvdhwtu .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#aefuvdhwtu .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#aefuvdhwtu .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#aefuvdhwtu .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aefuvdhwtu .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#aefuvdhwtu .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#aefuvdhwtu .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#aefuvdhwtu .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aefuvdhwtu .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#aefuvdhwtu .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#aefuvdhwtu .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#aefuvdhwtu .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#aefuvdhwtu .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#aefuvdhwtu .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aefuvdhwtu .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#aefuvdhwtu .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#aefuvdhwtu .gt_left {
+  text-align: left;
+}
+
+#aefuvdhwtu .gt_center {
+  text-align: center;
+}
+
+#aefuvdhwtu .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#aefuvdhwtu .gt_font_normal {
+  font-weight: normal;
+}
+
+#aefuvdhwtu .gt_font_bold {
+  font-weight: bold;
+}
+
+#aefuvdhwtu .gt_font_italic {
+  font-style: italic;
+}
+
+#aefuvdhwtu .gt_super {
+  font-size: 65%;
+}
+
+#aefuvdhwtu .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#aefuvdhwtu .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#aefuvdhwtu .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#aefuvdhwtu .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#aefuvdhwtu .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#aefuvdhwtu .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#aefuvdhwtu .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#aefuvdhwtu .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#aefuvdhwtu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="continent" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Continent</th>
+<th id="countries" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Countries</th>
+<th id="mean_lifeExp" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Life Expectancy</th>
+<th id="total_pop" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Total Population</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="continent">Asia</td>
+<td class="gt_row gt_right" headers="countries">33</td>
+<td class="gt_row gt_right" headers="mean_lifeExp">70.7</td>
+<td class="gt_row gt_right" headers="total_pop">3,811,953,827</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="continent">Africa</td>
+<td class="gt_row gt_right gt_striped" headers="countries">52</td>
+<td class="gt_row gt_right gt_striped" headers="mean_lifeExp">54.8</td>
+<td class="gt_row gt_right gt_striped" headers="total_pop">929,539,692</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="continent">Americas</td>
+<td class="gt_row gt_right" headers="countries">25</td>
+<td class="gt_row gt_right" headers="mean_lifeExp">73.6</td>
+<td class="gt_row gt_right" headers="total_pop">898,871,184</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center gt_striped" headers="continent">Europe</td>
+<td class="gt_row gt_right gt_striped" headers="countries">30</td>
+<td class="gt_row gt_right gt_striped" headers="mean_lifeExp">77.6</td>
+<td class="gt_row gt_right gt_striped" headers="total_pop">586,098,529</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="continent">Oceania</td>
+<td class="gt_row gt_right" headers="countries">2</td>
+<td class="gt_row gt_right" headers="mean_lifeExp">80.7</td>
+<td class="gt_row gt_right" headers="total_pop">24,549,947</td>
+</tr>
+</tbody>
+</table>
 
 </div>
+</div>
+</div>
+<aside class="notes">
+<p>Quick hit: before / after…</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="increase-the-data-pixel-ratio-of-a-table-1" class="slide level2" data-visibility="uncounted">
+<h2>(Increase the data-pixel ratio of) A table</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="okxranjsgq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#okxranjsgq table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
+#okxranjsgq thead, #okxranjsgq tbody, #okxranjsgq tfoot, #okxranjsgq tr, #okxranjsgq td, #okxranjsgq th {
+  border-style: none;
+}
+
+#okxranjsgq p {
+  margin: 0;
+  padding: 0;
+}
+
+#okxranjsgq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 34px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #F9EBDC;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: hidden;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#okxranjsgq .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#okxranjsgq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #F9EBDC;
+  border-bottom-width: 0;
+}
+
+#okxranjsgq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #F9EBDC;
+  border-top-width: 0;
+}
+
+#okxranjsgq .gt_heading {
+  background-color: #F9EBDC;
+  text-align: center;
+  border-bottom-color: #F9EBDC;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#okxranjsgq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#okxranjsgq .gt_col_headings {
+  border-top-style: hidden;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #292F20;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#okxranjsgq .gt_col_heading {
+  color: #333333;
+  background-color: #F9EBDC;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#okxranjsgq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #F9EBDC;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#okxranjsgq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#okxranjsgq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#okxranjsgq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #292F20;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#okxranjsgq .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#okxranjsgq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #F9EBDC;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#okxranjsgq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #F9EBDC;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#okxranjsgq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#okxranjsgq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#okxranjsgq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: hidden;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#okxranjsgq .gt_stub {
+  color: #333333;
+  background-color: #F9EBDC;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#okxranjsgq .gt_stub_row_group {
+  color: #333333;
+  background-color: #F9EBDC;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#okxranjsgq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#okxranjsgq .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#okxranjsgq .gt_summary_row {
+  color: #333333;
+  background-color: #F9EBDC;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#okxranjsgq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#okxranjsgq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#okxranjsgq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#okxranjsgq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #F9EBDC;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#okxranjsgq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#okxranjsgq .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#okxranjsgq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#okxranjsgq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#okxranjsgq .gt_footnotes {
+  color: #333333;
+  background-color: #F9EBDC;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#okxranjsgq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#okxranjsgq .gt_sourcenotes {
+  color: #333333;
+  background-color: #F9EBDC;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#okxranjsgq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#okxranjsgq .gt_left {
+  text-align: left;
+}
+
+#okxranjsgq .gt_center {
+  text-align: center;
+}
+
+#okxranjsgq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#okxranjsgq .gt_font_normal {
+  font-weight: normal;
+}
+
+#okxranjsgq .gt_font_bold {
+  font-weight: bold;
+}
+
+#okxranjsgq .gt_font_italic {
+  font-style: italic;
+}
+
+#okxranjsgq .gt_super {
+  font-size: 65%;
+}
+
+#okxranjsgq .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#okxranjsgq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#okxranjsgq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#okxranjsgq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#okxranjsgq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#okxranjsgq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#okxranjsgq .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#okxranjsgq .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#okxranjsgq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_col_headings header">
+<th id="continent" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Continent</th>
+<th id="countries" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Countries</th>
+<th id="mean_lifeExp" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean Life Expectancy</th>
+<th id="total_pop" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Total Population</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_center" headers="continent">Asia</td>
+<td class="gt_row gt_right" headers="countries">33</td>
+<td class="gt_row gt_right" headers="mean_lifeExp">70.7</td>
+<td class="gt_row gt_right" headers="total_pop">3,811,953,827</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="continent">Africa</td>
+<td class="gt_row gt_right" headers="countries">52</td>
+<td class="gt_row gt_right" headers="mean_lifeExp">54.8</td>
+<td class="gt_row gt_right" headers="total_pop">929,539,692</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="continent">Americas</td>
+<td class="gt_row gt_right" headers="countries">25</td>
+<td class="gt_row gt_right" headers="mean_lifeExp">73.6</td>
+<td class="gt_row gt_right" headers="total_pop">898,871,184</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="continent">Europe</td>
+<td class="gt_row gt_right" headers="countries">30</td>
+<td class="gt_row gt_right" headers="mean_lifeExp">77.6</td>
+<td class="gt_row gt_right" headers="total_pop">586,098,529</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="continent">Oceania</td>
+<td class="gt_row gt_right" headers="countries">2</td>
+<td class="gt_row gt_right" headers="mean_lifeExp">80.7</td>
+<td class="gt_row gt_right" headers="total_pop">24,549,947</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="possible-bonus-a-tablethat-can-be-processed-without-reading-s" class="slide level2">
+<h2>[Possible Bonus] A table…that can be processed without reading #s</h2>
+<p><em>[Placeholder: same continent table with horizontal bars embedded in the Total Population column — likely built with <code>gt</code> + <code>gtExtras::gt_plt_bar()</code>. To be built.]</em></p>
+<aside class="notes">
+<p>Not strictly data-pixel ratio territory, but is a cognitive load reducer: add horizontal bars in using a gt table.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="increase-the-data-pixel-ratio-of-text" class="slide level2 statement">
+<h2>(Increase the data-pixel ratio of) Text!</h2>
+<p>The application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.</p>
+<aside class="notes">
+<p>Quick hit: before / after — slightly verbose statement for the first, then tightened up overall words AND heavy-ing up a key point.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="increase-the-data-pixel-ratio-of-text-1" class="slide level2 statement" data-visibility="uncounted">
+<h2>(Increase the data-pixel ratio of) Text!</h2>
+<p>The new preprocessing technique reduced model run-time by <span class="emphasis">30–40%</span>.</p>
+</section>
+<section id="increase-the-data-pixel-ratio-of-code" class="slide level2">
+<h2>(Increase the data-pixel ratio of) Code!</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>penguins_clean <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a></a>  <span class="fu">drop_na</span>(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a></a>  <span class="fu">mutate</span>(<span class="at">body_mass_kg =</span> body_mass_g <span class="sc">/</span> <span class="dv">1000</span>,</span>
+<span id="cb1-4"><a></a>         <span class="at">species =</span> <span class="fu">as.factor</span>(species),</span>
+<span id="cb1-5"><a></a>         <span class="at">island =</span> <span class="fu">as.factor</span>(island),</span>
+<span id="cb1-6"><a></a>         <span class="at">sex =</span> <span class="fu">as.factor</span>(sex))</span>
+<span id="cb1-7"><a></a></span>
+<span id="cb1-8"><a></a>model_spec <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_kg <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> bill_length_mm <span class="sc">+</span></span>
+<span id="cb1-9"><a></a>                   bill_depth_mm <span class="sc">+</span> species <span class="sc">+</span> sex,</span>
+<span id="cb1-10"><a></a>                 <span class="at">data =</span> penguins_clean)</span>
+<span id="cb1-11"><a></a></span>
+<span id="cb1-12"><a></a>model_summary <span class="ot">&lt;-</span> broom<span class="sc">::</span><span class="fu">tidy</span>(model_spec, <span class="at">conf.int =</span> <span class="cn">TRUE</span>, <span class="at">conf.level =</span> <span class="fl">0.95</span>)</span>
+<span id="cb1-13"><a></a></span>
+<span id="cb1-14"><a></a>model_summary <span class="sc">|&gt;</span></span>
+<span id="cb1-15"><a></a>  <span class="fu">filter</span>(term <span class="sc">!=</span> <span class="st">"(Intercept)"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-16"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(<span class="fu">abs</span>(estimate)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<aside class="notes">
+<p>Quick hit: before / after — limit the initial version to JUST be reducing the volume of code shown and making ONE LINE of the code a larger font and bold/black; other code is “context” — smaller font BUT NOT SMALL and lighter color BUT NOT TOO LIGHT such that there is projector risk.</p>
+<p>[Placeholder styling note: the “after” treatment below uses Quarto’s code-line-numbers highlighting; a fuller size/color treatment may need SCSS tuning against the syntax highlighter.]</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="increase-the-data-pixel-ratio-of-code-1" class="slide level2" data-visibility="uncounted">
+<h2>(Increase the data-pixel ratio of) Code!</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>penguins_clean <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a></a>  <span class="fu">drop_na</span>(body_mass_g, flipper_length_mm)</span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a>model_spec <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_kg <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> species <span class="sc">+</span> sex,</span>
+<span id="cb2-5"><a></a>                 <span class="at">data =</span> penguins_clean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="building-information-make-it-impossible-to-ignore" class="slide level2">
+<h2>Building information (Make it impossible to ignore)</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-code-line-numbers="|1-2|4-5|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>penguins_clean <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">drop_na</span>(body_mass_g, flipper_length_mm)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a>model_spec <span class="ot">&lt;-</span> <span class="fu">lm</span>(body_mass_kg <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> species <span class="sc">+</span> sex,</span>
+<span id="cb3-5"><a></a>                 <span class="at">data =</span> penguins_clean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Choose a template that represents you (avoid the default)</p>
+<aside class="notes">
+<p>Pushes the same code example farther with builds and even a highlight: each click walks through the code, ending with the key line highlighted alone.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="brain-breaks-can-be-useful" class="slide level2">
+<h2>“Brain breaks” can be useful</h2>
+<p>Brain breaks (Make it interesting to pay attention):</p>
+<ul>
+<li><strong>Reveal</strong> — show something that is hard to describe (often a moment of revelation)</li>
+<li><strong>Explain</strong> — images can create connections that words cannot</li>
+<li><strong>Delight</strong> — aesthetics keep people interested</li>
+</ul>
+<p><br></p>
+<p>Gifs, comics, memes, blank screen</p>
+<aside class="notes">
+<p>For the audience (TED book).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section id="the-talk-is-about-the-idea.-the-slides-support-the-idea." class="title-slide slide level1 center" data-background-color="var(--divider-bg)">
+<h1>The talk is about the idea. The slides support the idea.</h1>
+<aside class="notes">
+<p>“Closing”</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+
+<section>
+<section id="why-are-so-many-slide-decks-so-bad" class="title-slide slide level1 center" data-background-color="var(--divider-bg)">
+<h1>Why are so many slide decks so bad?</h1>
 
 </section>
+<section id="normative-conformity" class="slide level2">
+<h2>normative conformity</h2>
+<blockquote>
+<p>“the tendency of individuals to adjust their behavior, attitudes, or beliefs to align with the perceived standards or expectations of a group or society”</p>
+</blockquote>
+</section>
+<section id="normative-conformityfor-slide-decks" class="slide level2">
+<h2>normative conformity…for slide decks</h2>
+<blockquote>
+<p>“the tendency of employees to adjust their presentations to align with the perceived standards of their organization”</p>
+</blockquote>
+</section>
+<section id="normative-conformityillustrated" class="slide level2 statement">
+<h2>normative conformity…illustrated</h2>
+<p>“This slide deck is killing me.”</p>
+<div class="fragment">
+<p>“Let me produce another one.”</p>
+</div>
+</section>
+<section id="you-have-the-power-to-change" class="slide level2" data-background-image="images/pic_uncle_sam.png" data-background-size="auto 100%" data-background-position="right center">
+<h2>You have the power to change!</h2>
+<aside class="notes">
+<p>Uncle Sam-like pic, full bleed to the right.</p>
+<p>Then choose your own adventure with what you want to learn more about.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/meadowlark-logo.png" class="slide-logo"></p>
@@ -575,7 +2055,7 @@ Tim Wilson
         }
           var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
           var mailtoRegex = new RegExp(/^mailto:/);
-            var filterRegex = new RegExp('/' + window.location.host + '/');
+            var filterRegex = new RegExp("https:\/\/gilliganondata\.github\.io\/dataviz-r-oriented\/");
           var isInternal = (href) => {
               return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
           }

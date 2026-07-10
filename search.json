@@ -1,65 +1,170 @@
 [
   {
-    "objectID": "rev-by-month.html",
-    "href": "rev-by-month.html",
-    "title": "Revenue by Month — Three Theme Treatments",
-    "section": "",
-    "text": "library(tidyverse)\nlibrary(ggthemes)\nlibrary(scales)"
-  },
-  {
-    "objectID": "rev-by-month.html#the-data",
-    "href": "rev-by-month.html#the-data",
-    "title": "Revenue by Month — Three Theme Treatments",
-    "section": "The Data",
-    "text": "The Data\nA synthetic 13-month revenue series with a gentle upward trend and realistic month-to-month variation. Median revenue is set at $20 million.\n\nset.seed(42)\n\n# Build a trend + noise series, then rescale so the median lands at $20M\nn &lt;- 13\ntrend  &lt;- seq(0, 1, length.out = n)          # gentle upward slope\nnoise  &lt;- rnorm(n, mean = 0, sd = 0.18)      # realistic variation\nraw    &lt;- trend + noise\n\n# Rescale: shift so median = 0, scale so spread feels natural, then add $20M\nraw_centered &lt;- raw - median(raw)\nrevenue_raw  &lt;- raw_centered * 3e6 + 20e6    # ~$3M std dev around $20M\n\ndf &lt;- tibble(\n  month   = seq(as.Date(\"2024-01-01\"), by = \"month\", length.out = n),\n  revenue = revenue_raw\n)\n\n# Quick look\ndf |&gt; mutate(revenue_M = scales::dollar(revenue / 1e6, suffix = \"M\"))\n\n# A tibble: 13 × 3\n   month        revenue revenue_M\n   &lt;date&gt;         &lt;dbl&gt; &lt;chr&gt;    \n 1 2024-01-01 19041433. $19.04M  \n 2 2024-02-01 18246179. $18.25M  \n 3 2024-03-01 18997205. $19.00M  \n 4 2024-04-01 19392862. $19.39M  \n 5 2024-05-01 19519421. $19.52M  \n 6 2024-06-01 19493809. $19.49M  \n 7 2024-07-01 20617338. $20.62M  \n 8 2024-08-01 20000000  $20.00M  \n 9 2024-09-01 21391065. $21.39M  \n10 2024-10-01 20517250. $20.52M  \n11 2024-11-01 21505745. $21.51M  \n12 2024-12-01 22285904. $22.29M  \n13 2025-01-01 20551131. $20.55M"
-  },
-  {
-    "objectID": "rev-by-month.html#chart-1-ggplot2-defaults",
-    "href": "rev-by-month.html#chart-1-ggplot2-defaults",
-    "title": "Revenue by Month — Three Theme Treatments",
-    "section": "Chart 1 — ggplot2 Defaults",
-    "text": "Chart 1 — ggplot2 Defaults\nNo theme() call at all; pure out-of-the-box ggplot2.\n\np_base &lt;- ggplot(df, aes(x = month, y = revenue)) +\n  geom_line(linewidth = 0.9) +\n  geom_point(size = 2.5) +\n  scale_x_date(date_labels = \"%b %Y\", date_breaks = \"1 month\") +\n  scale_y_continuous(\n    labels = label_dollar(scale = 1e-6, suffix = \"M\"),\n    limits = c(0, NA)\n  ) +\n  labs(\n    title   = \"Monthly Revenue\",\n    subtitle = \"13-month trend | Jan 2024 – Jan 2025\",\n    x       = NULL,\n    y       = \"Revenue\"\n  )\n\np_base"
-  },
-  {
-    "objectID": "rev-by-month.html#chart-2-tufte-theme-ggthemes",
-    "href": "rev-by-month.html#chart-2-tufte-theme-ggthemes",
-    "title": "Revenue by Month — Three Theme Treatments",
-    "section": "Chart 2 — Tufte Theme (ggthemes)",
-    "text": "Chart 2 — Tufte Theme (ggthemes)\nEdward Tufte’s minimalist aesthetic: no background, muted grid, range-frame axes.\n\np_base +\n  theme_tufte(base_size = 13) +\n  geom_rangeframe(color = \"grey30\")   # Tufte-style axis end-caps"
-  },
-  {
-    "objectID": "rev-by-month.html#chart-3-maximum-data-pixel-ratio",
-    "href": "rev-by-month.html#chart-3-maximum-data-pixel-ratio",
-    "title": "Revenue by Month — Three Theme Treatments",
-    "section": "Chart 3 — Maximum Data-Pixel Ratio",
-    "text": "Chart 3 — Maximum Data-Pixel Ratio\nEvery non-data element stripped away: no panel background, no grid lines, no axis ticks, no axis titles, minimal axis text. The data line is the only thing left to look at.\n\np_base +\n  labs(title = NULL, subtitle = NULL, x = NULL, y = NULL) +\n  theme(\n    # Remove all panel elements\n    panel.background  = element_blank(),\n    panel.grid.major  = element_blank(),\n    panel.grid.minor  = element_blank(),\n    panel.border      = element_blank(),\n\n    # Remove axis infrastructure\n    axis.ticks        = element_blank(),\n    axis.line         = element_blank(),\n\n    # Minimal axis text — just enough to orient the reader\n    axis.text.x       = element_text(size = 9, color = \"grey50\", margin = margin(t = 4)),\n    axis.text.y       = element_text(size = 9, color = \"grey50\", margin = margin(r = 4)),\n\n    # Strip the plot frame entirely\n    plot.background   = element_blank(),\n\n    # Tight margins\n    plot.margin       = margin(8, 8, 8, 8)\n  )"
-  },
-  {
     "objectID": "dataviz-best-practices.html#section",
     "href": "dataviz-best-practices.html#section",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Amplifying Talk Impactthrough VisualReinforcement"
-  },
-  {
-    "objectID": "dataviz-best-practices.html#for-someone-to-act-on-information-they-must",
-    "href": "dataviz-best-practices.html#for-someone-to-act-on-information-they-must",
-    "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "For someone to act oninformation, they must…",
-    "text": "For someone to act oninformation, they must…\n…be engaged with it.\n…understand it.\n…care about it.\n…remember it.\n\nWhat are some words that encapsulate delivery for you?"
+    "text": "Amplifying Talk Impact through Visual Reinforcement\n\n\nNot sure if I love this title, but trying to come up with something that frames the overarching point—that “the slides” are secondary to “the point” and “the narrative”… but they do still matter."
   },
   {
     "objectID": "dataviz-best-practices.html#section-1",
     "href": "dataviz-best-practices.html#section-1",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "← Ignore"
+    "text": "The goal of any talk is audience impact.\n\n\nGet them to think differently\n\n\nGet them to try something new\n\n\nGet them to take action"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#section-2",
+    "href": "dataviz-best-practices.html#section-2",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "",
+    "text": "Slides don’t drive the talk.\n\n\nThe talk drives the talk.\n\n\nSlides simply reinforce the talk.\n\n\n\nSlides are not where a talk starts.\nVerbally: Don’t worry! We WILL talk about slides. We just want to be clear that slides are not where a talk starts."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#ask-what-can-the-slides-do-better-than-my-words",
+    "href": "dataviz-best-practices.html#ask-what-can-the-slides-do-better-than-my-words",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "Ask: What can the slides do better than my words?",
+    "text": "Ask: What can the slides do better than my words?\n\nKeep the audience’s attention — the talk is bound by time and attention\nUnderstand and care about the information — by directly reinforcing what the speaker is saying\nRemember it — dual-encoding with multiple senses (hearing and seeing); brain science backs up that using multiple senses aids retention"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#what-slides-should-not-primarily-do",
+    "href": "dataviz-best-practices.html#what-slides-should-not-primarily-do",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "What slides should not (primarily) do",
+    "text": "What slides should not (primarily) do\n\nRemind the speaker what they’re supposed to be saying\n\n\nCaveat: break in case of emergency… they can be a visual aid to keep the speaker on track; that’s just a natural artifact if they do their primary job well!"
   },
   {
     "objectID": "dataviz-best-practices.html#section-3",
     "href": "dataviz-best-practices.html#section-3",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "IconicMemory\n  \n\n  \n  \n    Pre-Cognition\n  \n\n  \n  \n    ▼\n    \n      Short-TermMemory\n    \n  \n\n  \n  \n    7 ± 2\n  \n\n  \n  \n    ▼\n    \n      Long-TermMemory\n    \n  \n\n  \n  \n    Tomorrow,Next Week,Next Month"
+    "text": "Iconic Memory\n\n\nPre-Cognition\n\n\n▼\n\n\nShort-Term Memory\n\n\n7 ± 2\n\n\n▼\n\n\nLong-Term Memory\n\n\nTomorrow,Next Week,Next Month\n\n\nThe human brain has limitations:\n\nIconic memory — pre-cognition; everything comes in and gets processed\nShort-term memory / Miller’s Law (7 +/- 2)\nLong-term memory"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#shorthand-minimize-cognitive-load",
+    "href": "dataviz-best-practices.html#shorthand-minimize-cognitive-load",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "Shorthand → Minimize cognitive load",
+    "text": "Shorthand → Minimize cognitive load\n\nPhysical pic of “cognitive” load / lady w/ pots on her head (sets up callback later to risks/realities of being clever)."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#how-many-5s-are-in-this-set-of-numbers",
+    "href": "dataviz-best-practices.html#how-many-5s-are-in-this-set-of-numbers",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "How many 5s are in this set of numbers?",
+    "text": "How many 5s are in this set of numbers?\n\n\n49790275647902894728624092406037070570279072\n08029007302501270237008374082078720272007083\n02602703793775709707377970667462097094702780\n79709723097230979592750927279798734972608027\n\n\nSource: Information Dashboard Design by Stephen Few\n\nLikely need to cut for time. It IS a good way to get some quick interactivity and have them “feel” cognitive load, though."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#maximize-the-data-pixel-ratio",
+    "href": "dataviz-best-practices.html#maximize-the-data-pixel-ratio",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "Maximize the data-pixel ratio!",
+    "text": "Maximize the data-pixel ratio!\n\n\n\nPixels that represent actual data or information\n\n\nData-Information Pixels\n\n\nAll Non-Background Pixels\n\n\nEvery pixel that is not simply the background color\n\n\n\nTufte posited “the data-ink ratio”; Stephen Few derived “the data-pixel ratio.”\n\nVisually define — multiple slides, but they go quick.\nClose with, verbally: this is reducing cognitive load by giving the brain fewer decisions to make about “what matters.”"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-chart",
+    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-chart",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "(Increase the data-pixel ratio of) A chart",
+    "text": "(Increase the data-pixel ratio of) A chart\n\n\n\n\n\n\n\n\n\n\n← Ignore Ignore → Tilt my head to read! → ↑ Tilt my head to read! ↑ I already knew that\n\n\nQuick hit: before / after. These all can be literally a quick hit before/after; can return to that to go deeper as to what’s going on.\nEach callout is a click, building up the cognitive load the audience is carrying while reading a “default” chart."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-chart-1",
+    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-chart-1",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "(Increase the data-pixel ratio of) A chart",
+    "text": "(Increase the data-pixel ratio of) A chart\n\n\n\n\n\n\n\n\n\n\n\n\nThe “after”: same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table",
+    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "(Increase the data-pixel ratio of) A table",
+    "text": "(Increase the data-pixel ratio of) A table\n\n\n\n\n\n\n\n\nContinent\nCountries\nMean Life Expectancy\nTotal Population\n\n\n\n\nAsia\n33\n70.7\n3,811,953,827\n\n\nAfrica\n52\n54.8\n929,539,692\n\n\nAmericas\n25\n73.6\n898,871,184\n\n\nEurope\n30\n77.6\n586,098,529\n\n\nOceania\n2\n80.7\n24,549,947\n\n\n\n\n\n\n\n\nQuick hit: before / after…"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table-1",
+    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table-1",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "(Increase the data-pixel ratio of) A table",
+    "text": "(Increase the data-pixel ratio of) A table\n\n\n\n\n\n\n\n\nContinent\nCountries\nMean Life Expectancy\nTotal Population\n\n\n\n\nAsia\n33\n70.7\n3,811,953,827\n\n\nAfrica\n52\n54.8\n929,539,692\n\n\nAmericas\n25\n73.6\n898,871,184\n\n\nEurope\n30\n77.6\n586,098,529\n\n\nOceania\n2\n80.7\n24,549,947"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#possible-bonus-a-tablethat-can-be-processed-without-reading-s",
+    "href": "dataviz-best-practices.html#possible-bonus-a-tablethat-can-be-processed-without-reading-s",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "[Possible Bonus] A table…that can be processed without reading #s",
+    "text": "[Possible Bonus] A table…that can be processed without reading #s\n[Placeholder: same continent table with horizontal bars embedded in the Total Population column — likely built with gt + gtExtras::gt_plt_bar(). To be built.]\n\nNot strictly data-pixel ratio territory, but is a cognitive load reducer: add horizontal bars in using a gt table."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-text",
+    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-text",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "(Increase the data-pixel ratio of) Text!",
+    "text": "(Increase the data-pixel ratio of) Text!\nThe application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.\n\nQuick hit: before / after — slightly verbose statement for the first, then tightened up overall words AND heavy-ing up a key point."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-text-1",
+    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-text-1",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "(Increase the data-pixel ratio of) Text!",
+    "text": "(Increase the data-pixel ratio of) Text!\nThe new preprocessing technique reduced model run-time by 30–40%."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-code",
+    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-code",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "(Increase the data-pixel ratio of) Code!",
+    "text": "(Increase the data-pixel ratio of) Code!\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\nQuick hit: before / after — limit the initial version to JUST be reducing the volume of code shown and making ONE LINE of the code a larger font and bold/black; other code is “context” — smaller font BUT NOT SMALL and lighter color BUT NOT TOO LIGHT such that there is projector risk.\n[Placeholder styling note: the “after” treatment below uses Quarto’s code-line-numbers highlighting; a fuller size/color treatment may need SCSS tuning against the syntax highlighter.]"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-code-1",
+    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-code-1",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "(Increase the data-pixel ratio of) Code!",
+    "text": "(Increase the data-pixel ratio of) Code!\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm)\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + species + sex,\n                 data = penguins_clean)"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#building-information-make-it-impossible-to-ignore",
+    "href": "dataviz-best-practices.html#building-information-make-it-impossible-to-ignore",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "Building information (Make it impossible to ignore)",
+    "text": "Building information (Make it impossible to ignore)\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm)\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + species + sex,\n                 data = penguins_clean)\n\nChoose a template that represents you (avoid the default)\n\nPushes the same code example farther with builds and even a highlight: each click walks through the code, ending with the key line highlighted alone."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#brain-breaks-can-be-useful",
+    "href": "dataviz-best-practices.html#brain-breaks-can-be-useful",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "“Brain breaks” can be useful",
+    "text": "“Brain breaks” can be useful\nBrain breaks (Make it interesting to pay attention):\n\nReveal — show something that is hard to describe (often a moment of revelation)\nExplain — images can create connections that words cannot\nDelight — aesthetics keep people interested\n\n\nGifs, comics, memes, blank screen\n\nFor the audience (TED book)."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#normative-conformity",
+    "href": "dataviz-best-practices.html#normative-conformity",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "normative conformity",
+    "text": "normative conformity\n\n“the tendency of individuals to adjust their behavior, attitudes, or beliefs to align with the perceived standards or expectations of a group or society”"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#normative-conformityfor-slide-decks",
+    "href": "dataviz-best-practices.html#normative-conformityfor-slide-decks",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "normative conformity…for slide decks",
+    "text": "normative conformity…for slide decks\n\n“the tendency of employees to adjust their presentations to align with the perceived standards of their organization”"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#normative-conformityillustrated",
+    "href": "dataviz-best-practices.html#normative-conformityillustrated",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "normative conformity…illustrated",
+    "text": "normative conformity…illustrated\n“This slide deck is killing me.”\n\n“Let me produce another one.”"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#you-have-the-power-to-change",
+    "href": "dataviz-best-practices.html#you-have-the-power-to-change",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "You have the power to change!",
+    "text": "You have the power to change!\n\nUncle Sam-like pic, full bleed to the right.\nThen choose your own adventure with what you want to learn more about."
   }
 ]

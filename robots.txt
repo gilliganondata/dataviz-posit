@@ -1,0 +1,1 @@
+Sitemap: https://gilliganondata.github.io/dataviz-r-oriented/sitemap.xml
