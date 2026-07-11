@@ -99,54 +99,33 @@ Verbally: a good place to start is being clear on why we have slides in a talk
 in the first place…
 :::
 
-
 ## {.center background-image="images/pic_basketball_goal.jpg" background-size="auto 100%" background-position="right center"}
 
-:::: {.columns}
-
-::: {.column width="60%"}
+::: {.text-panel-left-60}
 
 ::: {.slide-body-heading}
-The goal of any talk is **audience impact**.
-:::
-
-::: {.fragment}
-Get them to [think differently]{.emphasis}
-:::
-
-::: {.fragment}
-Get them to [try something new]{.emphasis}
-:::
-
-::: {.fragment}
-Get them to [take action]{.emphasis}
+The goal of any talk is [audience impact]{.emphasis}.
 :::
 
 :::
 
-::: {.column width="40%"}
-:::
+##  {.center background-image="images/pic_basketball_goal.jpg" background-size="auto 100%" background-position="right center"}
 
-::::
-
-
-##
-
-:::: {.slide-stack}
+::: {.text-panel-left-60}
 
 ::: {.slide-body-heading}
-[Slides]{.emphasis} don't drive the talk.
+[Slides]{.emphasis} don't drive impact.
 :::
 
 ::: {.fragment .slide-body-heading}
-[The talk]{.emphasis} drives the talk.
+[The talk]{.emphasis} drives impact.
 :::
 
 ::: {.fragment .slide-body-heading}
-Slides simply [reinforce]{.emphasis} the talk.
+Slides simply [reinforce the talk]{.emphasis}.
 :::
 
-::::
+:::
 
 ::: {.notes}
 Slides are not where a talk starts.
@@ -154,7 +133,6 @@ Slides are not where a talk starts.
 Verbally: Don't worry! We WILL talk about slides. We just want to be clear that
 slides are not where a talk starts.
 :::
-
 
 ## Ask: What can the slides do better than my words?
 
@@ -194,7 +172,7 @@ Iconic Memory
 Pre-Cognition
 :::
 
-::: {.absolute .memory-arrow .fragment left="4%" top="28%" width="24%" fragment-index=3}
+::: {.absolute .memory-arrow .fragment left="4%" top="20%" width="24%" fragment-index=3}
 &#9660;
 :::
 
@@ -227,7 +205,15 @@ The human brain has limitations:
 :::
 
 
-## Shorthand &rarr; Minimize cognitive load {background-image="images/pic_cognitive_load.jpg" background-size="auto 100%" background-position="right center"}
+## {.center background-image="images/pic_cognitive_load.jpg" background-size="auto 100%" background-position="right center"}
+
+::: {.text-panel-left-50}
+
+::: {.slide-body-heading}
+Minimize [cognitive load]{.emphasis}.
+:::
+
+:::
 
 ::: {.notes}
 Physical pic of "cognitive" load / lady w/ pots on her head (sets up callback
