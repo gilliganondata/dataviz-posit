@@ -223,18 +223,18 @@ later to risks/realities of being clever).
 
 ## How many 5s are in this set of numbers?
 
-<br><br>
-
+::: {.slide-stack}
 ::: {.digit-wall}
-4979027[5]{.fragment .custom .five-pop fragment-index=1}647902894728624092406037070[5]{.fragment .custom .five-pop fragment-index=1}70279072\
-08029007302[5]{.fragment .custom .five-pop fragment-index=1}01270237008374082078720272007083\
-0260270379377[5]{.fragment .custom .five-pop fragment-index=1}709707377970667462097094702780\
-79709723097230979[5]{.fragment .custom .five-pop fragment-index=1}927[5]{.fragment .custom .five-pop fragment-index=1}0927279798734972608027
+4979027[5]{.fragment .custom .five-pop fragment-index=1}647902894728624092406037070[5]{.fragment .custom .five-pop fragment-index=1}7027\
+08029007302[5]{.fragment .custom .five-pop fragment-index=1}0127023700837408207872027200\
+0260270379377[5]{.fragment .custom .five-pop fragment-index=1}70970737797066746209709470\
+79709723097230979[5]{.fragment .custom .five-pop fragment-index=1}927[5]{.fragment .custom .five-pop fragment-index=1}092727979873497260
+:::
 :::
 
-<br><br>
-
+::: {.slide-source-footer .muted}
 [Source: *Information Dashboard Design* by Stephen Few]{.muted}
+:::
 
 ::: {.notes}
 Likely need to cut for time. It IS a good way to get some quick interactivity

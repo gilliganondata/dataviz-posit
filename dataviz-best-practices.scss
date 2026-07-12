@@ -97,6 +97,7 @@ $presentation-block-margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100%;
 }
 
@@ -114,6 +115,14 @@ $presentation-block-margin: 1rem;
   }
 }
 
+// For adding source footnotes at bottom right: 
+.slide-source-footer {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  font-size: 0.5em;
+  text-align: right;
+};
 
 // ── Statement slides (single big-text takeaways) ───────────────────────────
 .reveal .slides section.statement {
@@ -170,9 +179,9 @@ $presentation-block-margin: 1rem;
 // triggers, the 5s change color and weight (revealjs custom-fragment pattern)
 .digit-wall {
   font-family: $font-family-monospace;
-  font-size: 1.05em;
+  font-size: 2.15em;
   line-height: 1.6;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.0em;
   color: $muted;
   text-align: center;
 }
