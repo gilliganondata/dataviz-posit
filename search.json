@@ -11,14 +11,14 @@
     "href": "dataviz-best-practices.html#section-1",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "The goal of any talk is audience impact.\n\n\nGet them to think differently\n\n\nGet them to try something new\n\n\nGet them to take action"
+    "text": "The goal of any talk is audience impact."
   },
   {
     "objectID": "dataviz-best-practices.html#section-2",
     "href": "dataviz-best-practices.html#section-2",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Slides don’t drive the talk.\n\n\nThe talk drives the talk.\n\n\nSlides simply reinforce the talk.\n\n\n\nSlides are not where a talk starts.\nVerbally: Don’t worry! We WILL talk about slides. We just want to be clear that slides are not where a talk starts."
+    "text": "Slides don’t drive impact.\n\n\nThe talk drives impact.\n\n\nSlides simply reinforce the talk.\n\n\n\nSlides are not where a talk starts.\nVerbally: Don’t worry! We WILL talk about slides. We just want to be clear that slides are not where a talk starts."
   },
   {
     "objectID": "dataviz-best-practices.html#ask-what-can-the-slides-do-better-than-my-words",
@@ -42,18 +42,18 @@
     "text": "Iconic Memory\n\n\nPre-Cognition\n\n\n▼\n\n\nShort-Term Memory\n\n\n7 ± 2\n\n\n▼\n\n\nLong-Term Memory\n\n\nTomorrow,Next Week,Next Month\n\n\nThe human brain has limitations:\n\nIconic memory — pre-cognition; everything comes in and gets processed\nShort-term memory / Miller’s Law (7 +/- 2)\nLong-term memory"
   },
   {
-    "objectID": "dataviz-best-practices.html#shorthand-minimize-cognitive-load",
-    "href": "dataviz-best-practices.html#shorthand-minimize-cognitive-load",
+    "objectID": "dataviz-best-practices.html#section-4",
+    "href": "dataviz-best-practices.html#section-4",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "Shorthand → Minimize cognitive load",
-    "text": "Shorthand → Minimize cognitive load\n\nPhysical pic of “cognitive” load / lady w/ pots on her head (sets up callback later to risks/realities of being clever)."
+    "section": "",
+    "text": "Minimize cognitive load.\n\n\n\nPhysical pic of “cognitive” load / lady w/ pots on her head (sets up callback later to risks/realities of being clever)."
   },
   {
     "objectID": "dataviz-best-practices.html#how-many-5s-are-in-this-set-of-numbers",
     "href": "dataviz-best-practices.html#how-many-5s-are-in-this-set-of-numbers",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "How many 5s are in this set of numbers?",
-    "text": "How many 5s are in this set of numbers?\n\n\n49790275647902894728624092406037070570279072\n08029007302501270237008374082078720272007083\n02602703793775709707377970667462097094702780\n79709723097230979592750927279798734972608027\n\n\nSource: Information Dashboard Design by Stephen Few\n\nLikely need to cut for time. It IS a good way to get some quick interactivity and have them “feel” cognitive load, though."
+    "text": "How many 5s are in this set of numbers?\n\n\n4979027564790289472862409240603707057027\n0802900730250127023700837408207872027200\n0260270379377570970737797066746209709470\n7970972309723097959275092727979873497260\n\n\n\nSource: Information Dashboard Design by Stephen Few\n\n\nLikely need to cut for time. It IS a good way to get some quick interactivity and have them “feel” cognitive load, though."
   },
   {
     "objectID": "dataviz-best-practices.html#maximize-the-data-pixel-ratio",
