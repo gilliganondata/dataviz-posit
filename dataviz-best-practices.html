@@ -99,7 +99,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-cb80394cf19cf78b75963a99b3d62fc0.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-3eeb73a61ae5b0ff0f9bb9c9629fe593.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -219,6 +219,7 @@ Tim Wilson
 </div></div>
 <aside class="notes">
 <p>Not sure if I love this title, but trying to come up with something that frames the overarching point—that “the slides” are secondary to “the point” and “the narrative”… but they do still matter.</p>
+<p>I also spent some time trying to get the “corner” images from the PowerPoint example… and that’s uniquely difficult to pull off in Quarto.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -253,7 +254,7 @@ Tim Wilson
 <h2></h2>
 <div class="text-panel-left-60">
 <div class="slide-body-heading">
-<p>The goal of any talk is <span class="emphasis">audience impact</span>.</p>
+<p>The <span class="emphasis">goal</span> of any talk is <span class="emphasis">audience impact</span>.</p>
 </div>
 </div>
 </section>
@@ -320,31 +321,31 @@ Tim Wilson
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-3" class="slide level2" data-background-color="black" data-background-image="images/closeupeye-bw.jpg" data-background-size="auto 100%" data-background-position="right center">
+<section id="section-3" class="slide level2" data-background-color="#317168" data-background-image="images/closeupeye-bw.jpg" data-background-size="auto 100%" data-background-position="right center">
 <h2></h2>
 <div class="absolute memory-label fragment" data-fragment-index="1" style="top: 7%; left: 4%; width: 24%; ">
 <p>Iconic Memory</p>
 </div>
-<div class="absolute memory-detail fragment fade-in-then-out" data-fragment-index="2" style="top: 9%; left: 32%; ">
+<div class="absolute memory-detail memory-detail-1-5 fragment fade-in-then-out" data-fragment-index="2" style="top: 11%; left: 32%; ">
 <p>Pre-Cognition</p>
 </div>
-<div class="absolute memory-arrow fragment" data-fragment-index="3" style="top: 20%; left: 4%; width: 24%; ">
-<p>▼</p>
+<div class="absolute fragment" data-fragment-index="3" style="top: 25%; left: 12%; width: 7.5%; ">
+<p><img data-src="images/down-arrow.png"></p>
 </div>
-<div class="absolute memory-label fragment" data-fragment-index="3" style="top: 38%; left: 4%; width: 24%; ">
+<div class="absolute memory-label fragment" data-fragment-index="3" style="top: 37%; left: 4%; width: 24%; ">
 <p>Short-Term Memory</p>
 </div>
-<div class="absolute memory-detail fragment fade-in-then-out" data-fragment-index="4" style="top: 42%; left: 32%; ">
+<div class="absolute memory-detail memory-detail-3-5 fragment fade-in-then-out" data-fragment-index="4" style="top: 37%; left: 32%; ">
 <p>7 ± 2</p>
 </div>
-<div class="absolute memory-arrow fragment" data-fragment-index="5" style="top: 60%; left: 4%; width: 24%; ">
-<p>▼</p>
+<div class="absolute fragment" data-fragment-index="5" style="top: 57%; left: 12%; width: 7.5%; ">
+<p><img data-src="images/down-arrow.png"></p>
 </div>
 <div class="absolute memory-label fragment" data-fragment-index="5" style="top: 70%; left: 4%; width: 24%; ">
 <p>Long-Term Memory</p>
 </div>
-<div class="absolute memory-detail fragment" data-fragment-index="6" style="top: 68%; left: 32%; ">
-<p>Tomorrow,<br>Next Week,<br>Next Month</p>
+<div class="absolute memory-detail memory-detail-1-5 fragment" data-fragment-index="6" style="top: 68%; left: 32%; ">
+<p>In an Hour,<br>Tomorrow,<br>Next Month</p>
 </div>
 <aside class="notes">
 <p>The human brain has limitations:</p>
@@ -432,7 +433,7 @@ Tim Wilson
 </section>
 <section id="maximize-the-data-pixel-ratio" class="slide level2">
 <h2>Maximize the data-pixel ratio!</h2>
-<p><br><br></p>
+<div class="slide-stack">
 <div class="ratio-fraction">
 <div class="ratio-annotation">
 <p>Pixels that represent actual data or information</p>
@@ -447,8 +448,10 @@ Tim Wilson
 <p>Every pixel that is not simply the background color</p>
 </div>
 </div>
-<p><br></p>
-<p><span class="muted">Tufte posited “the data-ink ratio”; Stephen Few derived “the data-pixel ratio.”</span></p>
+</div>
+<div class="slide-source-footer muted">
+<p><span class="muted">Source: Edward Tufte posited “the data-ink ratio”; Stephen Few derived “the data-pixel ratio.”</span></p>
+</div>
 <aside class="notes">
 <p>Visually define — multiple slides, but they go quick.</p>
 <p>Close with, verbally: this is reducing cognitive load by giving the brain fewer decisions to make about “what matters.”</p>
@@ -524,23 +527,23 @@ Tim Wilson
 <h2>(Increase the data-pixel ratio of) A table</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="vokfbpuhhq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vokfbpuhhq table {
+<div id="abjbuhaxwr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#abjbuhaxwr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vokfbpuhhq thead, #vokfbpuhhq tbody, #vokfbpuhhq tfoot, #vokfbpuhhq tr, #vokfbpuhhq td, #vokfbpuhhq th {
+#abjbuhaxwr thead, #abjbuhaxwr tbody, #abjbuhaxwr tfoot, #abjbuhaxwr tr, #abjbuhaxwr td, #abjbuhaxwr th {
   border-style: none;
 }
 
-#vokfbpuhhq p {
+#abjbuhaxwr p {
   margin: 0;
   padding: 0;
 }
 
-#vokfbpuhhq .gt_table {
+#abjbuhaxwr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -566,12 +569,12 @@ Tim Wilson
   border-left-color: #D3D3D3;
 }
 
-#vokfbpuhhq .gt_caption {
+#abjbuhaxwr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vokfbpuhhq .gt_title {
+#abjbuhaxwr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -583,7 +586,7 @@ Tim Wilson
   border-bottom-width: 0;
 }
 
-#vokfbpuhhq .gt_subtitle {
+#abjbuhaxwr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -595,7 +598,7 @@ Tim Wilson
   border-top-width: 0;
 }
 
-#vokfbpuhhq .gt_heading {
+#abjbuhaxwr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -607,13 +610,13 @@ Tim Wilson
   border-right-color: #D3D3D3;
 }
 
-#vokfbpuhhq .gt_bottom_border {
+#abjbuhaxwr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vokfbpuhhq .gt_col_headings {
+#abjbuhaxwr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -628,7 +631,7 @@ Tim Wilson
   border-right-color: #D3D3D3;
 }
 
-#vokfbpuhhq .gt_col_heading {
+#abjbuhaxwr .gt_col_heading {
   color: #FFFFFF;
   background-color: #725496;
   font-size: 100%;
@@ -648,7 +651,7 @@ Tim Wilson
   overflow-x: hidden;
 }
 
-#vokfbpuhhq .gt_column_spanner_outer {
+#abjbuhaxwr .gt_column_spanner_outer {
   color: #FFFFFF;
   background-color: #725496;
   font-size: 100%;
@@ -660,15 +663,15 @@ Tim Wilson
   padding-right: 4px;
 }
 
-#vokfbpuhhq .gt_column_spanner_outer:first-child {
+#abjbuhaxwr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vokfbpuhhq .gt_column_spanner_outer:last-child {
+#abjbuhaxwr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vokfbpuhhq .gt_column_spanner {
+#abjbuhaxwr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -680,11 +683,11 @@ Tim Wilson
   width: 100%;
 }
 
-#vokfbpuhhq .gt_spanner_row {
+#abjbuhaxwr .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vokfbpuhhq .gt_group_heading {
+#abjbuhaxwr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -710,7 +713,7 @@ Tim Wilson
   text-align: left;
 }
 
-#vokfbpuhhq .gt_empty_group_heading {
+#abjbuhaxwr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -725,15 +728,15 @@ Tim Wilson
   vertical-align: middle;
 }
 
-#vokfbpuhhq .gt_from_md > :first-child {
+#abjbuhaxwr .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vokfbpuhhq .gt_from_md > :last-child {
+#abjbuhaxwr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vokfbpuhhq .gt_row {
+#abjbuhaxwr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -752,7 +755,7 @@ Tim Wilson
   overflow-x: hidden;
 }
 
-#vokfbpuhhq .gt_stub {
+#abjbuhaxwr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -765,7 +768,7 @@ Tim Wilson
   padding-right: 5px;
 }
 
-#vokfbpuhhq .gt_stub_row_group {
+#abjbuhaxwr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -779,15 +782,15 @@ Tim Wilson
   vertical-align: top;
 }
 
-#vokfbpuhhq .gt_row_group_first td {
+#abjbuhaxwr .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vokfbpuhhq .gt_row_group_first th {
+#abjbuhaxwr .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vokfbpuhhq .gt_summary_row {
+#abjbuhaxwr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -797,16 +800,16 @@ Tim Wilson
   padding-right: 5px;
 }
 
-#vokfbpuhhq .gt_first_summary_row {
+#abjbuhaxwr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vokfbpuhhq .gt_first_summary_row.thick {
+#abjbuhaxwr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vokfbpuhhq .gt_last_summary_row {
+#abjbuhaxwr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -816,7 +819,7 @@ Tim Wilson
   border-bottom-color: #D3D3D3;
 }
 
-#vokfbpuhhq .gt_grand_summary_row {
+#abjbuhaxwr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -826,7 +829,7 @@ Tim Wilson
   padding-right: 5px;
 }
 
-#vokfbpuhhq .gt_first_grand_summary_row {
+#abjbuhaxwr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -836,7 +839,7 @@ Tim Wilson
   border-top-color: #D3D3D3;
 }
 
-#vokfbpuhhq .gt_last_grand_summary_row_top {
+#abjbuhaxwr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -846,11 +849,11 @@ Tim Wilson
   border-bottom-color: #D3D3D3;
 }
 
-#vokfbpuhhq .gt_striped {
+#abjbuhaxwr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vokfbpuhhq .gt_table_body {
+#abjbuhaxwr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -859,7 +862,7 @@ Tim Wilson
   border-bottom-color: #D3D3D3;
 }
 
-#vokfbpuhhq .gt_footnotes {
+#abjbuhaxwr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -873,7 +876,7 @@ Tim Wilson
   border-right-color: #D3D3D3;
 }
 
-#vokfbpuhhq .gt_footnote {
+#abjbuhaxwr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -882,7 +885,7 @@ Tim Wilson
   padding-right: 5px;
 }
 
-#vokfbpuhhq .gt_sourcenotes {
+#abjbuhaxwr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -896,7 +899,7 @@ Tim Wilson
   border-right-color: #D3D3D3;
 }
 
-#vokfbpuhhq .gt_sourcenote {
+#abjbuhaxwr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -904,72 +907,72 @@ Tim Wilson
   padding-right: 5px;
 }
 
-#vokfbpuhhq .gt_left {
+#abjbuhaxwr .gt_left {
   text-align: left;
 }
 
-#vokfbpuhhq .gt_center {
+#abjbuhaxwr .gt_center {
   text-align: center;
 }
 
-#vokfbpuhhq .gt_right {
+#abjbuhaxwr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vokfbpuhhq .gt_font_normal {
+#abjbuhaxwr .gt_font_normal {
   font-weight: normal;
 }
 
-#vokfbpuhhq .gt_font_bold {
+#abjbuhaxwr .gt_font_bold {
   font-weight: bold;
 }
 
-#vokfbpuhhq .gt_font_italic {
+#abjbuhaxwr .gt_font_italic {
   font-style: italic;
 }
 
-#vokfbpuhhq .gt_super {
+#abjbuhaxwr .gt_super {
   font-size: 65%;
 }
 
-#vokfbpuhhq .gt_footnote_marks {
+#abjbuhaxwr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vokfbpuhhq .gt_asterisk {
+#abjbuhaxwr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vokfbpuhhq .gt_indent_1 {
+#abjbuhaxwr .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vokfbpuhhq .gt_indent_2 {
+#abjbuhaxwr .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vokfbpuhhq .gt_indent_3 {
+#abjbuhaxwr .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vokfbpuhhq .gt_indent_4 {
+#abjbuhaxwr .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vokfbpuhhq .gt_indent_5 {
+#abjbuhaxwr .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vokfbpuhhq .katex-display {
+#abjbuhaxwr .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vokfbpuhhq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#abjbuhaxwr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1038,23 +1041,23 @@ Tim Wilson
 <h2>(Increase the data-pixel ratio of) A table</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="ncvylymptn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ncvylymptn table {
+<div id="hutqktdamx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hutqktdamx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ncvylymptn thead, #ncvylymptn tbody, #ncvylymptn tfoot, #ncvylymptn tr, #ncvylymptn td, #ncvylymptn th {
+#hutqktdamx thead, #hutqktdamx tbody, #hutqktdamx tfoot, #hutqktdamx tr, #hutqktdamx td, #hutqktdamx th {
   border-style: none;
 }
 
-#ncvylymptn p {
+#hutqktdamx p {
   margin: 0;
   padding: 0;
 }
 
-#ncvylymptn .gt_table {
+#hutqktdamx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1080,12 +1083,12 @@ Tim Wilson
   border-left-color: #D3D3D3;
 }
 
-#ncvylymptn .gt_caption {
+#hutqktdamx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ncvylymptn .gt_title {
+#hutqktdamx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1097,7 +1100,7 @@ Tim Wilson
   border-bottom-width: 0;
 }
 
-#ncvylymptn .gt_subtitle {
+#hutqktdamx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1109,7 +1112,7 @@ Tim Wilson
   border-top-width: 0;
 }
 
-#ncvylymptn .gt_heading {
+#hutqktdamx .gt_heading {
   background-color: #F9EBDC;
   text-align: center;
   border-bottom-color: #F9EBDC;
@@ -1121,13 +1124,13 @@ Tim Wilson
   border-right-color: #D3D3D3;
 }
 
-#ncvylymptn .gt_bottom_border {
+#hutqktdamx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ncvylymptn .gt_col_headings {
+#hutqktdamx .gt_col_headings {
   border-top-style: hidden;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1142,7 +1145,7 @@ Tim Wilson
   border-right-color: #D3D3D3;
 }
 
-#ncvylymptn .gt_col_heading {
+#hutqktdamx .gt_col_heading {
   color: #333333;
   background-color: #F9EBDC;
   font-size: 100%;
@@ -1162,7 +1165,7 @@ Tim Wilson
   overflow-x: hidden;
 }
 
-#ncvylymptn .gt_column_spanner_outer {
+#hutqktdamx .gt_column_spanner_outer {
   color: #333333;
   background-color: #F9EBDC;
   font-size: 100%;
@@ -1174,15 +1177,15 @@ Tim Wilson
   padding-right: 4px;
 }
 
-#ncvylymptn .gt_column_spanner_outer:first-child {
+#hutqktdamx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ncvylymptn .gt_column_spanner_outer:last-child {
+#hutqktdamx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ncvylymptn .gt_column_spanner {
+#hutqktdamx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #292F20;
@@ -1194,11 +1197,11 @@ Tim Wilson
   width: 100%;
 }
 
-#ncvylymptn .gt_spanner_row {
+#hutqktdamx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ncvylymptn .gt_group_heading {
+#hutqktdamx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1224,7 +1227,7 @@ Tim Wilson
   text-align: left;
 }
 
-#ncvylymptn .gt_empty_group_heading {
+#hutqktdamx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #F9EBDC;
@@ -1239,15 +1242,15 @@ Tim Wilson
   vertical-align: middle;
 }
 
-#ncvylymptn .gt_from_md > :first-child {
+#hutqktdamx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ncvylymptn .gt_from_md > :last-child {
+#hutqktdamx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ncvylymptn .gt_row {
+#hutqktdamx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1266,7 +1269,7 @@ Tim Wilson
   overflow-x: hidden;
 }
 
-#ncvylymptn .gt_stub {
+#hutqktdamx .gt_stub {
   color: #333333;
   background-color: #F9EBDC;
   font-size: 100%;
@@ -1279,7 +1282,7 @@ Tim Wilson
   padding-right: 5px;
 }
 
-#ncvylymptn .gt_stub_row_group {
+#hutqktdamx .gt_stub_row_group {
   color: #333333;
   background-color: #F9EBDC;
   font-size: 100%;
@@ -1293,15 +1296,15 @@ Tim Wilson
   vertical-align: top;
 }
 
-#ncvylymptn .gt_row_group_first td {
+#hutqktdamx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ncvylymptn .gt_row_group_first th {
+#hutqktdamx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ncvylymptn .gt_summary_row {
+#hutqktdamx .gt_summary_row {
   color: #333333;
   background-color: #F9EBDC;
   text-transform: inherit;
@@ -1311,16 +1314,16 @@ Tim Wilson
   padding-right: 5px;
 }
 
-#ncvylymptn .gt_first_summary_row {
+#hutqktdamx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ncvylymptn .gt_first_summary_row.thick {
+#hutqktdamx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ncvylymptn .gt_last_summary_row {
+#hutqktdamx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1330,7 +1333,7 @@ Tim Wilson
   border-bottom-color: #D3D3D3;
 }
 
-#ncvylymptn .gt_grand_summary_row {
+#hutqktdamx .gt_grand_summary_row {
   color: #333333;
   background-color: #F9EBDC;
   text-transform: inherit;
@@ -1340,7 +1343,7 @@ Tim Wilson
   padding-right: 5px;
 }
 
-#ncvylymptn .gt_first_grand_summary_row {
+#hutqktdamx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1350,7 +1353,7 @@ Tim Wilson
   border-top-color: #D3D3D3;
 }
 
-#ncvylymptn .gt_last_grand_summary_row_top {
+#hutqktdamx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1360,11 +1363,11 @@ Tim Wilson
   border-bottom-color: #D3D3D3;
 }
 
-#ncvylymptn .gt_striped {
+#hutqktdamx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ncvylymptn .gt_table_body {
+#hutqktdamx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1373,7 +1376,7 @@ Tim Wilson
   border-bottom-color: #D3D3D3;
 }
 
-#ncvylymptn .gt_footnotes {
+#hutqktdamx .gt_footnotes {
   color: #333333;
   background-color: #F9EBDC;
   border-bottom-style: none;
@@ -1387,7 +1390,7 @@ Tim Wilson
   border-right-color: #D3D3D3;
 }
 
-#ncvylymptn .gt_footnote {
+#hutqktdamx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1396,7 +1399,7 @@ Tim Wilson
   padding-right: 5px;
 }
 
-#ncvylymptn .gt_sourcenotes {
+#hutqktdamx .gt_sourcenotes {
   color: #333333;
   background-color: #F9EBDC;
   border-bottom-style: none;
@@ -1410,7 +1413,7 @@ Tim Wilson
   border-right-color: #D3D3D3;
 }
 
-#ncvylymptn .gt_sourcenote {
+#hutqktdamx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1418,72 +1421,72 @@ Tim Wilson
   padding-right: 5px;
 }
 
-#ncvylymptn .gt_left {
+#hutqktdamx .gt_left {
   text-align: left;
 }
 
-#ncvylymptn .gt_center {
+#hutqktdamx .gt_center {
   text-align: center;
 }
 
-#ncvylymptn .gt_right {
+#hutqktdamx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ncvylymptn .gt_font_normal {
+#hutqktdamx .gt_font_normal {
   font-weight: normal;
 }
 
-#ncvylymptn .gt_font_bold {
+#hutqktdamx .gt_font_bold {
   font-weight: bold;
 }
 
-#ncvylymptn .gt_font_italic {
+#hutqktdamx .gt_font_italic {
   font-style: italic;
 }
 
-#ncvylymptn .gt_super {
+#hutqktdamx .gt_super {
   font-size: 65%;
 }
 
-#ncvylymptn .gt_footnote_marks {
+#hutqktdamx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ncvylymptn .gt_asterisk {
+#hutqktdamx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ncvylymptn .gt_indent_1 {
+#hutqktdamx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ncvylymptn .gt_indent_2 {
+#hutqktdamx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ncvylymptn .gt_indent_3 {
+#hutqktdamx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ncvylymptn .gt_indent_4 {
+#hutqktdamx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ncvylymptn .gt_indent_5 {
+#hutqktdamx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ncvylymptn .katex-display {
+#hutqktdamx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ncvylymptn div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#hutqktdamx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
