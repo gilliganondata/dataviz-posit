@@ -60,21 +60,28 @@
     "href": "dataviz-best-practices.html#maximize-the-data-pixel-ratio",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "Maximize the data-pixel ratio!",
-    "text": "Maximize the data-pixel ratio!\n\n\n\nPixels that represent actual data or information\n\n\nData-Information Pixels\n\n\nAll Non-Background Pixels\n\n\nEvery pixel that is not simply the background color\n\n\n\n\nSource: Edward Tufte posited “the data-ink ratio”; Stephen Few derived “the data-pixel ratio.”\n\n\nVisually define — multiple slides, but they go quick.\nClose with, verbally: this is reducing cognitive load by giving the brain fewer decisions to make about “what matters.”"
+    "text": "Maximize the data-pixel ratio!\n\nThis concept was initially put forth by Edward Tufte as “the data-ink ratio,” and Stephen Few later modernized it as “the data-pixel ratio.”\n\n\n\n\nData-Information Pixels\n\n\nAll Non-Background Pixels\n\n\n\n  Every pixel that is notsimply the background color\n Pixels that representactual data or information\n\nVisually define — multiple slides, but they go quick.\nClose with, verbally: this is reducing cognitive load by giving the brain fewer decisions to make about “what matters.”\nhttps://unsplash.com/photos/candlestick-stock-chart-on-dark-screen-VLpWpv3oDB4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
   },
   {
-    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-chart",
-    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-chart",
+    "objectID": "dataviz-best-practices.html#section-5",
+    "href": "dataviz-best-practices.html#section-5",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "(Increase the data-pixel ratio of) A chart",
-    "text": "(Increase the data-pixel ratio of) A chart\n\n\n\n\n\n\n\n\n\n\n← Ignore Ignore → Tilt my head to read! → ↑ Tilt my head to read! ↑ I already knew that\n\n\nQuick hit: before / after. These all can be literally a quick hit before/after; can return to that to go deeper as to what’s going on.\nEach callout is a click, building up the cognitive load the audience is carrying while reading a “default” chart."
+    "section": "",
+    "text": "Data-Information Pixels\n\n\nAll Non-Background Pixels\n\n\n\n Every pixel that is notsimply the background color\n Pixels that representactual data or information"
   },
   {
-    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-chart-1",
-    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-chart-1",
+    "objectID": "dataviz-best-practices.html#section-6",
+    "href": "dataviz-best-practices.html#section-6",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "(Increase the data-pixel ratio of) A chart",
-    "text": "(Increase the data-pixel ratio of) A chart\n\n\n\n\n\n\n\n\n\n\n\n\nThe “after”: same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels."
+    "section": "",
+    "text": "← Ignore Ignore → Tilt my head to read! → ↑ Tilt my head to read! ↑ I already knew that\n\n\n(Increase the data-pixel ratio of) A chart\nQuick hit: before / after. These all can be literally a quick hit before/after; can return to that to go deeper as to what’s going on.\nEach callout is a click, building up the cognitive load the audience is carrying while reading a “default” chart."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#section-7",
+    "href": "dataviz-best-practices.html#section-7",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "",
+    "text": "The “after”: same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels."
   },
   {
     "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table",
