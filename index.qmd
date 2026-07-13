@@ -1,5 +1,5 @@
 ---
-title: "Data Viz Presentations"
+pagetitle: "Data Viz Presentations"
 ---
 
 - [Dataviz Best Practices](dataviz-best-practices.html)

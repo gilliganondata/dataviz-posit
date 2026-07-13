@@ -87,6 +87,8 @@ df_continents <- gapminder |>
 Not sure if I love this title, but trying to come up with something that frames
 the overarching point—that "the slides" are secondary to "the point" and "the
 narrative"... but they do still matter.
+
+I also spent some time trying to get the "corner" images from the PowerPoint example... and that's uniquely difficult to pull off in Quarto.
 :::
 
 
@@ -104,7 +106,7 @@ in the first place…
 ::: {.text-panel-left-60}
 
 ::: {.slide-body-heading}
-The goal of any talk is [audience impact]{.emphasis}.
+The [goal]{.emphasis} of any talk is [audience impact]{.emphasis}.
 :::
 
 :::
@@ -162,38 +164,38 @@ neuroscience here…
 :::
 
 
-## {background-color="black" background-image="images/closeupeye-bw.jpg" background-size="auto 100%" background-position="right center"}
+## {background-color="#317168" background-image="images/closeupeye-bw.jpg" background-size="auto 100%" background-position="right center"}
 
 ::: {.absolute .memory-label .fragment left="4%" top="7%" width="24%" fragment-index=1}
 Iconic Memory
 :::
 
-::: {.absolute .memory-detail .fragment .fade-in-then-out left="32%" top="9%" fragment-index=2}
+::: {.absolute .memory-detail .memory-detail-1-5 .fragment .fade-in-then-out left="32%" top="11%" fragment-index=2}
 Pre-Cognition
 :::
 
-::: {.absolute .memory-arrow .fragment left="4%" top="20%" width="24%" fragment-index=3}
-&#9660;
+::: {.absolute .fragment left="12%" top="25%" width="7.5%" fragment-index=3}
+![](images/down-arrow.png)
 :::
 
-::: {.absolute .memory-label .fragment left="4%" top="38%" width="24%" fragment-index=3}
+::: {.absolute .memory-label .fragment left="4%" top="37%" width="24%" fragment-index=3}
 Short-Term Memory
 :::
 
-::: {.absolute .memory-detail .fragment .fade-in-then-out left="32%" top="42%" fragment-index=4}
+::: {.absolute .memory-detail .memory-detail-3-5 .fragment .fade-in-then-out left="32%" top="37%" fragment-index=4}
 7 &plusmn; 2
 :::
 
-::: {.absolute .memory-arrow .fragment left="4%" top="60%" width="24%" fragment-index=5}
-&#9660;
+::: {.absolute .fragment left="12%" top="57%" width="7.5%" fragment-index=5}
+![](images/down-arrow.png)
 :::
 
 ::: {.absolute .memory-label .fragment left="4%" top="70%" width="24%" fragment-index=5}
 Long-Term Memory
 :::
 
-::: {.absolute .memory-detail .fragment left="32%" top="68%" fragment-index=6}
-Tomorrow,<br>Next Week,<br>Next Month
+::: {.absolute .memory-detail .memory-detail-1-5 .fragment left="32%" top="68%" fragment-index=6}
+In an Hour,<br>Tomorrow,<br>Next Month
 :::
 
 ::: {.notes}
@@ -251,7 +253,7 @@ and have them "feel" cognitive load, though.
 
 ## Maximize the data-pixel ratio!
 
-<br><br>
+::: {.slide-stack}
 
 ::: {.ratio-fraction}
 ::: {.ratio-annotation}
@@ -267,10 +269,11 @@ All Non-Background Pixels
 Every pixel that is not simply the background color
 :::
 :::
+:::
 
-<br>
-
-[Tufte posited "the data-ink ratio"; Stephen Few derived "the data-pixel ratio."]{.muted}
+::: {.slide-source-footer .muted}
+[Source: Edward Tufte posited "the data-ink ratio"; Stephen Few derived "the data-pixel ratio."]{.muted}
+:::
 
 ::: {.notes}
 Visually define — multiple slides, but they go quick.

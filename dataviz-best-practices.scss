@@ -1,6 +1,6 @@
 /*-- scss:defaults --*/
 
-// Typography — Google Fonts loaded via scss:rules @import below)
+// Typography
 $font-family-sans-serif: "Halyard Text", sans-serif;
 $font-family-serif: "Plantagenet Cherokee", sans-serif;
 $font-family-monospace: "Fira Code", "Courier New", monospace;
@@ -28,6 +28,9 @@ $presentation-h3-font-size: 1.8em;
 
 // Slide spacing
 $presentation-block-margin: 1rem;
+
+// Footer offset -- both logo and source footers
+$footer-baseline: 14px;
 
 /*-- scss:rules --*/
 
@@ -93,12 +96,19 @@ $presentation-block-margin: 1rem;
 }
 
 // Vertical centering in a slide without sweating .center conflicts
+.reveal .slides section:has(.slide-stack) {
+  display: flex !important;   // force past reveal's inline display:block
+  flex-direction: column;
+  height: 100%;                // fill the full 1080px slide, not just content height
+}
+
 .slide-stack {
+  flex: 1;                     // take all space left after the <h2>
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  min-height: 0;                // stops the flex child from ignoring the parent's height cap
 }
 
 // When including an image at right, make some text panel classes that will
@@ -114,15 +124,6 @@ $presentation-block-margin: 1rem;
     }
   }
 }
-
-// For adding source footnotes at bottom right: 
-.slide-source-footer {
-  position: absolute;
-  bottom: 20px;
-  right: 40px;
-  font-size: 0.5em;
-  text-align: right;
-};
 
 // ── Statement slides (single big-text takeaways) ───────────────────────────
 .reveal .slides section.statement {
@@ -148,30 +149,44 @@ $presentation-block-margin: 1rem;
 // De-emphasized context (e.g., surrounding code / secondary text)
 .muted {
   color: $muted;
+  font-weight: 200;
   font-size: 0.85em;
 }
 
 // ── Memory slide (dark, photo right, labels build on the left) ─────────────
-.memory-label {
+.memory-label > p {
+  font-family: $font-family-serif;
   color: $body-bg;
-  font-weight: 700;
-  font-size: 1.6em;
-  line-height: 1.2;
-  text-align: center;
-}
-
-.memory-detail {
-  color: $secondary;
-  font-weight: 600;
-  font-size: 1.1em;
-  line-height: 1.5;
-}
-
-.memory-arrow {
-  color: $body-bg;
-  font-size: 1.4em;
+  font-weight: 500;
+  font-size: 2.4em;
   line-height: 1;
   text-align: center;
+}
+
+// Base class for shared memory detail. This is one specific slide, and the
+// over-the-top specificity is largely to get 'color' to win out.
+.reveal section.has-dark-background .memory-detail > p {
+  color: $accent;
+  font-weight: 600;
+  font-size: 1.1em; // default/fallback size
+  line-height: 1.1;
+}
+
+// Generate font-size modifier classes: .memory-detail-0-8 through .memory-detail-1-5
+// This is what the @use "sass:math"; is for at the top of the file
+$memory-detail-sizes: (
+  "1-0": 1.0,
+  "1-5": 1.5,
+  "2-0": 2.0,
+  "2-5": 2.5,
+  "3-0": 3.0,
+  "3-5": 3.5
+);
+
+@each $label, $size in $memory-detail-sizes {
+  .memory-detail-#{$label} {
+    font-size: $size * 1em;
+  }
 }
 
 // ── "How many 5s" exercise ──────────────────────────────────────────────────
@@ -200,7 +215,7 @@ $presentation-block-margin: 1rem;
 .ratio-fraction {
   text-align: center;
   font-weight: 700;
-  font-size: 1.4em;
+  font-size: 2.4em;
   width: 60%;
   margin: 0 auto;
 
@@ -260,13 +275,21 @@ $presentation-block-margin: 1rem;
 // Meadowlark logo — bottom-left on every slide
 .reveal .slide-logo {
   position: fixed;
-  bottom: 14px;
+  bottom: $footer-baseline;
   left: 16px;
   height: 36px;
   width: auto;
   opacity: 0.9;
 }
 
+// For adding source footnotes at bottom right: 
+.slide-source-footer {
+  position: absolute;
+  bottom: $footer-baseline;
+  right: 40px;
+  font-size: 1.0em;
+  text-align: right;
+};
 
 // Incremental list spacing
 .reveal ul li,
