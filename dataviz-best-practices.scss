@@ -10,6 +10,7 @@ $presentation-font-size-root: 36px;
 $body-bg: #F9EBDC;
 $divider-text: $body-bg; // divider slides are dark, so inverts the color
 $body-color: #292F20;
+$body-light: $body-bg; // when it's a dark slide and want to invert the color
 $link-color: #2563eb;
 
 $primary:   #317168;
@@ -93,6 +94,14 @@ $footer-baseline: 14px;
 .title-bird {
   width: 80%;
   height: auto;
+}
+
+// The corners -- flush
+.reveal .slides section img.flush {
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  background: none;
 }
 
 // Vertical centering in a slide without sweating .center conflicts
@@ -211,8 +220,15 @@ $memory-detail-sizes: (
   }
 }
 
-// ── Data-pixel ratio fraction ───────────────────────────────────────────────
+// ── Data-pixel ratio slide  ───────────────────────────────────────────────
+
+.body-light {
+  color: $body-light;
+}
+
+// For the first presentation - smaller
 .ratio-fraction {
+  color: $body-light;
   text-align: center;
   font-weight: 700;
   font-size: 2.4em;
@@ -220,20 +236,64 @@ $memory-detail-sizes: (
   margin: 0 auto;
 
   .numerator {
-    padding-bottom: 0.3em;
-    border-bottom: 4px solid $body-color;
+    padding-bottom: 0.2em;
   }
 
   .denominator {
-    padding-top: 0.3em;
+    border-top: 4px solid $body-light;
+    padding-top: 0.2em;
   }
 }
 
 .ratio-annotation {
-  color: $primary;
-  font-size: 0.6em;
+  color: $accent;
+  font-size: 1.5em;
   font-weight: 400;
 }
+
+// For the second slide: larger
+.ratio-fraction-lg {
+  color: $body-light;
+  text-align: center;
+  font-weight: 700;
+  font-size: 3.2em;
+  width: 80%;
+  margin: 0 auto;
+
+  .numerator {
+    padding-bottom: 0.2em;
+  }
+
+  .denominator {
+    border-top: 4px solid $body-light;
+    padding-top: 0.2em;
+  }
+}
+
+// ── Callouts ─────────────────────────────────────────────────────────────────
+.callout-oval {
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid $accent;
+  background-color: transparent;
+  pointer-events: none; // so it doesn't block clicks/interaction underneath
+}
+
+.callout-rect {
+  position: absolute;
+  border: 5px solid $accent;
+  background-color: transparent;
+  pointer-events: none; // so it doesn't block clicks/interaction underneath
+}
+
+.callout-line-vertical {
+  position: absolute;
+  width: 5px;              // this IS the line's thickness now
+  background-color: $accent;
+  border: none;            // no border at all
+  pointer-events: none;
+}
+
 
 // ── Quotes ──────────────────────────────────────────────────────────────────
 .reveal blockquote {
@@ -287,7 +347,7 @@ $memory-detail-sizes: (
   position: absolute;
   bottom: $footer-baseline;
   right: 40px;
-  font-size: 1.0em;
+  font-size: 0.8em;
   text-align: right;
 };
 

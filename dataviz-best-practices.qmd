@@ -36,8 +36,8 @@ pacman::p_load(tidyverse,
                scales,
                ggthemes)
 
-# Brand palette — mirrors the variables defined in dataviz-best-practices.scss.
-# (R can't read SCSS, so this is the one place hex values are repeated.)
+# Brand palette/fonts — mirrors the variables defined in dataviz-best-practices.scss.
+# (It's a hassle for R to read SCSS, so this is the one place hex values are repeated.)
 brand <- list(
   bg        = "#F9EBDC",
   primary   = "#317168",
@@ -48,12 +48,18 @@ brand <- list(
   gratuitous = "#725496"  # deliberately off-brand, for the "before" examples
 )
 
+font_serif <- "Plantagenet Cherokee"
+font_sans_serif <- "Halyard Text"
+
 ```
 
 ```{r data}
 
 # Time-series data: monthly data from the economics dataset
 df_unemployment <- economics |>
+  filter(date >= as.Date("2009-01-01"), date <= as.Date("2009-12-01"))
+
+df_psavert <- economics |>
   filter(date >= as.Date("2009-01-01"), date <= as.Date("2009-12-01"))
 
 # Summary table data: gapminder, 2007 snapshot by continent
@@ -243,92 +249,138 @@ Likely need to cut for time. It IS a good way to get some quick interactivity
 and have them "feel" cognitive load, though.
 :::
 
-
 # Some simple tactics can reduce cognitive load {background-color="var(--divider-bg)"}
 
 ::: {.notes}
 "The solutions"
 :::
 
+# The most powerful tactic?<br>Maximize the [data-pixel ratio]{.emphasis}! {background-color="var(--divider-bg)"}
 
-## Maximize the data-pixel ratio!
+
+## Maximize the [data-pixel ratio]{.emphasis}! {background-image="images/data-pixel-bg.jpg"}
+
+::: {.body-light}
+This concept was initially put forth by Edward Tufte as **"the data-ink ratio,"** and Stephen Few later modernized it as **"the data-pixel ratio."**
+:::
 
 ::: {.slide-stack}
-
 ::: {.ratio-fraction}
-::: {.ratio-annotation}
-Pixels that represent actual data or information
-:::
-::: {.numerator}
+::: {.numerator .fragment fragment-index=2}
 Data-Information Pixels
 :::
-::: {.denominator}
+::: {.denominator .fragment fragment-index=1}
 All Non-Background Pixels
 :::
-::: {.ratio-annotation}
-Every pixel that is not simply the background color
 :::
 :::
-:::
+<br><br>
+![](images/left-up-arc-arrow.png){.absolute .fragment top="67%" left="54%" width="5%" fragment-index=1}
+[Every pixel that is not<br>simply the background color]{.ratio-annotation .absolute .fragment top="71%" left="60%" fragment-index=1}
 
-::: {.slide-source-footer .muted}
-[Source: Edward Tufte posited "the data-ink ratio"; Stephen Few derived "the data-pixel ratio."]{.muted}
-:::
+![](images/left-down-arc-arrow.png){.absolute .fragment top="31%" left="45%" width="5%" fragment-index=2}
+[Pixels that represent<br>actual data or information]{.ratio-annotation .absolute .fragment top="26%" left="51%" fragment-index=2}
 
 ::: {.notes}
 Visually define — multiple slides, but they go quick.
 
 Close with, verbally: this is reducing cognitive load by giving the brain fewer
 decisions to make about "what matters."
+
+
+https://unsplash.com/photos/candlestick-stock-chart-on-dark-screen-VLpWpv3oDB4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
 :::
 
+## {background-color="var(--divider-bg)"}
 
-## (Increase the data-pixel ratio of) A chart {visibility="uncounted"}
+::: {.slide-stack}
+::: {.ratio-fraction-lg}
+::: {.numerator}
+Data-Information Pixels
+:::
+::: {.denominator}
+All Non-Background Pixels
+:::
+:::
+:::
+![](images/left-up-arc-arrow.png){.absolute top="63%" left="54%" width="5%"}
+[Every pixel that is not<br>simply the background color]{.ratio-annotation .absolute top="67%" left="60%"}
 
-:::{style="position: relative; width: 75%; margin: 0 auto;"}
+![](images/left-down-arc-arrow.png){.absolute top="22%" left="45%" width="5%"}
+[Pixels that represent<br>actual data or information]{.ratio-annotation .absolute top="17%" left="51%"}
+
+
+## {.center}
+
+:::{style="position: relative; width: 70%; margin: 0 auto;"}
 
 ```{r chart-default}
 #| fig.width: 6
 #| fig.height: 4.5
 #| fig-align: center
-#| out.width: 90%
+#| out.width: 85%
 
-gg <- ggplot(df_unemployment, aes(x = date, y = unemploy, color = "unemploy")) +
-  geom_line(linewidth = 0.5) +
-  scale_color_manual(values = c("unemploy" = brand$gratuitous)) +
+gg <- ggplot(df_psavert, aes(x = date, y = psavert, color = "psavert")) +
+  geom_line(linewidth = 0.3) +
+  scale_color_manual(values = c("psavert" = brand$gratuitous)) +
   scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
   scale_y_continuous(
-    labels = label_comma(),
-    limits = c(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000),
-    breaks = seq(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000, by = 20000)
-  ) +
+    limits = function(x) c(0, ceiling(max(x)) * 1.1)
+   ) +
   labs(
-    title  = "Unemployed Persons by Month in 2009",
-    x      = "Month",
-    y      = "000s of Unemployed Persons",
-    color  = NULL
+    title = "Personal Savings Rate by Month in 2009",
+    x = "Month",
+    y = "Personal Savings Rate (%)",
+    caption = "Source: https://fred.stlouisfed.org/series/PSAVERT/",
+    color = NULL
   ) +
   # worsen things up a bit by adding a gratuitous legend and plot border
   theme(
     legend.position = "top",
     plot.title.position = "plot",
+    plot.caption.position = "plot",
+    plot.caption = element_text(size = 8, hjust=0),
     plot.background  = element_rect(linewidth = 0.75, color = "gray40", fill = NA),
-    plot.margin = margin(10,10,10,10,"pt")
+    plot.margin = margin(10,10,10,10,"pt"),
+    axis.text.x = element_text(angle = 45, hjust = 1)
   )
 
 gg
 
 ```
 
-[&larr; Ignore]{.callout-label .absolute .fragment top="30%" left="95%" fragment-index=1}
-[Ignore &rarr;]{.callout-label .absolute .fragment top="3%" left="18%" fragment-index=2}
-[Tilt my head to read! &rarr;]{.callout-label .absolute .fragment top="45%" left="-18%" fragment-index=3}
-[&uarr; Tilt my head to read!]{.callout-label .absolute .fragment top="95%" left="55%" fragment-index=4}
-[&uarr; I already knew that]{.callout-label .absolute .fragment top="99%" left="38%" fragment-index=5}
+::: {.fragment .fade-in-then-out fragment-index="1" .callout-rect style="top: 1.5%; left: 7.5%; width: 1135px; height: 850px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" .callout-oval style="top: 70%; left: 46%; width: 50px; height: 150px; transform: rotate(45deg);"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" .callout-oval style="top: 23%; left: 7.8%; width: 60px; height: 450px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="3" .callout-oval style="top: 9.3%; left: 46%; width: 180px; height: 70px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="4" .callout-oval style="top: 81.5%; left: 47.5%; width: 150px; height: 60px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="5" .callout-line-vertical style="top: 20.8%; left: 31.3%; height: 482px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="5" .callout-line-vertical style="top: 20.8%; left: 34.5%; height: 482px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="5" .callout-line-vertical style="top: 20.8%; left: 37.7%; height: 482px;"}
+:::
+
+::: {.fragment}
+:::
 
 :::
 
 ::: {.notes}
+(Increase the data-pixel ratio of) A chart 
+
 Quick hit: before / after. These all can be literally a quick hit
 before/after; can return to that to go deeper as to what's going on.
 
@@ -337,40 +389,44 @@ carrying while reading a "default" chart.
 :::
 
 
-## (Increase the data-pixel ratio of) A chart {visibility="uncounted"}
+## Personal Savings Rate by Month in 2009
 
-:::{style="position: relative; width: 75%; margin: 0 auto;"}
+:::{style="margin: 0 auto;"}
 
 ```{r higher-data-pixel}
-#| fig.width: 6
+#| fig.width: 8
 #| fig.height: 4.5
 #| fig-align: center
-#| out.width: 90%
+#| out.width: 77%
 
-gg <- ggplot(df_unemployment, aes(x = date, y = unemploy, color = "unemploy")) +
-  geom_line(linewidth = 0.8) +
-  scale_color_manual(values = c("unemploy" = brand$primary)) +
-  scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
+gg <- ggplot(df_psavert, aes(x = date, y = psavert)) +
+  geom_line(linewidth = 0.8, color=brand$gratuitous) +
+  scale_x_date(date_labels = "%b", date_breaks = "1 month") +
   scale_y_continuous(
-    labels = label_comma(),
-    limits = c(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000),
-    breaks = seq(0, ceiling(max(df_unemployment$unemploy) / 20000) * 20000, by = 20000)
-  ) +
-  labs(
-    title  = "Unemployed Persons (000s) by Month in 2009",
-    color  = NULL
-  ) +
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 8, by = 2),
+    expand = c(0,0),
+    limits = function(x) c(0, ceiling(max(x)))
+   ) +
   theme_minimal() +
   theme(
-    legend.position = "none",
     plot.title.position = "plot",
     plot.background = element_rect(fill = brand$bg, color = NA),
-    axis.title = element_blank()
+    axis.title = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "gray70", linewidth = 0.2),
+    axis.text = element_text(family = font_sans_serif, size = 14, color = "gray60"),
+    axis.line.x = element_line(color = "gray40", linewidth = 0.4)
   )
 
 gg
 ```
 
+:::
+
+
+::: {.slide-source-footer .muted}
+[Source: https://fred.stlouisfed.org/series/PSAVERT/]{.muted}
 :::
 
 ::: {.notes}
