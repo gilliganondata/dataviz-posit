@@ -74,14 +74,14 @@
     "href": "dataviz-best-practices.html#section-6",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "← Ignore Ignore → Tilt my head to read! → ↑ Tilt my head to read! ↑ I already knew that\n\n\n(Increase the data-pixel ratio of) A chart\nQuick hit: before / after. These all can be literally a quick hit before/after; can return to that to go deeper as to what’s going on.\nEach callout is a click, building up the cognitive load the audience is carrying while reading a “default” chart."
+    "text": "(Increase the data-pixel ratio of) A chart\nQuick hit: before / after. These all can be literally a quick hit before/after; can return to that to go deeper as to what’s going on.\nEach callout is a click, building up the cognitive load the audience is carrying while reading a “default” chart."
   },
   {
-    "objectID": "dataviz-best-practices.html#section-7",
-    "href": "dataviz-best-practices.html#section-7",
+    "objectID": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009",
+    "href": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "",
-    "text": "The “after”: same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels."
+    "section": "Personal Savings Rate by Month in 2009",
+    "text": "Personal Savings Rate by Month in 2009\n\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nThe “after”: same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels."
   },
   {
     "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table",
