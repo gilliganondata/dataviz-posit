@@ -198,6 +198,25 @@ $memory-detail-sizes: (
   }
 }
 
+// Blinking text (which is here with some hesitation; accessibility concerns)
+@keyframes blink-text {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink-text 1s step-start 6;
+//  animation: blink-text 1s step-start infinite;  // if the blink should not stop
+  font-family: "Arial Black", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2em;
+  text-align: "left";
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: "red" !important; // or a hardcoded red/amber if it's off-brand on purpose
+}
+
+
 // ── "How many 5s" exercise ──────────────────────────────────────────────────
 // Custom fragment: digits are visible from the start; when the fragment
 // triggers, the 5s change color and weight (revealjs custom-fragment pattern)

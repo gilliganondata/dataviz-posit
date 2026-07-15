@@ -142,23 +142,69 @@ Verbally: Don't worry! We WILL talk about slides. We just want to be clear that
 slides are not where a talk starts.
 :::
 
-## Ask: What can the slides do better than my words?
+## {.center background-image="images/pic_boulder_support.jpg" background-size="auto 100%" background-position="right center"}
+
+::: {.text-panel-left-60}
+
+::: {.slide-body-heading}
+So what does [reinforcement]{.emphasis} actually [mean]{.emphasis}?
+:::
+
+:::
+
+::: {.notes}
+https://unsplash.com/photos/man-standing-beside-rock-formation-mj51pZwan9c?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+:::
+
+## {.center background-image="images/pic_boulder_support.jpg" background-size="auto 100%" background-position="right center"}
+
+::: {.text-panel-left-60}
+
+::: {.slide-body-heading}
+Hold their [attention]{.emphasis}.
+:::
+
+::: {.slide-body-heading .fragment}
+Help them [understand]{.emphasis} what's being presented.
+:::
+
+::: {.slide-body-heading .fragment}
+Enable them to [retain]{.emphasis} what matters most.
+:::
+
+:::
+
+::: {.notes}
+Image source: https://unsplash.com/photos/man-standing-beside-rock-formation-mj51pZwan9c?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+
+Ask: What can the slides do better than my words?
+
+"Keep attention" and "Remember it" (Talk can be about caring, attention, multi-encoding)
 
 - **Keep the audience's attention** — the talk is bound by time and attention
 - **Understand and care about the information** — by directly reinforcing what the speaker is saying
 - **Remember it** — dual-encoding with multiple senses (hearing *and* seeing); brain science backs up that using multiple senses aids retention
 
-
-## What slides should not (primarily) do
+What slides should not (primarily) do
 
 - Remind the speaker what they're supposed to be saying
 
-. . .
-
 *Caveat: break in case of emergency… they **can** be a visual aid to keep the speaker on track; that's just a natural artifact if they do their primary job well!*
 
+:::
 
-# Most slide decks fail to deliver {background-color="var(--divider-bg)"}
+
+# Most slide decks [fail to deliver]{.emphasis} {background-color="var(--divider-bg)"}
+
+:::: {.columns .fragment}
+
+::: {.column width="38%" .column-right}:::
+![](images/flashing_light.gif)
+:::
+::: {.column style="margin-left: 30px; text-align: left; color: #FF0000;"}
+[WARNING: Neuroscience<br>ahead!]{.blink}
+:::
+::::
 
 ::: {.notes}
 "The Challenge"
@@ -167,6 +213,10 @@ Verbal: this is partly because we don't stop and think about what the role of
 the slides is, but it's also because we operate as though the brain easily does
 some things that it just doesn't. We're going to briefly dip into some light
 neuroscience here…
+
+Slide: Warning, (light) Neuroscience Ahead
+
+For maximum fun: If I were designing in powerpoint I would make the warning large and have a handwritten font for light coming off at an angle.
 :::
 
 
@@ -434,6 +484,15 @@ The "after": same data, higher data-pixel ratio. No border, no legend, no
 redundant axis titles, horizontal month labels.
 :::
 
+## Make it imposssible to ignore/miss
+
+## Back to the line chart w/ impossible to ignore
+
+Possibly limit initial line chart to just be data-pixel ratio reduction.
+
+Everything after... 2 beats: 1) data-pixel, 2) impossible to ignore
+
+Showing McKinsey Titles
 
 ## (Increase the data-pixel ratio of) A table
 
@@ -620,6 +679,9 @@ For the audience (TED book).
 "Closing"
 :::
 
+## These Slides are in Quarto...
+
+Github link
 
 # Why are so many slide decks so bad? {background-color="var(--divider-bg)"}
 
