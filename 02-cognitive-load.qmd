@@ -1,0 +1,88 @@
+## {background-image="images/pic_neuroscience.jpg" background-position="center"}
+
+::: {.memory-label .memory-detail-1-5}
+It starts with how we take in and process information 
+:::
+
+::: {.notes}
+https://unsplash.com/photos/a-close-up-of-a-red-flower-59HOF9zHKNs?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+:::
+
+## {background-color="#317168" background-image="images/closeupeye-bw.jpg" background-size="auto 100%" background-position="right center"}
+
+::: {.absolute .memory-label .fragment left="4%" top="7%" width="24%" fragment-index=1}
+Iconic Memory
+:::
+
+::: {.absolute .memory-detail .memory-detail-1-5 .fragment .fade-in-then-out left="32%" top="11%" fragment-index=2}
+Pre-Cognition
+:::
+
+::: {.absolute .fragment left="12%" top="25%" width="7.5%" fragment-index=3}
+![](images/down-arrow.png)
+:::
+
+::: {.absolute .memory-label .fragment left="4%" top="37%" width="24%" fragment-index=3}
+Short-Term Memory
+:::
+
+::: {.absolute .memory-detail .memory-detail-3-5 .fragment .fade-in-then-out left="32%" top="37%" fragment-index=4}
+7 &plusmn; 2
+:::
+
+::: {.absolute .fragment left="12%" top="57%" width="7.5%" fragment-index=5}
+![](images/down-arrow.png)
+:::
+
+::: {.absolute .memory-label .fragment left="4%" top="70%" width="24%" fragment-index=5}
+Long-Term Memory
+:::
+
+::: {.absolute .memory-detail .memory-detail-1-5 .fragment left="32%" top="68%" fragment-index=6}
+In an Hour,<br>Tomorrow,<br>Next Month
+:::
+
+::: {.notes}
+The human brain has limitations:
+
+- Iconic memory — pre-cognition; everything comes in and gets processed
+- Short-term memory / Miller's Law (7 +/- 2)
+- Long-term memory
+:::
+
+
+## {.center background-image="images/pic_cognitive_load.jpg" background-size="auto 100%" background-position="right center"}
+
+::: {.text-panel-left-50}
+
+::: {.slide-body-heading}
+Minimize [cognitive load]{.emphasis}.
+:::
+
+:::
+
+::: {.notes}
+Physical pic of "cognitive" load / lady w/ pots on her head (sets up callback
+later to risks/realities of being clever).
+:::
+
+
+## How many 5s are in this set of numbers?
+
+::: {.slide-stack}
+::: {.digit-wall}
+4979027[5]{.fragment .custom .five-pop fragment-index=1}647902894728624092406037070[5]{.fragment .custom .five-pop fragment-index=1}7027\
+08029007302[5]{.fragment .custom .five-pop fragment-index=1}0127023700837408207872027200\
+0260270379377[5]{.fragment .custom .five-pop fragment-index=1}70970737797066746209709470\
+79709723097230979[5]{.fragment .custom .five-pop fragment-index=1}927[5]{.fragment .custom .five-pop fragment-index=1}092727979873497260
+:::
+:::
+
+::: {.slide-source-footer .muted}
+[Source: *Information Dashboard Design* by Stephen Few]{.muted}
+:::
+
+::: {.notes}
+Likely need to cut for time. It IS a good way to get some quick interactivity
+and have them "feel" cognitive load, though.
+:::

@@ -72,7 +72,6 @@ $footer-baseline: 14px;
   text-align: right;
 }
 
-
 // ── Custom title slide ──────────────────────────────────────────────────────
 // Vertically centers the bird + title columns
 .reveal .slides section.title-custom {
@@ -87,13 +86,31 @@ $footer-baseline: 14px;
   font-family: $font-family-serif;
   font-weight: 500;
   font-size: 2.6em;
-  line-height: 1.15;
+  line-height: 1;
+  color: $primary;
+}
+
+// Subtitle on the title slide
+.subtitle-text {
+  font-family: $font-family-serif;
+  font-weight: 500;
+  font-size: 1.8em;
+  line-height: 1.25;
   color: $primary;
 }
 
 .title-bird {
   width: 80%;
   height: auto;
+}
+
+// Subtitle on a regular slide
+.subtitle-slide-text {
+  font-family: $font-family-serif;
+  font-weight: 500;
+  font-size: 1.4em;
+  line-height: 1;
+  color: $body-color;
 }
 
 // The corners -- flush

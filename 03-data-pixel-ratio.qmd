@@ -1,0 +1,420 @@
+# Some simple tactics can reduce cognitive load {background-color="var(--divider-bg)"}
+
+::: {.notes}
+"The solutions"
+:::
+
+# The most powerful tactic?<br>Maximize the [data-pixel ratio]{.emphasis}! {background-color="var(--divider-bg)"}
+
+
+## Maximize the [data-pixel ratio]{.emphasis}! {background-image="images/data-pixel-bg.jpg"}
+
+::: {.body-light}
+This concept was initially put forth by Edward Tufte as **"the data-ink ratio,"** and Stephen Few later modernized it as **"the data-pixel ratio."**
+:::
+
+::: {.slide-stack}
+::: {.ratio-fraction}
+::: {.numerator .fragment fragment-index=2}
+Data-Information Pixels
+:::
+::: {.denominator .fragment fragment-index=1}
+All Non-Background Pixels
+:::
+:::
+:::
+<br><br>
+![](images/left-up-arc-arrow.png){.absolute .fragment top="67%" left="54%" width="5%" fragment-index=1}
+[Every pixel that is not<br>simply the background color]{.ratio-annotation .absolute .fragment top="71%" left="60%" fragment-index=1}
+
+![](images/left-down-arc-arrow.png){.absolute .fragment top="31%" left="45%" width="5%" fragment-index=2}
+[Pixels that represent<br>actual data or information]{.ratio-annotation .absolute .fragment top="26%" left="51%" fragment-index=2}
+
+::: {.notes}
+Visually define — multiple slides, but they go quick.
+
+Close with, verbally: this is reducing cognitive load by giving the brain fewer
+decisions to make about "what matters."
+
+
+https://unsplash.com/photos/candlestick-stock-chart-on-dark-screen-VLpWpv3oDB4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+:::
+
+## {background-color="var(--divider-bg)"}
+
+::: {.slide-stack}
+::: {.ratio-fraction-lg}
+::: {.numerator}
+Data-Information Pixels
+:::
+::: {.denominator}
+All Non-Background Pixels
+:::
+:::
+:::
+![](images/left-up-arc-arrow.png){.absolute top="63%" left="54%" width="5%"}
+[Every pixel that is not<br>simply the background color]{.ratio-annotation .absolute top="67%" left="60%"}
+
+![](images/left-down-arc-arrow.png){.absolute top="22%" left="45%" width="5%"}
+[Pixels that represent<br>actual data or information]{.ratio-annotation .absolute top="17%" left="51%"}
+
+
+## {.center}
+
+:::{style="position: relative; width: 70%; margin: 0 auto;"}
+
+```{r chart-default}
+#| fig.width: 6
+#| fig.height: 4.5
+#| fig-align: center
+#| out.width: 85%
+
+gg_line_og <- ggplot(df_psavert, aes(x = date, y = psavert, color = "psavert")) +
+  geom_line(linewidth = 0.3) +
+  scale_color_manual(values = c("psavert" = brand$gratuitous)) +
+  scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +
+  scale_y_continuous(
+    limits = function(x) c(0, ceiling(max(x)) * 1.1)
+   ) +
+  labs(
+    title = "Personal Savings Rate by Month in 2009",
+    x = "Month",
+    y = "Personal Savings Rate (%)",
+    caption = "Source: https://fred.stlouisfed.org/series/PSAVERT/",
+    color = NULL
+  ) +
+  # worsen things up a bit by adding a gratuitous legend and plot border
+  theme(
+    legend.position = "top",
+    plot.title.position = "plot",
+    plot.caption.position = "plot",
+    plot.caption = element_text(size = 8, hjust=0),
+    plot.background  = element_rect(linewidth = 0.75, color = "gray40", fill = NA),
+    plot.margin = margin(10,10,10,10,"pt"),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+gg_line_og
+
+```
+
+::: {.fragment .fade-in-then-out fragment-index="1" .callout-rect style="top: 1.5%; left: 7.5%; width: 1135px; height: 850px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" .callout-oval style="top: 70%; left: 46%; width: 50px; height: 150px; transform: rotate(45deg);"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="2" .callout-oval style="top: 23%; left: 7.8%; width: 60px; height: 450px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="3" .callout-oval style="top: 9.3%; left: 46%; width: 180px; height: 70px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="4" .callout-oval style="top: 81.5%; left: 47.5%; width: 150px; height: 60px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="5" .callout-line-vertical style="top: 20.8%; left: 31.3%; height: 482px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="5" .callout-line-vertical style="top: 20.8%; left: 34.5%; height: 482px;"}
+:::
+
+::: {.fragment .fade-in-then-out fragment-index="5" .callout-line-vertical style="top: 20.8%; left: 37.7%; height: 482px;"}
+:::
+
+::: {.fragment}
+:::
+
+:::
+
+::: {.notes}
+(Increase the data-pixel ratio of) A chart 
+
+Quick hit: before / after. These all can be literally a quick hit
+before/after; can return to that to go deeper as to what's going on.
+
+Each callout is a click, building up the cognitive load the audience is
+carrying while reading a "default" chart.
+:::
+
+
+## Personal Savings Rate by Month in 2009
+
+:::{style="margin: 0 auto;"}
+
+```{r higher-data-pixel}
+#| fig.width: 8
+#| fig.height: 4.5
+#| fig-align: center
+#| out.width: 77%
+
+gg_line_better <- ggplot(df_psavert, aes(x = date, y = psavert)) +
+  geom_line(linewidth = 0.8, color=brand$gratuitous) +
+  scale_x_date(date_labels = "%b", date_breaks = "1 month") +
+  scale_y_continuous(
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 8, by = 2),
+    expand = c(0,0),
+    limits = function(x) c(0, ceiling(max(x)))
+   ) +
+  theme_minimal() +
+  theme(
+    plot.title.position = "plot",
+    plot.background = element_rect(fill = brand$bg, color = NA),
+    axis.title = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "gray70", linewidth = 0.2),
+    axis.text = element_text(family = font_sans_serif, size = 14, color = "gray60"),
+    axis.line.x = element_line(color = "gray40", linewidth = 0.4)
+  )
+
+gg_line_better
+```
+
+:::
+
+::: {.slide-source-footer .muted}
+[Source: https://fred.stlouisfed.org/series/PSAVERT/]{.muted}
+:::
+
+::: {.notes}
+The "after": same data, higher data-pixel ratio. No border, no legend, no
+redundant axis titles, horizontal month labels.
+:::
+
+# We want to make the point as [impossible to miss]{.emphasis} as we can. {background-color="var(--divider-bg)"}
+
+## Personal Savings Rate by Month in 2009
+
+:::{style="margin: 0 auto;"}
+
+```{r higher-data-pixel_repeat}
+#| fig.width: 8
+#| fig.height: 4.5
+#| fig-align: center
+#| out.width: 77%
+
+gg_line_better
+```
+
+:::
+
+::: {.slide-source-footer .muted}
+[Source: https://fred.stlouisfed.org/series/PSAVERT/]{.muted}
+:::
+
+## Stimulus payments in [May]{.emphasis} drove a [savings spike]{.emphasis}
+[Personal saving rate by month: 2009]{.subtitle-slide-text}
+
+```{r line-impossible}
+#| fig.width: 8
+#| fig.height: 3.4
+#| fig-align: center
+#| out.width: 77%
+
+# Add the highlight spot
+df_highlight <- df_psavert |> 
+  filter(date == as.Date("2009-05-01")) |> 
+  mutate(psavert_callout = "ARRA Payments")
+ 
+gg_line_final <- ggplot(df_psavert, aes(x = date, y = psavert)) +
+  geom_line(linewidth = 0.7, color=brand$primary) +
+  # The highlighted point
+  geom_point(
+    data = df_highlight,
+    aes(x = date, y = psavert),
+    size = 3,
+    color = brand$accent
+  ) +
+  # Left-pointing arrow, positioned to the right of the point
+  geom_segment(
+    data = df_highlight,
+    aes(x = date + 25, xend = date + 6,
+        y = psavert, yend = psavert),
+    arrow = arrow(length = unit(0.15, "cm"), type = "closed"),
+    linewidth = 0.6,
+    color = "gray30",
+    inherit.aes = FALSE
+  ) +
+  # Callout text at the tail end of the arrow
+  geom_label(
+    data = df_highlight,
+    aes(x = date + 28, y = psavert, label = psavert_callout),
+    hjust = 0,
+    vjust = 0.5,
+    size = 5,
+    family = font_sans_serif,
+    color = "gray20", 
+    fill = brand$bg,
+    label.size = 0
+  ) +
+  scale_x_date(date_labels = "%b", date_breaks = "1 month") +
+  scale_y_continuous(
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 8, by = 2),
+    expand = c(0,0),
+    limits = function(x) c(0, ceiling(max(x)))
+   ) +
+  theme_minimal() +
+  theme(
+    plot.title.position = "plot",
+    plot.background = element_rect(fill = brand$bg, color = NA),
+    axis.title = element_blank(),
+    panel.grid.major.x = element_blank(),
+    panel.grid.major.y = element_line(color = "gray70", linewidth = 0.2),
+    axis.text = element_text(family = font_sans_serif, size = 12, color = "gray60"),
+    axis.line.x = element_line(color = "gray40", linewidth = 0.4)
+  )
+
+gg_line_final
+```
+
+::: {.slide-source-footer .muted}
+[Source: https://fred.stlouisfed.org/series/PSAVERT/]{.muted}
+:::
+
+# What about [tables]{.emphasis}? {background-color="var(--divider-bg)"}
+
+
+## {.center}
+
+```{r table-before}
+
+# The "before": default-ish gt table with heavy fills, borders, and banding
+df_continents |>
+  gt() |>
+  cols_label(
+    continent    = "Continent",
+    countries    = "Countries",
+    mean_lifeExp = "Mean Life Expectancy",
+    total_pop    = "Total Population"
+  ) |>
+  fmt_number(columns = mean_lifeExp, decimals = 1) |>
+  fmt_number(columns = total_pop, decimals = 0) |>
+  tab_options(
+    table.font.size = px(34),
+    column_labels.background.color = brand$gratuitous,
+    row.striping.include_table_body = TRUE,
+    table_body.hlines.width = px(2),
+    table_body.vlines.width = px(2),
+    table_body.vlines.style = "solid",
+    table.border.top.width = px(3),
+    table.border.bottom.width = px(3)
+  ) |>
+  opt_row_striping()
+
+```
+
+::: {.notes}
+Quick hit: before / after…
+:::
+
+
+## (Increase the data-pixel ratio of) A table {visibility="uncounted"}
+
+```{r table-after}
+
+# The "after": same data, minimal ink — light rules only where they aid scanning
+df_continents |>
+  gt() |>
+  cols_label(
+    continent    = "Continent",
+    countries    = "Countries",
+    mean_lifeExp = "Mean Life Expectancy",
+    total_pop    = "Total Population"
+  ) |>
+  fmt_number(columns = mean_lifeExp, decimals = 1) |>
+  fmt_number(columns = total_pop, decimals = 0) |>
+  tab_options(
+    table.font.size = px(34),
+    table.background.color = brand$bg,
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = brand$dark,
+    column_labels.border.top.style = "hidden",
+    table_body.hlines.style = "hidden",
+    table.border.bottom.style = "hidden"
+  )
+
+```
+
+
+## [Possible Bonus] A table…that can be processed without reading #s
+
+*[Placeholder: same continent table with horizontal bars embedded in the
+Total Population column — likely built with `gt` + `gtExtras::gt_plt_bar()`.
+To be built.]*
+
+::: {.notes}
+Not strictly data-pixel ratio territory, but is a cognitive load reducer: add
+horizontal bars in using a gt table.
+:::
+
+# It event works for [text]{.emphasis}! {background-color="var(--divider-bg)"}
+
+
+## {.center}
+
+The application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.
+
+::: {.notes}
+Quick hit: before / after — slightly verbose statement for the first, then
+tightened up overall words AND heavy-ing up a key point.
+:::
+
+
+## {.center}
+The new preprocessing technique reduced model run-time by [30–40%]{.emphasis}.
+
+## {.center}
+The new preprocessing technique reduced model run-time by [30–40%]{.emphasis}.
+
+
+## (Increase the data-pixel ratio of) Code!
+
+```{r code-before}
+#| echo: true
+#| eval: false
+
+penguins_clean <- penguins |>
+  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |>
+  mutate(body_mass_kg = body_mass_g / 1000,
+         species = as.factor(species),
+         island = as.factor(island),
+         sex = as.factor(sex))
+
+model_spec <- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +
+                   bill_depth_mm + species + sex,
+                 data = penguins_clean)
+
+model_summary <- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)
+
+model_summary |>
+  filter(term != "(Intercept)") |>
+  arrange(desc(abs(estimate)))
+```
+
+::: {.notes}
+Quick hit: before / after — limit the initial version to JUST be reducing the
+volume of code shown and making ONE LINE of the code a larger font and
+bold/black; other code is "context" — smaller font BUT NOT SMALL and lighter
+color BUT NOT TOO LIGHT such that there is projector risk.
+
+[Placeholder styling note: the "after" treatment below uses Quarto's
+code-line-numbers highlighting; a fuller size/color treatment may need SCSS
+tuning against the syntax highlighter.]
+:::
+
+
+## (Increase the data-pixel ratio of) Code! {visibility="uncounted"}
+
+```{r code-after}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "4"
+
+penguins_clean <- penguins |>
+  drop_na(body_mass_g, flipper_length_mm)
+
+model_spec <- lm(body_mass_kg ~ flipper_length_mm + species + sex,
+                 data = penguins_clean)
+```
