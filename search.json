@@ -4,7 +4,7 @@
     "href": "dataviz-best-practices.html#section",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Amplifying Talk Impact through Visual Reinforcement\n\n\nNot sure if I love this title, but trying to come up with something that frames the overarching point—that “the slides” are secondary to “the point” and “the narrative”… but they do still matter.\nI also spent some time trying to get the “corner” images from the PowerPoint example… and that’s uniquely difficult to pull off in Quarto."
+    "text": "Pixels with Purpose\nHow to Amplify the Impact of Your Talk Through Visual Reinforcement\n\n\nNot sure if I love this title, but trying to come up with something that frames the overarching point—that “the slides” are secondary to “the point” and “the narrative”… but they do still matter.\nI also spent some time trying to get the “corner” images from the PowerPoint example… and that’s uniquely difficult to pull off in Quarto."
   },
   {
     "objectID": "dataviz-best-practices.html#section-1",
@@ -39,11 +39,18 @@
     "href": "dataviz-best-practices.html#section-5",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Iconic Memory\n\n\nPre-Cognition\n\n\n\n\n\nShort-Term Memory\n\n\n7 ± 2\n\n\n\n\n\nLong-Term Memory\n\n\nIn an Hour,Tomorrow,Next Month\n\n\nThe human brain has limitations:\n\nIconic memory — pre-cognition; everything comes in and gets processed\nShort-term memory / Miller’s Law (7 +/- 2)\nLong-term memory"
+    "text": "It starts with how we take in and process information\n\n\nhttps://unsplash.com/photos/a-close-up-of-a-red-flower-59HOF9zHKNs?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
   },
   {
     "objectID": "dataviz-best-practices.html#section-6",
     "href": "dataviz-best-practices.html#section-6",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "",
+    "text": "Iconic Memory\n\n\nPre-Cognition\n\n\n\n\n\nShort-Term Memory\n\n\n7 ± 2\n\n\n\n\n\nLong-Term Memory\n\n\nIn an Hour,Tomorrow,Next Month\n\n\nThe human brain has limitations:\n\nIconic memory — pre-cognition; everything comes in and gets processed\nShort-term memory / Miller’s Law (7 +/- 2)\nLong-term memory"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#section-7",
+    "href": "dataviz-best-practices.html#section-7",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
     "text": "Minimize cognitive load.\n\n\n\nPhysical pic of “cognitive” load / lady w/ pots on her head (sets up callback later to risks/realities of being clever)."
@@ -63,15 +70,15 @@
     "text": "Maximize the data-pixel ratio!\n\nThis concept was initially put forth by Edward Tufte as “the data-ink ratio,” and Stephen Few later modernized it as “the data-pixel ratio.”\n\n\n\n\nData-Information Pixels\n\n\nAll Non-Background Pixels\n\n\n\n  Every pixel that is notsimply the background color\n Pixels that representactual data or information\n\nVisually define — multiple slides, but they go quick.\nClose with, verbally: this is reducing cognitive load by giving the brain fewer decisions to make about “what matters.”\nhttps://unsplash.com/photos/candlestick-stock-chart-on-dark-screen-VLpWpv3oDB4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"
   },
   {
-    "objectID": "dataviz-best-practices.html#section-7",
-    "href": "dataviz-best-practices.html#section-7",
+    "objectID": "dataviz-best-practices.html#section-8",
+    "href": "dataviz-best-practices.html#section-8",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
     "text": "Data-Information Pixels\n\n\nAll Non-Background Pixels\n\n\n\n Every pixel that is notsimply the background color\n Pixels that representactual data or information"
   },
   {
-    "objectID": "dataviz-best-practices.html#section-8",
-    "href": "dataviz-best-practices.html#section-8",
+    "objectID": "dataviz-best-practices.html#section-9",
+    "href": "dataviz-best-practices.html#section-9",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
     "text": "(Increase the data-pixel ratio of) A chart\nQuick hit: before / after. These all can be literally a quick hit before/after; can return to that to go deeper as to what’s going on.\nEach callout is a click, building up the cognitive load the audience is carrying while reading a “default” chart."
@@ -84,29 +91,29 @@
     "text": "Personal Savings Rate by Month in 2009\n\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nThe “after”: same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels."
   },
   {
-    "objectID": "dataviz-best-practices.html#make-it-imposssible-to-ignoremiss",
-    "href": "dataviz-best-practices.html#make-it-imposssible-to-ignoremiss",
+    "objectID": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009-1",
+    "href": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009-1",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "Make it imposssible to ignore/miss",
-    "text": "Make it imposssible to ignore/miss"
+    "section": "Personal Savings Rate by Month in 2009",
+    "text": "Personal Savings Rate by Month in 2009\n\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/"
   },
   {
-    "objectID": "dataviz-best-practices.html#back-to-the-line-chart-w-impossible-to-ignore",
-    "href": "dataviz-best-practices.html#back-to-the-line-chart-w-impossible-to-ignore",
+    "objectID": "dataviz-best-practices.html#stimulus-payments-in-may-drove-a-savings-spike",
+    "href": "dataviz-best-practices.html#stimulus-payments-in-may-drove-a-savings-spike",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "Back to the line chart w/ impossible to ignore",
-    "text": "Back to the line chart w/ impossible to ignore\nPossibly limit initial line chart to just be data-pixel ratio reduction.\nEverything after… 2 beats: 1) data-pixel, 2) impossible to ignore\nShowing McKinsey Titles"
+    "section": "Stimulus payments in May drove a savings spike",
+    "text": "Stimulus payments in May drove a savings spike\nPersonal saving rate by month: 2009\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#section-10",
+    "href": "dataviz-best-practices.html#section-10",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "",
+    "text": "Continent\nCountries\nMean Life Expectancy\nTotal Population\n\n\n\n\nAsia\n33\n70.7\n3,811,953,827\n\n\nAfrica\n52\n54.8\n929,539,692\n\n\nAmericas\n25\n73.6\n898,871,184\n\n\nEurope\n30\n77.6\n586,098,529\n\n\nOceania\n2\n80.7\n24,549,947\n\n\n\n\n\n\n\n\nQuick hit: before / after…"
   },
   {
     "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table",
     "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table",
-    "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "(Increase the data-pixel ratio of) A table",
-    "text": "(Increase the data-pixel ratio of) A table\n\n\n\n\n\n\n\n\nContinent\nCountries\nMean Life Expectancy\nTotal Population\n\n\n\n\nAsia\n33\n70.7\n3,811,953,827\n\n\nAfrica\n52\n54.8\n929,539,692\n\n\nAmericas\n25\n73.6\n898,871,184\n\n\nEurope\n30\n77.6\n586,098,529\n\n\nOceania\n2\n80.7\n24,549,947\n\n\n\n\n\n\n\n\nQuick hit: before / after…"
-  },
-  {
-    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table-1",
-    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table-1",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "(Increase the data-pixel ratio of) A table",
     "text": "(Increase the data-pixel ratio of) A table\n\n\n\n\n\n\n\n\nContinent\nCountries\nMean Life Expectancy\nTotal Population\n\n\n\n\nAsia\n33\n70.7\n3,811,953,827\n\n\nAfrica\n52\n54.8\n929,539,692\n\n\nAmericas\n25\n73.6\n898,871,184\n\n\nEurope\n30\n77.6\n586,098,529\n\n\nOceania\n2\n80.7\n24,549,947"
@@ -119,18 +126,25 @@
     "text": "[Possible Bonus] A table…that can be processed without reading #s\n[Placeholder: same continent table with horizontal bars embedded in the Total Population column — likely built with gt + gtExtras::gt_plt_bar(). To be built.]\n\nNot strictly data-pixel ratio territory, but is a cognitive load reducer: add horizontal bars in using a gt table."
   },
   {
-    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-text",
-    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-text",
+    "objectID": "dataviz-best-practices.html#section-11",
+    "href": "dataviz-best-practices.html#section-11",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "(Increase the data-pixel ratio of) Text!",
-    "text": "(Increase the data-pixel ratio of) Text!\nThe application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.\n\nQuick hit: before / after — slightly verbose statement for the first, then tightened up overall words AND heavy-ing up a key point."
+    "section": "",
+    "text": "The application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.\n\nQuick hit: before / after — slightly verbose statement for the first, then tightened up overall words AND heavy-ing up a key point."
   },
   {
-    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-text-1",
-    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-text-1",
+    "objectID": "dataviz-best-practices.html#section-12",
+    "href": "dataviz-best-practices.html#section-12",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "(Increase the data-pixel ratio of) Text!",
-    "text": "(Increase the data-pixel ratio of) Text!\nThe new preprocessing technique reduced model run-time by 30–40%."
+    "section": "",
+    "text": "The new preprocessing technique reduced model run-time by 30–40%."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#section-13",
+    "href": "dataviz-best-practices.html#section-13",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "",
+    "text": "The new preprocessing technique reduced model run-time by 30–40%."
   },
   {
     "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-code",
