@@ -219,6 +219,15 @@ Slide: Warning, (light) Neuroscience Ahead
 For maximum fun: If I were designing in powerpoint I would make the warning large and have a handwritten font for light coming off at an angle.
 :::
 
+## {background-image="images/pic_neuroscience.jpg" background-position="center"}
+
+::: {.memory-label .memory-detail-1-5}
+It starts with how we take in and process information 
+:::
+
+::: {.notes}
+https://unsplash.com/photos/a-close-up-of-a-red-flower-59HOF9zHKNs?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+:::
 
 ## {background-color="#317168" background-image="images/closeupeye-bw.jpg" background-size="auto 100%" background-position="right center"}
 
