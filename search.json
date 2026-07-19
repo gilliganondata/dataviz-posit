@@ -154,25 +154,46 @@
     "text": "The new preprocessing technique reduced model run-time by\n\n\n30–40%!\n\n\nWe can make it impossible to ignore."
   },
   {
-    "objectID": "dataviz-best-practices.html#section-15",
-    "href": "dataviz-best-practices.html#section-15",
+    "objectID": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins",
+    "href": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "",
-    "text": "penguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\nQuick hit: before / after — limit the initial version to JUST be reducing the volume of code shown and making ONE LINE of the code a larger font and bold/black; other code is “context” — smaller font BUT NOT SMALL and lighter color BUT NOT TOO LIGHT such that there is projector risk.\n[Placeholder styling note: the “after” treatment below uses Quarto’s code-line-numbers highlighting; a fuller size/color treatment may need SCSS tuning against the syntax highlighter.]"
+    "section": "Predicting the body mass of penguins",
+    "text": "Predicting the body mass of penguins\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\nThis is the default. It may seem fine on your screen now, but it WILL BE TOO MUCH and it WILL BE TOO SMALL when presented"
   },
   {
-    "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-code",
-    "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-code",
+    "objectID": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-1",
+    "href": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-1",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "(Increase the data-pixel ratio of) Code!",
-    "text": "(Increase the data-pixel ratio of) Code!\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm)\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + species + sex,\n                 data = penguins_clean)"
+    "section": "Predicting the body mass of penguins",
+    "text": "Predicting the body mass of penguins\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nThis is better."
   },
   {
-    "objectID": "dataviz-best-practices.html#building-information-make-it-impossible-to-ignore",
-    "href": "dataviz-best-practices.html#building-information-make-it-impossible-to-ignore",
+    "objectID": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-2",
+    "href": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-2",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "Building information (Make it impossible to ignore)",
-    "text": "Building information (Make it impossible to ignore)\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm)\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + species + sex,\n                 data = penguins_clean)\n\nChoose a template that represents you (avoid the default)\n\nPushes the same code example farther with builds and even a highlight: each click walks through the code, ending with the key line highlighted alone."
+    "section": "Predicting the body mass of penguins",
+    "text": "Predicting the body mass of penguins\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nEven better"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-3",
+    "href": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-3",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "Predicting the body mass of penguins",
+    "text": "Predicting the body mass of penguins\nPrepare the data\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-4",
+    "href": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-4",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "Predicting the body mass of penguins",
+    "text": "Predicting the body mass of penguins\nBuild the model\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-5",
+    "href": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-5",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "Predicting the body mass of penguins",
+    "text": "Predicting the body mass of penguins\nView the results\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore\n\nChoose a template that represents you (avoid the default)\n\nPushes the same code example farther with builds and even a highlight: each click walks through the code, ending with the key line highlighted alone."
   },
   {
     "objectID": "dataviz-best-practices.html#brain-breaks-can-be-useful",
