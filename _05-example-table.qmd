@@ -1,0 +1,75 @@
+# What about [tables]{.emphasis}? {background-color="var(--divider-bg)"}
+
+
+## {.center}
+
+```{r table-before}
+
+# The "before": default-ish gt table with heavy fills, borders, and banding
+df_continents |>
+  gt() |>
+  cols_label(
+    continent    = "Continent",
+    countries    = "Countries",
+    mean_lifeExp = "Mean Life Expectancy",
+    total_pop    = "Total Population"
+  ) |>
+  fmt_number(columns = mean_lifeExp, decimals = 1) |>
+  fmt_number(columns = total_pop, decimals = 0) |>
+  tab_options(
+    table.font.size = px(34),
+    column_labels.background.color = brand$gratuitous,
+    row.striping.include_table_body = TRUE,
+    table_body.hlines.width = px(2),
+    table_body.vlines.width = px(2),
+    table_body.vlines.style = "solid",
+    table.border.top.width = px(3),
+    table.border.bottom.width = px(3)
+  ) |>
+  opt_row_striping()
+
+```
+
+::: {.notes}
+Quick hit: before / after…
+:::
+
+
+## (Increase the data-pixel ratio of) A table {visibility="uncounted"}
+
+```{r table-after}
+
+# The "after": same data, minimal ink — light rules only where they aid scanning
+df_continents |>
+  gt() |>
+  cols_label(
+    continent    = "Continent",
+    countries    = "Countries",
+    mean_lifeExp = "Mean Life Expectancy",
+    total_pop    = "Total Population"
+  ) |>
+  fmt_number(columns = mean_lifeExp, decimals = 1) |>
+  fmt_number(columns = total_pop, decimals = 0) |>
+  tab_options(
+    table.font.size = px(34),
+    table.background.color = brand$bg,
+    column_labels.border.bottom.width = px(2),
+    column_labels.border.bottom.color = brand$dark,
+    column_labels.border.top.style = "hidden",
+    table_body.hlines.style = "hidden",
+    table.border.bottom.style = "hidden"
+  )
+
+```
+
+
+## [Possible Bonus] A table…that can be processed without reading #s
+
+*[Placeholder: same continent table with horizontal bars embedded in the
+Total Population column — likely built with `gt` + `gtExtras::gt_plt_bar()`.
+To be built.]*
+
+::: {.notes}
+Not strictly data-pixel ratio territory, but is a cognitive load reducer: add
+horizontal bars in using a gt table.
+:::

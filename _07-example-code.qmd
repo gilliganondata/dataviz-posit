@@ -1,0 +1,186 @@
+# Let's talk about [showing code]{.emphasis}! {background-color="var(--divider-bg)"}
+
+## Predicting the body mass of penguins
+
+```{r code-before}
+#| echo: true
+#| eval: false
+
+penguins_clean <- penguins |>
+  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |>
+  mutate(body_mass_kg = body_mass_g / 1000,
+         species = as.factor(species),
+         island = as.factor(island),
+         sex = as.factor(sex))
+
+model_spec <- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +
+                   bill_depth_mm + species + sex,
+                 data = penguins_clean)
+
+model_summary <- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)
+
+model_summary |>
+  filter(term != "(Intercept)") |>
+  arrange(desc(abs(estimate)))
+```
+
+::: {.notes}
+This is the default. It may seem fine on your screen now, but it WILL BE TOO MUCH
+and it WILL BE TOO SMALL when presented
+:::
+
+## Predicting the body mass of penguins
+
+::: {.code-size-1}
+```{r code-after-1}
+#| echo: true
+#| eval: false
+
+penguins_clean <- penguins |>
+  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |>
+  mutate(body_mass_kg = body_mass_g / 1000,
+         species = as.factor(species),
+         island = as.factor(island),
+         sex = as.factor(sex))
+
+model_spec <- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +
+                   bill_depth_mm + species + sex,
+                 data = penguins_clean)
+
+model_summary <- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)
+
+model_summary |>
+  filter(term != "(Intercept)") |>
+  arrange(desc(abs(estimate)))
+```
+:::
+
+::: {.notes}
+This is better.
+:::
+
+## Predicting the body mass of penguins
+
+::: {.code-size-2}
+```{r code-after-2}
+#| echo: true
+#| eval: false
+
+penguins_clean <- penguins |>
+  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |>
+  mutate(body_mass_kg = body_mass_g / 1000,
+         species = as.factor(species),
+         island = as.factor(island),
+         sex = as.factor(sex))
+
+model_spec <- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +
+                   bill_depth_mm + species + sex,
+                 data = penguins_clean)
+
+model_summary <- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)
+
+model_summary |>
+  filter(term != "(Intercept)") |>
+  arrange(desc(abs(estimate)))
+```
+:::
+
+::: {.notes}
+Even better
+:::
+
+## Predicting the body mass of penguins
+[Prepare the data]{.subtitle-slide-text}
+
+::: {.code-size-2}
+```{r code-after-3}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "1-6"
+
+penguins_clean <- penguins |>
+  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |>
+  mutate(body_mass_kg = body_mass_g / 1000,
+         species = as.factor(species),
+         island = as.factor(island),
+         sex = as.factor(sex))
+
+model_spec <- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +
+                   bill_depth_mm + species + sex,
+                 data = penguins_clean)
+
+model_summary <- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)
+
+model_summary |>
+  filter(term != "(Intercept)") |>
+  arrange(desc(abs(estimate)))
+```
+:::
+
+::: {.notes}
+Make it impossible to ignore
+:::
+
+## Predicting the body mass of penguins
+[Build the model]{.subtitle-slide-text}
+
+::: {.code-size-2}
+```{r code-after-4}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "8-10"
+
+penguins_clean <- penguins |>
+  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |>
+  mutate(body_mass_kg = body_mass_g / 1000,
+         species = as.factor(species),
+         island = as.factor(island),
+         sex = as.factor(sex))
+
+model_spec <- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +
+                   bill_depth_mm + species + sex,
+                 data = penguins_clean)
+
+model_summary <- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)
+
+model_summary |>
+  filter(term != "(Intercept)") |>
+  arrange(desc(abs(estimate)))
+```
+:::
+
+::: {.notes}
+Make it impossible to ignore
+:::
+
+## Predicting the body mass of penguins
+[View the results]{.subtitle-slide-text}
+
+::: {.code-size-2}
+```{r code-after-5}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "12-16"
+
+penguins_clean <- penguins |>
+  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |>
+  mutate(body_mass_kg = body_mass_g / 1000,
+         species = as.factor(species),
+         island = as.factor(island),
+         sex = as.factor(sex))
+
+model_spec <- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +
+                   bill_depth_mm + species + sex,
+                 data = penguins_clean)
+
+model_summary <- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)
+
+model_summary |>
+  filter(term != "(Intercept)") |>
+  arrange(desc(abs(estimate)))
+```
+:::
+
+::: {.notes}
+Make it impossible to ignore
+:::

@@ -377,8 +377,21 @@ $memory-detail-sizes: (
 
 // Code blocks
 .reveal pre code {
-  font-size: 0.75em;
+  font-size: .75em !important;
   line-height: 1.5;
+}
+
+.code-size-1 pre code  { 
+  font-size: 1.25em !important;
+  max-height: 850px !important;
+  }
+.code-size-2 pre code {
+  font-size: 1.65em !important; 
+  max-height: 850px !important;
+}
+.code-size-3 pre code  {
+  font-size: 2.5em !important; 
+  max-height: 850px !important;
 }
 
 // Footer text (slide number / text label)
@@ -432,3 +445,4 @@ $memory-detail-sizes: (
 .reveal .slides section.no-padding {
   padding: 0 !important;
 }
+

@@ -105,19 +105,13 @@ I also spent some time trying to get the "corner" images from the PowerPoint exa
 
 {{< include _03-data-pixel-ratio.qmd >}}
 
-## Building information (Make it impossible to ignore)
+{{< include _04-example-line-chart.qmd >}}
 
-```{r code-build}
-#| echo: true
-#| eval: false
-#| code-line-numbers: "|1-2|4-5|4"
+{{< include _05-example-table.qmd >}}
 
-penguins_clean <- penguins |>
-  drop_na(body_mass_g, flipper_length_mm)
+{{< include _06-example-text.qmd >}}
 
-model_spec <- lm(body_mass_kg ~ flipper_length_mm + species + sex,
-                 data = penguins_clean)
-```
+{{< include _07-example-code.qmd >}}
 
 Choose a template that represents you (avoid the default)
 
