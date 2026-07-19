@@ -349,27 +349,54 @@ Not strictly data-pixel ratio territory, but is a cognitive load reducer: add
 horizontal bars in using a gt table.
 :::
 
-# It event works for [text]{.emphasis}! {background-color="var(--divider-bg)"}
+# It even works for [text]{.emphasis}! {background-color="var(--divider-bg)"}
 
 
-## {.center}
+## {.center style="font-size: 1.5em;"}
 
 The application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.
 
 ::: {.notes}
-Quick hit: before / after — slightly verbose statement for the first, then
-tightened up overall words AND heavy-ing up a key point.
+While this may be an accurate statement, it's a LOT to read. We've all seen slides like this.
 :::
 
+## {.center}
+
+:::{.slide-body-lg-text}
+The new preprocessing technique reduced model run-time by 30–40%.
+:::
+
+::: {.notes}
+The first thing we can do is simply trim the words! Be more economical.
+:::
 
 ## {.center}
-The new preprocessing technique reduced model run-time by [30–40%]{.emphasis}.
+:::{.slide-body-lg-text}
+The new preprocessing technique reduced model run-time by
+:::
+::: {.slide-body-lg-text style="margin-top: -0.2em; font-size: 6em;"}
+30–40%!
+:::
+
+::: {.notes}
+We can make specific parts of the text really stand out
+:::
 
 ## {.center}
-The new preprocessing technique reduced model run-time by [30–40%]{.emphasis}.
+:::{.slide-body-lg-text}
+The new preprocessing technique reduced model run-time by
+:::
+::: {.slide-body-lg-text-emphasis}
+30–40%!
+:::
 
+::: {.notes}
+We can make it impossible to ignore.
+:::
 
-## (Increase the data-pixel ratio of) Code!
+# Let's talk about [showing code]{.emphasis}! {background-color="var(--divider-bg)"}
+
+##
 
 ```{r code-before}
 #| echo: true

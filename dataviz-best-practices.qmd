@@ -99,11 +99,11 @@ narrative"... but they do still matter.
 I also spent some time trying to get the "corner" images from the PowerPoint example... and that's uniquely difficult to pull off in Quarto.
 :::
 
-{{< include 01-intro.qmd >}}
+{{< include _01-intro.qmd >}}
 
-{{< include 02-cognitive-load.qmd >}}
+{{< include _02-cognitive-load.qmd >}}
 
-{{< include 03-data-pixel-ratio.qmd >}}
+{{< include _03-data-pixel-ratio.qmd >}}
 
 ## Building information (Make it impossible to ignore)
 

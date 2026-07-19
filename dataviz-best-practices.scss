@@ -330,6 +330,25 @@ $memory-detail-sizes: (
   pointer-events: none;
 }
 
+// ── Text emphasis slides ────────────────────────────────────────────────────
+.slide-body-lg-text {
+  text-align: center;
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 2.6em;
+  line-height: 1;
+}
+
+.slide-body-lg-text-emphasis {
+  text-align: center;
+  margin-top: -0.2em;
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  font-size: 8em;
+  line-height: 0.8;
+  color: $primary;
+}
+
 
 // ── Quotes ──────────────────────────────────────────────────────────────────
 .reveal blockquote {
