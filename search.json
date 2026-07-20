@@ -196,32 +196,53 @@
     "text": "Predicting the body mass of penguins\n\nView the results\n\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore"
   },
   {
-    "objectID": "dataviz-best-practices.html#choose-a-template-that-represents-you-avoid-the-default",
-    "href": "dataviz-best-practices.html#choose-a-template-that-represents-you-avoid-the-default",
+    "objectID": "dataviz-best-practices.html#section-15",
+    "href": "dataviz-best-practices.html#section-15",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "Choose a template that represents you (avoid the default)",
-    "text": "Choose a template that represents you (avoid the default)\n(Need to figure out what to do here)"
+    "section": "",
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/womans-portrait-mC852jACK1g"
   },
   {
-    "objectID": "dataviz-best-practices.html#brain-breaks-can-be-useful",
-    "href": "dataviz-best-practices.html#brain-breaks-can-be-useful",
+    "objectID": "dataviz-best-practices.html#section-16",
+    "href": "dataviz-best-practices.html#section-16",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "“Brain breaks” can be useful",
-    "text": "“Brain breaks” can be useful\n\nFor the audience (TED book)."
+    "section": "",
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/topless-man-with-water-droplets-on-his-face-UFm4e4fsEZc"
   },
   {
-    "objectID": "dataviz-best-practices.html#bring-out-emotion",
-    "href": "dataviz-best-practices.html#bring-out-emotion",
+    "objectID": "dataviz-best-practices.html#section-17",
+    "href": "dataviz-best-practices.html#section-17",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "Bring Out Emotion",
-    "text": "Bring Out Emotion\nSomething stormy, nature-y You should feel like something is coming"
+    "section": "",
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/selective-photography-of-white-thunder-nbqlWhOVu6k"
   },
   {
-    "objectID": "dataviz-best-practices.html#levity",
-    "href": "dataviz-best-practices.html#levity",
+    "objectID": "dataviz-best-practices.html#section-18",
+    "href": "dataviz-best-practices.html#section-18",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "Levity",
-    "text": "Levity\nxkcd example GIFs (cat typing)\n(Getting people to laugh)\nBe careful with levity… Star Trek references won’t land with everyone."
+    "section": "",
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/person-standing-on-hill-EAvS-4KnGrk"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#section-19",
+    "href": "dataviz-best-practices.html#section-19",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "",
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/brown-boat-near-dock-qkfxBc2NQ18"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#slides-can-inject-levity.",
+    "href": "dataviz-best-practices.html#slides-can-inject-levity.",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "Slides can inject levity.",
+    "text": "Slides can inject levity."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#but-be-careful",
+    "href": "dataviz-best-practices.html#but-be-careful",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "But be careful!",
+    "text": "But be careful!\nxkcd example GIFs (cat typing)\n(Getting people to laugh)\nBe careful with levity… Star Trek references won’t land with everyone.\nCallback…\n\nxkcd Source: https://xkcd.com/365\n\nDraw Focus\nBlank screen w/ a light bulb OR “Story time!”\n\n\nThe talk is about the idea. The slides support the idea.\n\n\n\n\nWe covered three simple tactics for reducing cognitive load\n\n\nMaximize the data-pixel ratio\nMake the point impossible to miss\nKeep the audience’s attention\n\n\n\n\n\nThis Presentation\n\nGitHub repo (Quarto/revealjs): rebrand.ly/dataviz-posit\nRendered slides (GitHub Pages): gilliganondata.github.io/dataviz-posit/#/"
   },
   {
     "objectID": "dataviz-best-practices.html#draw-focus",
@@ -229,34 +250,6 @@
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "Draw Focus",
     "text": "Draw Focus\nBlank screen w/ a light bulb OR “Story time!”"
-  },
-  {
-    "objectID": "dataviz-best-practices.html#normative-conformity",
-    "href": "dataviz-best-practices.html#normative-conformity",
-    "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "normative conformity",
-    "text": "normative conformity\n\n“the tendency of individuals to adjust their behavior, attitudes, or beliefs to align with the perceived standards or expectations of a group or society”"
-  },
-  {
-    "objectID": "dataviz-best-practices.html#normative-conformityfor-slide-decks",
-    "href": "dataviz-best-practices.html#normative-conformityfor-slide-decks",
-    "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "normative conformity…for slide decks",
-    "text": "normative conformity…for slide decks\n\n“the tendency of employees to adjust their presentations to align with the perceived standards of their organization”"
-  },
-  {
-    "objectID": "dataviz-best-practices.html#normative-conformityillustrated",
-    "href": "dataviz-best-practices.html#normative-conformityillustrated",
-    "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "normative conformity…illustrated",
-    "text": "normative conformity…illustrated\n“This slide deck is killing me.”\n\n“Let me produce another one.”"
-  },
-  {
-    "objectID": "dataviz-best-practices.html#you-have-the-power-to-change",
-    "href": "dataviz-best-practices.html#you-have-the-power-to-change",
-    "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "You have the power to change!",
-    "text": "You have the power to change!\n\nUncle Sam-like pic, full bleed to the right.\nThen choose your own adventure with what you want to learn more about."
   },
   {
     "objectID": "normative-conformity.html#normative-conformity",
