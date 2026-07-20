@@ -109,33 +109,49 @@ df_continents <- gapminder |>
 
 ## "Brain breaks" can be useful
 
-Brain breaks (Make it interesting to pay attention):
-
-- **Reveal** — show something that is hard to describe (often a moment of revelation)
-- **Explain** — images can create connections that words cannot
-- **Delight** — aesthetics keep people interested
-
-<br>
-
-Gifs, comics, memes, blank screen
-
 ::: {.notes}
 For the audience (TED book).
 :::
 
+## Bring Out Emotion
+
+Something stormy, nature-y
+You should feel like something is coming
+
+## Levity
+
+xkcd example
+GIFs (cat typing)
+
+(Getting people to laugh)
+
+Be careful with levity... Star Trek references won't land with everyone.
+
+## Draw Focus
+
+Blank screen w/ a light bulb
+OR
+"Story time!"
 
 # The talk is about [the idea]{.emphasis}. The slides [support the idea]{.emphasis}. {background-color="var(--divider-bg)"}
 
-# This Presentation (Quarto/revealjs) {background-color="var(--divider-bg)"}
+# We covered [three simple tactics]{.emphasis} for [reducing cognitive load]{.emphasis} {background-color="var(--divider-bg)"}
 
-::: {.memory-label style="padding-top: 30px"}
-GitHub repo: [rebrand.ly/dataviz-posit](https://rebrand.ly/dataviz-posit)
+::: {.hollow-square-bullets}
+- Maximize the [data-pixel ratio]{.emphasis}
+- Make the point [impossible to miss]{.emphasis}
+- Keep the audience's [attention]{.emphasis}
 :::
-::: {.memory-label style="padding-top: 30px"}
+
+# This Presentation {background-color="var(--divider-bg)"}
+
+::: {.slide-body-lg-text}
+GitHub repo (Quarto/revealjs): [rebrand.ly/dataviz-posit](https://rebrand.ly/dataviz-posit)
+
 Rendered slides (GitHub Pages): [gilliganondata.github.io/dataviz-posit/#/](https://gilliganondata.github.io/dataviz-posit/#/)
 :::
 
-# Why are so many slide decks so bad? {background-color="var(--divider-bg)"}
+# Why are so many slide decks [so bad]{.emphasis}? {background-color="var(--divider-bg)"}
 
 
 ## normative conformity

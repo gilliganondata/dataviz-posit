@@ -1,0 +1,56 @@
+---
+title: "Normative Conformity"
+author: "Tim Wilson"
+date: today
+format:
+  revealjs:
+    theme: [default, dataviz-best-practices.scss]
+    menu: false
+    progress: false
+    history: false
+    transition: fade
+    transition-speed: fast
+    incremental: false
+    logo: images/meadowlark-logo.png
+    width: 1920
+    height: 1080
+    margin: 0.05
+    highlight-style: github
+    center: false
+title-slide-attributes:
+  data-visibility: "hidden"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+# Why are so many slide decks [so bad]{.emphasis}? {background-color="var(--divider-bg)"}
+
+
+## normative conformity
+
+> "the tendency of individuals to adjust their behavior, attitudes, or beliefs to align with the perceived standards or expectations of a group or society"
+
+
+## normative conformity…for slide decks
+
+> "the tendency of employees to adjust their presentations to align with the perceived standards of their organization"
+
+
+## normative conformity…illustrated {.statement}
+
+"This slide deck is killing me."
+
+. . .
+
+"Let me produce another one."
+
+
+## You have the power to change! {background-image="images/pic_uncle_sam.png" background-size="auto 100%" background-position="right center"}
+
+::: {.notes}
+Uncle Sam-like pic, full bleed to the right.
+
+Then choose your own adventure with what you want to learn more about.
+:::

@@ -1,6 +1,4 @@
-# Some simple tactics can reduce cognitive load {background-color="var(--divider-bg)"}
-
-# The most powerful tactic?<br>Maximize the [data-pixel ratio]{.emphasis}! {background-color="var(--divider-bg)"}
+# The most powerful tactic?<br>[Maximize]{.emphasis} the [data-pixel ratio]{.emphasis}! {background-color="var(--divider-bg)"}
 
 ## Maximize the [data-pixel ratio]{.emphasis}! {background-image="images/data-pixel-bg.jpg"}
 

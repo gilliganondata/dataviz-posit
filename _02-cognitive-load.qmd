@@ -78,3 +78,12 @@ Minimize [cognitive load]{.emphasis}.
 ::: {.notes}
 Opportunity to experience cognitive load: counting the 5s without them highlighted. Then count them with them highlighted. So much easier, even though only a tiny number of pixels on the screen were altered.
 :::
+
+# Some [simple tactics]{.emphasis} can [reduce cognitive load]{.emphasis} {background-color="var(--divider-bg)"}
+
+::: {.hollow-square-bullets .incremental}
+- Maximize the [data-pixel ratio]{.emphasis}
+- Make the point [impossible to miss]{.emphasis}
+- Keep the audience's [attention]{.emphasis}
+:::
+

@@ -92,11 +92,12 @@ $footer-baseline: 14px;
 
 // Subtitle on the title slide
 .subtitle-text {
-  font-family: $font-family-serif;
-  font-weight: 500;
-  font-size: 1.8em;
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
   line-height: 1.25;
-  color: $primary;
+  color: #555;
+  margin-top: 0.15em;
 }
 
 .title-bird {
@@ -105,12 +106,13 @@ $footer-baseline: 14px;
 }
 
 // Subtitle on a regular slide
-.subtitle-slide-text {
-  font-family: $font-family-serif;
-  font-weight: 500;
-  font-size: 1.4em;
-  line-height: 1;
-  color: $body-color;
+.subtitle-slide-text > p {
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.25;
+  color: #555;
+  margin: 0;
 }
 
 // The corners -- flush
@@ -446,3 +448,26 @@ $memory-detail-sizes: (
   padding: 0 !important;
 }
 
+// Unordered lists will be checkboxes
+.hollow-square-bullets {
+  ul {
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 1.2em;
+      font-size: 2.2em;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.55em;
+        height: 0.55em;
+        border: 0.08em solid currentColor;
+      }
+    }
+  }
+}
