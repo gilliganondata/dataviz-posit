@@ -98,32 +98,32 @@
     "text": "Personal Savings Rate by Month in 2009\n\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nThis is what we had. But…what is it I want to say here? We want to make it impossible to miss."
   },
   {
-    "objectID": "dataviz-best-practices.html#stimulus-payments-in-may-drove-a-savings-spike",
-    "href": "dataviz-best-practices.html#stimulus-payments-in-may-drove-a-savings-spike",
+    "objectID": "dataviz-best-practices.html#stimulus-payments-in-may-drove-savings-spike",
+    "href": "dataviz-best-practices.html#stimulus-payments-in-may-drove-savings-spike",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "Stimulus payments in May drove a savings spike",
-    "text": "Stimulus payments in May drove a savings spike\nPersonal saving rate by month: 2009\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nWe can really highlight what we’re calling out. In this case, we made the title call out exactly what we’re showing, and we emphasized in the chart itself that same highlight."
+    "section": "Stimulus payments in May drove savings spike",
+    "text": "Stimulus payments in May drove savings spike\n\nPersonal saving rate by month: 2009\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nWe can really highlight what we’re calling out. In this case, we made the title call out exactly what we’re showing, and we emphasized in the chart itself that same highlight."
   },
   {
     "objectID": "dataviz-best-practices.html#section-10",
     "href": "dataviz-best-practices.html#section-10",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "THIS SLIDE IS IN WORK (HASN’T REALLY BEEEN TOUCHED YET)\n\n\n\n\n\n\n\n\nContinent\nCountries\nMean Life Expectancy\nTotal Population\n\n\n\n\nAsia\n33\n70.7\n3,811,953,827\n\n\nAfrica\n52\n54.8\n929,539,692\n\n\nAmericas\n25\n73.6\n898,871,184\n\n\nEurope\n30\n77.6\n586,098,529\n\n\nOceania\n2\n80.7\n24,549,947\n\n\n\n\n\n\n\n\nQuick hit: before / after…"
+    "text": "THIS SLIDE IS IN WORK (HASN’T REALLY BEEN TOUCHED YET)\n\n\n\n\n\n\n\n\nContinent\nCountries\nMean Life Expectancy\nTotal Population\n\n\n\n\nAsia\n33\n70.7\n3,811,953,827\n\n\nAfrica\n52\n54.8\n929,539,692\n\n\nAmericas\n25\n73.6\n898,871,184\n\n\nEurope\n30\n77.6\n586,098,529\n\n\nOceania\n2\n80.7\n24,549,947\n\n\n\n\n\n\n\n\nQuick hit: before / after…"
   },
   {
     "objectID": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table",
     "href": "dataviz-best-practices.html#increase-the-data-pixel-ratio-of-a-table",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "(Increase the data-pixel ratio of) A table",
-    "text": "(Increase the data-pixel ratio of) A table\nTHIS SLIDE IS IN WORK (HASN’T REALLY BEEEN TOUCHED YET)\n\n\n\n\n\n\n\n\nContinent\nCountries\nMean Life Expectancy\nTotal Population\n\n\n\n\nAsia\n33\n70.7\n3,811,953,827\n\n\nAfrica\n52\n54.8\n929,539,692\n\n\nAmericas\n25\n73.6\n898,871,184\n\n\nEurope\n30\n77.6\n586,098,529\n\n\nOceania\n2\n80.7\n24,549,947"
+    "text": "(Increase the data-pixel ratio of) A table\nTHIS SLIDE IS IN WORK (HASN’T REALLY BEEN TOUCHED YET)\n\n\n\n\n\n\n\n\nContinent\nCountries\nMean Life Expectancy\nTotal Population\n\n\n\n\nAsia\n33\n70.7\n3,811,953,827\n\n\nAfrica\n52\n54.8\n929,539,692\n\n\nAmericas\n25\n73.6\n898,871,184\n\n\nEurope\n30\n77.6\n586,098,529\n\n\nOceania\n2\n80.7\n24,549,947"
   },
   {
     "objectID": "dataviz-best-practices.html#possible-bonus-a-tablethat-can-be-processed-without-reading-s",
     "href": "dataviz-best-practices.html#possible-bonus-a-tablethat-can-be-processed-without-reading-s",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "[Possible Bonus] A table…that can be processed without reading #s",
-    "text": "[Possible Bonus] A table…that can be processed without reading #s\nTHIS SLIDE IS IN WORK (HASN’T REALLY BEEEN TOUCHED YET)\n[Placeholder: same continent table with horizontal bars embedded in the Total Population column — likely built with gt + gtExtras::gt_plt_bar(). To be built.]\n\nNot strictly data-pixel ratio territory, but is a cognitive load reducer: add horizontal bars in using a gt table."
+    "text": "[Possible Bonus] A table…that can be processed without reading #s\nTHIS SLIDE IS IN WORK (HASN’T REALLY BEEN TOUCHED YET)\n[Placeholder: same continent table with horizontal bars embedded in the Total Population column — likely built with gt + gtExtras::gt_plt_bar(). To be built.]\n\nNot strictly data-pixel ratio territory, but is a cognitive load reducer: add horizontal bars in using a gt table."
   },
   {
     "objectID": "dataviz-best-practices.html#section-11",
@@ -179,21 +179,21 @@
     "href": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-3",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "Predicting the body mass of penguins",
-    "text": "Predicting the body mass of penguins\nPrepare the data\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore"
+    "text": "Predicting the body mass of penguins\n\nPrepare the data\n\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore"
   },
   {
     "objectID": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-4",
     "href": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-4",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "Predicting the body mass of penguins",
-    "text": "Predicting the body mass of penguins\nBuild the model\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore"
+    "text": "Predicting the body mass of penguins\n\nBuild the model\n\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore"
   },
   {
     "objectID": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-5",
     "href": "dataviz-best-practices.html#predicting-the-body-mass-of-penguins-5",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "Predicting the body mass of penguins",
-    "text": "Predicting the body mass of penguins\nView the results\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore"
+    "text": "Predicting the body mass of penguins\n\nView the results\n\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore"
   },
   {
     "objectID": "dataviz-best-practices.html#choose-a-template-that-represents-you-avoid-the-default",
