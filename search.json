@@ -81,7 +81,7 @@
     "href": "dataviz-best-practices.html#section-9",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Let’s look at a generic, simple line chart. This is the ggplot defaults…made a little bit worse.\nThere are a lot of redundant or non-data/information pixels here."
+    "text": "Let’s look at a generic, simple line chart. This is the ggplot defaults (made a little bit worse).\nThere are a lot of redundant or non-data/information pixels here."
   },
   {
     "objectID": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009",
@@ -208,13 +208,6 @@
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "“Brain breaks” can be useful",
     "text": "“Brain breaks” can be useful\nBrain breaks (Make it interesting to pay attention):\n\nReveal — show something that is hard to describe (often a moment of revelation)\nExplain — images can create connections that words cannot\nDelight — aesthetics keep people interested\n\n\nGifs, comics, memes, blank screen\n\nFor the audience (TED book)."
-  },
-  {
-    "objectID": "dataviz-best-practices.html#these-slides-are-in-quarto",
-    "href": "dataviz-best-practices.html#these-slides-are-in-quarto",
-    "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "These Slides are in Quarto…",
-    "text": "These Slides are in Quarto…\nGithub link"
   },
   {
     "objectID": "dataviz-best-practices.html#normative-conformity",
