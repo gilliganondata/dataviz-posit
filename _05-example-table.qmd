@@ -1,7 +1,8 @@
 # What about [tables]{.emphasis}? {background-color="var(--divider-bg)"}
 
-
 ## {.center}
+
+THIS SLIDE IS IN WORK (HASN'T REALLY BEEEN TOUCHED YET)
 
 ```{r table-before}
 
@@ -34,8 +35,9 @@ df_continents |>
 Quick hit: before / after…
 :::
 
-
 ## (Increase the data-pixel ratio of) A table {visibility="uncounted"}
+
+THIS SLIDE IS IN WORK (HASN'T REALLY BEEEN TOUCHED YET)
 
 ```{r table-after}
 
@@ -62,8 +64,9 @@ df_continents |>
 
 ```
 
-
 ## [Possible Bonus] A table…that can be processed without reading #s
+
+THIS SLIDE IS IN WORK (HASN'T REALLY BEEEN TOUCHED YET)
 
 *[Placeholder: same continent table with horizontal bars embedded in the
 Total Population column — likely built with `gt` + `gtExtras::gt_plt_bar()`.

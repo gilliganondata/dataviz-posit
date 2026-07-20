@@ -1,11 +1,6 @@
 # Some simple tactics can reduce cognitive load {background-color="var(--divider-bg)"}
 
-::: {.notes}
-"The solutions"
-:::
-
 # The most powerful tactic?<br>Maximize the [data-pixel ratio]{.emphasis}! {background-color="var(--divider-bg)"}
-
 
 ## Maximize the [data-pixel ratio]{.emphasis}! {background-image="images/data-pixel-bg.jpg"}
 
@@ -31,13 +26,9 @@ All Non-Background Pixels
 [Pixels that represent<br>actual data or information]{.ratio-annotation .absolute .fragment top="26%" left="51%" fragment-index=2}
 
 ::: {.notes}
-Visually define — multiple slides, but they go quick.
+(After build) This is an example of a slide with high cognitive load.
 
-Close with, verbally: this is reducing cognitive load by giving the brain fewer
-decisions to make about "what matters."
-
-
-https://unsplash.com/photos/candlestick-stock-chart-on-dark-screen-VLpWpv3oDB4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+Image source: https://unsplash.com/photos/candlestick-stock-chart-on-dark-screen-VLpWpv3oDB4
 :::
 
 ## {background-color="var(--divider-bg)"}
@@ -58,3 +49,6 @@ All Non-Background Pixels
 ![](images/left-down-arc-arrow.png){.absolute top="22%" left="45%" width="5%"}
 [Pixels that represent<br>actual data or information]{.ratio-annotation .absolute top="17%" left="51%"}
 
+::: {.notes}
+We've drastically increased the data-pixel ratio, which gives the brain fewer choices to make as to what to try to take in and process.
+:::

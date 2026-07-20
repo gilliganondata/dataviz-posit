@@ -1,103 +1,76 @@
 # Why do we have slides in a talk? {background-color="var(--divider-bg)"}
 
 ::: {.notes}
-"Highest Level Situation"
-
-Verbally: a good place to start is being clear on why we have slides in a talk
-in the first place…
+A good place to start is being clear on why we have slides in a talk in the first place…
 :::
 
 ## {.center background-image="images/pic_basketball_goal.jpg" background-size="auto 100%" background-position="right center"}
 
 ::: {.text-panel-left-60}
-
 ::: {.slide-body-heading}
 The [goal]{.emphasis} of any talk is [audience impact]{.emphasis}.
 :::
-
 :::
 
 ##  {.center background-image="images/pic_basketball_goal.jpg" background-size="auto 100%" background-position="right center"}
 
 ::: {.text-panel-left-60}
-
 ::: {.slide-body-heading}
 [Slides]{.emphasis} don't drive impact.
 :::
-
 ::: {.fragment .slide-body-heading}
 [The talk]{.emphasis} drives impact.
 :::
-
 ::: {.fragment .slide-body-heading}
 Slides simply [reinforce the talk]{.emphasis}.
 :::
-
 :::
 
 ::: {.notes}
 Slides are not where a talk starts.
 
-Verbally: Don't worry! We WILL talk about slides. We just want to be clear that
+Don't worry! We WILL talk about slides. We just want to be clear that
 slides are not where a talk starts.
 :::
 
 ## {.center background-image="images/pic_boulder_support.jpg" background-size="auto 100%" background-position="right center"}
 
 ::: {.text-panel-left-60}
-
 ::: {.slide-body-heading}
 So what does [reinforcement]{.emphasis} actually [mean]{.emphasis}?
 :::
-
 :::
-
 ::: {.notes}
-https://unsplash.com/photos/man-standing-beside-rock-formation-mj51pZwan9c?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+Image source: https://unsplash.com/photos/man-standing-beside-rock-formation-mj51pZwan9c
 :::
 
 ## {.center background-image="images/pic_boulder_support.jpg" background-size="auto 100%" background-position="right center"}
 
 ::: {.text-panel-left-60}
-
 ::: {.slide-body-heading}
 Hold their [attention]{.emphasis}.
 :::
-
 ::: {.slide-body-heading .fragment}
 Help them [understand]{.emphasis} what's being presented.
 :::
-
 ::: {.slide-body-heading .fragment}
 Enable them to [retain]{.emphasis} what matters most.
 :::
-
 :::
 
 ::: {.notes}
-Image source: https://unsplash.com/photos/man-standing-beside-rock-formation-mj51pZwan9c?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
-
-Ask: What can the slides do better than my words?
-
-"Keep attention" and "Remember it" (Talk can be about caring, attention, multi-encoding)
-
 - **Keep the audience's attention** — the talk is bound by time and attention
 - **Understand and care about the information** — by directly reinforcing what the speaker is saying
 - **Remember it** — dual-encoding with multiple senses (hearing *and* seeing); brain science backs up that using multiple senses aids retention
 
-What slides should not (primarily) do
+What slides should not (primarily) do: remind the speaker what they're supposed to be  (although they *can* be a visual aid to keep the speaker on track; that's just a natural artifact if they do their primary job well!)
 
-- Remind the speaker what they're supposed to be saying
-
-*Caveat: break in case of emergency… they **can** be a visual aid to keep the speaker on track; that's just a natural artifact if they do their primary job well!*
-
+Image source: https://unsplash.com/photos/man-standing-beside-rock-formation-mj51pZwan9c
 :::
-
 
 # Most slide decks [fail to deliver]{.emphasis} {background-color="var(--divider-bg)"}
 
 :::: {.columns .fragment}
-
 ::: {.column width="38%" .column-right}:::
 ![](images/flashing_light.gif)
 :::
@@ -107,14 +80,8 @@ What slides should not (primarily) do
 ::::
 
 ::: {.notes}
-"The Challenge"
-
-Verbal: this is partly because we don't stop and think about what the role of
+this is partly because we don't stop and think about what the role of
 the slides is, but it's also because we operate as though the brain easily does
 some things that it just doesn't. We're going to briefly dip into some light
 neuroscience here…
-
-Slide: Warning, (light) Neuroscience Ahead
-
-For maximum fun: If I were designing in powerpoint I would make the warning large and have a handwritten font for light coming off at an angle.
 :::

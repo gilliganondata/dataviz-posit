@@ -1,6 +1,5 @@
 # It even works for [text]{.emphasis}! {background-color="var(--divider-bg)"}
 
-
 ## {.center style="font-size: 1.5em;"}
 
 The application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.

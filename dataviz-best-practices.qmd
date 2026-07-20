@@ -37,7 +37,7 @@ pacman::p_load(tidyverse,
                ggthemes)
 
 # Brand palette/fonts — mirrors the variables defined in dataviz-best-practices.scss.
-# (It's a hassle for R to read SCSS, so this is the one place hex values are repeated.)
+# (It's a hassle for R to read SCSS, so just repeating the hex values here.)
 brand <- list(
   bg        = "#F9EBDC",
   primary   = "#317168",
@@ -78,26 +78,15 @@ df_continents <- gapminder |>
 ## {.title-custom}
 
 :::: {.columns}
-
 ::: {.column width="38%" .column-right}
 ![](images/meadowlark_bird.png){.title-bird}
 :::
-
 ::: {.column width="62%"}
 [Pixels with Purpose]{.title-text}
 
 [How to Amplify the Impact of Your Talk Through Visual Reinforcement]{.subtitle-text}
 :::
-
 ::::
-
-::: {.notes}
-Not sure if I love this title, but trying to come up with something that frames
-the overarching point—that "the slides" are secondary to "the point" and "the
-narrative"... but they do still matter.
-
-I also spent some time trying to get the "corner" images from the PowerPoint example... and that's uniquely difficult to pull off in Quarto.
-:::
 
 {{< include _01-intro.qmd >}}
 
@@ -113,12 +102,9 @@ I also spent some time trying to get the "corner" images from the PowerPoint exa
 
 {{< include _07-example-code.qmd >}}
 
-Choose a template that represents you (avoid the default)
+## Choose a template that represents you (avoid the default)
 
-::: {.notes}
-Pushes the same code example farther with builds and even a highlight: each
-click walks through the code, ending with the key line highlighted alone.
-:::
+(Need to figure out what to do here)
 
 
 ## "Brain breaks" can be useful
@@ -139,10 +125,6 @@ For the audience (TED book).
 
 
 # The talk is about the idea. The slides support the idea. {background-color="var(--divider-bg)"}
-
-::: {.notes}
-"Closing"
-:::
 
 ## These Slides are in Quarto...
 

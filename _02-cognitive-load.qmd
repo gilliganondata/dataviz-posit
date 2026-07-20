@@ -5,7 +5,7 @@ It starts with how we take in and process information
 :::
 
 ::: {.notes}
-https://unsplash.com/photos/a-close-up-of-a-red-flower-59HOF9zHKNs?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+Image source: https://unsplash.com/photos/a-close-up-of-a-red-flower-59HOF9zHKNs
 :::
 
 ## {background-color="#317168" background-image="images/closeupeye-bw.jpg" background-size="auto 100%" background-position="right center"}
@@ -46,26 +46,19 @@ In an Hour,<br>Tomorrow,<br>Next Month
 The human brain has limitations:
 
 - Iconic memory — pre-cognition; everything comes in and gets processed
-- Short-term memory / Miller's Law (7 +/- 2)
+
+- Short-term memory / Miller's Law (7 +/- 2) - George Miller, psychologist in the 1950s
+
 - Long-term memory
 :::
-
 
 ## {.center background-image="images/pic_cognitive_load.jpg" background-size="auto 100%" background-position="right center"}
 
 ::: {.text-panel-left-50}
-
 ::: {.slide-body-heading}
 Minimize [cognitive load]{.emphasis}.
 :::
-
 :::
-
-::: {.notes}
-Physical pic of "cognitive" load / lady w/ pots on her head (sets up callback
-later to risks/realities of being clever).
-:::
-
 
 ## How many 5s are in this set of numbers?
 
@@ -83,6 +76,5 @@ later to risks/realities of being clever).
 :::
 
 ::: {.notes}
-Likely need to cut for time. It IS a good way to get some quick interactivity
-and have them "feel" cognitive load, though.
+Opportunity to experience cognitive load: counting the 5s without them highlighted. Then count them with them highlighted. So much easier, even though only a tiny number of pixels on the screen were altered.
 :::

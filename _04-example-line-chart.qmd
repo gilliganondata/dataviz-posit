@@ -43,8 +43,10 @@ gg_line_og
 ::: {.fragment .fade-in-then-out fragment-index="2" .callout-oval style="top: 70%; left: 46%; width: 50px; height: 150px; transform: rotate(45deg);"}
 :::
 
+<!--
 ::: {.fragment .fade-in-then-out fragment-index="2" .callout-oval style="top: 23%; left: 7.8%; width: 60px; height: 450px;"}
 :::
+-->
 
 ::: {.fragment .fade-in-then-out fragment-index="3" .callout-oval style="top: 9.3%; left: 46%; width: 180px; height: 70px;"}
 :::
@@ -67,15 +69,10 @@ gg_line_og
 :::
 
 ::: {.notes}
-(Increase the data-pixel ratio of) A chart 
+Let's look at a generic, simple line chart. This is the ggplot defaults...made a little bit worse.
 
-Quick hit: before / after. These all can be literally a quick hit
-before/after; can return to that to go deeper as to what's going on.
-
-Each callout is a click, building up the cognitive load the audience is
-carrying while reading a "default" chart.
+There are a lot of redundant or non-data/information pixels here.
 :::
-
 
 ## Personal Savings Rate by Month in 2009
 
@@ -117,8 +114,7 @@ gg_line_better
 :::
 
 ::: {.notes}
-The "after": same data, higher data-pixel ratio. No border, no legend, no
-redundant axis titles, horizontal month labels.
+The same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels.
 :::
 
 # We want to make the point as [impossible to miss]{.emphasis} as we can. {background-color="var(--divider-bg)"}
@@ -140,6 +136,10 @@ gg_line_better
 
 ::: {.slide-source-footer .muted}
 [Source: https://fred.stlouisfed.org/series/PSAVERT/]{.muted}
+:::
+
+::: {.notes}
+This is what we had. But...what is it I want to *say* here? We want to make it *impossible to miss*.
 :::
 
 ## Stimulus payments in [May]{.emphasis} drove a [savings spike]{.emphasis}
@@ -210,4 +210,8 @@ gg_line_final
 
 ::: {.slide-source-footer .muted}
 [Source: https://fred.stlouisfed.org/series/PSAVERT/]{.muted}
+:::
+
+:::{.notes}
+We can really highlight what we're calling out. In this case, we made the title call out exactly what we're showing, and we emphasized in the chart itself that same highlight.
 :::
