@@ -124,11 +124,16 @@ For the audience (TED book).
 :::
 
 
-# The talk is about the idea. The slides support the idea. {background-color="var(--divider-bg)"}
+# The talk is about [the idea]{.emphasis}. The slides [support the idea]{.emphasis}. {background-color="var(--divider-bg)"}
 
-## These Slides are in Quarto...
+# This Presentation (Quarto/revealjs) {background-color="var(--divider-bg)"}
 
-Github link
+::: {.memory-label style="padding-top: 30px"}
+GitHub repo: [rebrand.ly/dataviz-posit](https://rebrand.ly/dataviz-posit)
+:::
+::: {.memory-label style="padding-top: 30px"}
+Rendered slides (GitHub Pages): [gilliganondata.github.io/dataviz-posit/#/](https://gilliganondata.github.io/dataviz-posit/#/)
+:::
 
 # Why are so many slide decks so bad? {background-color="var(--divider-bg)"}
 

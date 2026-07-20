@@ -2,4 +2,6 @@
 pagetitle: "Data Viz Presentations"
 ---
 
+Rendered presentation(s) from the GitHub repo at: https://github.com/gilliganondata/dataviz-posit: 
+
 - [Dataviz Best Practices](dataviz-best-practices.html)

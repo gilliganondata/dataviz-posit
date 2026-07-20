@@ -1,15 +1,7 @@
-# dataviz-r-oriented
-Data viz training targeted at R users
+# dataviz-posit
 
-Some notes on meadowlark's styles:
+A presentation developed as training for conference speakers.
 
-green background - #317168
-tan text - #F3E6C8
-dark text - #292F20
-light tan background - #F9EBDC
-medium brown - #9D792F
-purple - #725496
-light red (bird) - #F1655F
+The presentation was developed using Quarto/revealjs. As is generally (always?) the case for this repo owner, the SCSS for such an endeavor starts out pretty clean and simple, but then gets a slew of one-offs over the course of the development and goes a bit off the rails.
 
-Serif: Plantagenet Cherokee --> Google Font sub: STIX Two Text weight: 500
-Sans Serif: Halyard Text --> Source Sans Pro?
+Rendered presentation(s) from this repo are available on GitHub Pages at <https://gilliganondata.github.io/dataviz-posit/#/>.

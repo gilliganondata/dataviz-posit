@@ -86,7 +86,7 @@ $footer-baseline: 14px;
   font-family: $font-family-serif;
   font-weight: 500;
   font-size: 2.6em;
-  line-height: 1;
+  line-height: 1 !important;
   color: $primary;
 }
 
