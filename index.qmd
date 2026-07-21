@@ -4,5 +4,5 @@ pagetitle: "Data Viz Presentations"
 
 Rendered presentation(s) from the GitHub repo at [github.com/gilliganondata/dataviz-posit](https://github.com/gilliganondata/dataviz-posit): 
 
-- (Main presentation) [Dataviz Best Practices](dataviz-best-practices.html)
-- [Why are so many slide decks so bad?(normative-conformity.html)
+- (Main presentation) [Pixels with Purpose](dataviz-best-practices.html)
+- [Why are so many slide decks so bad?](normative-conformity.html)

@@ -4,7 +4,7 @@ author: "Tim Wilson"
 date: today
 format:
   revealjs:
-    theme: [default, dataviz-best-practices.scss]
+    theme: [default, styles.scss]
     menu: false
     progress: false
     history: false

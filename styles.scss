@@ -471,3 +471,13 @@ $memory-detail-sizes: (
     }
   }
 }
+
+// Specific placement of slightly rotated images
+
+.rotate-ccw-15 {
+  transform: rotate(-15deg);
+}
+
+.rotate-cw-15 {
+  transform: rotate(15deg);
+}
