@@ -1,5 +1,40 @@
 # What about [tables]{.emphasis}? {background-color="var(--divider-bg)"}
 
+##
+
+:::: {.columns}
+
+::: {.column width="40%" .slide-body-heading}
+Europe in 2007
+:::
+
+::: {.column width="60%"}
+::: {.raw-table-demo}
+```{r table-base}
+print(df_europe_2007, n=30)
+```
+:::
+:::
+
+::::
+
+
+
+::: {.slide-source-footer .muted}
+[Source: gapminder R package (Gapminder.org, ~2010 excerpt), gdpPercap is constant 2005 Int'l $ (PPP)]{.muted}
+:::
+
+
+## {.center}
+
+  select(Country = "country",
+         `Life Expectancy` = lifeExp,
+         Population = pop,
+         `GDP per Capita*` = gdpPercap)
+
+
+
+
 ## {.center}
 
 THIS SLIDE IS IN WORK (HASN'T REALLY BEEN TOUCHED YET)
@@ -30,6 +65,8 @@ df_continents |>
   opt_row_striping()
 
 ```
+
+
 
 ::: {.notes}
 Quick hit: before / after…

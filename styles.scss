@@ -82,11 +82,12 @@ $footer-baseline: 14px;
 }
 
 .title-text,
-.slide-body-heading {
+.slide-body-heading p {
   font-family: $font-family-serif;
   font-weight: 500;
   font-size: 2.6em;
-  line-height: 1 !important;
+  line-height: 1.1;
+  margin-top: 0.5em;
   color: $primary;
 }
 
@@ -112,7 +113,8 @@ $footer-baseline: 14px;
   font-size: 1.5em;
   line-height: 1.25;
   color: #555;
-  margin: 0;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
 }
 
 // The corners -- flush
@@ -341,13 +343,37 @@ $memory-detail-sizes: (
   pointer-events: none;
 }
 
+// ── Table formatting slides ────────────────────────────────────────────────────
+.reveal .slides section .raw-table-demo {
+  display: flex;
+  justify-content: center;
+
+  pre {
+    margin: 0;
+    font-size: 32px;
+  }
+
+  pre code {
+    max-height: none;      // kill reveal's 500px cap
+    overflow: visible;     // and its scrolling behavior
+    line-height: 1.2;
+  }
+}
+
 // ── Text emphasis slides ────────────────────────────────────────────────────
+.slide-body-med-text p {
+  text-align: center;
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 1.8em;
+}
+
+
 .slide-body-lg-text {
   text-align: center;
   font-family: $font-family-sans-serif;
   font-weight: 400;
   font-size: 2.6em;
-  line-height: 1;
 }
 
 .slide-body-lg-text-emphasis {
@@ -358,6 +384,8 @@ $memory-detail-sizes: (
   font-size: 8em;
   line-height: 0.8;
   color: $primary;
+  margin-top: -0.3em;
+  margin-bottom: 0em;
 }
 
 
@@ -403,6 +431,11 @@ $memory-detail-sizes: (
 .code-size-3 pre code  {
   font-size: 2.5em !important; 
   max-height: 850px !important;
+}
+
+.highlight-line {
+  font-weight: 550;
+  font-size: 1.2em;
 }
 
 // Footer text (slide number / text label)

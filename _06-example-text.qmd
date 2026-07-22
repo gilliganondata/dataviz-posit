@@ -22,7 +22,7 @@ The first thing we can do is simply trim the words! Be more economical.
 :::{.slide-body-lg-text}
 The new preprocessing technique reduced model run-time by
 :::
-::: {.slide-body-lg-text style="margin-top: -0.2em; font-size: 6em;"}
+::: {.slide-body-lg-text style="margin-top: -0.3em; font-size: 6em;"}
 30–40%!
 :::
 

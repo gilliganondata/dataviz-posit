@@ -92,10 +92,16 @@ Be careful, though!
 :::
 :::
 
+::: {.rotate-ccw-15 style="position: absolute; top: 3%; left: 45%; font-size: 2em; text-align: center; color: `r brand$dark`"}
+"Cognitive load."<br>Get it? Get it?!<br>😂...?
+:::
+
 ::: {.notes}
 Humor can be subtle (and get missed). That's okay if it's just a bonus for those who get it. Remember this slide? How many caught that this was "cognitive load" being cheekily represented?
 
 Also, don't expect all cultural references to land with the entire audience: Star Trek, pop culture, memes.
+
+And, obviously, steer clear of anything potentially offensive.
 :::
 
 

@@ -73,6 +73,12 @@ df_continents <- gapminder |>
   ) |>
   arrange(desc(total_pop))
 
+# Summary table: gapminder, 2007 by country in Europe
+df_europe_2007 <- gapminder |>
+  filter(year == 2007, continent == "Europe") |>
+  select(-continent, -year) |> 
+  arrange(desc(pop))
+
 ```
 
 ## {.title-custom}
@@ -82,9 +88,13 @@ df_continents <- gapminder |>
 ![](images/meadowlark_bird.png){.title-bird}
 :::
 ::: {.column width="62%"}
-[Pixels with Purpose]{.title-text}
 
-[How to Amplify the Impact of Your Talk Through Visual Reinforcement]{.subtitle-text}
+::: {.title-text}
+Pixels with Purpose
+:::
+::: {.subtitle-text}
+How to Amplify the Impact of Your Talk Through Visual Reinforcement
+:::
 :::
 ::::
 
@@ -117,9 +127,16 @@ df_continents <- gapminder |>
 
 # This Presentation {background-color="var(--divider-bg)"}
 
-::: {.slide-body-lg-text}
-GitHub repo (Quarto/revealjs): [rebrand.ly/dataviz-posit](https://rebrand.ly/dataviz-posit)
-
-Rendered slides (GitHub Pages): [gilliganondata.github.io/dataviz-posit/#/](https://gilliganondata.github.io/dataviz-posit/#/)
+::: {.slide-body-med-text}
+GitHub repo (Quarto/revealjs)
+:::
+::: {.slide-body-lg-text style="margin-top: -0.4em;"}
+[rebrand.ly/dataviz-posit](https://rebrand.ly/dataviz-posit)
+:::
+::: {.slide-body-med-text style="margin-top: 1em;"}
+Rendered slides (GitHub Pages)
+:::
+::: {.slide-body-lg-text style="margin-top: -0.4em;"}
+[gilliganondata.github.io/dataviz-posit](https://gilliganondata.github.io/dataviz-posit/#/)
 :::
 
