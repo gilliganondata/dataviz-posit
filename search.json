@@ -67,14 +67,14 @@
     "href": "dataviz-best-practices.html#maximize-the-data-pixel-ratio",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "Maximize the data-pixel ratio!",
-    "text": "Maximize the data-pixel ratio!\n\nThis concept was initially put forth by Edward Tufte as “the data-ink ratio,” and Stephen Few later modernized it as “the data-pixel ratio.”\n\n\n\n\nData-Information Pixels\n\n\nAll Non-Background Pixels\n\n\n\n  Every pixel that is notsimply the background color\n Pixels that representactual data or information\n\n(After build) This is an example of a slide with high cognitive load.\nImage source: https://unsplash.com/photos/candlestick-stock-chart-on-dark-screen-VLpWpv3oDB4"
+    "text": "Maximize the data-pixel ratio!\n\nThis concept was initially put forth by Edward Tufte as “the data-ink ratio,” and Stephen Few later modernized it as “the data-pixel ratio.”\n\n\n\n\nData-Information Pixels\n\n\nAll Non-Background Pixels\n\n\n\n  Every pixel that is notsimply the background color\n Pixels that representactual data or information\n\n(After build) This is an example of a slide with high cognitive load.\nCall out: let’s see what happens if we remove all of those non-data-information pixels!\nImage source: https://unsplash.com/photos/candlestick-stock-chart-on-dark-screen-VLpWpv3oDB4"
   },
   {
     "objectID": "dataviz-best-practices.html#section-8",
     "href": "dataviz-best-practices.html#section-8",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Data-Information Pixels\n\n\nAll Non-Background Pixels\n\n\n\n Every pixel that is notsimply the background color\n Pixels that representactual data or information\n\nWe’ve drastically increased the data-pixel ratio, which gives the brain fewer choices to make as to what to try to take in and process."
+    "text": "Data-Information Pixels\n\n\nAll Non-Background Pixels\n\n\n\n Every pixel that is notsimply the background color\n Pixels that representactual data or information\n\nWe’ve drastically increased the data-pixel ratio, which gives the brain fewer choices to make as to what to try to take in and process.\nWhen I removed all the extra clutter, I actually had more room on the slide, which then let me make the ratio itself larger on the screen."
   },
   {
     "objectID": "dataviz-best-practices.html#section-9",
@@ -102,7 +102,7 @@
     "href": "dataviz-best-practices.html#stimulus-payments-in-may-drove-savings-spike",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "Stimulus payments in May drove savings spike",
-    "text": "Stimulus payments in May drove savings spike\n\nPersonal saving rate by month: 2009\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nWe can really highlight what we’re calling out. In this case, we made the title call out exactly what we’re showing, and we emphasized in the chart itself that same highlight."
+    "text": "Stimulus payments in May drove savings spike\n\nPersonal saving rate by month: 2009\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nWe can really highlight what we’re calling out. In this case, we made the title call out exactly what we’re showing, and we emphasized in the chart itself that same highlight."
   },
   {
     "objectID": "dataviz-best-practices.html#section-10",
@@ -245,11 +245,11 @@
     "text": "Be careful, though!\n\n\n\nHumor can be subtle (and get missed). That’s okay if it’s just a bonus for those who get it. Remember this slide? How many caught that this was “cognitive load” being cheekily represented?\nAlso, don’t expect all cultural references to land with the entire audience: Star Trek, pop culture, memes."
   },
   {
-    "objectID": "dataviz-best-practices.html#draw-focus",
-    "href": "dataviz-best-practices.html#draw-focus",
+    "objectID": "dataviz-best-practices.html#section-22",
+    "href": "dataviz-best-practices.html#section-22",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "Draw Focus",
-    "text": "Draw Focus\nBlank screen w/ a light bulb OR “Story time!”"
+    "section": "",
+    "text": "Draw focus!\n\n\n\nSource: https://unsplash.com/photos/a-light-bulb-sitting-on-top-of-a-wooden-table-u5l8ded3n3Y"
   },
   {
     "objectID": "normative-conformity.html#normative-conformity",
