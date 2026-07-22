@@ -142,14 +142,14 @@ gg_line_better
 This is what we had. But...what is it I want to *say* here? We want to make it *impossible to miss*.
 :::
 
-## Stimulus payments in [May]{.emphasis} drove [savings spike]{.emphasis}
+## Stimulus payments in [May]{.emphasis} drove [savings spike]{.emphasis}{.nostretch}
 ::: {.subtitle-slide-text}
 Personal saving rate by month: 2009
 :::
 
 ```{r line-impossible}
 #| fig.width: 8
-#| fig.height: 3.4
+#| fig.height: 4.2
 #| fig-align: center
 #| out.width: 77%
 

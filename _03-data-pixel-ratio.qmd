@@ -26,6 +26,8 @@ All Non-Background Pixels
 ::: {.notes}
 (After build) This is an example of a slide with high cognitive load.
 
+Call out: let's see what happens if we remove all of those non-data-information pixels!
+
 Image source: https://unsplash.com/photos/candlestick-stock-chart-on-dark-screen-VLpWpv3oDB4
 :::
 
@@ -49,4 +51,6 @@ All Non-Background Pixels
 
 ::: {.notes}
 We've drastically increased the data-pixel ratio, which gives the brain fewer choices to make as to what to try to take in and process.
+
+When I removed all the extra clutter, I actually had more room on the slide, which then let me make the ratio itself larger on the screen.
 :::

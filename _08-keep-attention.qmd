@@ -63,37 +63,55 @@ Images can bring out [emotion]{.emphasis}.
 Source: https://unsplash.com/photos/brown-boat-near-dock-qkfxBc2NQ18
 :::
 
-## Slides can inject [levity]{.emphasis}.
+## {.center background-image="images/green_bg.png" background-size="auto 100%" background-position="right center"}
 
-::: {.rotate-ccw-15 style="position: absolute; top: 20%; left: 5%;"}
-![](images/xkcd_slides.png)
+::: {.text-panel-left-60}
+::: {.slide-body-heading}
+Slides can inject [levity]{.emphasis}.
+:::
 :::
 
-::: {.rotate-cw-15 style="position: absolute; top: 25%; left: 35%;"}
+::: {.rotate-ccw-15 style="position: absolute; top: 60%; left: 70%; width: 550px"}
+![](images/allison-horst-function.png)
+:::
+
+::: {.rotate-cw-15 style="position: absolute; top: 34%; left: 67%; width: 450px"}
 ![](images/dog_hacking.gif)
 :::
 
+::: {.rotate-ccw-15 style="position: absolute; top: 0%; left: 77%; width: 450px"}
+![](images/xkcd_slides.png)
+:::
 
-## But be careful!
 
+## {.center background-image="images/pic_cognitive_load.jpg" background-size="auto 100%" background-position="right center"}
 
-xkcd example
-GIFs (cat typing)
-
-(Getting people to laugh)
-
-Be careful with levity... Star Trek references won't land with everyone.
-
-Callback...
+::: {.text-panel-left-50}
+::: {.slide-body-heading}
+Be careful, though! 
+:::
+:::
 
 ::: {.notes}
-xkcd Source: https://xkcd.com/365
+Humor can be subtle (and get missed). That's okay if it's just a bonus for those who get it. Remember this slide? How many caught that this was "cognitive load" being cheekily represented?
+
+Also, don't expect all cultural references to land with the entire audience: Star Trek, pop culture, memes.
+:::
 
 
-## Draw Focus
+## {.center background-image="images/pic_lightbulb.jpg" background-size="100% auto"}
 
-Blank screen w/ a light bulb
-OR
-"Story time!"
+::: {.text-panel-left-50}
+::: {.slide-body-heading style="color: `r brand$bg`;"}
+Draw focus! 
+:::
+:::
 
+::: {.notes}
+Source: https://unsplash.com/photos/a-light-bulb-sitting-on-top-of-a-wooden-table-u5l8ded3n3Y
+:::
+
+# [Really]{.emphasis} draw focus! {background-color="var(--divider-bg)"}
+
+# {background-color="var(--divider-bg)"}
 

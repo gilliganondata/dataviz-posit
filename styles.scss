@@ -153,6 +153,15 @@ $footer-baseline: 14px;
   }
 }
 
+// Take over vertical centering to allow more flexibiltiy
+section.center {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;  // establishes positioning context for absolute children
+  height: 100%;
+}
+
 // ── Statement slides (single big-text takeaways) ───────────────────────────
 .reveal .slides section.statement {
   display: flex;

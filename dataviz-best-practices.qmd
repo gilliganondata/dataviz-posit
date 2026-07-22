@@ -107,7 +107,7 @@ df_continents <- gapminder |>
 
 # The talk is about [the idea]{.emphasis}. The slides [support the idea]{.emphasis}. {background-color="var(--divider-bg)"}
 
-# We covered [three simple tactics]{.emphasis} for [reducing cognitive load]{.emphasis} {background-color="var(--divider-bg)"}
+# We covered [three simple tactics]{.emphasis} for [reducing cognitive load]{.emphasis}: {background-color="var(--divider-bg)"}
 
 ::: {.hollow-square-bullets}
 - Maximize the [data-pixel ratio]{.emphasis}
