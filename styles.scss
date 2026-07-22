@@ -344,6 +344,8 @@ $memory-detail-sizes: (
 }
 
 // ── Table formatting slides ────────────────────────────────────────────────────
+
+// Base R table
 .reveal .slides section .raw-table-demo {
   display: flex;
   justify-content: center;
@@ -357,6 +359,34 @@ $memory-detail-sizes: (
     max-height: none;      // kill reveal's 500px cap
     overflow: visible;     // and its scrolling behavior
     line-height: 1.2;
+  }
+}
+
+// Kable table
+.kable-table table {
+  font-size: 0.6em;
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+// Bad formatting for the borders (can't do this w/ bootstrap_options; thanks, Quarto, 
+// for trying to protect me from myself)
+.reveal .kable-table-borders {
+  th, td {
+    border: 1px solid $body-color;
+  }
+  tbody tr:nth-of-type(odd) td {
+    background-color: $muted;
+  }
+  tbody tr:last-child td {
+  border-bottom: 1px solid $body-color;
+  }
+}
+
+// Improved table. Leaving just the horizontal borders AND making them a lighter color
+.reveal .kable-table-light {
+  th, td {
+    border-bottom: 1px solid $muted 
   }
 }
 
