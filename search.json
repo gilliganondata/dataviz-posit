@@ -238,11 +238,11 @@
     "text": "Slides can inject levity."
   },
   {
-    "objectID": "dataviz-best-practices.html#but-be-careful",
-    "href": "dataviz-best-practices.html#but-be-careful",
+    "objectID": "dataviz-best-practices.html#section-21",
+    "href": "dataviz-best-practices.html#section-21",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "But be careful!",
-    "text": "But be careful!\nxkcd example GIFs (cat typing)\n(Getting people to laugh)\nBe careful with levity… Star Trek references won’t land with everyone.\nCallback…\n\nxkcd Source: https://xkcd.com/365\n\nDraw Focus\nBlank screen w/ a light bulb OR “Story time!”\n\n\nThe talk is about the idea. The slides support the idea.\n\n\n\n\nWe covered three simple tactics for reducing cognitive load\n\n\nMaximize the data-pixel ratio\nMake the point impossible to miss\nKeep the audience’s attention\n\n\n\n\n\nThis Presentation\n\nGitHub repo (Quarto/revealjs): rebrand.ly/dataviz-posit\nRendered slides (GitHub Pages): gilliganondata.github.io/dataviz-posit/#/"
+    "section": "",
+    "text": "Be careful, though!\n\n\n\nHumor can be subtle (and get missed). That’s okay if it’s just a bonus for those who get it. Remember this slide? How many caught that this was “cognitive load” being cheekily represented?\nAlso, don’t expect all cultural references to land with the entire audience: Star Trek, pop culture, memes."
   },
   {
     "objectID": "dataviz-best-practices.html#draw-focus",
