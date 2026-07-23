@@ -193,3 +193,104 @@ df_europe_2007_gt |>
 Now the eye can compare countries at a glance — the bars carry the magnitude, the numbers are there when you need precision.
 :::
 
+##
+
+:::: {.columns}
+::: {.column width="40%" .slide-body-heading}
+[France]{.emphasis} and the [UK]{.emphasis} were [2007 twinsies]{.emphasis}.
+:::
+
+::: {.column width="60%" .kable-table}
+```{r table-gt-highlight}
+#| html-table-processing: none
+# Use gt + gtExtras to pair each metric value with an inline bar scaled to the
+# largest value in that column. Works from df_europe_2007 (all-numeric), with
+# each metric duplicated into a value column and a bar column.
+df_europe_2007_gt <- df_europe_2007 |>
+  mutate(pop = round(pop/1000000, 1),
+         lifeExp = round(lifeExp, 1)) |>
+  mutate(pop_bar = pop,
+         lifeExp_bar = lifeExp,
+         gdpPercap_bar = gdpPercap) |>
+  select(country, pop, pop_bar, lifeExp, lifeExp_bar, gdpPercap, gdpPercap_bar)
+
+# Make the table
+# Build once, reuse across all three gt_plt_bar() calls
+highlight_countries <- c("France", "United Kingdom")
+
+bar_colors <- dplyr::if_else(
+  df_europe_2007_gt$country %in% highlight_countries,
+  brand$accent,
+  brand$muted
+)
+
+df_europe_2007_gt |> 
+  gt(id = "europe-metrics-tbl") |>
+  fmt_number(columns = c(pop, lifeExp), decimals = 1) |>
+  fmt_number(columns = gdpPercap, decimals = 0) |>
+  gt_plt_bar(column = pop_bar, color = bar_colors, scale_type = "none", width = 45) |>
+  gt_plt_bar(column = lifeExp_bar, color = bar_colors, scale_type = "none", width = 28) |>
+  gt_plt_bar(column = gdpPercap_bar, color = bar_colors, scale_type = "none", width = 28) |>
+  cols_label(country = "",
+             pop = "",
+             pop_bar = "",
+             lifeExp = "",
+             lifeExp_bar = "",
+             gdpPercap = "",
+             gdpPercap_bar = "") |>
+  tab_spanner(label = "Country", columns = country, id = "country_span") |>
+  tab_spanner(label = "Population (M)", columns = c(pop, pop_bar)) |>
+  tab_spanner(label = "Life Expectancy", columns = c(lifeExp, lifeExp_bar)) |>
+  tab_spanner(label = "GDP per Capita (USD)", columns = c(gdpPercap, gdpPercap_bar)) |>
+  cols_align(align = "left", columns = country) |>
+  cols_align(align = "right", columns = c(pop, lifeExp, gdpPercap)) |>
+  cols_width(country ~ px(300),
+             gdpPercap ~ px(150)) |>
+  tab_style(style = cell_text(weight = "bold", color = brand$muted),
+            locations = cells_body(columns = country)) |>
+  tab_style(style = cell_text(color = brand$muted),
+            locations = cells_body(columns = c(pop, lifeExp, gdpPercap))) |>
+  tab_style(style = cell_text(weight = "bold", color = brand$primary),
+            locations = cells_column_spanners()) |>
+  tab_style(style = cell_text(align = "left"),
+                              locations = cells_column_spanners(spanners = "country_span")) |> 
+  # Country name color override for the two highlighted rows
+  tab_style(style = cell_text(color = brand$accent, weight = "bold"),
+            locations = cells_body(columns = c(country, pop, lifeExp, gdpPercap), 
+                                   rows = country %in% highlight_countries)) |>
+  # Bump body text size specifically (keeps spanner/label size independent)
+  tab_style(style = cell_text(size = px(22)),
+            locations = cells_body()) |>
+  tab_options(table.background.color = brand$bg,
+              table.font.size = px(18),
+              data_row.padding = px(2),
+              column_labels.border.top.style = "hidden",
+              column_labels.border.bottom.color = brand$muted,
+              table_body.hlines.color = brand$muted,
+              table_body.border.bottom.color = brand$muted,
+              table.border.top.style = "hidden",
+              table.border.bottom.style = "hidden") |>
+  opt_css(
+    css = "
+      #europe-metrics-tbl .gt_col_headings:not(.gt_spanner_row) {
+        display: none;
+      }
+      #europe-metrics-tbl .gt_table .gt_body tr td {
+        line-height: 1.4;
+      }
+    "
+  )
+```
+:::
+
+::::
+
+::: {.slide-source-footer .muted}
+[Source: gapminder R package (Gapminder.org, ~2010 excerpt), GDP per Capita is constant 2005 Int'l $ (PPP)]{.muted}
+:::
+
+::: {.notes}
+And now let's make it impossible to miss. What I'm probably doing here is making a claim that will equally upset the British and the French.
+:::
+
+
