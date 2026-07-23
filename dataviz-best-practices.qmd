@@ -40,7 +40,7 @@ pacman::p_load(tidyverse,
                scales,
                ggthemes)
 
-# Brand palette/fonts — mirrors the variables defined in dataviz-best-practices.scss.
+# Brand palette/fonts — loads the variables defined in styles.scss.
 # (It's a hassle for R to read SCSS, so just repeating the hex values here.)
 brand <- list(
   bg        = "#F9EBDC",
@@ -48,7 +48,8 @@ brand <- list(
   secondary = "#9D792F",
   accent    = "#F1655F",
   dark      = "#292F20",
-  muted     = "#94a3b8",
+  muted_med = "#5F6B71", # Darker than OG; safer that it will show up.
+  muted     = "#94a3b8", # OG muted; concerned that it may be too light for projectors
   gratuitous = "#725496"  # deliberately off-brand, for the "before" examples
 )
 

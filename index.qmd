@@ -6,3 +6,5 @@ Rendered presentation(s) from the GitHub repo at [github.com/gilliganondata/data
 
 - (Main presentation) [Pixels with Purpose](dataviz-best-practices.html)
 - [Why are so many slide decks so bad?](normative-conformity.html)
+
+Note that the presentation was delivered from a local machine, so it uses two fonts—Halyard Text (sans serif) and Plantagenet Cherokee (serif)—that are not universally available. The fallbacks are...okay... but, given the nature of the content, it seemed worth calling out.

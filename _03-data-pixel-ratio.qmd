@@ -31,7 +31,7 @@ Call out: let's see what happens if we remove all of those non-data-information 
 Image source: https://unsplash.com/photos/candlestick-stock-chart-on-dark-screen-VLpWpv3oDB4
 :::
 
-## {background-color="var(--divider-bg)"}
+## {background-color="var(--brand-dark)"}
 
 ::: {.slide-stack}
 ::: {.ratio-fraction-lg}

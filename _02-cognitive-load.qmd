@@ -1,8 +1,5 @@
-## {background-image="images/pic_neuroscience.jpg" background-position="center"}
+# It starts with how we take in and process information {background-image="images/pic_neuroscience.jpg" background-opacity="0.3" background-position="center" background-color="var(--divider-bg)"}
 
-::: {.memory-label .memory-detail-1-5}
-It starts with how we take in and process information 
-:::
 
 ::: {.notes}
 Image source: https://unsplash.com/photos/a-close-up-of-a-red-flower-59HOF9zHKNs

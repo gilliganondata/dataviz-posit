@@ -152,7 +152,7 @@ df_europe_2007_gt |>
              gdpPercap ~ px(150)) |>
   tab_style(style = cell_text(weight = "bold"),
             locations = cells_body(columns = country)) |>
-  tab_style(style = cell_text(color = brand$muted),
+  tab_style(style = cell_text(color = brand$muted_med),
             locations = cells_body(columns = c(pop, lifeExp, gdpPercap))) |>
   tab_style(style = cell_text(weight = "bold", color = brand$primary),
             locations = cells_column_spanners()) |>
@@ -246,9 +246,9 @@ df_europe_2007_gt |>
   cols_align(align = "right", columns = c(pop, lifeExp, gdpPercap)) |>
   cols_width(country ~ px(300),
              gdpPercap ~ px(150)) |>
-  tab_style(style = cell_text(weight = "bold", color = brand$muted),
+  tab_style(style = cell_text(weight = "bold", color = brand$muted_med),
             locations = cells_body(columns = country)) |>
-  tab_style(style = cell_text(color = brand$muted),
+  tab_style(style = cell_text(color = brand$muted_med),
             locations = cells_body(columns = c(pop, lifeExp, gdpPercap))) |>
   tab_style(style = cell_text(weight = "bold", color = brand$primary),
             locations = cells_column_spanners()) |>

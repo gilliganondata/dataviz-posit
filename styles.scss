@@ -16,7 +16,8 @@ $link-color: #2563eb;
 $primary:   #317168;
 $secondary: #9D792F;
 $accent:    #F1655F;
-$muted:     #94a3b8;
+$muted_med: #5F6B71; // Darker than OG; safer that it will show up. 
+$muted:     #94a3b8; // OG muted; concerned that it may be too light for projectors.
 
 // Headings — ~25% smaller than revealjs default (2.5em → ~1.85em)
 $presentation-heading-color: $primary;
@@ -36,7 +37,8 @@ $footer-baseline: 14px;
 /*-- scss:rules --*/
 
 // Expose brand colors as CSS variables so .qmd files can reference them
-// (e.g., background-color="var(--divider-bg)") without hardcoding hex values
+// (e.g., background-color="var(--divider-bg)") without hardcoding hex values.
+// Still hardcoded hex values in dataviz-best-practices.qmd for use in R chunks. :-()
 :root {
   --divider-bg: #{$primary};
   --brand-bg: #{$body-bg};
@@ -45,6 +47,7 @@ $footer-baseline: 14px;
   --brand-accent: #{$accent};
   --brand-dark: #{$body-color};
   --brand-muted: #{$muted};
+  --brand-muted_med: #{$muted_med};
 }
 
 // Divider / section slides (level-1 headings with no body content)
@@ -187,7 +190,7 @@ section.center {
 
 // De-emphasized context (e.g., surrounding code / secondary text)
 .muted {
-  color: $muted;
+  color: $muted_med;
   font-weight: 200;
   font-size: 0.85em;
 }
@@ -255,7 +258,7 @@ $memory-detail-sizes: (
   font-size: 2.15em;
   line-height: 1.6;
   letter-spacing: 0.0em;
-  color: $muted;
+  color: $muted_med;
   text-align: center;
 }
 
@@ -438,7 +441,7 @@ $memory-detail-sizes: (
 
 .quote-attribution {
   font-size: 0.7em;
-  color: $muted;
+  color: $muted_med;
   text-align: right;
 }
 
@@ -478,7 +481,7 @@ $memory-detail-sizes: (
 // Footer text (slide number / text label)
 .reveal .footer {
   font-size: 0.55em;
-  color: $muted;
+  color: $muted_med;
 }
 
 // Meadowlark logo — bottom-left on every slide
