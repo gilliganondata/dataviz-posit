@@ -35,6 +35,8 @@ pacman::p_load(tidyverse,
                palmerpenguins,
                gapminder,
                gt,
+               gtExtras,
+               svglite,   # required by gtExtras for inline bar plots
                scales,
                ggthemes)
 

@@ -390,6 +390,13 @@ $memory-detail-sizes: (
   }
 }
 
+// gtExtras inline-bar SVGs: svglite (>= 2.2) omits the fill on the blank plot
+// background rect, and SVG's default fill is black. Neutralize any rect without
+// an inline fill; the bars themselves carry an explicit fill and are unaffected.
+.reveal .gt_table svg rect:not([style*="fill"]) {
+  fill: none;
+}
+
 // ── Text emphasis slides ────────────────────────────────────────────────────
 .slide-body-med-text p {
   text-align: center;
