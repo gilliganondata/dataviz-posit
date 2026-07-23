@@ -137,25 +137,32 @@
     "href": "dataviz-best-practices.html#section-14",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "The application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.\n\nWhile this may be an accurate statement, it’s a LOT to read. We’ve all seen slides like this."
+    "text": "France and the UK were 2007 twinsies.\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n      \n        Country\n      \n      \n        Population (M)\n      \n      \n        Life Expectancy\n      \n      \n        GDP per Capita (USD)\n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n    \n  \n  \n    Germany\n82.4\n          \n79.4\n          \n32,170\n          \n    Turkey\n71.2\n          \n71.8\n          \n8,458\n          \n    France\n61.1\n          \n80.7\n          \n30,470\n          \n    United Kingdom\n60.8\n          \n79.4\n          \n33,203\n          \n    Italy\n58.1\n          \n80.5\n          \n28,570\n          \n    Spain\n40.4\n          \n80.9\n          \n28,821\n          \n    Poland\n38.5\n          \n75.6\n          \n15,390\n          \n    Romania\n22.3\n          \n72.5\n          \n10,808\n          \n    Netherlands\n16.6\n          \n79.8\n          \n36,798\n          \n    Greece\n10.7\n          \n79.5\n          \n27,538\n          \n    Portugal\n10.6\n          \n78.1\n          \n20,510\n          \n    Belgium\n10.4\n          \n79.4\n          \n33,693\n          \n    Czech Republic\n10.2\n          \n76.5\n          \n22,833\n          \n    Serbia\n10.2\n          \n74.0\n          \n9,787\n          \n    Hungary\n10.0\n          \n73.3\n          \n18,009\n          \n    Sweden\n9.0\n          \n80.9\n          \n33,860\n          \n    Austria\n8.2\n          \n79.8\n          \n36,126\n          \n    Switzerland\n7.6\n          \n81.7\n          \n37,506\n          \n    Bulgaria\n7.3\n          \n73.0\n          \n10,681\n          \n    Denmark\n5.5\n          \n78.3\n          \n35,278\n          \n    Slovak Republic\n5.4\n          \n74.7\n          \n18,678\n          \n    Finland\n5.2\n          \n79.3\n          \n33,207\n          \n    Norway\n4.6\n          \n80.2\n          \n49,357\n          \n    Bosnia and Herzegovina\n4.6\n          \n74.9\n          \n7,446\n          \n    Croatia\n4.5\n          \n75.7\n          \n14,619\n          \n    Ireland\n4.1\n          \n78.9\n          \n40,676\n          \n    Albania\n3.6\n          \n76.4\n          \n5,937\n          \n    Slovenia\n2.0\n          \n77.9\n          \n25,768\n          \n    Montenegro\n0.7\n          \n74.5\n          \n9,254\n          \n    Iceland\n0.3\n          \n81.8\n          \n36,181\n          \n  \n  \n\n\n\n\n\n\nSource: gapminder R package (Gapminder.org, ~2010 excerpt), GDP per Capita is constant 2005 Int’l $ (PPP)\n\n\nNow the eye can compare countries at a glance — the bars carry the magnitude, the numbers are there when you need precision."
   },
   {
     "objectID": "dataviz-best-practices.html#section-15",
     "href": "dataviz-best-practices.html#section-15",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "The new preprocessing technique reduced model run-time by 30–40%.\n\n\nThe first thing we can do is simply trim the words! Be more economical."
+    "text": "The application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.\n\nWhile this may be an accurate statement, it’s a LOT to read. We’ve all seen slides like this."
   },
   {
     "objectID": "dataviz-best-practices.html#section-16",
     "href": "dataviz-best-practices.html#section-16",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "The new preprocessing technique reduced model run-time by\n\n\n30–40%!\n\n\nWe can make specific parts of the text really stand out"
+    "text": "The new preprocessing technique reduced model run-time by 30–40%.\n\n\nThe first thing we can do is simply trim the words! Be more economical."
   },
   {
     "objectID": "dataviz-best-practices.html#section-17",
     "href": "dataviz-best-practices.html#section-17",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "",
+    "text": "The new preprocessing technique reduced model run-time by\n\n\n30–40%!\n\n\nWe can make specific parts of the text really stand out"
+  },
+  {
+    "objectID": "dataviz-best-practices.html#section-18",
+    "href": "dataviz-best-practices.html#section-18",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
     "text": "The new preprocessing technique reduced model run-time by\n\n\n30–40%!\n\n\nWe can make it impossible to ignore."
@@ -203,57 +210,57 @@
     "text": "Predicting the body mass of penguins\n\nView the results\n\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore"
   },
   {
-    "objectID": "dataviz-best-practices.html#section-18",
-    "href": "dataviz-best-practices.html#section-18",
-    "title": "Amplifying Talk Impact through Visual Reinforcement",
-    "section": "",
-    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/womans-portrait-mC852jACK1g"
-  },
-  {
     "objectID": "dataviz-best-practices.html#section-19",
     "href": "dataviz-best-practices.html#section-19",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/topless-man-with-water-droplets-on-his-face-UFm4e4fsEZc"
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/womans-portrait-mC852jACK1g"
   },
   {
     "objectID": "dataviz-best-practices.html#section-20",
     "href": "dataviz-best-practices.html#section-20",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/selective-photography-of-white-thunder-nbqlWhOVu6k"
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/topless-man-with-water-droplets-on-his-face-UFm4e4fsEZc"
   },
   {
     "objectID": "dataviz-best-practices.html#section-21",
     "href": "dataviz-best-practices.html#section-21",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/person-standing-on-hill-EAvS-4KnGrk"
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/selective-photography-of-white-thunder-nbqlWhOVu6k"
   },
   {
     "objectID": "dataviz-best-practices.html#section-22",
     "href": "dataviz-best-practices.html#section-22",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/brown-boat-near-dock-qkfxBc2NQ18"
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/person-standing-on-hill-EAvS-4KnGrk"
   },
   {
     "objectID": "dataviz-best-practices.html#section-23",
     "href": "dataviz-best-practices.html#section-23",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Slides can inject levity."
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/brown-boat-near-dock-qkfxBc2NQ18"
   },
   {
     "objectID": "dataviz-best-practices.html#section-24",
     "href": "dataviz-best-practices.html#section-24",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
-    "text": "Be careful, though!\n\n\n\n“Cognitive load.”Get it? Get it?!😂…?\n\n\nHumor can be subtle (and get missed). That’s okay if it’s just a bonus for those who get it. Remember this slide? How many caught that this was “cognitive load” being cheekily represented?\nAlso, don’t expect all cultural references to land with the entire audience: Star Trek, pop culture, memes.\nAnd, obviously, steer clear of anything potentially offensive."
+    "text": "Slides can inject levity."
   },
   {
     "objectID": "dataviz-best-practices.html#section-25",
     "href": "dataviz-best-practices.html#section-25",
+    "title": "Amplifying Talk Impact through Visual Reinforcement",
+    "section": "",
+    "text": "Be careful, though!\n\n\n\n“Cognitive load.”Get it? Get it?!😂…?\n\n\nHumor can be subtle (and get missed). That’s okay if it’s just a bonus for those who get it. Remember this slide? How many caught that this was “cognitive load” being cheekily represented?\nAlso, don’t expect all cultural references to land with the entire audience: Star Trek, pop culture, memes.\nAnd, obviously, steer clear of anything potentially offensive."
+  },
+  {
+    "objectID": "dataviz-best-practices.html#section-26",
+    "href": "dataviz-best-practices.html#section-26",
     "title": "Amplifying Talk Impact through Visual Reinforcement",
     "section": "",
     "text": "Draw focus!\n\n\n\nSource: https://unsplash.com/photos/a-light-bulb-sitting-on-top-of-a-wooden-table-u5l8ded3n3Y"
