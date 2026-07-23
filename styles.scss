@@ -563,3 +563,11 @@ $memory-detail-sizes: (
 .rotate-cw-15 {
   transform: rotate(15deg);
 }
+
+// Supplemental slides
+
+// Normative conformity
+blockquote > p {
+  font-family: $font-family-serif;
+  font-size: 1.4em;
+}

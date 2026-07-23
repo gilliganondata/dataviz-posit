@@ -18,6 +18,7 @@ The [goal]{.emphasis} of any talk is [audience impact]{.emphasis}.
 ::: {.slide-body-heading}
 [Slides]{.emphasis} don't drive impact.
 :::
+
 ::: {.fragment .slide-body-heading}
 [The talk]{.emphasis} drives impact.
 :::

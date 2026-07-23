@@ -25,17 +25,32 @@ execute:
   message: false
 ---
 
-# Why are so many slide decks [so bad]{.emphasis}? {background-color="var(--divider-bg)"}
+# Why are so many slide decks<br>[so bad]{.emphasis}? {background-color="var(--divider-bg)"}
 
 
-## normative conformity
+## {.center}
+::: {.slide-body-heading}
+normative conformity
+:::
+::: {style = "font-size: 1.6em; color: #317168; margin-top: -0.8em"}
+**nor**-muh-tiv   kuhn-**for**-muh-tee
+:::
 
 > "the tendency of individuals to adjust their behavior, attitudes, or beliefs to align with the perceived standards or expectations of a group or society"
 
+::: {.slide-source-footer .muted}
+Source: https://lifestyle.sustainability-directory.com/area/normative-conformity/
+:::
 
-## normative conformity…for slide decks
+## {.center}
+::: {.slide-body-heading}
+normative conformity
+:::
+::: {style = "font-size: 1.6em; color: #317168; margin-top: -0.8em"}
+**nor**-muh-tiv   kuhn-**for**-muh-tee
+:::
 
-> "the tendency of employees to adjust their presentations to align with the perceived standards of their organization"
+> "the tendency of individuals to adjust their [presentations]{.emphasis} to align with the perceived standards of their [organization or industry]{.emphasis}"
 
 
 ## normative conformity…illustrated {.statement}
@@ -47,7 +62,13 @@ execute:
 "Let me produce another one."
 
 
-## You have the power to change! {background-image="images/pic_uncle_sam.png" background-size="auto 100%" background-position="right center"}
+## {.center background-image="images/pic_uncle_sam_beige.png" background-size="auto 100%" background-position="right center"}
+
+::: {.text-panel-left-60}
+::: {.slide-body-heading}
+[You]{.emphasis} have the power to [change]{.emphasis}!
+:::
+:::
 
 ::: {.notes}
 Uncle Sam-like pic, full bleed to the right.

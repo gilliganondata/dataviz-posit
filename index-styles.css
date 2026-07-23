@@ -1,0 +1,11 @@
+body {
+  background-color: #F9EBDC;
+}
+
+.logo-corner {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  width: 240px; 
+  z-index: 10;  // keeps it above body text if anything overlaps
+}
