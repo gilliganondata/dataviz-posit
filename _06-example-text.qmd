@@ -1,0 +1,44 @@
+# It even works for [text]{.emphasis}! {background-color="var(--divider-bg)"}
+
+## {.center style="font-size: 1.5em;"}
+
+The application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.
+
+::: {.notes}
+While this may be an accurate statement, it's a LOT to read. We've all seen slides like this.
+:::
+
+## {.center}
+
+::: {.slide-body-lg-text}
+The new preprocessing technique reduced model run-time by 30–40%.
+:::
+
+::: {.notes}
+The first thing we can do is simply trim the words! Be more economical.
+:::
+
+## {.center}
+::: {.slide-body-lg-text}
+The new preprocessing technique reduced model run-time by
+:::
+::: {.slide-body-lg-text style="margin-top: -0.3em; font-size: 6em;"}
+30–40%!
+:::
+
+::: {.notes}
+We can make specific parts of the text really stand out
+:::
+
+## {.center}
+::: {.slide-body-lg-text}
+The new preprocessing technique reduced model run-time by
+:::
+::: {.slide-body-lg-text-emphasis}
+30–40%!
+:::
+
+::: {.notes}
+We can make it impossible to ignore.
+:::
+

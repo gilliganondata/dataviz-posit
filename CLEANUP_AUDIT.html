@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <title>Data Viz Presentations – cleanup_audit</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section>
+<section id="cleanup-audit-cleanupassets-and-styles" class="title-slide slide level1 center">
+<h1>Cleanup Audit — <code>cleanup/assets-and-styles</code></h1>
+<p><strong>Pre-flight check:</strong> Confirmed on branch <code>cleanup/assets-and-styles</code>, working tree clean, before reading any project files.</p>
+<p><strong>Naming note:</strong> The brief refers to <code>custom.scss</code> (~619 lines). The project’s actual file is <a href="styles.scss">styles.scss</a> (620 lines) — same file, referenced from both presentations’ YAML as <code>theme: [default, styles.scss]</code>. All findings below are against that file.</p>
+<p>No changes have been made anywhere in the project. This is a read-only report.</p>
+</section>
+<section id="unused-assets" class="slide level2">
+<h2>1. Unused Assets</h2>
+<p>Cross-checked every file in <code>images/</code> against every <code>.qmd</code>, <code>.scss</code>, <code>.css</code>, and <code>.yml</code> file in the project (including YAML frontmatter fields like <code>logo:</code>), excluding <code>_site/</code> and <code>.quarto/</code> build output.</p>
+<h3 id="zero-references-found-anywhere">Zero references found anywhere</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Size</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>images/closeupeye-bw-og.jpg</code></td>
+<td>2.7 MB</td>
+<td>Likely the pre-compression original of <code>closeupeye-bw.jpg</code> (327 KB, which <em>is</em> used in <a href="_02-cognitive-load.qmd">_02-cognitive-load.qmd:8</a>). Looks like a leftover source file.</td>
+</tr>
+<tr class="even">
+<td><code>images/pic_polevault.jpeg</code></td>
+<td>1.1 MB</td>
+<td>No references.</td>
+</tr>
+<tr class="odd">
+<td><code>images/pic_uncle_sam.png</code></td>
+<td>371 KB</td>
+<td>Likely superseded by <code>pic_uncle_sam_beige.png</code> (347 KB, modified 3 days later, used in <a href="./normative-conformity.html">normative-conformity.qmd:77</a>).</td>
+</tr>
+<tr class="even">
+<td><code>images/title_bottom_right.png</code></td>
+<td>4.2 KB</td>
+<td>No references. Name suggests an earlier title-slide layout, now replaced by <code>.title-custom</code> + <code>meadowlark_bird.png</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>images/title_top_left.png</code></td>
+<td>4.2 KB</td>
+<td>Same as above.</td>
+</tr>
+</tbody>
+</table>
+<p>None of these five turned up in comments, <code>.notes</code> blocks, R chunks, or anywhere else — they are simply absent from the codebase, not conditionally referenced. Safe to delete, but confirm before deleting <code>closeupeye-bw-og.jpg</code> and <code>pic_uncle_sam.png</code> specifically, since they look like intentionally-kept “before” versions of images still in use.</p>
+<h3 id="flagged-for-manual-confirmation-not-literal-filename-matches">Flagged for manual confirmation (not literal filename matches)</h3>
+<p>None found. Every image reference in the project is a literal <code>images/filename.ext</code> string — in Pandoc <code>![]()</code> syntax, <code>background-image=</code> attributes, or the <code>logo:</code> YAML field. There are no computed/variable paths (e.g., no R string-interpolated image paths, no Sass <code>url()</code> calls) and no filenames appearing only inside comments. This makes the “zero references” list above reliable as-is, with no gray-area cases to separate out.</p>
+<h3 id="all-other-images-reference-counts">All other images — reference counts</h3>
+<p>Every remaining file in <code>images/</code> has at least one confirmed literal reference; several (<code>meadowlark-logo.png</code>, <code>down-arrow.png</code>, <code>left-up-arc-arrow.png</code>, <code>left-down-arc-arrow.png</code>, <code>pic_cognitive_load.jpg</code>, <code>norm_conform_frustrated.png</code>) are intentionally reused 2–3 times across slides/decks. Full per-file reference tables are omitted here for brevity but were verified line-by-line during this audit.</p>
+<h3 id="side-note-not-an-asset-but-adjacent">Side note (not an asset, but adjacent)</h3>
+<p><code>images/.DS_Store</code> is a macOS Finder artifact, not a real asset. It’s harmless but doesn’t belong in the repo. Worth adding <code>.DS_Store</code> to <code>.gitignore</code> if it isn’t already covered — a quick check shows the root <code>.gitignore</code> exists but you may want to confirm it covers this path.</p>
+<h3 id="human-feedback">Human Feedback</h3>
+<ul>
+<li><p>Remove all zero-reference images found. This includes <code>closeupeye-bw-og.jpg</code> and <code>pic_uncle_sam.png</code>, which both have, indeed, been superseded.</p></li>
+<li><p>Update .gitignore to add <code>images/.DS_Store</code></p></li>
+<li><p>Notify me if there are any other changes recommended in this section that I have not addressed with this feedback.</p></li>
+</ul>
+</section>
+<section id="scss-naming-consistency" class="slide level2">
+<h2>2. SCSS Naming Consistency</h2>
+<p><strong>Overall finding: the file is unusually consistent.</strong> All custom classes use kebab-case with no camelCase and effectively no snake_case (checked explicitly — zero camelCase identifiers found in class or variable names). The one real inconsistency is isolated to a single concept name:</p>
+<h3 id="proposed-rename-muted_med-muted-med">Proposed rename: <code>muted_med</code> → <code>muted-med</code></h3>
+<p>The Sass variable <code>$muted_med</code> and the CSS custom property <code>--brand-muted_med</code> are the <em>only</em> identifiers in the file using an underscore. Every sibling variable (<code>$primary</code>, <code>$secondary</code>, <code>$accent</code>, <code>$muted</code>, <code>$body-color</code>, <code>$body-bg</code>, <code>$link-color</code>, <code>$divider-text</code>, <code>$body-light</code>, <code>$footer-baseline</code>, all the <code>$presentation-*</code> tokens) is kebab-case or a single word.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Current</th>
+<th>Proposed</th>
+<th>File</th>
+<th>Line</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>$muted_med</code> (declaration)</td>
+<td><code>$muted-med</code></td>
+<td><a href="styles.scss">styles.scss:19</a></td>
+<td>19</td>
+</tr>
+<tr class="even">
+<td><code>--brand-muted_med</code> (declaration)</td>
+<td><code>--brand-muted-med</code></td>
+<td><a href="styles.scss">styles.scss:50</a></td>
+<td>50</td>
+</tr>
+<tr class="odd">
+<td><code>$muted_med</code> (usage in <code>--brand-muted_med</code> decl)</td>
+<td><code>$muted-med</code></td>
+<td><a href="styles.scss">styles.scss:50</a></td>
+<td>50</td>
+</tr>
+<tr class="even">
+<td><code>$muted_med</code> (usage)</td>
+<td><code>$muted-med</code></td>
+<td><a href="styles.scss">styles.scss:193</a></td>
+<td>193 (<code>.muted</code> class)</td>
+</tr>
+<tr class="odd">
+<td><code>$muted_med</code> (usage)</td>
+<td><code>$muted-med</code></td>
+<td><a href="styles.scss">styles.scss:261</a></td>
+<td>261 (<code>.digit-wall</code>)</td>
+</tr>
+<tr class="even">
+<td><code>$muted_med</code> (usage)</td>
+<td><code>$muted-med</code></td>
+<td><a href="styles.scss">styles.scss:458</a></td>
+<td>458 (<code>.quote-attribution</code>)</td>
+</tr>
+<tr class="odd">
+<td><code>$muted_med</code> (usage)</td>
+<td><code>$muted-med</code></td>
+<td><a href="styles.scss">styles.scss:498</a></td>
+<td>498 (<code>.reveal .footer</code>)</td>
+</tr>
+<tr class="even">
+<td><code>$muted_med</code> (usage)</td>
+<td><code>$muted-med</code></td>
+<td><a href="styles.scss">styles.scss:603</a></td>
+<td>603 (<code>.norm-conform</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Blast radius outside <code>styles.scss</code>: none.</strong> I checked whether <code>var(--brand-muted_med)</code> is consumed anywhere in the <code>.qmd</code> files — it isn’t (see next paragraph). So this rename is fully contained to <code>styles.scss</code>.</p>
+<p><strong>Do NOT rename</strong> <code>brand$muted_med</code> in <a href="./dataviz-best-practices.html">dataviz-best-practices.qmd:51</a>, <a href="_05-example-table.qmd">_05-example-table.qmd:155,249,251</a> — that’s an R list name following R’s own snake_case convention, deliberately independent from the Sass variable (the comment at <a href="styles.scss">styles.scss:41</a> explicitly notes hex values are hardcoded in R separately). Renaming the Sass side doesn’t touch these at all.</p>
+<h3 id="related-finding-context-not-a-rename-most---brand--custom-properties-are-unused">Related finding (context, not a rename): most <code>--brand-*</code> custom properties are unused</h3>
+<p>While tracing blast radius for the rename above, I found that only <code>--divider-bg</code> (of the seven properties exposed in the <code>:root</code> block, <a href="styles.scss">styles.scss:42–51</a>) is actually consumed via <code>var()</code> anywhere in the <code>.qmd</code> files (9 uses, all <code>background-color="var(--divider-bg)"</code>). <code>--brand-bg</code>, <code>--brand-primary</code>, <code>--brand-secondary</code>, <code>--brand-accent</code>, <code>--brand-dark</code>, <code>--brand-muted</code>, and <code>--brand-muted_med</code> are all defined but currently dead — not a naming issue, just relevant context for why the <code>--brand-muted_med</code> rename above carries zero external risk. Not proposing removal since that’s outside this audit’s scope (naming, not usage-pruning) — flagging only so it isn’t mistaken for a wider blast radius than it has.</p>
+<h3 id="naming-collision-worth-flagging-not-a-rename">Naming collision worth flagging (not a rename)</h3>
+<p><code>.callout-tip</code> (<a href="styles.scss">styles.scss:463</a>) reuses the exact name Quarto uses for its own built-in callout block type (<code>::: {.callout-tip}</code>). It’s currently unused in any <code>.qmd</code> file, so there’s no active conflict, but the name is a trap: if anyone ever adds a native Quarto callout to either deck, it will silently pick up this custom styling instead of (or blended with) Quarto’s built-in callout CSS. Since it’s unused, this is a candidate for either renaming to something project-specific (e.g.&nbsp;<code>.highlight-box</code>) or deleting outright — your call, flagging rather than proposing since deletion/rename both need your sign-off given it’s a name collision rather than a pure style inconsistency.</p>
+<h3 id="everything-else-checked-and-found-consistent">Everything else checked and found consistent</h3>
+<ul>
+<li>No BEM-style patterns (<code>__</code>/<code>--</code> modifiers) exist anywhere, so there’s nothing to make consistent on that front.</li>
+<li>Multi-part utility families are internally consistent: <code>text-panel-{side}-{width}</code>, <code>memory-detail-{n}-{n}</code>, <code>callout-{oval,rect,line-vertical,label}</code>, <code>slide-body-{med,lg}-text[-emphasis]</code>, <code>norm-{conform,speech,advice}</code>, <code>rotate-{ccw,cw}-15</code>, <code>kable-table[-borders|-light]</code>.</li>
+<li>Two classes produce visually identical output — <code>.title-text</code> and <code>.slide-body-heading p</code> share one rule block (<a href="styles.scss">styles.scss:87–95</a>) by design (comma-joined selector), not an accidental duplication — flagging only as an FYI, not a defect.</li>
+</ul>
+<h3 id="human-feedback-1">Human Feedback</h3>
+<ul>
+<li><p>Rename <code>muted_med</code> → <code>muted-med</code> in the SCSS as proposed</p></li>
+<li><p>Confirmed: do <em>not</em> rename <code>brand$muted_med</code> in the <code>.qmd</code> files</p></li>
+<li><p>I’ve added a <code>Deferred</code> section to the bottom of this document that we will come back to after completing the initial audit areas to address further cleanup of the palette configuration approach.</p></li>
+<li><p>Go ahead and remove <code>.callout-tip</code> from the .scss to prevent future confusion.</p></li>
+</ul>
+</section>
+<section id="scss-file-organization" class="slide level2">
+<h2>3. SCSS File Organization</h2>
+<h3 id="current-state">Current state</h3>
+<p>The file is already broken into banner-commented sections (<code>// ── Section Name ──</code>), but the sections are ordered roughly in the chronological order features were added to the decks, not by logical category. Generic, broadly-reusable utilities (<code>.emphasis</code>, <code>.muted</code>, <code>.columns-equal</code>, <code>.rotate-*</code>) are interleaved with styles that exist for exactly one specific slide (the memory-model slide, the “how many 5s” exercise, the normative-conformity phonetic-spelling slide).</p>
+<h3 id="proposed-section-order">Proposed section order</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource scss number-lines code-with-copy"><code class="sourceCode scss"><span id="cb1-1"><a></a><span class="co">/*-- scss:defaults --*/</span></span>
+<span id="cb1-2"><a></a><span class="co">// 1. TOKENS — fonts, colors, heading scale, spacing (already isolated, keep as-is: lines 1–36)</span></span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a><span class="co">/*-- scss:rules --*/</span></span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a><span class="co">// 2. CSS CUSTOM PROPERTY BRIDGE</span></span>
+<span id="cb1-7"><a></a><span class="co">//    Exposes brand tokens as --variables for use in .qmd attributes (lines 42–51)</span></span>
+<span id="cb1-8"><a></a></span>
+<span id="cb1-9"><a></a><span class="co">// 3. BASE / REVEAL OVERRIDES</span></span>
+<span id="cb1-10"><a></a><span class="co">//    Generic tweaks to reveal.js's own built-in structures (divider slides,</span></span>
+<span id="cb1-11"><a></a><span class="co">//    dark-background text color, footer, logo, list spacing, code block defaults)</span></span>
+<span id="cb1-12"><a></a><span class="co">//    — current lines 53–66, 495–524, 471–493</span></span>
+<span id="cb1-13"><a></a></span>
+<span id="cb1-14"><a></a><span class="co">// 4. LAYOUT UTILITIES</span></span>
+<span id="cb1-15"><a></a><span class="co">//    Reusable, content-agnostic structural helpers usable on any slide:</span></span>
+<span id="cb1-16"><a></a><span class="co">//    .columns / .column-right / .columns-equal, section.center,</span></span>
+<span id="cb1-17"><a></a><span class="co">//    .slide-stack + :has(.slide-stack), .no-padding, .text-panel-{side}-{width},</span></span>
+<span id="cb1-18"><a></a><span class="co">//    .rotate-ccw-15 / .rotate-cw-15</span></span>
+<span id="cb1-19"><a></a><span class="co">//    — current lines 68–76, 131–168, 147–159, 526–532, 542–545, 571–579</span></span>
+<span id="cb1-20"><a></a></span>
+<span id="cb1-21"><a></a><span class="co">// 5. TYPOGRAPHY UTILITIES</span></span>
+<span id="cb1-22"><a></a><span class="co">//    Reusable text treatments not tied to one slide's content:</span></span>
+<span id="cb1-23"><a></a><span class="co">//    .emphasis, .muted, .body-light, blockquote + .quote-attribution,</span></span>
+<span id="cb1-24"><a></a><span class="co">//    .hollow-square-bullets, .highlight-line</span></span>
+<span id="cb1-25"><a></a><span class="co">//    — current lines 185–196, 277–279, 446–460, 490–493, 547–569</span></span>
+<span id="cb1-26"><a></a></span>
+<span id="cb1-27"><a></a><span class="co">// 6. REUSABLE COMPONENTS</span></span>
+<span id="cb1-28"><a></a><span class="co">//    Named, multi-slide components: title slide (.title-custom, .title-text,</span></span>
+<span id="cb1-29"><a></a><span class="co">//    .subtitle-text, .title-bird, .subtitle-slide-text), table family</span></span>
+<span id="cb1-30"><a></a><span class="co">//    (.raw-table-demo, .kable-table*, .table-system-font, gt svg fix),</span></span>
+<span id="cb1-31"><a></a><span class="co">//    code sizing (.code-size-1/2/3), callouts (.callout-oval/rect/line-vertical/label),</span></span>
+<span id="cb1-32"><a></a><span class="co">//    .slide-source-footer, slide-body-{med,lg}-text[-emphasis]</span></span>
+<span id="cb1-33"><a></a><span class="co">//    — current lines 78–129, 354–415, 471–493, 330–352, 511–518, 417–443</span></span>
+<span id="cb1-34"><a></a></span>
+<span id="cb1-35"><a></a><span class="co">// 7. PER-SLIDE / ONE-OFF OVERRIDES</span></span>
+<span id="cb1-36"><a></a><span class="co">//    Single-use styles tied to one specific slide's exact content — grouped</span></span>
+<span id="cb1-37"><a></a><span class="co">//    by which slide/talk they belong to:</span></span>
+<span id="cb1-38"><a></a><span class="co">//      - Memory-model slide: .memory-label, .memory-detail(-*)</span></span>
+<span id="cb1-39"><a></a><span class="co">//      - "How many 5s" exercise: .digit-wall, .fragment.custom.five-pop, .blink</span></span>
+<span id="cb1-40"><a></a><span class="co">//      - Data-pixel-ratio slide: .ratio-fraction(-lg), .ratio-annotation, .no-logo</span></span>
+<span id="cb1-41"><a></a><span class="co">//      - Normative-conformity talk: .norm-conform, .norm-speech, .norm-advice, .center-col</span></span>
+<span id="cb1-42"><a></a><span class="co">//    — current lines 198–273, 275–328, 581–619</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This groups by “how reusable/generic is this” (tokens → base → layout → typography → components → one-offs), which matches the order you described wanting. The <code>.callout-tip</code> “Highlight box utility” (<a href="styles.scss">styles.scss:462–469</a>) would land in section 6 if kept, or be deleted per the naming-collision note above.</p>
+<h3 id="specificity-conflicts-do-not-reorder-these-relative-to-each-other-without-flagging-it">Specificity conflicts — do not reorder these relative to each other without flagging it</h3>
+<p>Per your instructions, here are the selector pairs/groups with <strong>equal CSS specificity that set overlapping properties</strong>. Reordering any of these changes which declaration wins if both ever match the same element:</p>
+<p><strong>A) Three “vertical-centering” selectors, all specificity <code>(0,3,1)</code>:</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Selector</th>
+<th>Lines</th>
+<th>Properties set</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.reveal .slides section.title-custom</code></td>
+<td><a href="styles.scss">80–85</a></td>
+<td><code>display: flex</code>, <code>flex-direction: column</code>, <code>justify-content: center</code>, <code>height: 100%</code></td>
+</tr>
+<tr class="even">
+<td><code>.reveal .slides section:has(.slide-stack)</code></td>
+<td><a href="styles.scss">132–136</a></td>
+<td><code>display: flex !important</code>, <code>flex-direction: column</code>, <code>height: 100%</code></td>
+</tr>
+<tr class="odd">
+<td><code>.reveal .slides section.statement</code></td>
+<td><a href="styles.scss">171–176</a></td>
+<td><code>display: flex</code>, <code>flex-direction: column</code>, <code>justify-content: center</code>, <code>height: 100%</code></td>
+</tr>
+</tbody>
+</table>
+<p>All three compute to specificity <code>(0,3,1)</code> — <code>.reveal</code>, <code>.slides</code>, and one more class each contribute one class-level point (<code>:has(.slide-stack)</code>’s specificity is that of its argument, <code>.slide-stack</code>, per spec), and <code>section</code> is the one element. Currently no slide in the project applies more than one of these three conditions at once (<code>.statement</code> is in fact unused in any <code>.qmd</code> right now — see below), so there’s no live conflict, but if a future slide combines <code>.title-custom</code> or <code>.statement</code> with a nested <code>.slide-stack</code>, or if <code>.statement</code> gets adopted on a slide containing <code>.slide-stack</code>, source order decides the shared properties (except <code>display</code>, which <code>:has(.slide-stack)</code> pins via <code>!important</code> regardless of order).</p>
+<p><strong>B) Table border rules, both specificity <code>(0,2,1)</code> at the <code>th</code>/<code>td</code> level:</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Selector</th>
+<th>Lines</th>
+<th>Property</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.reveal .kable-table-borders th, td</code></td>
+<td><a href="styles.scss">391–393</a></td>
+<td><code>border: 1px solid $body-color</code> (shorthand — touches all four sides)</td>
+</tr>
+<tr class="even">
+<td><code>.reveal .kable-table-light th, td</code></td>
+<td><a href="styles.scss">404–407</a></td>
+<td><code>border-bottom: 1px solid $muted</code></td>
+</tr>
+</tbody>
+</table>
+<p>Currently mutually exclusive by usage — every table in <a href="_05-example-table.qmd">_05-example-table.qmd</a> applies exactly one of <code>kable-table-borders</code> or <code>kable-table-light</code>, never both. But they’re the same specificity and both touch the bottom border edge, so if ever combined on one table, order (and shorthand-vs-longhand interaction) determines the result.</p>
+<p><strong>C) Lower priority — same-specificity size variants, currently non-overlapping by usage:</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Selector</th>
+<th>Lines</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.ratio-fraction</code></td>
+<td><a href="styles.scss">282–298</a></td>
+</tr>
+<tr class="even">
+<td><code>.ratio-fraction-lg</code></td>
+<td><a href="styles.scss">307–323</a></td>
+</tr>
+</tbody>
+</table>
+<p>Both <code>(0,1,0)</code> at the base class, sharing <code>color</code>/<code>text-align</code>/<code>font-weight</code>/<code>font-size</code>/<code>width</code>. These are clearly designed as alternate size variants for different slides (confirmed: used on two different slides in <a href="_03-data-pixel-ratio.qmd">_03-data-pixel-ratio.qmd</a>, never together), so this is low-risk — flagging only because it technically meets your literal criteria.</p>
+<h3 id="human-feedback-2">Human Feedback</h3>
+<ul>
+<li><p>Implement the proposed section order. Include a clear heading (not numbered) in all caps for each major section to match the proposal here. Add a brief commented description underneath each of those all caps titles to lightly elaborate on that grouping criteria.</p></li>
+<li><p>Remove <code>.statement</code> entirely from the .scss, since it was not used.</p></li>
+<li><p>Because there are no current overlaps identified for any of the specificity matches, go ahead and re-order those logically and into the appropriate category</p></li>
+</ul>
+</section>
+<section id="qmd-syntaxlayout-consistency" class="slide level2">
+<h2>4. QMD Syntax/Layout Consistency</h2>
+<p>All of the following are cosmetic — none change parsed structure, heading levels, or fenced-div nesting depth. Verified render-safety by checking Pandoc’s fenced-div and attribute-parsing rules before including anything here.</p>
+<h3 id="safe-to-batch">Safe to batch</h3>
+<ol type="1">
+<li><p><strong>Fenced-div class syntax: bare word vs.&nbsp;braced dot-class.</strong> <a href="./normative-conformity.html">normative-conformity.qmd</a> uses bare <code>::: columns</code> / <code>:::: columns</code> (lines 63, 89, 110) where every other file uses <code>::: {.columns}</code> / <code>:::: {.columns}</code> (6 instances across <a href="_05-example-table.qmd">_05-example-table.qmd</a> and <a href="./dataviz-best-practices.html">dataviz-best-practices.qmd:81</a>). Pandoc treats <code>::: className</code> and <code>::: {.className}</code> identically — purely a style choice. Recommend standardizing on the braced form since it’s already the 2:1 majority convention.</p></li>
+<li><p><strong>Space between fence marker and opening brace.</strong> 14 instances of <code>:::{</code> (no space) vs.&nbsp;303 instances of <code>::: {</code> / <code>:::: {</code> (with space):</p>
+<ul>
+<li><a href="_04-example-line-chart.qmd">_04-example-line-chart.qmd:3,79,124,217</a></li>
+<li><a href="_06-example-text.qmd">_06-example-text.qmd:13,22,34</a> Pandoc doesn’t require the space; recommend adding it to match the dominant style.</li>
+</ul></li>
+<li><p><strong><code>fragment-index</code> attribute quoting.</strong> Quoted (<code>fragment-index="1"</code>) in <a href="_04-example-line-chart.qmd">_04-example-line-chart.qmd</a> (8 instances) vs.&nbsp;unquoted (<code>fragment-index=1</code>) in <a href="_02-cognitive-load.qmd">_02-cognitive-load.qmd</a> (16 instances) and <a href="_03-data-pixel-ratio.qmd">_03-data-pixel-ratio.qmd</a> (6 instances). Both parse identically as a Quarto/reveal attribute; recommend picking one (unquoted is the majority, 22 vs 8).</p></li>
+<li><p><strong>Double space after heading marker.</strong> <a href="_01-intro.qmd">_01-intro.qmd:15</a> — <code>##  {.center ...}</code> (two spaces) vs.&nbsp;every other bare-attribute heading in the project using a single space. One-line fix.</p></li>
+<li><p><strong>Class/attribute ordering within fenced-div and span attribute lists.</strong> <code>.fragment</code> appears in every possible position — first (<a href="_01-intro.qmd">_01-intro.qmd:22</a> <code>{.fragment .slide-body-heading}</code>), last (<a href="_01-intro.qmd">_01-intro.qmd:54</a> <code>{.slide-body-heading .fragment}</code>, <a href="./normative-conformity.html">normative-conformity.qmd:64</a> <code>{.column width="50%" .center-col .norm-speech .fragment}</code>), and middle (<a href="_02-cognitive-load.qmd">_02-cognitive-load.qmd:14</a> <code>{.absolute .memory-detail .memory-detail-1-5 .fragment .fade-in-then-out ...}</code>). This is scattered across roughly 30 attribute blocks in <a href="_01-intro.qmd">_01-intro.qmd</a>, <a href="_02-cognitive-load.qmd">_02-cognitive-load.qmd</a>, <a href="_03-data-pixel-ratio.qmd">_03-data-pixel-ratio.qmd</a>, <a href="_04-example-line-chart.qmd">_04-example-line-chart.qmd</a>, and <a href="./normative-conformity.html">normative-conformity.qmd</a>. Attribute order inside <code>{...}</code> has no effect on Pandoc/reveal.js rendering, so this is safe to normalize — recommend a fixed convention, e.g., <strong>positioning/structural classes → <code>.fragment</code>/animation classes → <code>fragment-index</code> → geometry attrs (<code>top</code>/<code>left</code>/<code>width</code>) → <code>style</code> last</strong>, and I’d want you to confirm the convention before I touch ~30 lines rather than guessing at your preference.</p></li>
+</ol>
+<h3 id="uncertain-needs-discussion-not-proposed-as-safe-fixes">Uncertain — needs discussion (not proposed as safe fixes)</h3>
+<ul>
+<li><p><strong>Nested fenced-div colon counts.</strong> <a href="./index.html">index.qmd:81–94</a> opens with <code>:::: {.columns}</code> (4 colons) but a directly-nested <code>::: {.column width="62%"}</code> (3 colons) itself contains two more 3-colon divs (<code>.title-text</code>, <code>.subtitle-text</code>) at the <em>same</em> colon count as their parent. Pandoc’s fence-matching algorithm can be sensitive to this (“outer fence needs ≥ colons of anything it contains” is the safe convention; matching counts on parent/child is technically allowed but is exactly the kind of thing that renders correctly today and breaks on a Pandoc version bump or minor edit). This currently renders fine, but I’m not proposing to “fix” the colon counts since a wrong edit here is a real rendering-breakage risk — this needs your explicit review, not a batch pass.</p></li>
+<li><p><strong><code>&lt;br&gt;</code> vs.&nbsp;other line-break mechanisms.</strong> Raw HTML <code>&lt;br&gt;</code> is used ~13 times across 5 files for forced line breaks in short text. Separately, <a href="_02-cognitive-load.qmd">_02-cognitive-load.qmd:64–67</a> uses a trailing backslash (<code>\</code>) at end-of-line inside <code>.digit-wall</code> to force line breaks within one dense block of digits. These aren’t really serving the same purpose (short thematic breaks vs.&nbsp;exact wrapping inside a single content block), so “unifying” them isn’t obviously correct — surfacing this so you can decide if it’s worth touching, not proposing a change.</p></li>
+</ul>
+<h3 id="human-feedback-3">Human Feedback</h3>
+<ul>
+<li><p>Standardize on the braced form for the class syntax throughout</p></li>
+<li><p>Add a space between the fence marker and the opening brace throughout (go with what’s already dominant)</p></li>
+<li><p>Go with unquoted <code>fragment-index</code> throughout</p></li>
+<li><p>Change the double space after the heading marker in the one instance found to be a single space</p></li>
+<li><p>For the class/attribute ordering, update all to use: <strong>positioning/structural classes → <code>.fragment</code>/animation classes → <code>fragment-index</code> → geometry attrs (<code>top</code>/<code>left</code>/<code>width</code>) → <code>style</code> last</strong></p></li>
+<li><p>Update to follow the “outer fence needs ≥ colons of anything it contains” convention throughout all of the .qmd files. Search every .qmd file in the project for nested fenced-div blocks (:::/::::) where an outer fence’s colon count is NOT strictly greater than any fence nested inside it. For each occurrence, increase the outer fence’s colon count so it’s strictly greater than the highest colon count of anything nested inside it, following the “outer fence needs more colons than anything it contains” convention. Only ever increase colon counts — never decrease any fence’s colon count, even if it looks like it would still work with fewer.</p></li>
+<li><p>Go ahead and replace the trailing backslash (‘\’) with <code>&lt;br&gt;</code> on the one slide where it occurs.</p></li>
+</ul>
+</section>
+<section id="summary-risk-tiers" class="slide level2">
+<h2>Summary — Risk Tiers</h2>
+<h3 id="lowest-risk-safe-to-batch-together">Lowest-risk, safe to batch together</h3>
+<ul>
+<li>SCSS: <code>$muted_med</code> → <code>$muted-med</code> and <code>--brand-muted_med</code> → <code>--brand-muted-med</code> rename (7 lines, all in <code>styles.scss</code>, zero external consumers).</li>
+<li>QMD: fenced-div bare-class → braced-class in <code>normative-conformity.qmd</code> (3 lines).</li>
+<li>QMD: no-space <code>:::{</code> → <code>::: {</code> (7 lines across 2 files).</li>
+<li>QMD: <code>fragment-index</code> quoting standardization (24 lines across 2 files) — pick unquoted (majority) or quoted, either is safe.</li>
+<li>QMD: double-space fix in <code>_01-intro.qmd:15</code> (1 line).</li>
+<li>Housekeeping: delete the 5 zero-reference images, and add <code>.DS_Store</code> to <code>.gitignore</code> if not already covered.</li>
+</ul>
+<h3 id="needs-your-explicit-decision-before-touching">Needs your explicit decision before touching</h3>
+<ul>
+<li><code>.fragment</code>/class ordering standardization (~30 attribute blocks) — safe mechanically, but needs you to pick the target convention first.</li>
+<li><code>.callout-tip</code> naming collision with Quarto’s built-in callout type — rename vs.&nbsp;delete (it’s currently unused either way).</li>
+<li>SCSS section reorganization (item 3) — mechanically safe (pure reordering + comment headers) <em>except</em> for the three specificity-tied groups (A, B, C above), which must stay in their current relative order unless you decide to also resolve the underlying overlap (e.g., by adding a distinguishing modifier or scoping one of them more tightly).</li>
+<li><code>closeupeye-bw-og.jpg</code> and <code>pic_uncle_sam.png</code> deletion — high confidence these are superseded originals, but worth a quick visual diff against their replacements before deleting since they’re meaningfully large files.</li>
+</ul>
+<h3 id="out-of-scope-do-not-touch">Out of scope / do not touch</h3>
+<ul>
+<li>Nested fenced-div colon-count pattern in <code>index.qmd</code> — real rendering risk, not cosmetic.</li>
+<li><code>&lt;br&gt;</code> vs.&nbsp;backslash hard-break — different use cases, not a clear inconsistency.</li>
+<li>Any reveal.js/Quarto built-in class or selector (<code>.reveal</code>, <code>.slides</code>, <code>section</code>, <code>.fragment</code> itself, <code>.slide-logo</code>, <code>.footer</code>, <code>.columns</code>/<code>.column</code> as Quarto’s own layout primitive, heading levels).</li>
+</ul>
+</section>
+<section id="deferred-items" class="slide level2">
+<h2>Deferred Items</h2>
+<p><strong>Palette consolidation</strong>: Investigate <code>var(--*)</code> usage for markup and <code>gt</code>/<code>gtExtras</code> tables to eliminate palette replication from <code>custom.scss</code>. ggplot2 stays on the <code>brand</code> R list (or migrates to a shared JSON/YAML source) since it needs resolved values at render time, not CSS variable references. Related: currently-unused <code>--brand-*</code> custom properties in <code>custom.scss</code>.</p>
+
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/gilliganondata\.github\.io\/dataviz-posit\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>

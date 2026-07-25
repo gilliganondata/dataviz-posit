@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://gilliganondata.github.io/dataviz-posit/dataviz-best-practices.html</loc>
-    <lastmod>2026-07-25T14:39:16.923Z</lastmod>
+    <lastmod>2026-07-25T21:36:05.500Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gilliganondata.github.io/dataviz-posit/CLEANUP_AUDIT.html</loc>
+    <lastmod>2026-07-25T19:50:26.693Z</lastmod>
   </url>
   <url>
     <loc>https://gilliganondata.github.io/dataviz-posit/normative-conformity.html</loc>
-    <lastmod>2026-07-25T16:59:04.439Z</lastmod>
+    <lastmod>2026-07-25T21:36:05.501Z</lastmod>
   </url>
   <url>
     <loc>https://gilliganondata.github.io/dataviz-posit/index.html</loc>
