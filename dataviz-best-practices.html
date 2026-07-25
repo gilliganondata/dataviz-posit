@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.38">
 
   <meta name="author" content="Tim Wilson">
-  <meta name="dcterms.date" content="2026-07-23">
+  <meta name="dcterms.date" content="2026-07-25">
   <title>Data Viz Presentations – Pixels with Purpose</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -99,7 +99,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-6293090d02f53af2b73093c9dfabc500.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-89cf25ece5aa3fc504cfd36d47ecadde.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -209,7 +209,7 @@ Tim Wilson
 </div>
 </div>
 
-  <p class="date">2026-07-23</p>
+  <p class="date">2026-07-25</p>
 </section>
 <section id="section" class="slide level2 title-custom">
 <h2></h2>
@@ -501,7 +501,7 @@ Tim Wilson
           display:block!important;
       }</style></aside>
 </section>
-<section id="section-7" class="slide level2" data-background-color="var(--brand-dark)">
+<section id="section-7" class="slide level2 no-logo" data-background-color="#0A0C0D">
 <h2></h2>
 <div class="slide-stack">
 <div class="ratio-fraction-lg">
@@ -697,38 +697,38 @@ Tim Wilson
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 30 × 4
-   country                lifeExp      pop gdpPercap
-   &lt;fct&gt;                    &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
- 1 Germany                   79.4 82400996    32170.
- 2 Turkey                    71.8 71158647     8458.
- 3 France                    80.7 61083916    30470.
- 4 United Kingdom            79.4 60776238    33203.
- 5 Italy                     80.5 58147733    28570.
- 6 Spain                     80.9 40448191    28821.
- 7 Poland                    75.6 38518241    15390.
- 8 Romania                   72.5 22276056    10808.
- 9 Netherlands               79.8 16570613    36798.
-10 Greece                    79.5 10706290    27538.
-11 Portugal                  78.1 10642836    20510.
-12 Belgium                   79.4 10392226    33693.
-13 Czech Republic            76.5 10228744    22833.
-14 Serbia                    74.0 10150265     9787.
-15 Hungary                   73.3  9956108    18009.
-16 Sweden                    80.9  9031088    33860.
-17 Austria                   79.8  8199783    36126.
-18 Switzerland               81.7  7554661    37506.
-19 Bulgaria                  73.0  7322858    10681.
-20 Denmark                   78.3  5468120    35278.
-21 Slovak Republic           74.7  5447502    18678.
-22 Finland                   79.3  5238460    33207.
-23 Norway                    80.2  4627926    49357.
-24 Bosnia and Herzegovina    74.9  4552198     7446.
-25 Croatia                   75.7  4493312    14619.
-26 Ireland                   78.9  4109086    40676.
-27 Albania                   76.4  3600523     5937.
-28 Slovenia                  77.9  2009245    25768.
-29 Montenegro                74.5   684736     9254.
-30 Iceland                   81.8   301931    36181.</code></pre>
+   country                     pop lifeExp gdpPercap
+   &lt;fct&gt;                     &lt;int&gt;   &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Germany                82400996    79.4    32170.
+ 2 Turkey                 71158647    71.8     8458.
+ 3 France                 61083916    80.7    30470.
+ 4 United Kingdom         60776238    79.4    33203.
+ 5 Italy                  58147733    80.5    28570.
+ 6 Spain                  40448191    80.9    28821.
+ 7 Poland                 38518241    75.6    15390.
+ 8 Romania                22276056    72.5    10808.
+ 9 Netherlands            16570613    79.8    36798.
+10 Greece                 10706290    79.5    27538.
+11 Portugal               10642836    78.1    20510.
+12 Belgium                10392226    79.4    33693.
+13 Czech Republic         10228744    76.5    22833.
+14 Serbia                 10150265    74.0     9787.
+15 Hungary                 9956108    73.3    18009.
+16 Sweden                  9031088    80.9    33860.
+17 Austria                 8199783    79.8    36126.
+18 Switzerland             7554661    81.7    37506.
+19 Bulgaria                7322858    73.0    10681.
+20 Denmark                 5468120    78.3    35278.
+21 Slovak Republic         5447502    74.7    18678.
+22 Finland                 5238460    79.3    33207.
+23 Norway                  4627926    80.2    49357.
+24 Bosnia and Herzegovina  4552198    74.9     7446.
+25 Croatia                 4493312    75.7    14619.
+26 Ireland                 4109086    78.9    40676.
+27 Albania                 3600523    76.4     5937.
+28 Slovenia                2009245    77.9    25768.
+29 Montenegro               684736    74.5     9254.
+30 Iceland                  301931    81.8    36181.</code></pre>
 </div>
 </div>
 </div>
@@ -758,7 +758,7 @@ Tim Wilson
 </div><div class="column kable-table" style="width:60%;">
 <div class="cell">
 <div class="cell-output-display">
-<table class="kable-table-borders table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="kable-table-borders table-system-font table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold; color: rgba(249, 235, 220, 1) !important; background-color: rgba(49, 113, 104, 1) !important;">Country</th>
@@ -978,7 +978,7 @@ Tim Wilson
 </div><div class="column kable-table" style="width:60%;">
 <div class="cell">
 <div class="cell-output-display">
-<table class="kable-table-light table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="kable-table-light table-system-font table caption-top" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; font-weight: bold; color: rgba(49, 113, 104, 1) !important;">Country</th>
