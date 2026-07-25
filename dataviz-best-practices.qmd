@@ -67,21 +67,11 @@ df_unemployment <- economics |>
 df_psavert <- economics |>
   filter(date >= as.Date("2009-01-01"), date <= as.Date("2009-12-01"))
 
-# Summary table data: gapminder, 2007 snapshot by continent
-df_continents <- gapminder |>
-  filter(year == 2007) |>
-  group_by(continent) |>
-  summarise(
-    countries    = n(),
-    mean_lifeExp = mean(lifeExp),
-    total_pop    = sum(as.numeric(pop))
-  ) |>
-  arrange(desc(total_pop))
-
 # Summary table: gapminder, 2007 by country in Europe
 df_europe_2007 <- gapminder |>
   filter(year == 2007, continent == "Europe") |>
-  select(-continent, -year) |> 
+  # Limit the columns and reorder a bit
+  select(country, pop, lifeExp, gdpPercap) |> 
   arrange(desc(pop))
 
 ```

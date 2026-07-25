@@ -53,7 +53,7 @@ Europe in 2007
 # striped rows.
 df_europe_2007_cleaner |> 
   kable("html", align = c("l", "r", "r", "r"),
-        table.attr = 'class="kable-table-borders"') |>                     
+        table.attr = 'class="kable-table-borders table-system-font"') |>                     
   kable_styling(full_width = FALSE, position = "center") |>  
   column_spec(1, width = "7cm", bold = TRUE) %>% 
   column_spec(2, width = "5cm") |> 
@@ -86,7 +86,7 @@ Europe in 2007
 # Make some improvements to the kable version.
 df_europe_2007_cleaner |> 
   kable("html", align = c("l", "r", "r", "r"),
-        table.attr = 'class="kable-table-light"') |>                     
+        table.attr = 'class="kable-table-light table-system-font"') |>                     
   kable_styling(full_width = FALSE, position = "center") |>  
   column_spec(1, width = "7cm", bold = TRUE) %>% 
   column_spec(2, width = "5cm") |> 
@@ -116,7 +116,7 @@ Europe in 2007
 ::: {.column width="60%" .kable-table}
 ```{r table-gt}
 #| html-table-processing: none
-# Use gt + gtExtras to pair each metric value with an inline bar scaled to the
+# Use gt & gtExtras to pair each metric value with an inline bar scaled to the
 # largest value in that column. Works from df_europe_2007 (all-numeric), with
 # each metric duplicated into a value column and a bar column.
 df_europe_2007_gt <- df_europe_2007 |>

@@ -32,7 +32,7 @@ execute:
 ::: {.slide-body-heading}
 normative conformity
 :::
-::: {style = "font-size: 1.6em; color: #317168; margin-top: -0.8em"}
+::: {.norm-conform}
 **nor**-muh-tiv   kuhn-**for**-muh-tee
 :::
 
@@ -46,23 +46,35 @@ Source: https://lifestyle.sustainability-directory.com/area/normative-conformity
 ::: {.slide-body-heading}
 normative conformity
 :::
-::: {style = "font-size: 1.6em; color: #317168; margin-top: -0.8em"}
+::: {.norm-conform}
 **nor**-muh-tiv   kuhn-**for**-muh-tee
 :::
 
 > "the tendency of individuals to adjust their [presentations]{.emphasis} to align with the perceived standards of their [organization or industry]{.emphasis}"
 
+## 
+::: {.slide-body-heading}
+normative conformity
+:::
+::: {.norm-conform}
+**nor**-muh-tiv   kuhn-**for**-muh-tee
+:::
 
-## normative conformity…illustrated {.statement}
+::: columns
+::: {.column width="50%" .center-col .norm-speech .fragment}
+"This slide deck is killing me!"
 
-"This slide deck is killing me."
+![](images/norm_conform_frustrated.png){style="width: 800px;"}
+:::
 
-. . .
+::: {.column width="50%" .center-col .norm-speech .fragment}
+"Let me produce another one!"
 
-"Let me produce another one."
+![](images/norm_conform_creator.png){style="width: 800px;"}
+:::
+:::
 
-
-## {.center background-image="images/pic_uncle_sam_beige.png" background-size="auto 100%" background-position="right center"}
+## {.center background-image="images/pic_uncle_sam_beige.png" background-size="auto 80%" background-position="right center"}
 
 ::: {.text-panel-left-60}
 ::: {.slide-body-heading}
@@ -70,8 +82,44 @@ normative conformity
 :::
 :::
 
-::: {.notes}
-Uncle Sam-like pic, full bleed to the right.
+## Pay attention to your peers!
 
-Then choose your own adventure with what you want to learn more about.
+<br>
+
+::: columns
+::: {.column width="50%" .center-col .norm-speech}
+"This slide deck is killing me!"
+
+![](images/norm_conform_frustrated.png){style="width: 800px;"}
+:::
+
+::: {.column width="50%" .norm-advice}
+::: {.fragment}
+Identify what, specifically, is making it [ineffective]{.emphasis}.
+:::
+::: {.fragment}
+Resolve to [not repeat those mistakes]{.emphasis}.
+:::
+:::
+:::
+
+## Pay attention to your peers!
+
+<br>
+
+::: columns
+::: {.column width="50%" .center-col .norm-speech}
+"This slide deck is amazing!"
+
+![](images/norm_conform_happy.png){style="width: 800px;"}
+:::
+
+::: {.column width="50%" .norm-advice}
+::: {.fragment}
+Identify what, specifically, is making it [effective]{.emphasis}.
+:::
+::: {.fragment}
+Resolve to [apply those same practices]{.emphasis}.
+:::
+:::
 :::
