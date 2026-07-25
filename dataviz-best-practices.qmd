@@ -123,7 +123,7 @@ How to Amplify the Impact of Your Talk Through Visual Reinforcement
 # This Presentation {background-color="var(--divider-bg)"}
 
 ::: {.slide-body-med-text}
-GitHub repo (Quarto/revealjs)
+GitHub repo (Quarto/reveal.js)
 :::
 ::: {.slide-body-lg-text style="margin-top: -0.4em;"}
 [rebrand.ly/dataviz-posit](https://rebrand.ly/dataviz-posit)
