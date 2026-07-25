@@ -1,6 +1,6 @@
 ## {.center}
 
-:::{style="position: relative; width: 70%; margin: 0 auto;"}
+:::: {style="position: relative; width: 70%; margin: 0 auto;"}
 
 ```{r chart-default}
 #| fig.width: 6
@@ -37,36 +37,36 @@ gg_line_og
 
 ```
 
-::: {.fragment .fade-in-then-out fragment-index="1" .callout-rect style="top: 1.5%; left: 7.5%; width: 1135px; height: 850px;"}
+::: {.callout-rect .fragment .fade-in-then-out fragment-index=1 style="top: 1.5%; left: 7.5%; width: 1135px; height: 850px;"}
 :::
 
 <!--
-::: {.fragment .fade-in-then-out fragment-index="2" .callout-oval style="top: 70%; left: 46%; width: 50px; height: 150px; transform: rotate(45deg);"}
+::: {.callout-oval .fragment .fade-in-then-out fragment-index=2 style="top: 70%; left: 46%; width: 50px; height: 150px; transform: rotate(45deg);"}
 :::
 -->
 
-::: {.fragment .fade-in-then-out fragment-index="2" .callout-oval style="top: 23%; left: 7.8%; width: 60px; height: 450px;"}
+::: {.callout-oval .fragment .fade-in-then-out fragment-index=2 style="top: 23%; left: 7.8%; width: 60px; height: 450px;"}
 :::
 
-::: {.fragment .fade-in-then-out fragment-index="3" .callout-oval style="top: 9.3%; left: 46%; width: 180px; height: 70px;"}
+::: {.callout-oval .fragment .fade-in-then-out fragment-index=3 style="top: 9.3%; left: 46%; width: 180px; height: 70px;"}
 :::
 
-::: {.fragment .fade-in-then-out fragment-index="4" .callout-oval style="top: 81.5%; left: 47.5%; width: 150px; height: 60px;"}
+::: {.callout-oval .fragment .fade-in-then-out fragment-index=4 style="top: 81.5%; left: 47.5%; width: 150px; height: 60px;"}
 :::
 
-::: {.fragment .fade-in-then-out fragment-index="5" .callout-line-vertical style="top: 20.8%; left: 31.3%; height: 482px;"}
+::: {.callout-line-vertical .fragment .fade-in-then-out fragment-index=5 style="top: 20.8%; left: 31.3%; height: 482px;"}
 :::
 
-::: {.fragment .fade-in-then-out fragment-index="5" .callout-line-vertical style="top: 20.8%; left: 34.5%; height: 482px;"}
+::: {.callout-line-vertical .fragment .fade-in-then-out fragment-index=5 style="top: 20.8%; left: 34.5%; height: 482px;"}
 :::
 
-::: {.fragment .fade-in-then-out fragment-index="5" .callout-line-vertical style="top: 20.8%; left: 37.7%; height: 482px;"}
+::: {.callout-line-vertical .fragment .fade-in-then-out fragment-index=5 style="top: 20.8%; left: 37.7%; height: 482px;"}
 :::
 
 ::: {.fragment}
 :::
 
-:::
+::::
 
 ::: {.notes}
 Let's look at a generic, simple line chart. This is the ggplot defaults (made a little bit worse).
@@ -76,7 +76,7 @@ There are a lot of redundant or non-data/information pixels here.
 
 ## Personal Savings Rate by Month in 2009
 
-:::{style="margin: 0 auto;"}
+::: {style="margin: 0 auto;"}
 
 ```{r higher-data-pixel}
 #| fig.width: 8
@@ -121,7 +121,7 @@ The same data, higher data-pixel ratio. No border, no legend, no redundant axis 
 
 ## Personal Savings Rate by Month in 2009
 
-:::{style="margin: 0 auto;"}
+::: {style="margin: 0 auto;"}
 
 ```{r higher-data-pixel_repeat}
 #| fig.width: 8
@@ -214,6 +214,6 @@ gg_line_final
 [Source: https://fred.stlouisfed.org/series/PSAVERT/]{.muted}
 :::
 
-:::{.notes}
+::: {.notes}
 We can really highlight what we're calling out. In this case, we made the title call out exactly what we're showing, and we emphasized in the chart itself that same highlight.
 :::

@@ -1,5 +1,8 @@
 /*-- scss:defaults --*/
 
+// TOKENS
+// Fonts, colors, heading scale, and spacing tokens shared by both decks.
+
 // Typography
 $font-family-sans-serif: "Halyard Text", sans-serif;
 $font-family-serif: "Plantagenet Cherokee", sans-serif;
@@ -16,7 +19,7 @@ $link-color: #2563eb;
 $primary:   #317168;
 $secondary: #9D792F;
 $accent:    #F1655F;
-$muted_med: #5F6B71; // Darker than OG; safer that it will show up. 
+$muted-med: #5F6B71; // Darker than OG; safer that it will show up.
 $muted:     #94a3b8; // OG muted; concerned that it may be too light for projectors.
 
 // Headings — ~25% smaller than revealjs default (2.5em → ~1.85em)
@@ -36,6 +39,9 @@ $footer-baseline: 14px;
 
 /*-- scss:rules --*/
 
+// CSS CUSTOM PROPERTY BRIDGE
+// Exposes brand tokens as --variables so .qmd attributes can reference them without hardcoding hex values.
+
 // Expose brand colors as CSS variables so .qmd files can reference them
 // (e.g., background-color="var(--divider-bg)") without hardcoding hex values.
 // Still hardcoded hex values in dataviz-best-practices.qmd for use in R chunks. :-()
@@ -47,8 +53,11 @@ $footer-baseline: 14px;
   --brand-accent: #{$accent};
   --brand-dark: #{$body-color};
   --brand-muted: #{$muted};
-  --brand-muted_med: #{$muted_med};
+  --brand-muted-med: #{$muted-med};
 }
+
+// BASE / REVEAL OVERRIDES
+// Generic tweaks to reveal.js's own built-in structures: divider slides, dark-background text, footer, logo, list spacing, and code block defaults.
 
 // Divider / section slides (level-1 headings with no body content)
 .reveal section.level1 {
@@ -65,6 +74,37 @@ $footer-baseline: 14px;
   color: $divider-text;
 }
 
+// Code blocks
+.reveal pre code {
+  font-size: .75em !important;
+  line-height: 1.5;
+}
+
+// Footer text (slide number / text label)
+.reveal .footer {
+  font-size: 0.55em;
+  color: $muted-med;
+}
+
+// Meadowlark logo — bottom-left on every slide
+.reveal .slide-logo {
+  position: fixed;
+  bottom: $footer-baseline;
+  left: 16px;
+  height: 36px;
+  width: auto;
+  opacity: 0.9;
+}
+
+// Incremental list spacing
+.reveal ul li,
+.reveal ol li {
+  margin-bottom: 0.4em;
+}
+
+// LAYOUT UTILITIES
+// Reusable, content-agnostic structural helpers usable on any slide.
+
 // Column adjustments
 .columns {
   display: flex !important;
@@ -73,51 +113,6 @@ $footer-baseline: 14px;
 
 .column-right {
   text-align: right;
-}
-
-// ── Custom title slide ──────────────────────────────────────────────────────
-// Vertically centers the bird + title columns
-.reveal .slides section.title-custom {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-.title-text,
-.slide-body-heading p {
-  font-family: $font-family-serif;
-  font-weight: 500;
-  font-size: 2.6em;
-  line-height: 1.1;
-  margin-top: 0.5em;
-  color: $primary;
-}
-
-// Subtitle on the title slide
-.subtitle-text {
-  font-family: $font-family-sans-serif;
-  font-weight: 400;
-  font-size: 1.5em;
-  line-height: 1.25;
-  color: #555;
-  margin-top: 0.15em;
-}
-
-.title-bird {
-  width: 80%;
-  height: auto;
-}
-
-// Subtitle on a regular slide
-.subtitle-slide-text > p {
-  font-family: $font-family-sans-serif;
-  font-weight: 400;
-  font-size: 1.5em;
-  line-height: 1.25;
-  color: #555;
-  margin-top: -0.5em;
-  margin-bottom: 0.5em;
 }
 
 // The corners -- flush
@@ -167,20 +162,31 @@ section.center {
   height: 100%;
 }
 
-// ── Statement slides (single big-text takeaways) ───────────────────────────
-.reveal .slides section.statement {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-
-  p {
-    font-family: $font-family-serif;
-    font-size: 1.8em;
-    line-height: 1.3;
-    color: $body-color;
-  }
+// Two-column layout helper
+.columns-equal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
 }
+
+// Setting up to allow full bleed as needed
+.reveal .slides section.no-padding {
+  padding: 0 !important;
+}
+
+// Specific placement of slightly rotated images
+
+.rotate-ccw-15 {
+  transform: rotate(-15deg);
+}
+
+.rotate-cw-15 {
+  transform: rotate(15deg);
+}
+
+// TYPOGRAPHY UTILITIES
+// Reusable text treatments not tied to any one slide's content.
 
 // Accent emphasis within statements ("heavy up" a key point)
 .emphasis {
@@ -190,10 +196,256 @@ section.center {
 
 // De-emphasized context (e.g., surrounding code / secondary text)
 .muted {
-  color: $muted_med;
+  color: $muted-med;
   font-weight: 200;
   font-size: 0.85em;
 }
+
+.body-light {
+  color: $body-light;
+}
+
+// ── Quotes ──────────────────────────────────────────────────────────────────
+.reveal blockquote {
+  font-family: $font-family-serif;
+  font-size: 1.3em;
+  line-height: 1.4;
+  border-left: 6px solid $accent;
+  padding-left: 0.8em;
+  color: $body-color;
+}
+
+.quote-attribution {
+  font-size: 0.7em;
+  color: $muted-med;
+  text-align: right;
+}
+
+.highlight-line {
+  font-weight: 550;
+  font-size: 1.2em;
+}
+
+// Unordered lists will be checkboxes
+.hollow-square-bullets {
+  ul {
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 1.2em;
+      font-size: 2.2em;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.55em;
+        height: 0.55em;
+        border: 0.08em solid currentColor;
+      }
+    }
+  }
+}
+
+// REUSABLE COMPONENTS
+// Named, multi-slide components used across the decks: title slide, tables, code sizing, callouts, and slide footer/body-text variants.
+
+// ── Custom title slide ──────────────────────────────────────────────────────
+// Vertically centers the bird + title columns
+.reveal .slides section.title-custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.title-text,
+.slide-body-heading p {
+  font-family: $font-family-serif;
+  font-weight: 500;
+  font-size: 2.6em;
+  line-height: 1.1;
+  margin-top: 0.5em;
+  color: $primary;
+}
+
+// Subtitle on the title slide
+.subtitle-text {
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.25;
+  color: #555;
+  margin-top: 0.15em;
+}
+
+.title-bird {
+  width: 80%;
+  height: auto;
+}
+
+// Subtitle on a regular slide
+.subtitle-slide-text > p {
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 1.25;
+  color: #555;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+}
+
+// ── Callouts ─────────────────────────────────────────────────────────────────
+.callout-oval {
+  position: absolute;
+  border-radius: 50%;
+  border: 5px solid $accent;
+  background-color: transparent;
+  pointer-events: none; // so it doesn't block clicks/interaction underneath
+}
+
+.callout-rect {
+  position: absolute;
+  border: 5px solid $accent;
+  background-color: transparent;
+  pointer-events: none; // so it doesn't block clicks/interaction underneath
+}
+
+.callout-line-vertical {
+  position: absolute;
+  width: 5px;              // this IS the line's thickness now
+  background-color: $accent;
+  border: none;            // no border at all
+  pointer-events: none;
+}
+
+// Callout labels (chart annotation fragments)
+.callout-label {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: $accent;
+}
+
+// ── Table formatting slides ────────────────────────────────────────────────────
+
+// Base R table
+.reveal .slides section .raw-table-demo {
+  display: flex;
+  justify-content: center;
+
+  pre {
+    margin: 0;
+    font-size: 32px;
+  }
+
+  pre code {
+    max-height: none;      // kill reveal's 500px cap
+    overflow: visible;     // and its scrolling behavior
+    line-height: 1.2;
+  }
+}
+
+// Kable table
+.kable-table table {
+  font-size: 0.6em;
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+// The brand fonts primarily used here are so far from monospace that they really
+// bork numbers in tables, so put in an override that the kable tables will use.
+$font-table: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+.reveal .slides section .table-system-font {
+  font-family: $font-table;
+  font-variant-numeric: tabular-nums;
+}
+
+// Bad formatting for the borders (can't do this w/ bootstrap_options; thanks, Quarto,
+// for trying to protect me from myself)
+.reveal .kable-table-borders {
+  th, td {
+    border: 1px solid $body-color;
+  }
+  tbody tr:nth-of-type(odd) td {
+    background-color: $muted;
+  }
+  tbody tr:last-child td {
+  border-bottom: 1px solid $body-color;
+  }
+}
+
+// Improved table. Leaving just the horizontal borders AND making them a lighter color
+.reveal .kable-table-light {
+  th, td {
+    border-bottom: 1px solid $muted
+  }
+}
+
+// gtExtras inline-bar SVGs: svglite (>= 2.2) omits the fill on the blank plot
+// background rect, and SVG's default fill is black. Neutralize any rect without
+// an inline fill; the bars themselves carry an explicit fill and are unaffected.
+.reveal .gt_table svg rect:not([style*="fill"]) {
+  fill: none;
+}
+
+// Code sizing
+.code-size-1 pre code  {
+  font-size: 1.25em !important;
+  max-height: 850px !important;
+  }
+.code-size-2 pre code {
+  font-size: 1.65em !important;
+  max-height: 850px !important;
+}
+.code-size-3 pre code  {
+  font-size: 2.5em !important;
+  max-height: 850px !important;
+}
+
+// For adding source footnotes at bottom right:
+.slide-source-footer {
+  position: absolute;
+  bottom: $footer-baseline;
+  right: 40px;
+  font-size: 0.8em;
+  text-align: right;
+};
+
+// ── Text emphasis slides ────────────────────────────────────────────────────
+.slide-body-med-text p {
+  text-align: center;
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 1.8em;
+}
+
+
+.slide-body-lg-text {
+  text-align: center;
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  font-size: 2.6em;
+}
+
+.slide-body-lg-text-emphasis {
+  text-align: center;
+  margin-top: -0.2em;
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+  font-size: 8em;
+  line-height: 0.8;
+  color: $primary;
+  margin-top: -0.3em;
+  margin-bottom: 0em;
+}
+
+// PER-SLIDE / ONE-OFF OVERRIDES
+// Single-use styles tied to one specific slide's exact content, grouped by which slide or talk they belong to.
 
 // ── Memory slide (dark, photo right, labels build on the left) ─────────────
 .memory-label > p {
@@ -231,6 +483,28 @@ $memory-detail-sizes: (
   }
 }
 
+// ── "How many 5s" exercise ──────────────────────────────────────────────────
+// Custom fragment: digits are visible from the start; when the fragment
+// triggers, the 5s change color and weight (revealjs custom-fragment pattern)
+.digit-wall {
+  font-family: $font-family-monospace;
+  font-size: 2.15em;
+  line-height: 1.6;
+  letter-spacing: 0.0em;
+  color: $muted-med;
+  text-align: center;
+}
+
+.fragment.custom.five-pop {
+  opacity: 1;
+  visibility: visible;
+
+  &.visible {
+    color: $accent;
+    font-weight: 700;
+  }
+}
+
 // Blinking text (which is here with some hesitation; accessibility concerns)
 @keyframes blink-text {
   0%, 50% { opacity: 1; }
@@ -249,34 +523,7 @@ $memory-detail-sizes: (
   color: $accent;
 }
 
-
-// ── "How many 5s" exercise ──────────────────────────────────────────────────
-// Custom fragment: digits are visible from the start; when the fragment
-// triggers, the 5s change color and weight (revealjs custom-fragment pattern)
-.digit-wall {
-  font-family: $font-family-monospace;
-  font-size: 2.15em;
-  line-height: 1.6;
-  letter-spacing: 0.0em;
-  color: $muted_med;
-  text-align: center;
-}
-
-.fragment.custom.five-pop {
-  opacity: 1;
-  visibility: visible;
-
-  &.visible {
-    color: $accent;
-    font-weight: 700;
-  }
-}
-
 // ── Data-pixel ratio slide  ───────────────────────────────────────────────
-
-.body-light {
-  color: $body-light;
-}
 
 // For the first presentation - smaller
 .ratio-fraction {
@@ -327,259 +574,6 @@ $memory-detail-sizes: (
   display: none !important;
 }
 
-// ── Callouts ─────────────────────────────────────────────────────────────────
-.callout-oval {
-  position: absolute;
-  border-radius: 50%;
-  border: 5px solid $accent;
-  background-color: transparent;
-  pointer-events: none; // so it doesn't block clicks/interaction underneath
-}
-
-.callout-rect {
-  position: absolute;
-  border: 5px solid $accent;
-  background-color: transparent;
-  pointer-events: none; // so it doesn't block clicks/interaction underneath
-}
-
-.callout-line-vertical {
-  position: absolute;
-  width: 5px;              // this IS the line's thickness now
-  background-color: $accent;
-  border: none;            // no border at all
-  pointer-events: none;
-}
-
-// ── Table formatting slides ────────────────────────────────────────────────────
-
-// Base R table
-.reveal .slides section .raw-table-demo {
-  display: flex;
-  justify-content: center;
-
-  pre {
-    margin: 0;
-    font-size: 32px;
-  }
-
-  pre code {
-    max-height: none;      // kill reveal's 500px cap
-    overflow: visible;     // and its scrolling behavior
-    line-height: 1.2;
-  }
-}
-
-// Kable table
-.kable-table table {
-  font-size: 0.6em;
-  font-weight: 400;
-  line-height: 0.95;
-}
-
-// The brand fonts primarily used here are so far from monospace that they really
-// bork numbers in tables, so put in an override that the kable tables will use.
-$font-table: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-
-.reveal .slides section .table-system-font {
-  font-family: $font-table;
-  font-variant-numeric: tabular-nums;
-}
-
-// Bad formatting for the borders (can't do this w/ bootstrap_options; thanks, Quarto, 
-// for trying to protect me from myself)
-.reveal .kable-table-borders {
-  th, td {
-    border: 1px solid $body-color;
-  }
-  tbody tr:nth-of-type(odd) td {
-    background-color: $muted;
-  }
-  tbody tr:last-child td {
-  border-bottom: 1px solid $body-color;
-  }
-}
-
-// Improved table. Leaving just the horizontal borders AND making them a lighter color
-.reveal .kable-table-light {
-  th, td {
-    border-bottom: 1px solid $muted 
-  }
-}
-
-// gtExtras inline-bar SVGs: svglite (>= 2.2) omits the fill on the blank plot
-// background rect, and SVG's default fill is black. Neutralize any rect without
-// an inline fill; the bars themselves carry an explicit fill and are unaffected.
-.reveal .gt_table svg rect:not([style*="fill"]) {
-  fill: none;
-}
-
-// ── Text emphasis slides ────────────────────────────────────────────────────
-.slide-body-med-text p {
-  text-align: center;
-  font-family: $font-family-sans-serif;
-  font-weight: 400;
-  font-size: 1.8em;
-}
-
-
-.slide-body-lg-text {
-  text-align: center;
-  font-family: $font-family-sans-serif;
-  font-weight: 400;
-  font-size: 2.6em;
-}
-
-.slide-body-lg-text-emphasis {
-  text-align: center;
-  margin-top: -0.2em;
-  font-family: $font-family-sans-serif;
-  font-weight: 600;
-  font-size: 8em;
-  line-height: 0.8;
-  color: $primary;
-  margin-top: -0.3em;
-  margin-bottom: 0em;
-}
-
-
-// ── Quotes ──────────────────────────────────────────────────────────────────
-.reveal blockquote {
-  font-family: $font-family-serif;
-  font-size: 1.3em;
-  line-height: 1.4;
-  border-left: 6px solid $accent;
-  padding-left: 0.8em;
-  color: $body-color;
-}
-
-.quote-attribution {
-  font-size: 0.7em;
-  color: $muted_med;
-  text-align: right;
-}
-
-// Highlight box utility class
-.callout-tip {
-  border-left: 4px solid $primary;
-  background: #eff6ff;
-  padding: 0.5rem 1rem;
-  border-radius: 0 6px 6px 0;
-  font-size: 0.85em;
-}
-
-// Code blocks
-.reveal pre code {
-  font-size: .75em !important;
-  line-height: 1.5;
-}
-
-.code-size-1 pre code  { 
-  font-size: 1.25em !important;
-  max-height: 850px !important;
-  }
-.code-size-2 pre code {
-  font-size: 1.65em !important; 
-  max-height: 850px !important;
-}
-.code-size-3 pre code  {
-  font-size: 2.5em !important; 
-  max-height: 850px !important;
-}
-
-.highlight-line {
-  font-weight: 550;
-  font-size: 1.2em;
-}
-
-// Footer text (slide number / text label)
-.reveal .footer {
-  font-size: 0.55em;
-  color: $muted_med;
-}
-
-// Meadowlark logo — bottom-left on every slide
-.reveal .slide-logo {
-  position: fixed;
-  bottom: $footer-baseline;
-  left: 16px;
-  height: 36px;
-  width: auto;
-  opacity: 0.9;
-}
-
-// For adding source footnotes at bottom right: 
-.slide-source-footer {
-  position: absolute;
-  bottom: $footer-baseline;
-  right: 40px;
-  font-size: 0.8em;
-  text-align: right;
-};
-
-// Incremental list spacing
-.reveal ul li,
-.reveal ol li {
-  margin-bottom: 0.4em;
-}
-
-// Two-column layout helper
-.columns-equal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
-}
-
-// Callout labels (chart annotation fragments)
-.callout-label {
-  font-family: $font-family-sans-serif;
-  font-size: 0.8em;
-  font-weight: bold;
-  color: $accent;
-}
-
-// Setting up to allow full bleed as needed
-.reveal .slides section.no-padding {
-  padding: 0 !important;
-}
-
-// Unordered lists will be checkboxes
-.hollow-square-bullets {
-  ul {
-    list-style: none;
-
-    li {
-      position: relative;
-      padding-left: 1.2em;
-      font-size: 2.2em;
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 0.55em;
-        height: 0.55em;
-        border: 0.08em solid currentColor;
-      }
-    }
-  }
-}
-
-// Specific placement of slightly rotated images
-
-.rotate-ccw-15 {
-  transform: rotate(-15deg);
-}
-
-.rotate-cw-15 {
-  transform: rotate(15deg);
-}
-
-// Supplemental slides
-
 // Normative conformity
 blockquote > p {
   font-family: $font-family-serif;
@@ -598,9 +592,9 @@ blockquote > p {
 
 // The phonetic spelling formatting
 .norm-conform {
-  font-size: 1.6em; 
+  font-size: 1.6em;
   margin-top: -0.8em;
-  color: $muted_med
+  color: $muted-med
 }
 
 // Speech text
@@ -617,5 +611,3 @@ blockquote > p {
   line-height: 1.3em;
   margin-top: 0.8em;
 }
-
-  

@@ -78,11 +78,11 @@ df_europe_2007 <- gapminder |>
 
 ## {.title-custom}
 
-:::: {.columns}
-::: {.column width="38%" .column-right}
+::::: {.columns}
+::: {.column .column-right width="38%"}
 ![](images/meadowlark_bird.png){.title-bird}
 :::
-::: {.column width="62%"}
+:::: {.column width="62%"}
 
 ::: {.title-text}
 Pixels with Purpose
@@ -90,8 +90,8 @@ Pixels with Purpose
 ::: {.subtitle-text}
 How to Amplify the Impact of Your Talk Through Visual Reinforcement
 :::
-:::
 ::::
+:::::
 
 {{< include _01-intro.qmd >}}
 
@@ -123,7 +123,7 @@ How to Amplify the Impact of Your Talk Through Visual Reinforcement
 # This Presentation {background-color="var(--divider-bg)"}
 
 ::: {.slide-body-med-text}
-GitHub repo (Quarto/revealjs)
+GitHub repo (Quarto/reveal.js)
 :::
 ::: {.slide-body-lg-text style="margin-top: -0.4em;"}
 [rebrand.ly/dataviz-posit](https://rebrand.ly/dataviz-posit)
