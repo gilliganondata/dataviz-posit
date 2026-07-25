@@ -7,35 +7,35 @@ Image source: https://unsplash.com/photos/a-close-up-of-a-red-flower-59HOF9zHKNs
 
 ## {background-color="#317168" background-image="images/closeupeye-bw.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.absolute .memory-label .fragment left="4%" top="7%" width="24%" fragment-index=1}
+::: {.absolute .memory-label .fragment fragment-index=1 top="7%" left="4%" width="24%"}
 Iconic Memory
 :::
 
-::: {.absolute .memory-detail .memory-detail-1-5 .fragment .fade-in-then-out left="32%" top="11%" fragment-index=2}
+::: {.absolute .memory-detail .memory-detail-1-5 .fragment .fade-in-then-out fragment-index=2 top="11%" left="32%"}
 Pre-Cognition
 :::
 
-::: {.absolute .fragment left="12%" top="25%" width="7.5%" fragment-index=3}
+::: {.absolute .fragment fragment-index=3 top="25%" left="12%" width="7.5%"}
 ![](images/down-arrow.png)
 :::
 
-::: {.absolute .memory-label .fragment left="4%" top="37%" width="24%" fragment-index=3}
+::: {.absolute .memory-label .fragment fragment-index=3 top="37%" left="4%" width="24%"}
 Short-Term Memory
 :::
 
-::: {.absolute .memory-detail .memory-detail-3-5 .fragment .fade-in-then-out left="32%" top="37%" fragment-index=4}
+::: {.absolute .memory-detail .memory-detail-3-5 .fragment .fade-in-then-out fragment-index=4 top="37%" left="32%"}
 7 &plusmn; 2
 :::
 
-::: {.absolute .fragment left="12%" top="57%" width="7.5%" fragment-index=5}
+::: {.absolute .fragment fragment-index=5 top="57%" left="12%" width="7.5%"}
 ![](images/down-arrow.png)
 :::
 
-::: {.absolute .memory-label .fragment left="4%" top="70%" width="24%" fragment-index=5}
+::: {.absolute .memory-label .fragment fragment-index=5 top="70%" left="4%" width="24%"}
 Long-Term Memory
 :::
 
-::: {.absolute .memory-detail .memory-detail-1-5 .fragment left="32%" top="68%" fragment-index=6}
+::: {.absolute .memory-detail .memory-detail-1-5 .fragment fragment-index=6 top="68%" left="32%"}
 In an Hour,<br>Tomorrow,<br>Next Month
 :::
 
@@ -61,9 +61,9 @@ Minimize [cognitive load]{.emphasis}.
 
 ::: {.slide-stack}
 ::: {.digit-wall}
-4979027[5]{.fragment .custom .five-pop fragment-index=1}647902894728624092406037070[5]{.fragment .custom .five-pop fragment-index=1}7027\
-08029007302[5]{.fragment .custom .five-pop fragment-index=1}0127023700837408207872027200\
-0260270379377[5]{.fragment .custom .five-pop fragment-index=1}70970737797066746209709470\
+4979027[5]{.fragment .custom .five-pop fragment-index=1}647902894728624092406037070[5]{.fragment .custom .five-pop fragment-index=1}7027<br>
+08029007302[5]{.fragment .custom .five-pop fragment-index=1}0127023700837408207872027200<br>
+0260270379377[5]{.fragment .custom .five-pop fragment-index=1}70970737797066746209709470<br>
 79709723097230979[5]{.fragment .custom .five-pop fragment-index=1}927[5]{.fragment .custom .five-pop fragment-index=1}092727979873497260
 :::
 :::

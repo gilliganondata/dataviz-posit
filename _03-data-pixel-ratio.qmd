@@ -17,11 +17,11 @@ All Non-Background Pixels
 :::
 :::
 <br><br>
-![](images/left-up-arc-arrow.png){.absolute .fragment top="67%" left="54%" width="5%" fragment-index=1}
-[Every pixel that is not<br>simply the background color]{.ratio-annotation .absolute .fragment top="71%" left="60%" fragment-index=1}
+![](images/left-up-arc-arrow.png){.absolute .fragment fragment-index=1 top="67%" left="54%" width="5%"}
+[Every pixel that is not<br>simply the background color]{.ratio-annotation .absolute .fragment fragment-index=1 top="71%" left="60%"}
 
-![](images/left-down-arc-arrow.png){.absolute .fragment top="31%" left="45%" width="5%" fragment-index=2}
-[Pixels that represent<br>actual data or information]{.ratio-annotation .absolute .fragment top="26%" left="51%" fragment-index=2}
+![](images/left-down-arc-arrow.png){.absolute .fragment fragment-index=2 top="31%" left="45%" width="5%"}
+[Pixels that represent<br>actual data or information]{.ratio-annotation .absolute .fragment fragment-index=2 top="26%" left="51%"}
 
 ::: {.notes}
 (After build) This is an example of a slide with high cognitive load.

@@ -12,17 +12,17 @@ The [goal]{.emphasis} of any talk is [audience impact]{.emphasis}.
 :::
 :::
 
-##  {.center background-image="images/pic_basketball_goal.jpg" background-size="auto 100%" background-position="right center"}
+## {.center background-image="images/pic_basketball_goal.jpg" background-size="auto 100%" background-position="right center"}
 
 ::: {.text-panel-left-60}
 ::: {.slide-body-heading}
 [Slides]{.emphasis} don't drive impact.
 :::
 
-::: {.fragment .slide-body-heading}
+::: {.slide-body-heading .fragment}
 [The talk]{.emphasis} drives impact.
 :::
-::: {.fragment .slide-body-heading}
+::: {.slide-body-heading .fragment}
 Slides simply [reinforce the talk]{.emphasis}.
 :::
 :::
@@ -72,7 +72,7 @@ Image source: https://unsplash.com/photos/man-standing-beside-rock-formation-mj5
 # Most slide decks [fail to deliver]{.emphasis} {background-color="var(--divider-bg)"}
 
 :::: {.columns .fragment}
-::: {.column width="38%" .column-right}:::
+::: {.column .column-right width="38%"}
 ![](images/flashing_light.gif)
 :::
 ::: {.column style="margin-left: 30px; text-align: left; color: #FF0000;"}

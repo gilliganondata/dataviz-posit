@@ -4,7 +4,7 @@
 
 :::: {.columns}
 
-::: {.column width="40%" .slide-body-heading}
+::: {.column .slide-body-heading width="40%"}
 Europe in 2007
 :::
 
@@ -43,11 +43,11 @@ df_europe_2007_cleaner <- df_europe_2007 |>
 
 :::: {.columns}
 
-::: {.column width="40%" .slide-body-heading}
+::: {.column .slide-body-heading width="40%"}
 Europe in 2007
 :::
 
-::: {.column width="60%" .kable-table}
+::: {.column .kable-table width="60%"}
 ```{r table-improve-1}
 # Use kable to make a table that has borders for rows and columns and alternating
 # striped rows.
@@ -77,11 +77,11 @@ Lots of pixels keeping that data-pixel ratio down: the borders everywhere, the s
 ##
 
 :::: {.columns}
-::: {.column width="40%" .slide-body-heading}
+::: {.column .slide-body-heading width="40%"}
 Europe in 2007
 :::
 
-::: {.column width="60%" .kable-table}
+::: {.column .kable-table width="60%"}
 ```{r table-improve-2}
 # Make some improvements to the kable version.
 df_europe_2007_cleaner |> 
@@ -109,11 +109,11 @@ Easier on the eyes. Still... high cognitive load to read and process numbers.
 ##
 
 :::: {.columns}
-::: {.column width="40%" .slide-body-heading}
+::: {.column .slide-body-heading width="40%"}
 Europe in 2007
 :::
 
-::: {.column width="60%" .kable-table}
+::: {.column .kable-table width="60%"}
 ```{r table-gt}
 #| html-table-processing: none
 # Use gt & gtExtras to pair each metric value with an inline bar scaled to the
@@ -196,11 +196,11 @@ Now the eye can compare countries at a glance — the bars carry the magnitude, 
 ##
 
 :::: {.columns}
-::: {.column width="40%" .slide-body-heading}
+::: {.column .slide-body-heading width="40%"}
 [France]{.emphasis} and the [UK]{.emphasis} were [2007 twinsies]{.emphasis}.
 :::
 
-::: {.column width="60%" .kable-table}
+::: {.column .kable-table width="60%"}
 ```{r table-gt-highlight}
 #| html-table-processing: none
 # Use gt + gtExtras to pair each metric value with an inline bar scaled to the

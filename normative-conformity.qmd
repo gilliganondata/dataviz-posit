@@ -60,14 +60,14 @@ normative conformity
 **nor**-muh-tiv   kuhn-**for**-muh-tee
 :::
 
-::: columns
-::: {.column width="50%" .center-col .norm-speech .fragment}
+::: {.columns}
+::: {.column .center-col .norm-speech .fragment width="50%"}
 "This slide deck is killing me!"
 
 ![](images/norm_conform_frustrated.png){style="width: 800px;"}
 :::
 
-::: {.column width="50%" .center-col .norm-speech .fragment}
+::: {.column .center-col .norm-speech .fragment width="50%"}
 "Let me produce another one!"
 
 ![](images/norm_conform_creator.png){style="width: 800px;"}
@@ -86,14 +86,14 @@ normative conformity
 
 <br>
 
-::: columns
-::: {.column width="50%" .center-col .norm-speech}
+::: {.columns}
+::: {.column .center-col .norm-speech width="50%"}
 "This slide deck is killing me!"
 
 ![](images/norm_conform_frustrated.png){style="width: 800px;"}
 :::
 
-::: {.column width="50%" .norm-advice}
+::: {.column .norm-advice width="50%"}
 ::: {.fragment}
 Identify what, specifically, is making it [ineffective]{.emphasis}.
 :::
@@ -107,14 +107,14 @@ Resolve to [not repeat those mistakes]{.emphasis}.
 
 <br>
 
-::: columns
-::: {.column width="50%" .center-col .norm-speech}
+::: {.columns}
+::: {.column .center-col .norm-speech width="50%"}
 "This slide deck is amazing!"
 
 ![](images/norm_conform_happy.png){style="width: 800px;"}
 :::
 
-::: {.column width="50%" .norm-advice}
+::: {.column .norm-advice width="50%"}
 ::: {.fragment}
 Identify what, specifically, is making it [effective]{.emphasis}.
 :::
