@@ -5,11 +5,11 @@
 
 ## {.center background-image="images/pic_womans_portrait.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-60}
+:::: {.text-panel-left-60}
 ::: {.slide-body-heading}
 Images can bring out [emotion]{.emphasis}.
 :::
-:::
+::::
 
 ::: {.notes}
 Source: https://unsplash.com/photos/womans-portrait-mC852jACK1g
@@ -17,11 +17,11 @@ Source: https://unsplash.com/photos/womans-portrait-mC852jACK1g
 
 ## {.center background-image="images/pic_cold_shower.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-60}
+:::: {.text-panel-left-60}
 ::: {.slide-body-heading}
 Images can bring out [emotion]{.emphasis}.
 :::
-:::
+::::
 
 ::: {.notes}
 Source: https://unsplash.com/photos/topless-man-with-water-droplets-on-his-face-UFm4e4fsEZc
@@ -29,11 +29,11 @@ Source: https://unsplash.com/photos/topless-man-with-water-droplets-on-his-face-
 
 ## {.center background-image="images/pic_white_thunder.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-60}
+:::: {.text-panel-left-60}
 ::: {.slide-body-heading}
 Images can bring out [emotion]{.emphasis}.
 :::
-:::
+::::
 
 ::: {.notes}
 Source: https://unsplash.com/photos/selective-photography-of-white-thunder-nbqlWhOVu6k
@@ -41,11 +41,11 @@ Source: https://unsplash.com/photos/selective-photography-of-white-thunder-nbqlW
 
 ## {.center background-image="images/pic_person_standing.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-60}
+:::: {.text-panel-left-60}
 ::: {.slide-body-heading}
 Images can bring out [emotion]{.emphasis}.
 :::
-:::
+::::
 
 ::: {.notes}
 Source: https://unsplash.com/photos/person-standing-on-hill-EAvS-4KnGrk
@@ -53,11 +53,11 @@ Source: https://unsplash.com/photos/person-standing-on-hill-EAvS-4KnGrk
 
 ## {.center background-image="images/pic_sunrise.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-60}
+:::: {.text-panel-left-60}
 ::: {.slide-body-heading}
 Images can bring out [emotion]{.emphasis}.
 :::
-:::
+::::
 
 ::: {.notes}
 Source: https://unsplash.com/photos/brown-boat-near-dock-qkfxBc2NQ18
@@ -65,11 +65,11 @@ Source: https://unsplash.com/photos/brown-boat-near-dock-qkfxBc2NQ18
 
 ## {.center background-image="images/green_bg.png" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-60}
+:::: {.text-panel-left-60}
 ::: {.slide-body-heading}
 Slides can inject [levity]{.emphasis}.
 :::
-:::
+::::
 
 ::: {.rotate-ccw-15 style="position: absolute; top: 60%; left: 70%; width: 550px"}
 ![](images/allison-horst-function.png)
@@ -86,11 +86,11 @@ Slides can inject [levity]{.emphasis}.
 
 ## {.center background-image="images/pic_cognitive_load.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-50}
+:::: {.text-panel-left-50}
 ::: {.slide-body-heading}
 Be careful, though! 
 :::
-:::
+::::
 
 ::: {.rotate-ccw-15 style="position: absolute; top: 3%; left: 45%; font-size: 2em; text-align: center; color: `r brand$dark`"}
 "Cognitive load."<br>Get it? Get it?!<br>😂...?
@@ -107,11 +107,11 @@ And, obviously, steer clear of anything potentially offensive.
 
 ## {.center background-image="images/pic_lightbulb.jpg" background-size="100% auto"}
 
-::: {.text-panel-left-50}
+:::: {.text-panel-left-50}
 ::: {.slide-body-heading style="color: `r brand$bg`;"}
 Draw focus! 
 :::
-:::
+::::
 
 ::: {.notes}
 Source: https://unsplash.com/photos/a-light-bulb-sitting-on-top-of-a-wooden-table-u5l8ded3n3Y

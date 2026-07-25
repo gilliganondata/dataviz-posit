@@ -6,15 +6,15 @@ A good place to start is being clear on why we have slides in a talk in the firs
 
 ## {.center background-image="images/pic_basketball_goal.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-60}
+:::: {.text-panel-left-60}
 ::: {.slide-body-heading}
 The [goal]{.emphasis} of any talk is [audience impact]{.emphasis}.
 :::
-:::
+::::
 
 ## {.center background-image="images/pic_basketball_goal.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-60}
+:::: {.text-panel-left-60}
 ::: {.slide-body-heading}
 [Slides]{.emphasis} don't drive impact.
 :::
@@ -25,7 +25,7 @@ The [goal]{.emphasis} of any talk is [audience impact]{.emphasis}.
 ::: {.slide-body-heading .fragment}
 Slides simply [reinforce the talk]{.emphasis}.
 :::
-:::
+::::
 
 ::: {.notes}
 Slides are not where a talk starts.
@@ -36,18 +36,18 @@ slides are not where a talk starts.
 
 ## {.center background-image="images/pic_boulder_support.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-60}
+:::: {.text-panel-left-60}
 ::: {.slide-body-heading}
 So what does [reinforcement]{.emphasis} actually [mean]{.emphasis}?
 :::
-:::
+::::
 ::: {.notes}
 Image source: https://unsplash.com/photos/man-standing-beside-rock-formation-mj51pZwan9c
 :::
 
 ## {.center background-image="images/pic_boulder_support.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-60}
+:::: {.text-panel-left-60}
 ::: {.slide-body-heading}
 Hold their [attention]{.emphasis}.
 :::
@@ -57,7 +57,7 @@ Help them [understand]{.emphasis} what's being presented.
 ::: {.slide-body-heading .fragment}
 Enable them to [retain]{.emphasis} what matters most.
 :::
-:::
+::::
 
 ::: {.notes}
 - **Keep the audience's attention** — the talk is bound by time and attention

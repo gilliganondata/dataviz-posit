@@ -6,16 +6,16 @@
 This concept was initially put forth by Edward Tufte as **"the data-ink ratio,"** and Stephen Few later modernized it as **"the data-pixel ratio."**
 :::
 
-::: {.slide-stack}
-::: {.ratio-fraction}
+::::: {.slide-stack}
+:::: {.ratio-fraction}
 ::: {.numerator .fragment fragment-index=2}
 Data-Information Pixels
 :::
 ::: {.denominator .fragment fragment-index=1}
 All Non-Background Pixels
 :::
-:::
-:::
+::::
+:::::
 <br><br>
 ![](images/left-up-arc-arrow.png){.absolute .fragment fragment-index=1 top="67%" left="54%" width="5%"}
 [Every pixel that is not<br>simply the background color]{.ratio-annotation .absolute .fragment fragment-index=1 top="71%" left="60%"}
@@ -33,16 +33,16 @@ Image source: https://unsplash.com/photos/candlestick-stock-chart-on-dark-screen
 
 ## {.no-logo background-color="#0A0C0D"}
 
-::: {.slide-stack}
-::: {.ratio-fraction-lg}
+::::: {.slide-stack}
+:::: {.ratio-fraction-lg}
 ::: {.numerator}
 Data-Information Pixels
 :::
 ::: {.denominator}
 All Non-Background Pixels
 :::
-:::
-:::
+::::
+:::::
 ![](images/left-up-arc-arrow.png){.absolute top="63%" left="54%" width="5%"}
 [Every pixel that is not<br>simply the background color]{.ratio-annotation .absolute top="67%" left="60%"}
 

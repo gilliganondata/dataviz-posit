@@ -1,6 +1,6 @@
 ## {.center}
 
-::: {style="position: relative; width: 70%; margin: 0 auto;"}
+:::: {style="position: relative; width: 70%; margin: 0 auto;"}
 
 ```{r chart-default}
 #| fig.width: 6
@@ -66,7 +66,7 @@ gg_line_og
 ::: {.fragment}
 :::
 
-:::
+::::
 
 ::: {.notes}
 Let's look at a generic, simple line chart. This is the ggplot defaults (made a little bit worse).

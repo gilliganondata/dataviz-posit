@@ -51,22 +51,22 @@ The human brain has limitations:
 
 ## {.center background-image="images/pic_cognitive_load.jpg" background-size="auto 100%" background-position="right center"}
 
-::: {.text-panel-left-50}
+:::: {.text-panel-left-50}
 ::: {.slide-body-heading}
 Minimize [cognitive load]{.emphasis}.
 :::
-:::
+::::
 
 ## How many 5s are in this set of numbers?
 
-::: {.slide-stack}
+:::: {.slide-stack}
 ::: {.digit-wall}
 4979027[5]{.fragment .custom .five-pop fragment-index=1}647902894728624092406037070[5]{.fragment .custom .five-pop fragment-index=1}7027<br>
 08029007302[5]{.fragment .custom .five-pop fragment-index=1}0127023700837408207872027200<br>
 0260270379377[5]{.fragment .custom .five-pop fragment-index=1}70970737797066746209709470<br>
 79709723097230979[5]{.fragment .custom .five-pop fragment-index=1}927[5]{.fragment .custom .five-pop fragment-index=1}092727979873497260
 :::
-:::
+::::
 
 ::: {.slide-source-footer .muted}
 [Source: *Information Dashboard Design* by Stephen Few]{.muted}
