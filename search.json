@@ -287,6 +287,55 @@
     "text": "Draw focus!\n\n\n\nSource: https://unsplash.com/photos/a-light-bulb-sitting-on-top-of-a-wooden-table-u5l8ded3n3Y"
   },
   {
+    "objectID": "mckinsey-titles.html#mckinsey-titles",
+    "href": "mckinsey-titles.html#mckinsey-titles",
+    "title": "McKinsey Titles",
+    "section": "McKinsey Titles",
+    "text": "McKinsey Titles\n\nDefinition\n\n\nThe title of the slide is structured as a sentence\nThat sentence has a single declarative takeaway\nThe body of the slide then reinforces that single takeaway"
+  },
+  {
+    "objectID": "mckinsey-titles.html#mckinsey-titles-are-a-declarative-statement",
+    "href": "mckinsey-titles.html#mckinsey-titles-are-a-declarative-statement",
+    "title": "McKinsey Titles",
+    "section": "McKinsey titles are a declarative statement!",
+    "text": "McKinsey titles are a declarative statement!\n\nOne point,clearly stated,reinforced bythebody of the slide"
+  },
+  {
+    "objectID": "mckinsey-titles.html#mckinsey-titles-are-a-declarative-statement-1",
+    "href": "mckinsey-titles.html#mckinsey-titles-are-a-declarative-statement-1",
+    "title": "McKinsey Titles",
+    "section": "McKinsey titles are a declarative statement!",
+    "text": "McKinsey titles are a declarative statement!\n\nDefinition\n\n\nOne point,clearly stated,reinforced bythebody of the slide"
+  },
+  {
+    "objectID": "mckinsey-titles.html#stimulus-payments-in-may-drove-savings-spike",
+    "href": "mckinsey-titles.html#stimulus-payments-in-may-drove-savings-spike",
+    "title": "McKinsey Titles",
+    "section": "Stimulus payments in May drove savings spike",
+    "text": "Stimulus payments in May drove savings spike\n\nPersonal saving rate by month: 2009\n\n\n\n\n\nVertical Logic\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/"
+  },
+  {
+    "objectID": "mckinsey-titles.html#stimulus-payments-in-may-drove-savings-spike-1",
+    "href": "mckinsey-titles.html#stimulus-payments-in-may-drove-savings-spike-1",
+    "title": "McKinsey Titles",
+    "section": "Stimulus payments in May drove savings spike",
+    "text": "Stimulus payments in May drove savings spike\n\nPersonal saving rate by month: 2009\n\n\n\n\n\nVertical Logic\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/"
+  },
+  {
+    "objectID": "mckinsey-titles.html#mckinsey-titles-can-tell-the-story-concisely",
+    "href": "mckinsey-titles.html#mckinsey-titles-can-tell-the-story-concisely",
+    "title": "McKinsey Titles",
+    "section": "McKinsey titles can “tell the story” concisely",
+    "text": "McKinsey titles can “tell the story” concisely\n    \n\nHorizontal Logic"
+  },
+  {
+    "objectID": "mckinsey-titles.html#mckinsey-titles-can-tell-the-story-concisely-1",
+    "href": "mckinsey-titles.html#mckinsey-titles-can-tell-the-story-concisely-1",
+    "title": "McKinsey Titles",
+    "section": "McKinsey titles can “tell the story” concisely",
+    "text": "McKinsey titles can “tell the story” concisely\n    \n\nHorizontal Logic"
+  },
+  {
     "objectID": "normative-conformity.html#section",
     "href": "normative-conformity.html#section",
     "title": "Normative Conformity",
@@ -333,13 +382,13 @@
     "href": "index.html",
     "title": "Data Viz Presentations",
     "section": "",
-    "text": "Rendered presentation(s) from the GitHub repo at github.com/gilliganondata/dataviz-posit:\n\n(Main presentation) Pixels with Purpose: How to Amplify the Impact of Your Talk Through Visual Reinforcement\nWhy are so many slide decks so bad?\n\nNote that these presentations were originally delivered from a local machine, so they use two fonts—Halyard Text (sans serif) and Plantagenet Cherokee (serif)—that are not universally available. The fallbacks are…okay… but, given the nature of the content, it seemed worth calling out."
+    "text": "Rendered presentation(s) from the GitHub repo at github.com/gilliganondata/dataviz-posit:\n\n(Main presentation) Pixels with Purpose: How to Amplify the Impact of Your Talk Through Visual Reinforcement\nWhy are so many slide decks so bad?\nMaximizing the Impact of Slide Titles\n\nNote that these presentations were originally delivered from a local machine, so they use two fonts—Halyard Text (sans serif) and Plantagenet Cherokee (serif)—that are not universally available. The fallbacks are…okay… but, given the nature of the content, it seemed worth calling out."
   },
   {
     "objectID": "index.html#pixels-with-purpose-and-more",
     "href": "index.html#pixels-with-purpose-and-more",
     "title": "Data Viz Presentations",
     "section": "",
-    "text": "Rendered presentation(s) from the GitHub repo at github.com/gilliganondata/dataviz-posit:\n\n(Main presentation) Pixels with Purpose: How to Amplify the Impact of Your Talk Through Visual Reinforcement\nWhy are so many slide decks so bad?\n\nNote that these presentations were originally delivered from a local machine, so they use two fonts—Halyard Text (sans serif) and Plantagenet Cherokee (serif)—that are not universally available. The fallbacks are…okay… but, given the nature of the content, it seemed worth calling out."
+    "text": "Rendered presentation(s) from the GitHub repo at github.com/gilliganondata/dataviz-posit:\n\n(Main presentation) Pixels with Purpose: How to Amplify the Impact of Your Talk Through Visual Reinforcement\nWhy are so many slide decks so bad?\nMaximizing the Impact of Slide Titles\n\nNote that these presentations were originally delivered from a local machine, so they use two fonts—Halyard Text (sans serif) and Plantagenet Cherokee (serif)—that are not universally available. The fallbacks are…okay… but, given the nature of the content, it seemed worth calling out."
   }
 ]
