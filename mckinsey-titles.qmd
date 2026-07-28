@@ -70,7 +70,7 @@ Definition
 ## McKinsey titles are a [declarative statement]{.emphasis}!{background-image="images/pic_pointing_hand.jpg" background-size="100% auto" background-position="center bottom"}
 
 ::: {style="position: absolute; top: 35%; left: 60%; font-size: 2.5em; text-align: left; color: `r brand$bg`"}
-One point,<br>clearly stated,<br>reinforced bythe<br>body of the slide
+One point,<br>clearly stated,<br>reinforced by the<br>body of the slide
 :::
 
 ## McKinsey titles are a [declarative statement]{.emphasis}!{background-image="images/pic_pointing_hand.jpg" background-size="100% auto" background-position="center bottom"}
@@ -79,7 +79,7 @@ Definition
 :::
 
 ::: {style="position: absolute; top: 35%; left: 60%; font-size: 2.5em; text-align: left; color: `r brand$bg`"}
-One point,<br>clearly stated,<br>reinforced bythe<br>body of the slide
+One point,<br>clearly stated,<br>reinforced by the<br>body of the slide
 :::
 
 ## Stimulus payments in [May]{.emphasis} drove [savings spike]{.emphasis}{.nostretch auto-animate=true auto-animate-id="vert-logic" auto-animate-unmatched="false"}
