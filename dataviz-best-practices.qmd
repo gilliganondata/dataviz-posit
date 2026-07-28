@@ -17,6 +17,7 @@ format:
     margin: 0.05
     highlight-style: github
     center: false
+    slide-number: false
 title-slide-attributes:
   data-visibility: "hidden"
 execute:
@@ -100,6 +101,8 @@ How to Amplify the Impact of Your Talk Through Visual Reinforcement
 {{< include _03-data-pixel-ratio.qmd >}}
 
 {{< include _04-example-line-chart.qmd >}}
+
+{{< include _04-example-line-chart_alt.qmd >}}
 
 {{< include _05-example-table.qmd >}}
 
