@@ -11,6 +11,7 @@ Rendered presentation(s) from the GitHub repo at [github.com/gilliganondata/data
 
 - (Main presentation) [Pixels with Purpose: How to Amplify the Impact of Your Talk Through Visual Reinforcement](dataviz-best-practices.html){target="_blank"}
 - [Why are so many slide decks so bad?](normative-conformity.html){target="_blank"}
+- [Maximizing the Impact of Slide Titles](mckinsey-titles.html){target="_blank"}
 
 Note that these presentations were originally delivered from a local machine, so they use two fonts—[Halyard Text](https://fonts.adobe.com/fonts/halyard){target="_blank"} (sans serif) and [Plantagenet Cherokee](https://learn.microsoft.com/en-us/typography/font-list/plantagenet-cherokee){target="_blank"} (serif)—that are not universally available. The fallbacks are...okay... but, given the nature of the content, it seemed worth calling out.
 

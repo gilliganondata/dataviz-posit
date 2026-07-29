@@ -235,6 +235,7 @@ section.center {
       position: relative;
       padding-left: 1.2em;
       font-size: 2.2em;
+      color: $divider-text;
 
       &::before {
         content: "";
@@ -293,7 +294,7 @@ section.center {
   font-weight: 400;
   font-size: 1.5em;
   line-height: 1.25;
-  color: #555;
+  color: $muted-med;
   margin-top: -0.5em;
   margin-bottom: 0.5em;
 }
@@ -574,6 +575,8 @@ $memory-detail-sizes: (
   display: none !important;
 }
 
+// ── Normative Conformity Supplemental Presentation  ───────────────────────
+
 // Normative conformity
 blockquote > p {
   font-family: $font-family-serif;
@@ -611,3 +614,22 @@ blockquote > p {
   line-height: 1.3em;
   margin-top: 0.8em;
 }
+
+// ── McKinsey Titles Supplemental Presentation  ───────────────────────
+.mc-logic-vert {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  color: $accent;
+  font-size: 2em;
+}
+
+.mc-logic-horiz {
+  position: absolute;
+  z-index: 50;
+  color: $accent;
+  font-size: 2em;
+}
+
