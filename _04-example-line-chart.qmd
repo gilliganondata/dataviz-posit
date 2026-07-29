@@ -1,8 +1,8 @@
-## {.center}
+## {.center visibility="uncounted"}
 
 :::: {style="position: relative; width: 70%; margin: 0 auto;"}
 
-```{r chart-default}
+```{r chart-default-alt}
 #| fig.width: 6
 #| fig.height: 4.5
 #| fig-align: center
@@ -17,6 +17,7 @@ gg_line_og <- ggplot(df_psavert, aes(x = date, y = psavert, color = "psavert")) 
    ) +
   labs(
     title = "Personal Savings Rate by Month in 2009",
+    subtitle = "Stimulus payments in May drove a savings spike",
     x = "Month",
     y = "Personal Savings Rate (%)",
     caption = "Source: https://fred.stlouisfed.org/series/PSAVERT/",
@@ -26,6 +27,7 @@ gg_line_og <- ggplot(df_psavert, aes(x = date, y = psavert, color = "psavert")) 
   theme(
     legend.position = "top",
     plot.title.position = "plot",
+    plot.subtitle = element_text(face = "italic", color = "gray30"),
     plot.caption.position = "plot",
     plot.caption = element_text(size = 8, hjust=0),
     plot.background  = element_rect(linewidth = 0.75, color = "gray40", fill = NA),
@@ -43,19 +45,19 @@ gg_line_og
 ::: {.callout-oval .fragment .fade-in-then-out fragment-index=2 style="top: 23%; left: 7.8%; width: 60px; height: 450px;"}
 :::
 
-::: {.callout-oval .fragment .fade-in-then-out fragment-index=3 style="top: 9.3%; left: 46%; width: 180px; height: 70px;"}
+::: {.callout-oval .fragment .fade-in-then-out fragment-index=3 style="top: 13.8%; left: 46%; width: 180px; height: 70px;"}
 :::
 
 ::: {.callout-oval .fragment .fade-in-then-out fragment-index=4 style="top: 81.5%; left: 47.5%; width: 150px; height: 60px;"}
 :::
 
-::: {.callout-line-vertical .fragment .fade-in-then-out fragment-index=5 style="top: 20.8%; left: 31.3%; height: 482px;"}
+::: {.callout-line-vertical .fragment .fade-in-then-out fragment-index=5 style="top: 25.0%; left: 31.3%; height: 445px;"}
 :::
 
-::: {.callout-line-vertical .fragment .fade-in-then-out fragment-index=5 style="top: 20.8%; left: 34.5%; height: 482px;"}
+::: {.callout-line-vertical .fragment .fade-in-then-out fragment-index=5 style="top: 25.0%; left: 34.5%; height: 445px;"}
 :::
 
-::: {.callout-line-vertical .fragment .fade-in-then-out fragment-index=5 style="top: 20.8%; left: 37.7%; height: 482px;"}
+::: {.callout-line-vertical .fragment .fade-in-then-out fragment-index=5 style="top: 25.0%; left: 37.7%; height: 445px;"}
 :::
 
 ::: {.fragment}
@@ -69,18 +71,21 @@ Let's look at a generic, simple line chart. This is the ggplot defaults (made a 
 There are a lot of redundant or non-data/information pixels here.
 :::
 
-## Personal Savings Rate by Month in 2009
+## Personal Savings Rate by Month in 2009 {.nostretch visibility="uncounted"}
+::: {.subtitle-slide-text}
+Stimulus payments in May drove a savings spike
+:::
 
 ::: {style="margin: 0 auto;"}
 
-```{r higher-data-pixel}
+```{r higher-data-pixel-alt}
 #| fig.width: 8
-#| fig.height: 4.5
+#| fig.height: 4.2
 #| fig-align: center
 #| out.width: 77%
 
 gg_line_better <- ggplot(df_psavert, aes(x = date, y = psavert)) +
-  geom_line(linewidth = 0.8, color=brand$gratuitous) +
+  geom_line(linewidth = 0.8, color=brand$primary) +
   scale_x_date(date_labels = "%b", date_breaks = "1 month") +
   scale_y_continuous(
     labels = label_percent(scale = 1),
@@ -95,7 +100,7 @@ gg_line_better <- ggplot(df_psavert, aes(x = date, y = psavert)) +
     axis.title = element_blank(),
     panel.grid.major.x = element_blank(),
     panel.grid.major.y = element_line(color = "gray70", linewidth = 0.2),
-    axis.text = element_text(family = font_sans_serif, size = 14, color = "gray60"),
+    axis.text = element_text(family = font_sans_serif, size = 12, color = "gray60"),
     axis.line.x = element_line(color = "gray40", linewidth = 0.4)
   )
 
@@ -112,15 +117,18 @@ gg_line_better
 The same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels.
 :::
 
-# We want to make the point as [impossible to miss]{.emphasis} as we can. {background-color="var(--divider-bg)"}
+# We want to make the point as [impossible to miss]{.emphasis} as we can. {background-color="var(--divider-bg)" visibility="uncounted"}
 
-## Personal Savings Rate by Month in 2009
+## Personal Savings Rate by Month in 2009 {.nostretch visibility="uncounted"}
+::: {.subtitle-slide-text}
+Stimulus payments in May drove a savings spike
+:::
 
 ::: {style="margin: 0 auto;"}
 
-```{r higher-data-pixel_repeat}
+```{r higher-data-pixel_repeat-alt}
 #| fig.width: 8
-#| fig.height: 4.5
+#| fig.height: 4.2
 #| fig-align: center
 #| out.width: 77%
 
@@ -137,12 +145,12 @@ gg_line_better
 This is what we had. But...what is it I want to *say* here? We want to make it *impossible to miss*.
 :::
 
-## Stimulus payments in [May]{.emphasis} drove [savings spike]{.emphasis}{.nostretch}
+## Stimulus payments in [May]{.emphasis} drove [savings spike]{.emphasis}{.nostretch visibility="uncounted"}
 ::: {.subtitle-slide-text}
-Personal saving rate by month: 2009
+Personal savings rate by month in 2009
 :::
 
-```{r line-impossible}
+```{r line-impossible-alt}
 #| fig.width: 8
 #| fig.height: 4.2
 #| fig-align: center
@@ -154,7 +162,7 @@ df_highlight <- df_psavert |>
   mutate(psavert_callout = "ARRA Payments")
  
 gg_line_final <- ggplot(df_psavert, aes(x = date, y = psavert)) +
-  geom_line(linewidth = 0.7, color=brand$primary) +
+  geom_line(linewidth = 0.8, color=brand$primary) +
   # The highlighted point
   geom_point(
     data = df_highlight,
@@ -212,3 +220,4 @@ gg_line_final
 ::: {.notes}
 We can really highlight what we're calling out. In this case, we made the title call out exactly what we're showing, and we emphasized in the chart itself that same highlight.
 :::
+

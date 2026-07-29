@@ -92,7 +92,7 @@ Be careful, though!
 :::
 ::::
 
-::: {.rotate-ccw-15 style="position: absolute; top: 3%; left: 45%; font-size: 2em; text-align: center; color: `r brand$dark`"}
+::: {.fragment .rotate-ccw-15 style="position: absolute; top: 10%; left: 10%; font-size: 2em; text-align: center; color: `r brand$dark`"}
 "Cognitive load."<br>Get it? Get it?!<br>😂...?
 :::
 
