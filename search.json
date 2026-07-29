@@ -81,109 +81,81 @@
     "href": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009",
     "title": "Pixels with Purpose",
     "section": "Personal Savings Rate by Month in 2009",
-    "text": "Personal Savings Rate by Month in 2009\n\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nThe same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels."
+    "text": "Personal Savings Rate by Month in 2009\n\nStimulus payments in May drove a savings spike\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nThe same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels."
   },
   {
     "objectID": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009-1",
     "href": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009-1",
     "title": "Pixels with Purpose",
     "section": "Personal Savings Rate by Month in 2009",
-    "text": "Personal Savings Rate by Month in 2009\n\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nThis is what we had. But…what is it I want to say here? We want to make it impossible to miss."
+    "text": "Personal Savings Rate by Month in 2009\n\nStimulus payments in May drove a savings spike\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nThis is what we had. But…what is it I want to say here? We want to make it impossible to miss."
   },
   {
     "objectID": "dataviz-best-practices.html#stimulus-payments-in-may-drove-savings-spike",
     "href": "dataviz-best-practices.html#stimulus-payments-in-may-drove-savings-spike",
     "title": "Pixels with Purpose",
     "section": "Stimulus payments in May drove savings spike",
-    "text": "Stimulus payments in May drove savings spike\n\nPersonal saving rate by month: 2009\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nWe can really highlight what we’re calling out. In this case, we made the title call out exactly what we’re showing, and we emphasized in the chart itself that same highlight."
+    "text": "Stimulus payments in May drove savings spike\n\nPersonal savings rate by month in 2009\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nWe can really highlight what we’re calling out. In this case, we made the title call out exactly what we’re showing, and we emphasized in the chart itself that same highlight."
   },
   {
     "objectID": "dataviz-best-practices.html#section-9",
     "href": "dataviz-best-practices.html#section-9",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "Let’s look at a generic, simple line chart. This is the ggplot defaults (made a little bit worse).\nThere are a lot of redundant or non-data/information pixels here."
-  },
-  {
-    "objectID": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009-2",
-    "href": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009-2",
-    "title": "Pixels with Purpose",
-    "section": "Personal Savings Rate by Month in 2009",
-    "text": "Personal Savings Rate by Month in 2009\n\nSavings spike from ARRA stimulus payments\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nThe same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels."
-  },
-  {
-    "objectID": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009-3",
-    "href": "dataviz-best-practices.html#personal-savings-rate-by-month-in-2009-3",
-    "title": "Pixels with Purpose",
-    "section": "Personal Savings Rate by Month in 2009",
-    "text": "Personal Savings Rate by Month in 2009\n\nSavings spike from ARRA stimulus payments\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nThis is what we had. But…what is it I want to say here? We want to make it impossible to miss."
-  },
-  {
-    "objectID": "dataviz-best-practices.html#stimulus-payments-in-may-drove-savings-spike-1",
-    "href": "dataviz-best-practices.html#stimulus-payments-in-may-drove-savings-spike-1",
-    "title": "Pixels with Purpose",
-    "section": "Stimulus payments in May drove savings spike",
-    "text": "Stimulus payments in May drove savings spike\n\nPersonal saving rate by month: 2009\n\n\n\n\n\n\n\n\n\n\n\nSource: https://fred.stlouisfed.org/series/PSAVERT/\n\n\nWe can really highlight what we’re calling out. In this case, we made the title call out exactly what we’re showing, and we emphasized in the chart itself that same highlight."
+    "text": "Europe in 2007\n\n\n\n\n# A tibble: 30 × 4\n   country                     pop lifeExp gdpPercap\n   &lt;fct&gt;                     &lt;int&gt;   &lt;dbl&gt;     &lt;dbl&gt;\n 1 Germany                82400996    79.4    32170.\n 2 Turkey                 71158647    71.8     8458.\n 3 France                 61083916    80.7    30470.\n 4 United Kingdom         60776238    79.4    33203.\n 5 Italy                  58147733    80.5    28570.\n 6 Spain                  40448191    80.9    28821.\n 7 Poland                 38518241    75.6    15390.\n 8 Romania                22276056    72.5    10808.\n 9 Netherlands            16570613    79.8    36798.\n10 Greece                 10706290    79.5    27538.\n11 Portugal               10642836    78.1    20510.\n12 Belgium                10392226    79.4    33693.\n13 Czech Republic         10228744    76.5    22833.\n14 Serbia                 10150265    74.0     9787.\n15 Hungary                 9956108    73.3    18009.\n16 Sweden                  9031088    80.9    33860.\n17 Austria                 8199783    79.8    36126.\n18 Switzerland             7554661    81.7    37506.\n19 Bulgaria                7322858    73.0    10681.\n20 Denmark                 5468120    78.3    35278.\n21 Slovak Republic         5447502    74.7    18678.\n22 Finland                 5238460    79.3    33207.\n23 Norway                  4627926    80.2    49357.\n24 Bosnia and Herzegovina  4552198    74.9     7446.\n25 Croatia                 4493312    75.7    14619.\n26 Ireland                 4109086    78.9    40676.\n27 Albania                 3600523    76.4     5937.\n28 Slovenia                2009245    77.9    25768.\n29 Montenegro               684736    74.5     9254.\n30 Iceland                  301931    81.8    36181.\n\n\n\n\n\nSource: gapminder R package (Gapminder.org, ~2010 excerpt), gdpPercap is constant 2005 Int’l $ (PPP)\n\n\nSure. This looks familiar, but it’s brutal on the brain: extra labels at the top, column names using variable names rather than what they represent, no comma-delimiting."
   },
   {
     "objectID": "dataviz-best-practices.html#section-10",
     "href": "dataviz-best-practices.html#section-10",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "Europe in 2007\n\n\n\n\n# A tibble: 30 × 4\n   country                     pop lifeExp gdpPercap\n   &lt;fct&gt;                     &lt;int&gt;   &lt;dbl&gt;     &lt;dbl&gt;\n 1 Germany                82400996    79.4    32170.\n 2 Turkey                 71158647    71.8     8458.\n 3 France                 61083916    80.7    30470.\n 4 United Kingdom         60776238    79.4    33203.\n 5 Italy                  58147733    80.5    28570.\n 6 Spain                  40448191    80.9    28821.\n 7 Poland                 38518241    75.6    15390.\n 8 Romania                22276056    72.5    10808.\n 9 Netherlands            16570613    79.8    36798.\n10 Greece                 10706290    79.5    27538.\n11 Portugal               10642836    78.1    20510.\n12 Belgium                10392226    79.4    33693.\n13 Czech Republic         10228744    76.5    22833.\n14 Serbia                 10150265    74.0     9787.\n15 Hungary                 9956108    73.3    18009.\n16 Sweden                  9031088    80.9    33860.\n17 Austria                 8199783    79.8    36126.\n18 Switzerland             7554661    81.7    37506.\n19 Bulgaria                7322858    73.0    10681.\n20 Denmark                 5468120    78.3    35278.\n21 Slovak Republic         5447502    74.7    18678.\n22 Finland                 5238460    79.3    33207.\n23 Norway                  4627926    80.2    49357.\n24 Bosnia and Herzegovina  4552198    74.9     7446.\n25 Croatia                 4493312    75.7    14619.\n26 Ireland                 4109086    78.9    40676.\n27 Albania                 3600523    76.4     5937.\n28 Slovenia                2009245    77.9    25768.\n29 Montenegro               684736    74.5     9254.\n30 Iceland                  301931    81.8    36181.\n\n\n\n\n\nSource: gapminder R package (Gapminder.org, ~2010 excerpt), gdpPercap is constant 2005 Int’l $ (PPP)\n\n\nSure. This looks familiar, but it’s brutal on the brain: extra labels at the top, column names using variable names rather than what they represent, no comma-delimiting."
+    "text": "Europe in 2007\n\n\n\n\n\n\nCountry\nPopulation (M)\nLife Expectancy\nGDP per Capita (USD)\n\n\n\n\nGermany\n82.4\n79.4\n32,170\n\n\nTurkey\n71.2\n71.8\n8,458\n\n\nFrance\n61.1\n80.7\n30,470\n\n\nUnited Kingdom\n60.8\n79.4\n33,203\n\n\nItaly\n58.1\n80.5\n28,570\n\n\nSpain\n40.4\n80.9\n28,821\n\n\nPoland\n38.5\n75.6\n15,390\n\n\nRomania\n22.3\n72.5\n10,808\n\n\nNetherlands\n16.6\n79.8\n36,798\n\n\nGreece\n10.7\n79.5\n27,538\n\n\nPortugal\n10.6\n78.1\n20,510\n\n\nBelgium\n10.4\n79.4\n33,693\n\n\nCzech Republic\n10.2\n76.5\n22,833\n\n\nSerbia\n10.2\n74.0\n9,787\n\n\nHungary\n10.0\n73.3\n18,009\n\n\nSweden\n9.0\n80.9\n33,860\n\n\nAustria\n8.2\n79.8\n36,126\n\n\nSwitzerland\n7.6\n81.7\n37,506\n\n\nBulgaria\n7.3\n73.0\n10,681\n\n\nDenmark\n5.5\n78.3\n35,278\n\n\nSlovak Republic\n5.4\n74.7\n18,678\n\n\nFinland\n5.2\n79.3\n33,207\n\n\nNorway\n4.6\n80.2\n49,357\n\n\nBosnia and Herzegovina\n4.6\n74.9\n7,446\n\n\nCroatia\n4.5\n75.7\n14,619\n\n\nIreland\n4.1\n78.9\n40,676\n\n\nAlbania\n3.6\n76.4\n5,937\n\n\nSlovenia\n2.0\n77.9\n25,768\n\n\nMontenegro\n0.7\n74.5\n9,254\n\n\nIceland\n0.3\n81.8\n36,181\n\n\n\n\n\n\n\nSource: gapminder R package (Gapminder.org, ~2010 excerpt), GDP per Capita is constant 2005 Int’l $ (PPP)\n\n\nBetter? Yes. Probably. Lots of pixels keeping that data-pixel ratio down: the borders everywhere, the striped rows, …"
   },
   {
     "objectID": "dataviz-best-practices.html#section-11",
     "href": "dataviz-best-practices.html#section-11",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "Europe in 2007\n\n\n\n\n\n\nCountry\nPopulation (M)\nLife Expectancy\nGDP per Capita (USD)\n\n\n\n\nGermany\n82.4\n79.4\n32,170\n\n\nTurkey\n71.2\n71.8\n8,458\n\n\nFrance\n61.1\n80.7\n30,470\n\n\nUnited Kingdom\n60.8\n79.4\n33,203\n\n\nItaly\n58.1\n80.5\n28,570\n\n\nSpain\n40.4\n80.9\n28,821\n\n\nPoland\n38.5\n75.6\n15,390\n\n\nRomania\n22.3\n72.5\n10,808\n\n\nNetherlands\n16.6\n79.8\n36,798\n\n\nGreece\n10.7\n79.5\n27,538\n\n\nPortugal\n10.6\n78.1\n20,510\n\n\nBelgium\n10.4\n79.4\n33,693\n\n\nCzech Republic\n10.2\n76.5\n22,833\n\n\nSerbia\n10.2\n74.0\n9,787\n\n\nHungary\n10.0\n73.3\n18,009\n\n\nSweden\n9.0\n80.9\n33,860\n\n\nAustria\n8.2\n79.8\n36,126\n\n\nSwitzerland\n7.6\n81.7\n37,506\n\n\nBulgaria\n7.3\n73.0\n10,681\n\n\nDenmark\n5.5\n78.3\n35,278\n\n\nSlovak Republic\n5.4\n74.7\n18,678\n\n\nFinland\n5.2\n79.3\n33,207\n\n\nNorway\n4.6\n80.2\n49,357\n\n\nBosnia and Herzegovina\n4.6\n74.9\n7,446\n\n\nCroatia\n4.5\n75.7\n14,619\n\n\nIreland\n4.1\n78.9\n40,676\n\n\nAlbania\n3.6\n76.4\n5,937\n\n\nSlovenia\n2.0\n77.9\n25,768\n\n\nMontenegro\n0.7\n74.5\n9,254\n\n\nIceland\n0.3\n81.8\n36,181\n\n\n\n\n\n\n\nSource: gapminder R package (Gapminder.org, ~2010 excerpt), GDP per Capita is constant 2005 Int’l $ (PPP)\n\n\nBetter? Yes. Probably. Lots of pixels keeping that data-pixel ratio down: the borders everywhere, the striped rows, …"
+    "text": "Europe in 2007\n\n\n\n\n\n\nCountry\nPopulation (M)\nLife Expectancy\nGDP per Capita (USD)\n\n\n\n\nGermany\n82.4\n79.4\n32,170\n\n\nTurkey\n71.2\n71.8\n8,458\n\n\nFrance\n61.1\n80.7\n30,470\n\n\nUnited Kingdom\n60.8\n79.4\n33,203\n\n\nItaly\n58.1\n80.5\n28,570\n\n\nSpain\n40.4\n80.9\n28,821\n\n\nPoland\n38.5\n75.6\n15,390\n\n\nRomania\n22.3\n72.5\n10,808\n\n\nNetherlands\n16.6\n79.8\n36,798\n\n\nGreece\n10.7\n79.5\n27,538\n\n\nPortugal\n10.6\n78.1\n20,510\n\n\nBelgium\n10.4\n79.4\n33,693\n\n\nCzech Republic\n10.2\n76.5\n22,833\n\n\nSerbia\n10.2\n74.0\n9,787\n\n\nHungary\n10.0\n73.3\n18,009\n\n\nSweden\n9.0\n80.9\n33,860\n\n\nAustria\n8.2\n79.8\n36,126\n\n\nSwitzerland\n7.6\n81.7\n37,506\n\n\nBulgaria\n7.3\n73.0\n10,681\n\n\nDenmark\n5.5\n78.3\n35,278\n\n\nSlovak Republic\n5.4\n74.7\n18,678\n\n\nFinland\n5.2\n79.3\n33,207\n\n\nNorway\n4.6\n80.2\n49,357\n\n\nBosnia and Herzegovina\n4.6\n74.9\n7,446\n\n\nCroatia\n4.5\n75.7\n14,619\n\n\nIreland\n4.1\n78.9\n40,676\n\n\nAlbania\n3.6\n76.4\n5,937\n\n\nSlovenia\n2.0\n77.9\n25,768\n\n\nMontenegro\n0.7\n74.5\n9,254\n\n\nIceland\n0.3\n81.8\n36,181\n\n\n\n\n\n\n\nSource: gapminder R package (Gapminder.org, ~2010 excerpt), GDP per Capita is constant 2005 Int’l $ (PPP)\n\n\nEasier on the eyes. Still… high cognitive load to read and process numbers."
   },
   {
     "objectID": "dataviz-best-practices.html#section-12",
     "href": "dataviz-best-practices.html#section-12",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "Europe in 2007\n\n\n\n\n\n\nCountry\nPopulation (M)\nLife Expectancy\nGDP per Capita (USD)\n\n\n\n\nGermany\n82.4\n79.4\n32,170\n\n\nTurkey\n71.2\n71.8\n8,458\n\n\nFrance\n61.1\n80.7\n30,470\n\n\nUnited Kingdom\n60.8\n79.4\n33,203\n\n\nItaly\n58.1\n80.5\n28,570\n\n\nSpain\n40.4\n80.9\n28,821\n\n\nPoland\n38.5\n75.6\n15,390\n\n\nRomania\n22.3\n72.5\n10,808\n\n\nNetherlands\n16.6\n79.8\n36,798\n\n\nGreece\n10.7\n79.5\n27,538\n\n\nPortugal\n10.6\n78.1\n20,510\n\n\nBelgium\n10.4\n79.4\n33,693\n\n\nCzech Republic\n10.2\n76.5\n22,833\n\n\nSerbia\n10.2\n74.0\n9,787\n\n\nHungary\n10.0\n73.3\n18,009\n\n\nSweden\n9.0\n80.9\n33,860\n\n\nAustria\n8.2\n79.8\n36,126\n\n\nSwitzerland\n7.6\n81.7\n37,506\n\n\nBulgaria\n7.3\n73.0\n10,681\n\n\nDenmark\n5.5\n78.3\n35,278\n\n\nSlovak Republic\n5.4\n74.7\n18,678\n\n\nFinland\n5.2\n79.3\n33,207\n\n\nNorway\n4.6\n80.2\n49,357\n\n\nBosnia and Herzegovina\n4.6\n74.9\n7,446\n\n\nCroatia\n4.5\n75.7\n14,619\n\n\nIreland\n4.1\n78.9\n40,676\n\n\nAlbania\n3.6\n76.4\n5,937\n\n\nSlovenia\n2.0\n77.9\n25,768\n\n\nMontenegro\n0.7\n74.5\n9,254\n\n\nIceland\n0.3\n81.8\n36,181\n\n\n\n\n\n\n\nSource: gapminder R package (Gapminder.org, ~2010 excerpt), GDP per Capita is constant 2005 Int’l $ (PPP)\n\n\nEasier on the eyes. Still… high cognitive load to read and process numbers."
+    "text": "Europe in 2007\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n      \n        Country\n      \n      \n        Population (M)\n      \n      \n        Life Expectancy\n      \n      \n        GDP per Capita (USD)\n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n    \n  \n  \n    Germany\n82.4\n          \n79.4\n          \n32,170\n          \n    Turkey\n71.2\n          \n71.8\n          \n8,458\n          \n    France\n61.1\n          \n80.7\n          \n30,470\n          \n    United Kingdom\n60.8\n          \n79.4\n          \n33,203\n          \n    Italy\n58.1\n          \n80.5\n          \n28,570\n          \n    Spain\n40.4\n          \n80.9\n          \n28,821\n          \n    Poland\n38.5\n          \n75.6\n          \n15,390\n          \n    Romania\n22.3\n          \n72.5\n          \n10,808\n          \n    Netherlands\n16.6\n          \n79.8\n          \n36,798\n          \n    Greece\n10.7\n          \n79.5\n          \n27,538\n          \n    Portugal\n10.6\n          \n78.1\n          \n20,510\n          \n    Belgium\n10.4\n          \n79.4\n          \n33,693\n          \n    Czech Republic\n10.2\n          \n76.5\n          \n22,833\n          \n    Serbia\n10.2\n          \n74.0\n          \n9,787\n          \n    Hungary\n10.0\n          \n73.3\n          \n18,009\n          \n    Sweden\n9.0\n          \n80.9\n          \n33,860\n          \n    Austria\n8.2\n          \n79.8\n          \n36,126\n          \n    Switzerland\n7.6\n          \n81.7\n          \n37,506\n          \n    Bulgaria\n7.3\n          \n73.0\n          \n10,681\n          \n    Denmark\n5.5\n          \n78.3\n          \n35,278\n          \n    Slovak Republic\n5.4\n          \n74.7\n          \n18,678\n          \n    Finland\n5.2\n          \n79.3\n          \n33,207\n          \n    Norway\n4.6\n          \n80.2\n          \n49,357\n          \n    Bosnia and Herzegovina\n4.6\n          \n74.9\n          \n7,446\n          \n    Croatia\n4.5\n          \n75.7\n          \n14,619\n          \n    Ireland\n4.1\n          \n78.9\n          \n40,676\n          \n    Albania\n3.6\n          \n76.4\n          \n5,937\n          \n    Slovenia\n2.0\n          \n77.9\n          \n25,768\n          \n    Montenegro\n0.7\n          \n74.5\n          \n9,254\n          \n    Iceland\n0.3\n          \n81.8\n          \n36,181\n          \n  \n  \n\n\n\n\n\n\nSource: gapminder R package (Gapminder.org, ~2010 excerpt), GDP per Capita is constant 2005 Int’l $ (PPP)\n\n\nNow the eye can compare countries at a glance — the bars carry the magnitude, the numbers are there when you need precision."
   },
   {
     "objectID": "dataviz-best-practices.html#section-13",
     "href": "dataviz-best-practices.html#section-13",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "Europe in 2007\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n      \n        Country\n      \n      \n        Population (M)\n      \n      \n        Life Expectancy\n      \n      \n        GDP per Capita (USD)\n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n    \n  \n  \n    Germany\n82.4\n          \n79.4\n          \n32,170\n          \n    Turkey\n71.2\n          \n71.8\n          \n8,458\n          \n    France\n61.1\n          \n80.7\n          \n30,470\n          \n    United Kingdom\n60.8\n          \n79.4\n          \n33,203\n          \n    Italy\n58.1\n          \n80.5\n          \n28,570\n          \n    Spain\n40.4\n          \n80.9\n          \n28,821\n          \n    Poland\n38.5\n          \n75.6\n          \n15,390\n          \n    Romania\n22.3\n          \n72.5\n          \n10,808\n          \n    Netherlands\n16.6\n          \n79.8\n          \n36,798\n          \n    Greece\n10.7\n          \n79.5\n          \n27,538\n          \n    Portugal\n10.6\n          \n78.1\n          \n20,510\n          \n    Belgium\n10.4\n          \n79.4\n          \n33,693\n          \n    Czech Republic\n10.2\n          \n76.5\n          \n22,833\n          \n    Serbia\n10.2\n          \n74.0\n          \n9,787\n          \n    Hungary\n10.0\n          \n73.3\n          \n18,009\n          \n    Sweden\n9.0\n          \n80.9\n          \n33,860\n          \n    Austria\n8.2\n          \n79.8\n          \n36,126\n          \n    Switzerland\n7.6\n          \n81.7\n          \n37,506\n          \n    Bulgaria\n7.3\n          \n73.0\n          \n10,681\n          \n    Denmark\n5.5\n          \n78.3\n          \n35,278\n          \n    Slovak Republic\n5.4\n          \n74.7\n          \n18,678\n          \n    Finland\n5.2\n          \n79.3\n          \n33,207\n          \n    Norway\n4.6\n          \n80.2\n          \n49,357\n          \n    Bosnia and Herzegovina\n4.6\n          \n74.9\n          \n7,446\n          \n    Croatia\n4.5\n          \n75.7\n          \n14,619\n          \n    Ireland\n4.1\n          \n78.9\n          \n40,676\n          \n    Albania\n3.6\n          \n76.4\n          \n5,937\n          \n    Slovenia\n2.0\n          \n77.9\n          \n25,768\n          \n    Montenegro\n0.7\n          \n74.5\n          \n9,254\n          \n    Iceland\n0.3\n          \n81.8\n          \n36,181\n          \n  \n  \n\n\n\n\n\n\nSource: gapminder R package (Gapminder.org, ~2010 excerpt), GDP per Capita is constant 2005 Int’l $ (PPP)\n\n\nNow the eye can compare countries at a glance — the bars carry the magnitude, the numbers are there when you need precision."
+    "text": "France and the UK were 2007 twinsies.\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n      \n        Country\n      \n      \n        Population (M)\n      \n      \n        Life Expectancy\n      \n      \n        GDP per Capita (USD)\n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n    \n  \n  \n    Germany\n82.4\n          \n79.4\n          \n32,170\n          \n    Turkey\n71.2\n          \n71.8\n          \n8,458\n          \n    France\n61.1\n          \n80.7\n          \n30,470\n          \n    United Kingdom\n60.8\n          \n79.4\n          \n33,203\n          \n    Italy\n58.1\n          \n80.5\n          \n28,570\n          \n    Spain\n40.4\n          \n80.9\n          \n28,821\n          \n    Poland\n38.5\n          \n75.6\n          \n15,390\n          \n    Romania\n22.3\n          \n72.5\n          \n10,808\n          \n    Netherlands\n16.6\n          \n79.8\n          \n36,798\n          \n    Greece\n10.7\n          \n79.5\n          \n27,538\n          \n    Portugal\n10.6\n          \n78.1\n          \n20,510\n          \n    Belgium\n10.4\n          \n79.4\n          \n33,693\n          \n    Czech Republic\n10.2\n          \n76.5\n          \n22,833\n          \n    Serbia\n10.2\n          \n74.0\n          \n9,787\n          \n    Hungary\n10.0\n          \n73.3\n          \n18,009\n          \n    Sweden\n9.0\n          \n80.9\n          \n33,860\n          \n    Austria\n8.2\n          \n79.8\n          \n36,126\n          \n    Switzerland\n7.6\n          \n81.7\n          \n37,506\n          \n    Bulgaria\n7.3\n          \n73.0\n          \n10,681\n          \n    Denmark\n5.5\n          \n78.3\n          \n35,278\n          \n    Slovak Republic\n5.4\n          \n74.7\n          \n18,678\n          \n    Finland\n5.2\n          \n79.3\n          \n33,207\n          \n    Norway\n4.6\n          \n80.2\n          \n49,357\n          \n    Bosnia and Herzegovina\n4.6\n          \n74.9\n          \n7,446\n          \n    Croatia\n4.5\n          \n75.7\n          \n14,619\n          \n    Ireland\n4.1\n          \n78.9\n          \n40,676\n          \n    Albania\n3.6\n          \n76.4\n          \n5,937\n          \n    Slovenia\n2.0\n          \n77.9\n          \n25,768\n          \n    Montenegro\n0.7\n          \n74.5\n          \n9,254\n          \n    Iceland\n0.3\n          \n81.8\n          \n36,181\n          \n  \n  \n\n\n\n\n\n\nSource: gapminder R package (Gapminder.org, ~2010 excerpt), GDP per Capita is constant 2005 Int’l $ (PPP)\n\n\nAnd now let’s make it impossible to miss. What I’m probably doing here is making a claim that will equally upset the British and the French."
   },
   {
     "objectID": "dataviz-best-practices.html#section-14",
     "href": "dataviz-best-practices.html#section-14",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "France and the UK were 2007 twinsies.\n\n\n\n\n\n\n  \n    \n    \n    \n    \n    \n    \n    \n  \n  \n    \n      \n        Country\n      \n      \n        Population (M)\n      \n      \n        Life Expectancy\n      \n      \n        GDP per Capita (USD)\n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n    \n  \n  \n    Germany\n82.4\n          \n79.4\n          \n32,170\n          \n    Turkey\n71.2\n          \n71.8\n          \n8,458\n          \n    France\n61.1\n          \n80.7\n          \n30,470\n          \n    United Kingdom\n60.8\n          \n79.4\n          \n33,203\n          \n    Italy\n58.1\n          \n80.5\n          \n28,570\n          \n    Spain\n40.4\n          \n80.9\n          \n28,821\n          \n    Poland\n38.5\n          \n75.6\n          \n15,390\n          \n    Romania\n22.3\n          \n72.5\n          \n10,808\n          \n    Netherlands\n16.6\n          \n79.8\n          \n36,798\n          \n    Greece\n10.7\n          \n79.5\n          \n27,538\n          \n    Portugal\n10.6\n          \n78.1\n          \n20,510\n          \n    Belgium\n10.4\n          \n79.4\n          \n33,693\n          \n    Czech Republic\n10.2\n          \n76.5\n          \n22,833\n          \n    Serbia\n10.2\n          \n74.0\n          \n9,787\n          \n    Hungary\n10.0\n          \n73.3\n          \n18,009\n          \n    Sweden\n9.0\n          \n80.9\n          \n33,860\n          \n    Austria\n8.2\n          \n79.8\n          \n36,126\n          \n    Switzerland\n7.6\n          \n81.7\n          \n37,506\n          \n    Bulgaria\n7.3\n          \n73.0\n          \n10,681\n          \n    Denmark\n5.5\n          \n78.3\n          \n35,278\n          \n    Slovak Republic\n5.4\n          \n74.7\n          \n18,678\n          \n    Finland\n5.2\n          \n79.3\n          \n33,207\n          \n    Norway\n4.6\n          \n80.2\n          \n49,357\n          \n    Bosnia and Herzegovina\n4.6\n          \n74.9\n          \n7,446\n          \n    Croatia\n4.5\n          \n75.7\n          \n14,619\n          \n    Ireland\n4.1\n          \n78.9\n          \n40,676\n          \n    Albania\n3.6\n          \n76.4\n          \n5,937\n          \n    Slovenia\n2.0\n          \n77.9\n          \n25,768\n          \n    Montenegro\n0.7\n          \n74.5\n          \n9,254\n          \n    Iceland\n0.3\n          \n81.8\n          \n36,181\n          \n  \n  \n\n\n\n\n\n\nSource: gapminder R package (Gapminder.org, ~2010 excerpt), GDP per Capita is constant 2005 Int’l $ (PPP)\n\n\nAnd now let’s make it impossible to miss. What I’m probably doing here is making a claim that will equally upset the British and the French."
+    "text": "The application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.\n\nWhile this may be an accurate statement, it’s a LOT to read. We’ve all seen slides like this."
   },
   {
     "objectID": "dataviz-best-practices.html#section-15",
     "href": "dataviz-best-practices.html#section-15",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "The application of the revised preprocessing technique that the team developed during the second quarter resulted in a measurable reduction in the overall run-time of the production model, with observed improvements generally falling in the range of approximately 30 to 40 percent.\n\nWhile this may be an accurate statement, it’s a LOT to read. We’ve all seen slides like this."
+    "text": "The new preprocessing technique reduced model run-time by 30–40%.\n\n\nThe first thing we can do is simply trim the words! Be more economical."
   },
   {
     "objectID": "dataviz-best-practices.html#section-16",
     "href": "dataviz-best-practices.html#section-16",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "The new preprocessing technique reduced model run-time by 30–40%.\n\n\nThe first thing we can do is simply trim the words! Be more economical."
+    "text": "The new preprocessing technique reduced model run-time by\n\n\n30–40%!\n\n\nWe can make specific parts of the text really stand out"
   },
   {
     "objectID": "dataviz-best-practices.html#section-17",
     "href": "dataviz-best-practices.html#section-17",
-    "title": "Pixels with Purpose",
-    "section": "",
-    "text": "The new preprocessing technique reduced model run-time by\n\n\n30–40%!\n\n\nWe can make specific parts of the text really stand out"
-  },
-  {
-    "objectID": "dataviz-best-practices.html#section-18",
-    "href": "dataviz-best-practices.html#section-18",
     "title": "Pixels with Purpose",
     "section": "",
     "text": "The new preprocessing technique reduced model run-time by\n\n\n30–40%!\n\n\nWe can make it impossible to ignore."
@@ -231,57 +203,57 @@
     "text": "Predicting the body mass of penguins\n\nView the results\n\n\n\npenguins_clean &lt;- penguins |&gt;\n  drop_na(body_mass_g, flipper_length_mm, bill_length_mm, bill_depth_mm) |&gt;\n  mutate(body_mass_kg = body_mass_g / 1000,\n         species = as.factor(species),\n         island = as.factor(island),\n         sex = as.factor(sex))\n\nmodel_spec &lt;- lm(body_mass_kg ~ flipper_length_mm + bill_length_mm +\n                   bill_depth_mm + species + sex,\n                 data = penguins_clean)\n\nmodel_summary &lt;- broom::tidy(model_spec, conf.int = TRUE, conf.level = 0.95)\n\nmodel_summary |&gt;\n  filter(term != \"(Intercept)\") |&gt;\n  arrange(desc(abs(estimate)))\n\n\n\nMake it impossible to ignore"
   },
   {
+    "objectID": "dataviz-best-practices.html#section-18",
+    "href": "dataviz-best-practices.html#section-18",
+    "title": "Pixels with Purpose",
+    "section": "",
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/womans-portrait-mC852jACK1g"
+  },
+  {
     "objectID": "dataviz-best-practices.html#section-19",
     "href": "dataviz-best-practices.html#section-19",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/womans-portrait-mC852jACK1g"
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/topless-man-with-water-droplets-on-his-face-UFm4e4fsEZc"
   },
   {
     "objectID": "dataviz-best-practices.html#section-20",
     "href": "dataviz-best-practices.html#section-20",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/topless-man-with-water-droplets-on-his-face-UFm4e4fsEZc"
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/selective-photography-of-white-thunder-nbqlWhOVu6k"
   },
   {
     "objectID": "dataviz-best-practices.html#section-21",
     "href": "dataviz-best-practices.html#section-21",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/selective-photography-of-white-thunder-nbqlWhOVu6k"
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/person-standing-on-hill-EAvS-4KnGrk"
   },
   {
     "objectID": "dataviz-best-practices.html#section-22",
     "href": "dataviz-best-practices.html#section-22",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/person-standing-on-hill-EAvS-4KnGrk"
+    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/brown-boat-near-dock-qkfxBc2NQ18"
   },
   {
     "objectID": "dataviz-best-practices.html#section-23",
     "href": "dataviz-best-practices.html#section-23",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "Images can bring out emotion.\n\n\n\nSource: https://unsplash.com/photos/brown-boat-near-dock-qkfxBc2NQ18"
+    "text": "Slides can inject levity."
   },
   {
     "objectID": "dataviz-best-practices.html#section-24",
     "href": "dataviz-best-practices.html#section-24",
     "title": "Pixels with Purpose",
     "section": "",
-    "text": "Slides can inject levity."
+    "text": "Be careful, though!\n\n\n\n“Cognitive load.”Get it? Get it?!😂…?\n\n\nHumor can be subtle (and get missed). That’s okay if it’s just a bonus for those who get it. Remember this slide? How many caught that this was “cognitive load” being cheekily represented?\nAlso, don’t expect all cultural references to land with the entire audience: Star Trek, pop culture, memes.\nAnd, obviously, steer clear of anything potentially offensive."
   },
   {
     "objectID": "dataviz-best-practices.html#section-25",
     "href": "dataviz-best-practices.html#section-25",
-    "title": "Pixels with Purpose",
-    "section": "",
-    "text": "Be careful, though!\n\n\n\n“Cognitive load.”Get it? Get it?!😂…?\n\n\nHumor can be subtle (and get missed). That’s okay if it’s just a bonus for those who get it. Remember this slide? How many caught that this was “cognitive load” being cheekily represented?\nAlso, don’t expect all cultural references to land with the entire audience: Star Trek, pop culture, memes.\nAnd, obviously, steer clear of anything potentially offensive."
-  },
-  {
-    "objectID": "dataviz-best-practices.html#section-26",
-    "href": "dataviz-best-practices.html#section-26",
     "title": "Pixels with Purpose",
     "section": "",
     "text": "Draw focus!\n\n\n\nSource: https://unsplash.com/photos/a-light-bulb-sitting-on-top-of-a-wooden-table-u5l8ded3n3Y"
