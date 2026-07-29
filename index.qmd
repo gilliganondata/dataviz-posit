@@ -3,6 +3,7 @@ pagetitle: "Data Viz Presentations"
 format:
   html:
     css: index-styles.css
+    link-external-newwindow: true
 ---
 
 ## Pixels with Purpose and More!
