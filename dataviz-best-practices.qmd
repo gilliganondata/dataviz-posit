@@ -17,7 +17,7 @@ format:
     margin: 0.05
     highlight-style: github
     center: false
-    slide-number: true
+    slide-number: false
 title-slide-attributes:
   data-visibility: "hidden"
 execute:
