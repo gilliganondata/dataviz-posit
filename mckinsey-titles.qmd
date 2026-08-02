@@ -148,9 +148,11 @@ gg_line_final <- ggplot(df_psavert, aes(x = date, y = psavert)) +
   theme_minimal() +
   theme(
     plot.title.position = "plot",
-    plot.background = element_rect(fill = brand$bg, color = NA),
+    plot.background = element_rect(fill = brand$bg, color = brand$bg),
     axis.title = element_blank(),
+    panel.grid.minor.x = element_blank(),
     panel.grid.major.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
     panel.grid.major.y = element_line(color = "gray70", linewidth = 0.2),
     axis.text = element_text(family = font_sans_serif, size = 12, color = "gray60"),
     axis.line.x = element_line(color = "gray40", linewidth = 0.4)

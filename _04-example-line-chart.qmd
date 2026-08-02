@@ -1,4 +1,4 @@
-## {.center visibility="uncounted"}
+## {.center}
 
 :::: {style="position: relative; width: 70%; margin: 0 auto;"}
 
@@ -71,7 +71,7 @@ Let's look at a generic, simple line chart. This is the ggplot defaults (made a 
 There are a lot of redundant or non-data/information pixels here.
 :::
 
-## Personal Savings Rate by Month in 2009 {.nostretch visibility="uncounted"}
+## Personal Savings Rate by Month in 2009 {.nostretch}
 ::: {.subtitle-slide-text}
 Stimulus payments in May drove a savings spike
 :::
@@ -96,9 +96,11 @@ gg_line_better <- ggplot(df_psavert, aes(x = date, y = psavert)) +
   theme_minimal() +
   theme(
     plot.title.position = "plot",
-    plot.background = element_rect(fill = brand$bg, color = NA),
+    plot.background = element_rect(fill = brand$bg, color = brand$bg),
     axis.title = element_blank(),
+    panel.grid.minor.x = element_blank(),
     panel.grid.major.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
     panel.grid.major.y = element_line(color = "gray70", linewidth = 0.2),
     axis.text = element_text(family = font_sans_serif, size = 12, color = "gray60"),
     axis.line.x = element_line(color = "gray40", linewidth = 0.4)
@@ -117,9 +119,9 @@ gg_line_better
 The same data, higher data-pixel ratio. No border, no legend, no redundant axis titles, horizontal month labels.
 :::
 
-# We want to make the point as [impossible to miss]{.emphasis} as we can. {background-color="var(--divider-bg)" visibility="uncounted"}
+# We want to make the point as [impossible to miss]{.emphasis} as we can. {background-color="var(--divider-bg)"}
 
-## Personal Savings Rate by Month in 2009 {.nostretch visibility="uncounted"}
+## Personal Savings Rate by Month in 2009 {.nostretch}
 ::: {.subtitle-slide-text}
 Stimulus payments in May drove a savings spike
 :::
@@ -145,7 +147,7 @@ gg_line_better
 This is what we had. But...what is it I want to *say* here? We want to make it *impossible to miss*.
 :::
 
-## Stimulus payments in [May]{.emphasis} drove [savings spike]{.emphasis}{.nostretch visibility="uncounted"}
+## Stimulus payments in [May]{.emphasis} drove [savings spike]{.emphasis}{.nostretch}
 ::: {.subtitle-slide-text}
 Personal savings rate by month in 2009
 :::
@@ -202,9 +204,11 @@ gg_line_final <- ggplot(df_psavert, aes(x = date, y = psavert)) +
   theme_minimal() +
   theme(
     plot.title.position = "plot",
-    plot.background = element_rect(fill = brand$bg, color = NA),
+    plot.background = element_rect(fill = brand$bg, color = brand$bg),
     axis.title = element_blank(),
+    panel.grid.minor.x = element_blank(),
     panel.grid.major.x = element_blank(),
+    panel.grid.minor.y = element_blank(),
     panel.grid.major.y = element_line(color = "gray70", linewidth = 0.2),
     axis.text = element_text(family = font_sans_serif, size = 12, color = "gray60"),
     axis.line.x = element_line(color = "gray40", linewidth = 0.4)
